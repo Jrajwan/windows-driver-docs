@@ -27,6 +27,8 @@ The current altitude allocations are listed for each of the following load order
 
 | Minifilter                    | Altitude | Company                  |
 |-------------------------------|----------|--------------------------|
+| wcnfs.sys		                  | 409900	 | Microsoft                |
+| iorate.sys	                  | 409010	 | Microsoft                |
 | ioqos.sys                     | 409000   | Microsoft                |
 | fsdepends.sys                 | 407000   | Microsoft                |
 | sftredir.sys                  | 406000   | Microsoft                |
@@ -48,6 +50,7 @@ The current altitude allocations are listed for each of the following load order
 | mbamwatchdog.sys              | 400900   | Malwarebytes Corporation |
 | edevmon.sys                   | 400800   | ESET                     |
 | vmwflstor.sys                 | 400700   | VMware, Inc.             |
+| TsQBDrv.sys	                  | 400600	 | Tencent Technology       |
 
  
 
