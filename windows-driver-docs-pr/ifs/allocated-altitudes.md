@@ -34,6 +34,8 @@ The current altitude allocations are listed for each of the following load order
 | Minifilter                    | Altitude | Company                  |
 |-------------------------------|----------|--------------------------|
 | wcnfs.sys		                | 409900   | Microsoft                |
+| bindflt.sys                    | 409800   | Microsoft                |
+| cldflt.sys                    | 409500   | Microsoft                |
 | iorate.sys		            | 409010   | Microsoft                |
 | ioqos.sys                     | 409000   | Microsoft                |
 | fsdepends.sys                 | 407000   | Microsoft                |
@@ -43,6 +45,8 @@ The current altitude allocations are listed for each of the following load order
 | csvflt.sys                    | 404800   | Microsoft                |
 | Microsoft.Uev.AgentDriver.sys | 404710   | Microsoft                |
 | AppvVfs.sys                   | 404700   | Microsoft                |
+| Dewdrv.sys                    | 402000   | Dell Technologies        |
+| zsusbstorfilt.sys             | 401910   | Zshield Inc.             |
 | eaw.sys                       | 401900   | Raytheon Cyber Solutions |
 | TVFsfilter.sys                | 401800   | TrustView                |
 | KKDiskProtecter.sys           | 401700   | Goldmsg                  |
@@ -53,10 +57,12 @@ The current altitude allocations are listed for each of the following load order
 | pcgenfam.sys                  | 401200   | Soluto                   |
 | atrsdfw.sys                   | 401100   | Altiris                  |
 | tpfilter.sys                  | 401000   | RedPhone Security        |
+| BIG2Prot.sys                  | 400920   | Malwarebytes Corporation |
 | mbamwatchdog.sys              | 400900   | Malwarebytes Corporation |
 | edevmon.sys                   | 400800   | ESET                     |
 | vmwflstor.sys                 | 400700   | VMware, Inc.             |
 | TsQBDrv.sys		            | 400600   | Tencent Technology       |
+| WRAEKernel.sys                | 400500   | Webroot Inc.             |
 
  
 
