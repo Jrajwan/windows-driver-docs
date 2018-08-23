@@ -57,7 +57,7 @@ The current altitude allocations are listed for each of the following load order
 | pcgenfam.sys                  | 401200   | Soluto                   |
 | atrsdfw.sys                   | 401100   | Altiris                  |
 | tpfilter.sys                  | 401000   | RedPhone Security        |
-| BIG2Prot.sys                  | 400920   | Malwarebytes Corporation |
+| MBIG2Prot.sys                  | 400920   | Malwarebytes Corporation |
 | mbamwatchdog.sys              | 400900   | Malwarebytes Corporation |
 | edevmon.sys                   | 400800   | ESET                     |
 | vmwflstor.sys                 | 400700   | VMware, Inc.             |
