@@ -939,8 +939,11 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | DeepInsFS.sys		               | 320320   |	Deep Instinct Ltd.                                        |
 | avfsmn.sys	                   | 320310   |	Anvisoft                                                  |
 | lbd.sys                          | 320300   | Lavasoft AB                                               |
+| pavdrv.sys		| 320210	| Panzor Cybersecurity |
 | rvsmon.sys                       | 320200   | CJSC Returnil Software                                    |
-| ssfmonm.sys                      | 320100   | Webroot Software, Inc.                                    |
+| WRKrn.sys		| 320110	| Webroot Inc. |
+| ssfmonm.sys                      | 320100   | Webroot Software, Inc. |
+| vk_fsf.sys		| 320050	| AxBx |
 | VirtualAgent.sys                 | 320005   | Symantec                                                  |
 
  
