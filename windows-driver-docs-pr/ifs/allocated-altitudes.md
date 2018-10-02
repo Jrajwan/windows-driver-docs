@@ -640,7 +640,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | SolSecBr.sys     | 345020   | Soliton Systems K.K.           |
 | SolFCLLi.sys     | 345010   | Soliton Systems K.K.           |
 | SolFCL.sys       | 345000   | Soliton Smart Sec              |
-
+| DCVPr.sys		| 340700	| SecurStar GmbH |	
  
 
 ## <span id="320000_-_329998__FSFilter_Anti-Virus"></span><span id="320000_-_329998__fsfilter_anti-virus"></span><span id="320000_-_329998__FSFILTER_ANTI-VIRUS"></span>320000 - 329998: FSFilter Anti-Virus
@@ -648,6 +648,10 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 
 | Minifilter                       | Altitude | Company                                                   |
 |----------------------------------|----------|-----------------------------------------------------------|
+| CSFlt.sys		| 329290	| ConeSecurity Inc	|
+| RansomDefensexxx.sys		| 329220	| WidgetNuri Corp |	
+| RanPodFS.sys		| 329210	| Pooyan System	|
+| ksfsflt.sys		| 329200	| Beijing Kingsoft |	
 | DeepInsFS.sys		               | 329190   |	Deep Instinct	                                          |
 | AppCheckD.sys		               | 329180   |	CheckMAL Inc	                                          |
 | spellmon.sys		               | 329170   |	SpellSecurity	                                          |
@@ -671,17 +675,21 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | a2gffi64.sys - IA64              | 328910   | Emsi Software GmbH                                        |
 | a2acc.sys                        | 328900   | Emsi Software GmbH                                        |
 | a2acc64.sys on x64 systems       | 328900   | Emsi Software GmbH                                        |
+| FlightRecorder.sys		| 328850	| Malwarebytes Corp. |
 | si32\_file.sys                   | 328810   | Scargo Inc                                                |
 | si64\_file.sys                   | 328810   | Scargo Inc                                                |
 | mbam.sys                         | 328800   | Malwarebytes Corp.                                        |
+| EnigmaFileMonDriver.sys		| 328770	| EnigmaSoft |
 | KUBWKSP.sys	                   | 328750   |	Netlor SAS	                                              |
 | hcp_kernel_acq.sys		       | 328740   |	refractionPOINT	                                          |
 | SegiraAM.sys		               | 328730   |	Segira LLC	                                              |
 | wdocsafe.sys		               | 328722   |	Cheetah Mobile Inc.	                                      |
 | lbprotect.sys		               | 328720   |	Cheetah Mobile Inc.	                                      |
 | eamonm.sys                       | 328700   | ESET, spol. s r.o.                                        |
+| klam.sys		| 328650	| Kaspersky Lab |
 | MaxProc64.sys                    | 328620   | Max Secure Software                                       |
 | MaxProtector.sys                 | 328610   | Max Secure Software                                       |
+| maxcryptmon.sys		| 328601	| Max Secure Software |
 | SDActMon.sys                     | 328600   | Max Secure Software                                       |
 | fileflt.sys                      | 328540   | Trend Micro Inc.                                          |
 | TmEsFlt.sys                      | 328530   | Trend Micro Inc.                                          |
@@ -705,17 +713,24 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | amm8660.sys - Windows Vista x86  | 327600   | Panda Security                                            |
 | amm6460.sys - Windows Vista x64  | 327600   | Panda Security                                            |
 | ADSpiderDoc.sys		           | 327550   |	Digitalonnet	                                          |
+| BkavAutoFlt.sys		| 327542	| Bkav Corporation |
 | BkavSdFlt.sys                    | 327540   | Bkav Corporation                                          |
 | easyanticheat.sys                | 327530   | EasyAntiCheat Solutions                                   |
 | 5nine.cbt.sys                    | 327520   | 5nine Software                                            |
 | caavFltr.sys                     | 327510   | Computer Assoc                                            |
 | ino\_fltr.sys                    | 327500   | Computer Assoc                                            |
+| SECOne_USB.sys		| 327426	| GRGBanking Equipment |
+| SECOne_Proc10.sys		| 327424	| GRGBanking Equipment |
+| SECOne_REG10.sys		| 327422	| GRGBanking Equipment |
+| SECOne_FileMon10.sys		| 327420	| GRGBanking Equipment |
 | WCSDriver.sys                    | 327410   | White Cloud Security                                      |
 | 360qpesv.sys		               | 327404   |	360 Software (Beijing)                                    |
 | dsark.sys                        | 327402   | Qihoo 360                                                 |
 | 360avflt.sys                     | 327400   | Qihoo 360                                                 |
+| scifsflt.sys		| 327333	| SECUI Corporation |
 | ANVfsm.sys                       | 327310   | Arcdo                                                     |
 | CDrRSFlt.sys                     | 327300   | Arcdo                                                     |
+| mfdriver.sys		| 327250	| Imperva Inc. |
 | EPSMn.sys                        | 327200   | SGA                                                       |
 | VTSysFlt.sys		               | 327150   |	Beijing Venus	                                          |
 | TesMon.sys		               | 327130   |	Tencent	                                                  |
@@ -729,6 +744,9 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | bd0003.sys                       | 326912   | Baidu online network technology (beijing)Co.              |
 | Bfilter.sys                      | 326910   | Baidu (Hong Kong) Limited                                 |
 | NeoKerbyFilter                   | 326900   | NeoAutus                                                  |
+| egnfsflt.sys		| 326830	| Egnyte Inc |
+| RsFlt.sys		| 326820	| Redstor Limited |
+| trpmnflt.sys		| 326810	| TRAPMINE A.S. |
 | PLGFltr.sys                      | 326800   | Paretologic                                               |
 | WrdWizSecure64.sys		       | 326730   | WardWiz                                                   |
 | wrdwizscanner.sys                | 326720   | WardWiz                                                   |
@@ -747,6 +765,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | SheedAntivirusFilterDriver.sys   | 326290   |	SheedSoft Ltd	                                          |
 | bSyirmf.sys		               | 326260   |	BLACKFORT SECURITY	                                      |
 | bSymfdm.sys		               | 326240   |	BLACKFORT SECURITY	                                      |
+| bSywl.sys		| 326235	| BLACKFORT SECURITY |
 | bSyrtp.sys		               | 326230   |	BLACKFORT SECURITY	                                      |
 | bSyaed.sys		               | 326220   |	BLACKFORT SECURITY	                                      |
 | bSyar.sys		                   | 326210   |	BLACKFORT SECURITY	                                      |
@@ -779,6 +798,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | OMFltLh.sys                      | 325960   | Ahnlab                                                    |
 | V3Flu2k.sys                      | 325950   | Ahnlab                                                    |
 | TfFregNt.sys                     | 325940   | AhnLab Inc.                                               |
+| AdcVcsNT.sys		| 325930	| Ahnlab |
 | vcdriv.sys                       | 325820   | Greatsoft Corp.Ltd                                        |
 | vcreg.sys                        | 325810   | Greatsoft Corp.Ltd                                        |
 | vchle.sys                        | 325800   | Greatsoft Corp.Ltd                                        |
@@ -809,6 +829,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | crnsysm.sys                      | 324310   | Coranti                                                   |
 | crncache32.sys                   | 324300   | Coranti                                                   |
 | crncache64.sys                   | 324300   | Coranti                                                   |
+| egambit.sys		| 324242	| TEHTRI-Security |
 | drwebfwft.sys                    | 324210   | Doctor Web                                                |
 | DwShield.sys                     | 324200   | Doctor Web                                                |
 | DwShield64.sys                   | 324200   | Doctor Web                                                |
@@ -818,6 +839,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | TvSPFltr.sys                     | 324120   | EveryZone INC.                                            |
 | TvPtFile.sys                     | 324110   | EveryZone INC.                                            |
 | TvMFltr.sys                      | 324100   | Everyzone                                                 |
+| SophosED.sys		| 324050	| Sophos |
 | SAVOnAccess.sys		           | 324010   |	Sophos                                                    |
 | savonaccess.sys                  | 324000   | Sophos                                                    |
 | sld.sys                          | 323990   | Sophos                                                    |
@@ -836,6 +858,8 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | cwdriver.sys                     | 322900   | Leith Bade                                                |
 | AYFilter.sys                     | 322810   | ESTsoft                                                   |
 | Rtw.sys                          | 322800   | ESTsoft                                                   |
+| RSRtw.sys		| 322790	| ESTsecurity Corp |
+| RSPCRtw.sys		| 322780	| ESTsecurity Corp |
 | HookSys.sys                      | 322700   | Beijing Rising Information Technology Corporation Limited |
 | snscore.sys                      | 322600   | S.N.Safe&Software                                         |
 | ssvhook.sys                      | 322500   | SecuLution GmbH                                           |
@@ -843,6 +867,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | strapvista64.sys                 | 322400   | AvSoft Technologies                                       |
 | sascan.sys                       | 322300   | SecureAge Technology                                      |
 | savant.sys                       | 322200   | Savant Protection, Inc.                                   |
+| VrARnFlt.sys		| 322161	| HAURI |
 | VrBBDFlt.sys		               | 322160   |	HAURI	                                                  |
 | vrSDfmx.sys                      | 322153   | HAURI                                                     |
 | vrSDfmx.sys                      | 322152   | HAURI                                                     |
@@ -868,10 +893,12 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | arwflt.sys                       | 321480   | Quick Heal Technologies Pvt. Ltd.                         |
 | csagent.sys                      | 321410   | CrowdStrike Ltd.                                          |
 | kmkuflt.sys                      | 321400   | Komoku Inc.                                               |
+| ntguard.sys		| 321337	| IKARUS Security |
 | epdrv.sys                        | 321320   | McAfee Inc.                                               |
 | mfencoas.sys                     | 321310   | McAfee Inc.                                               |
 | mfehidk.sys                      | 321300   | McAfee Inc.                                               |
 | swin.sys		                   | 321250   |	McAfee Inc.                                               |
+| CyvrFsfd.sys		| 321234	| Palo Alto Networks |
 | cmdccav.sys		               | 321210	  |Comodo Group Inc.                                          |
 | cmdguard.sys                     | 321200   | Comodo Group Inc.                                         |
 | K7Sentry.sys                     | 321100   | K7 Computing Private Ltd.                                 |
@@ -887,6 +914,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | AVCKF.SYS                        | 320810   | BitDefender SRL                                           |
 | bdfsfltr.sys                     | 320800   | Softwin                                                   |
 | bdfm.sys                         | 320790   | Softwin                                                   |
+| gemma.sys		| 320782	| BitDefender SRL |	
 | Atc.sys		                   | 320781   |	BitDefender SRL	                                          |
 | AVC3.SYS                         | 320780   | BitDefender SRL                                           |
 | TRUFOS.SYS                       | 320770   | BitDefender SRL                                           |
@@ -895,12 +923,17 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | PktIcpt.sys                      | 320601   | G Data                                                    |
 | MiniIcpt.sys                     | 320600   | G Data                                                    |
 | avgntflt.sys                     | 320500   | Avira GmbH                                                |
+| klam.sys		| 320450	| Kaspersky Lab |
 | klbg.sys                         | 320440   | Kaspersky                                                 |
 | kldback.sys                      | 320430   | Kaspersky                                                 |
 | kldlinf.sys                      | 320420   | Kaspersky                                                 |
 | kldtool.sys                      | 320410   | Kaspersky                                                 |
 | klif.sys                         | 320401   | Kaspersky Lab                                             |
 | klif.sys                         | 320400   | Kaspersky                                                 |
+| klam.sys		| 320350	| Kaspersky Lab	|
+| hsmltwhl.sys		| 320340	| Hitachi Solutions	|
+| hssfwhl.sys		| 320330	| Hitachi Solutions	|
+| DeepInsFS.sys		| 320320	| Deep Instinct Ltd.	|
 | avfsmn.sys                       | 320310   | Anvisoft                                                  |
 | hssfwhl.sys		               | 320330   |	Hitachi Solutions                                         |
 | DeepInsFS.sys		               | 320320   |	Deep Instinct Ltd.                                        |
