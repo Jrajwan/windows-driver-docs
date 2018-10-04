@@ -445,9 +445,9 @@ The current altitude allocations are listed for each of the following load order
 | nullFilter.sys                   | 370020   | Microsoft                                              |
 | ntest.sys                        | 370010   | Microsoft                                              |
 | minispy.sys - Middle             | 370000   | Microsoft                                              |
-| wats_se.sys		| 368510	Fujian Shen Kong |
-| secure_os_mf.sys		| 368500	HAURI |
-| FileMonitor.sys		| 368470	Cygna Labs |
+| wats_se.sys		| 368510 | Fujian Shen Kong |
+| secure_os_mf.sys		| 368500	| HAURI |
+| FileMonitor.sys		| 368470	| Cygna Labs |
 | asiofms.sys		| 368460	| Encourage Technologies |
 | cbfsfilter2017.sys		| 368450	| Absolute Software |
 | FileHubAgent.sys		| 368440	| SmartFile LLC |
