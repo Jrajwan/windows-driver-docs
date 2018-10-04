@@ -1333,10 +1333,10 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | FJSeparettiFilterRamMon.sys | 		149100	| FUJITSU LIMITED |
 | gisfile_decryption.sys | 		149030	| Communication U China |
 | TIFSFilter.sys | 		149020	| SG Corporation |
-| OsrDt2.sys | 		| 149010	| Information Security Corp |
+| OsrDt2.sys 		| 149010	|  Information Security Corp  |
 | EasyKryptMF.sys | 		149000	| SoftKrypt LLC |
-| EasyKryptMF.sys             | 149000   | SoftKrypt LLC                         |
-| padlock.sys                 | 148910   | IntSoft Inc.                          |
+| EasyKryptMF.sys             | 149000   | SoftKrypt LLC                        |
+| padlock.sys                 | 148910  | IntSoft Inc.                          |
 | ffecore.sys                 | 148900   | Winmagic                              |
 | fangcloud.sys		| 148860	| fangcloud |
 | klvfs.sys                   | 148810   | Kaspersky Lab                         |
@@ -1470,8 +1470,8 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | Filecrypt.sys               | 141100   | Microsoft                             |
 | encrypt.sys                 | 141010   | Microsoft                             |
 | swapBuffers.sys             | 141000   | Microsoft                             |
-| Filecrypt.sys		141100	Microsoft
-| encrypt.sys		141010	Microsoft
+| Filecrypt.sys		| 141100	| Microsoft |
+| encrypt.sys		| 141010	| Microsoft |
 | swapBuffers.sys		| 141000	| Microsoft | 
  
 
