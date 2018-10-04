@@ -353,7 +353,7 @@ The current altitude allocations are listed for each of the following load order
 | PsAcFileAccessFilter.sys		 | 382902	  | FUJITSU SOFTWARE	  |
 | FJGSDis2.sys                     | 382900   | FUJITSU LIMITED                                        |
 | secure_os.sys		               | 382890	  |	FUJITSU SOCIAL SCIENCE                                 |
-| ibr2fsk.sys		                 | 382880	FUJITSU ENGINEERING	| 
+| ibr2fsk.sys		                 | 382880	| FUJITSU ENGINEERING	| 
 | FJSeparettiFilterRedirect.sys		| 382860	| FUJITSU LIMITED	|
 | da_ctl.sys	                  	| 382850	| FUJITSU LIMITED	|
 | zqFilter                         | 382800   | magrasoft Ltd                                          |
@@ -490,7 +490,7 @@ The current altitude allocations are listed for each of the following load order
 | csaam.sys                        | 367400   | Cisco Systems                                          |
 | FSMon.sys                        | 367300   | 1mill                                                  |
 | mfl.sys                          | 367200   | OSR Open Systems Resources, Inc.                       |
-| filefilter.sys                   | 367100   | Beijing Zhong Hang Jiaxin Computer Technology Co.,Ltd. |
+| filefilter.sys                   | 367100   | Beijing Zhong Hang Jiaxin Computer Technology Co., Ltd. |
 | iiscache.sys                     | 367000   | Microsoft                                              |
 | nowonmf.sys                      | 366993   | Diskeeper Corporation                                  |
 | dktlfsmf.sys                     | 366992   | Diskeeper Corporation                                  |
@@ -640,7 +640,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | SolSecBr.sys     | 345020   | Soliton Systems K.K.           |
 | SolFCLLi.sys     | 345010   | Soliton Systems K.K.           |
 | SolFCL.sys       | 345000   | Soliton Smart Sec              |
-| DCVPr.sys		| 340700	| SecurStar GmbH |	
+| DCVPr.sys		| 340700	| SecurStar GmbH  |	
  
 
 ## <span id="320000_-_329998__FSFilter_Anti-Virus"></span><span id="320000_-_329998__fsfilter_anti-virus"></span><span id="320000_-_329998__FSFILTER_ANTI-VIRUS"></span>320000 - 329998: FSFilter Anti-Virus
@@ -1042,6 +1042,9 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | Minifilter                  | Altitude | Company                                  |
 |-----------------------------|----------|------------------------------------------|
 | Klshadow.sys                | 268300   | Kaspersky Lab                            |
+| TN28.sys		| 268290	| ID Authentication Tech |
+| PGDriver.sys		| 268280	| Avecto Ltd |
+| itseczvdb.sys		| 268270	| Innotium Inc |
 | isarsd.sys		          | 268260   | ISARS	                                |
 | zeoscanner.sys		      | 268255   | PCKeeper	                                |
 | fileHiders.sys		      | 268250	 | PCKeeper	                                |
@@ -1050,21 +1053,29 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | AliFileMonitorDriver.sys    | 268220   | Alibaba                                  |
 | writeGuard.sys              | 268210   | TCXA Ltd.                                |
 | KKUDKProtectKer.sys         | 268200   | Goldmessage technology co.               |
+| HAWKFIMInt.sys		| 268190	| HAWK Network Defense |
+| esaccctl.sys		| 268180	| EgoSecure GmbH |
+| WSguard.sys		| 268170	| Wiper Software UAB |
 | Atomizer.sys		          | 268160	 | DragonFlyCodeWorks                       |
 | farwflt.sys		          | 268150	 | Malwarebytes                             |
 | ADSpiderEx2.sys		      | 268140	 | Digitalonnet                             |
+| sdfilter.sys		| 268130	| Igor Zorkov |
 | Safe.sys                    | 268120   | rian@alum.mit.edu                        |
 | mydlpdelete-scanner.sys     | 268110   | Medra Teknoloji                          |
 | mydlpscanner.sys            | 268100   | Medra Teknoloji                          |
+| hnpro.sys		| 268040	| Solupia |
 | DLDriverNetMini.sys		  | 268030	 | DeviceLock Inc                           |
 | ENFFLTDRV.sys		          | 268020	 | Enforcive Systems                        |
+| imagentpg.sys |		268012 |	Infomaximum |
 | crocopg.sys		          | 268010	 | Infomaximum                              |
 | sbapifs.sys                 | 268000   | Sunbelt Software                         |
 | SGKD32.SYS		          | 267910	 | NetSection Security	                    |
 | IccFilter.sys               | 267900   | NEC System Technologies                  |
 | tflbc.sys                   | 267800   | Tani Electronics Corporation             |
+| ArmFlt.sys		| 267000	| Armor Antivirus |
 | WBDrv.sys                   | 266700   | Axiana LLC                               |
 | DMSamFilter.sys             | 266600   | Digimarc Corp.                           |
+| mumbl.sys		| 266540	| ZenmuTech Inc. |
 | 5nine.cbt.sys               | 266100   | 5nine Software                           |
 | bsfs.sys                    | 266000   | Quick Heal TechnologiesPvt. Ltd.         |
 | XXRegSFilter.sys		      | 265910	 | Zhe Jiang Xinxin Software Tech.          |
@@ -1125,10 +1136,12 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | wvscr.sys                   | 262200   | Chengdu Wei Tech Inc.                    |
 | psepfilter.sys              | 262100   | Absolute Software                        |
 | SAMDriver.sys               | 262000   | Summit IT                                |
+| emrcore.sys		| 261920	| Ivanti Inc |
 | wire_fsfilter.sys		      | 261910	 | ThreatSpike Labs                         |
 | AMFileSystemFilter.sys      |	261900	 | AppSense Ltd                             |
 | mtflt.sys	                  |	261880	 | mTalos Inc.                              |
 | nxrmflt.sys                 | 261680   | NextLabs, Inc.                           |
+| oc_fsfilter.sys		| 261300	| Raiffeisen | Bank Aval |
 | hdlpflt.sys                 | 261200   | McAfee Inc.                              |
 | CCFFilter.sys               | 261160   | Microsoft                                |
 | cbafilt.sys                 | 261150   | Microsoft                                |
@@ -1148,6 +1161,8 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | aictracedrv\_cs.sys         | 260500   | AI Consulting                            |
 | DWFIxxxx.sys                | 260410   | SciencePark Corporation                  |
 | DWFIxxxx.sys                | 260400   | SciencePark Corporation                  |
+| DSDriver.sys		| 260330	| ManageEngine Zoho Corp |
+| mcfltlab.sys		| 260320	| Beijing MicroColor |
 | FDriver.sys		          | 260310	 | Fox-IT                                   |
 | iqpk.sys                    | 260300   | Secure Islands Technologies LTD          |
 | VHDFlt.sys                  | 260240   | Dell                                     |
@@ -1203,11 +1218,14 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | wcifs.sys                     | 189900   | Microsoft                       |
 | gvflt.sys		                | 189800   | Microsoft                       |
 | Svfsf.sys		                | 186700   | Spharsoft Technologies          |
+| mnefs.sys		| 186800	| Nippon Techno Lab |
+| Svfsf.sys		| 186700	| Spharsoft Technologies |
 | gwmemory.sys		            | 186600   | Macrotec LLC                    |
 | cteraflt.sys	                | 186550   | CTERA Networks Ltd.             |
 | dbx.sys		                | 186500   | Dropbox Inc.                    |
 | quaddrasi.sys                 | 186400   | Quaddra Software                |
 | gdrive.sys                    | 186300   | Google                          |
+| CoreSyncFilter.sys		| 186250	| Adobe Systems Inc. |
 | EaseTag.sys                   | 186200   | EaseVault Technologies Inc.     |
 | hcminifilter.sys              | 186100   | Happy Cloud                     |
 | PDFsFilter.sys                | 186000   | Raxco Sfotware                  |
@@ -1218,6 +1236,8 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | HSMdriver.sys                 | 185600   | Wim Vervoorn                    |
 | kdfilter.sys		            | 185555   | Komprise Inc.	                 |
 | htdafd.sys                    | 185500   | Bridgehead Soft                 |
+| odphflt.sys		| 180455	| Microsoft |
+| cldflt.sys		| 180451	| Microsoft |
 | SymHsm.sys                    | 185400   | Symantec                        |
 | evmf.sys                      | 185100   | Symantec                        |
 | otfilter.sys                  | 185000   | Overtone Soft                   |
@@ -1226,6 +1246,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | SonyHsmMinifilter.sys         | 184700   | Sony Corporation                |
 | acahsm.sys                    | 184600   | Autonomy Corporation            |
 | zlhsm.sys                     | 184500   | ZL Technologies                 |
+| dvfilter.sys		| 183003	| Microsoft |
 | Accesstracker.sys             | 183002   | Microsoft                       |
 | Changetracker.sys             | 183001   | Microsoft                       |
 | Fstier.sys                    | 183000   | Microsoft                       |
@@ -1242,10 +1263,11 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | autnhsm.sys                   | 182000   | Autonomy Corporation            |
 | cthsmflt.sys                  | 181970   | ComTrade                        |
 | NxMini.sys                    | 181900   | NEXSAN                          |
+| neuflt.sys		| 181818	| NeuShield |
 | npfdaflt.sys                  | 181800   | Mimosa Systems Inc              |
 | AppStream.sys                 | 181700   | AppStream, Inc.                 |
 | HPEDpHsmX64.sys		        | 181620   | Hewlett-Packard, Co.            |
-| HPArcHsmX64.sys               | 181610   | Hewlett-Packard, Co.            |
+| cparchsm.sys		| 181610	| Micro Focus |	
 | hphsmflt.sys                  | 181600   | Hewlett-Packard, Co.            |
 | RepHsm.sys                    | 181500   | Double-Take Software, Inc.      |
 | RepSIS.sys                    | 181490   | Double-Take Software            |
@@ -1279,6 +1301,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 
 | Minifilter        | Altitude | Company   |
 |-------------------|----------|-----------|
+| pfmfs_???.sys		| 172100	| Pismo Technic Inc |
 | virtual\_file.sys | 172000   | Acronis   |
 | wimFltr.sys       | 170500   | Microsoft |
 
@@ -1307,11 +1330,18 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 
 | Minifilter                  | Altitude | Company                               |
 |-----------------------------|----------|---------------------------------------|
+| FJSeparettiFilterRamMon.sys | 		149100	| FUJITSU LIMITED |
+| gisfile_decryption.sys | 		149030	| Communication U China |
+| TIFSFilter.sys | 		149020	| SG Corporation |
+| OsrDt2.sys | 		| 149010	| Information Security Corp |
+| EasyKryptMF.sys | 		149000	| SoftKrypt LLC |
 | EasyKryptMF.sys             | 149000   | SoftKrypt LLC                         |
 | padlock.sys                 | 148910   | IntSoft Inc.                          |
 | ffecore.sys                 | 148900   | Winmagic                              |
+| fangcloud.sys		| 148860	| fangcloud |
 | klvfs.sys                   | 148810   | Kaspersky Lab                         |
 | Klfle.sys                   | 148800   | Kaspersky Lab                         |
+| ISFP.sys		| 148701	| ALPS SYSTEM INTEGRATION |
 | ISIRM.sys                   | 148700   | ALPS SYSTEM INTERGRATION CO.          |
 | ASUSSecDrive.sys	          | 148650	 | ASUS                                  |
 | ABFilterDriver.sys		  | 148640	 | AlertBoot                             |
@@ -1321,6 +1351,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | mwIPSDFilter.sys            | 148600   | Egis Technology Inc.                  |
 | csccvdrv.sys                | 148500   | Computer Sciences Corporation         |
 | aefs.sys                    | 148400   | Angelltech Corporation Xi'an          |
+| VTEFsFlt.sys		| 148374	| EsComputer Corp |
 | IWCSEFlt.sys                | 148300   | InfoWatch                             |
 | GDDmk.sys                   | 148250   | G Data Software AG                    |
 | clcxcore.sys                | 148210   | AFORE Solutions Inc.                  |
@@ -1362,6 +1393,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | jmefs.sys                   | 145400   | ShangHai Elec                         |
 | emugufs.sys		          | 145333	 | Emugu Secure FS                       |
 | VFDriver.sys                | 145300   | R Systems                             |
+| IntelDG.sys		| 145250	| Intel Corporation |	
 | EVSDecrypt64.sys		      | 145230	 | Fortium Technologies Ltd              |
 | skycryptorencfs.sys	      | 145220	 | Onecryptor CJSC.                      |
 | AisLeg.sys                  | 145210   | Assured Information Security          |
@@ -1433,10 +1465,14 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | DWENxxxx.sys                | 141400   | SciencePark Corporation               |
 | hdFileSentryDrv32.sys       | 141300   | Heilig Defense                        |
 | hdFileSentryDrv64.sys       | 141300   | Heilig Defense                        |
+| NetCryptKR.sys		| 141210	| NetCrypt Pty Ltd	|
+| BHFilter.sys		| 141200	| Beachhead | Solutions |
 | Filecrypt.sys               | 141100   | Microsoft                             |
 | encrypt.sys                 | 141010   | Microsoft                             |
 | swapBuffers.sys             | 141000   | Microsoft                             |
-
+| Filecrypt.sys		141100	Microsoft
+| encrypt.sys		141010	Microsoft
+| swapBuffers.sys		| 141000	| Microsoft | 
  
 
 ## <span id="130000_-_139999__FSFilter_Virtualization"></span><span id="130000_-_139999__fsfilter_virtualization"></span><span id="130000_-_139999__FSFILTER_VIRTUALIZATION"></span>130000 - 139999: FSFilter Virtualization
@@ -1452,6 +1488,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | vzdrv.sys              | 138000   | Altiris                       |
 | sffsg.sys		         | 137990	| Starfish Storage Corp         | 
 | AppStream.sys          | 137920   | Symantec Corporation          |
+| Rasm.sys		| 137915	| OpDesk Inc |
 | boxifier.sys           | 137910   | Kenubi                        |
 | xorw.sys               | 137900   | CA (XOsoft)                   |
 | ctlua.sys              | 137800   | SurfRight B.V.                |
@@ -1505,6 +1542,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | mhpvfs.sys             | 131500   | Wunix Limited                 |
 | svdriver.sys           | 131400   | SnapVolumes                   |
 | Sptvrt.sys             | 131300   | Safend                        |
+| antirswf.sys		| 131210	| Panzor Cybersecurity |
 | aicvirt.sys            | 131200   | AI Consulting                 |
 | sfo.sys                | 130100   | Microsoft                     |
 | DeVolume.sys           | 130000   | Microsoft                     |
@@ -1541,6 +1579,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 
 | Minifilter              | Altitude | Company                                  |
 |-------------------------|----------|------------------------------------------|
+| psprotf.sys		| 88210	| Panzor Cybersecurity |
 | dsbwnck.sys	   	      | 88000	 | Easy Solution Inc.                       |     
 | rsbfsfilter.sys         | 87800	 | Corel Corporation                        |
 | hsmltflt.sys		      | 87720	 | Hitachi Solutions                        |
@@ -1608,6 +1647,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | spyshelter.sys		  | 84000	 | Datpol                                   |
 | clpinspprot.sys		  | 83900	 | Information Technology Company Ltd.      |
 | uvmfsflt.sys		      | 83376	 | NEC Corporation                          |
+| ProtectIt.sys		| 82373	| TeraByte Inc. |
 | dguard.sys		      | 82300	 | Dmitry Varshavsky                        |
 | NSUSBStorageFilter.sys  | 82200	 | NetSupport Ltd                           |
 | RMSEFFMV.SYS		      | 82100	 | CJSC Returnil Software                   |
@@ -1637,7 +1677,8 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | ksmf.sys		          | 80690	 | IntSoft Co                               |
 | im.sys		          | 80680	 | CrowdStrike                              |
 | SophosED.sys		      | 80670	 | Sophos                                   |
-
+| jazzfile.sys		| 80660	| Jazz Networks |
+| SMXFs.sys		| 80500	| OSR | 
  
 
 ## <span id="60000_-_69999__FSFilter_Copy_Protection"></span><span id="60000_-_69999__fsfilter_copy_protection"></span><span id="60000_-_69999__FSFILTER_COPY_PROTECTION"></span>60000 - 69999: FSFilter Copy Protection
@@ -1645,6 +1686,8 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 
 | Minifilter             | Altitude | Company                                 |
 |------------------------|----------|-----------------------------------------|
+| d3clock.sys		| 67000	| D3CRYPT3D LLC	 |
+| cbfltfs4.sys		| 66500	| I3D Technology Inc |	
 | CkProcess.sys          | 66100    | KASHU SYSTEM DESIGN INC.                |
 | dlmfprot.sys           | 66000    | Data Encrypt Sys                        |
 | baprtsef.sys           | 65700    | BitArmor Systems, Inc                   |
@@ -1660,6 +1703,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | scrubber.sys           | 65000    | Microsoft                               |
 | BRDriver.sys           | 64000    | BitRaider LLC                           |
 | BRDriver64.sys         | 64000    | BitRaider LLC                           |
+| X7Ex.sys		| 62500	| Exent Technologies Ltd |	
 | LibertyFSF.sys         | 62300    | Bayalink Solutions Co                   |
 | axfsdrv2.sys           | 62100    | Axence Software                         |
 | sds.sys                | 62000    | Egress Software                         |
@@ -1678,6 +1722,8 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 
 | Minifilter          | Altitude | Company            |
 |---------------------|----------|--------------------|
+| RMPFileMounter.sys		| 48000	| ManageEngine Zoho |
+| pfmfs_???.sys		| 47300	| Pismo Technic Inc. |
 | DLDriverMiniFlt.sys |	47200	 | DeviceLock Inc	  |
 | hsmltlib.sys		  | 47110	 | Hitachi Solutions  |
 | hskdlib.sys		  | 47100	 | Hitachi Solutions  | 
@@ -1690,7 +1736,10 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | rsfxdrv.sys         | 41000    | Microsoft          |
 | defilter.sys        | 40900    | Microsoft          |
 | AppVVemgr.sys       | 40800    | Microsoft          |
+| wofadk.sys		| 40730	| Microsoft |
 | wof.sys             | 40700    | Microsoft          |
+| fileinfo		| 40500	| Microsoft |
+| WinSetupBoot.sys		| 40400	| Microsoft | 
 
  
 
