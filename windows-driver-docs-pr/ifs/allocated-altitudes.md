@@ -955,6 +955,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 |-------------------------|----------|-------------------------|
 | IntelCAS.sys            | 309100   | Intel Corporation       |
 | mvfs.sys                | 309000   | IBM Corporation         |
+| frxccd.sys		| 306000	| FSLogix Inc. |
 | fsrecord.sys            | 305000   | Microsoft               |
 | InstMon.sys		      | 304201	 | Numecent Inc.           |	
 | StreamingFSD.sys		  | 304200	 | Numecent Inc.	       |
@@ -973,6 +974,8 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | AV12NFNT.sys            | 303000   | AhnLab                  |
 | mDP\_win\_mini.sys      | 302900   | Macro Impact            |
 | ctxubs.sys              | 302800   | Citrix Systems          |
+| rrepfsf.sys		| 302700	| Rose Datasystems Inc |
+| cbfsfilter2017.sys		| 301900	| Super Flexible Software |
 | AxFilter.sys            | 301800   | Axcient                 |
 | vxfsrep.sys             | 301700   | Symantec                |
 | dellcapfd.sys           | 301600   | Dell                    |
@@ -1029,6 +1032,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | nvfr\_cpd              | 280310   | Bakbone Software      |
 | nvfr\_fdd              | 280300   | Bakbone Software      |
 | Sptbkp.sys             | 280290   | Safend                |
+| accessmonitor.sys		| 280280	| Briljant Ekonomisystem |
 
  
 
