@@ -1565,7 +1565,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 
 | Minifilter      | Altitude | Company                |
 |-----------------|----------|------------------------|
-| insyncmf.sys    | 105000   | InSync                 |
+| insyncmf.sys    | 105000   | InSync                |
 | SPILock8.sys	  | 100900	 | Software Pursuits Inc. |
 | Klbackupflt.sys | 100800   | Kaspersky              |
 | repkap          | 100700   | Vision Solutions       |
