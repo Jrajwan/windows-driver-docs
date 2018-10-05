@@ -1676,7 +1676,7 @@ QDocumentREF.sys		| 363110	| BicDroid Inc. |
 | acpadlock.sys		      | 80691	 | IntSoft Co                               |
 | ksmf.sys		          | 80690	 | IntSoft Co                               |
 | im.sys		          | 80680	 | CrowdStrike                              |
-| SophosED.sys		      | 80670	 | Sophos                                   |
+| SophosED.sys		      | 80670	 | Sophos                                  |
 | jazzfile.sys		| 80660	| Jazz Networks |
 | SMXFs.sys		| 80500	| OSR | 
  
