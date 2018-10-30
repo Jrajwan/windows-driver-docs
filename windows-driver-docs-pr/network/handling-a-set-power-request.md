@@ -2,13 +2,24 @@
 title: Handling a Set Power Request
 description: Handling a Set Power Request
 ms.assetid: c69d4a9b-009a-4320-8e20-32a9cf9113bf
-keywords: ["set-power requests WDK NDIS intermediate", "Sleeping state WDK NDIS intermediate", "Working state WDK NDIS intermediate", "standby flags WDK NDIS intermediate", "power states WDK networking"]
+keywords:
+- set-power requests WDK NDIS intermediate
+- Sleeping state WDK NDIS intermediate
+- Working state WDK NDIS intermediate
+- standby flags WDK NDIS intermediate
+- power states WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Handling a Set Power Request
 
 
-## <a href="" id="ddk-handling-a-set-power-request-ng"></a>
+
 
 
 An intermediate driver must handle requests to set power to the working state (a network device power state of D0) and to sleeping states (a network device power state of D1, D2, or D3). The intermediate driver should also maintain power state variables and a StandBy flag. These issues are discussed further in this topic.

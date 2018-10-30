@@ -2,7 +2,18 @@
 title: Receive Side Scaling on an Offloaded TCP Connection
 description: Receive Side Scaling on an Offloaded TCP Connection
 ms.assetid: bc389304-c8e0-463e-adcd-61b866f58292
-keywords: ["data I/O WDK TCP chimney offload , receive side scaling", "I/O WDK TCP chimney offload , receive side scaling", "received data processing WDK TCP chimney offload , receive side scaling", "receive side scaling WDK TCP chimney offload", "RSS WDK TCP chimney offload"]
+keywords:
+- data I/O WDK TCP chimney offload , receive side scaling
+- I/O WDK TCP chimney offload , receive side scaling
+- received data processing WDK TCP chimney offload , receive side scaling
+- receive side scaling WDK TCP chimney offload
+- RSS WDK TCP chimney offload
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Receive Side Scaling on an Offloaded TCP Connection
@@ -10,7 +21,7 @@ keywords: ["data I/O WDK TCP chimney offload , receive side scaling", "I/O WDK T
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-receive-side-scaling-on-an-offloaded-tcp-connection-ng"></a>
+
 
 
 An offload target can implement receive side scaling (RSS). For more information about RSS processing, see [NDIS 6.0 Receive-Side Scaling](https://msdn.microsoft.com/library/windows/hardware/ff567232).

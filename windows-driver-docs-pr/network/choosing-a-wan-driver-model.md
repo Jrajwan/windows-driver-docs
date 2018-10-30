@@ -2,13 +2,24 @@
 title: Choosing a WAN Driver Model
 description: Choosing a WAN Driver Model
 ms.assetid: 63976cfa-6f7b-44d0-a4c5-de82254bedbd
-keywords: ["WAN miniport drivers WDK networking , driver models", "WAN miniport drivers WDK networking , NDIS WAN vs CoNDIS WAN drivers", "driver models WDK WAN", "CoNDIS drivers WDK networking , WAN drivers", "CoNDIS WAN drivers WDK networking"]
+keywords:
+- WAN miniport drivers WDK networking , driver models
+- WAN miniport drivers WDK networking , NDIS WAN vs CoNDIS WAN drivers
+- driver models WDK WAN
+- CoNDIS drivers WDK networking , WAN drivers
+- CoNDIS WAN drivers WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Choosing a WAN Driver Model
 
 
-## <a href="" id="ddk-choosing-a-wan-driver-model-ng"></a>
+
 
 
 Microsoft Windows 2000 and later operating systems support two WAN driver models: NDIS WAN and CoNDIS WAN.

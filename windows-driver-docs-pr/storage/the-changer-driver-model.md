@@ -3,7 +3,23 @@ title: The Changer Driver Model
 author: windows-driver-content
 description: The Changer Driver Model
 ms.assetid: 87a70ecf-e518-4c22-945b-9056b59fed5a
-keywords: ["changer drivers WDK storage , architecture", "storage changer drivers WDK , architecture", "transport element WDK changer", "data transfer elements WDK changer", "storage elements WDK changer", "IEport WDK changer", "import/export element WDK changer", "doors WDK changer", "removable storage manager WDK changer", "RSM WDK changer"]
+keywords:
+- changer drivers WDK storage , architecture
+- storage changer drivers WDK , architecture
+- transport element WDK changer
+- data transfer elements WDK changer
+- storage elements WDK changer
+- IEport WDK changer
+- import/export element WDK changer
+- doors WDK changer
+- removable storage manager WDK changer
+- RSM WDK changer
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # The Changer Driver Model
@@ -53,6 +69,5 @@ A changer miniclass driver reports the type and number of a changer's elements i
  
 
 
---------------------
 
 

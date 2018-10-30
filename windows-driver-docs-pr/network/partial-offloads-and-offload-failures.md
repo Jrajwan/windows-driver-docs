@@ -2,7 +2,19 @@
 title: Partial Offloads and Offload Failures
 description: Partial Offloads and Offload Failures
 ms.assetid: 70b10b0f-f367-4ade-b85b-f86b30334d5c
-keywords: ["state offloading process WDK TCP chimney offload , partial offloads", "offloading state process WDK TCP chimney offload , partial offloads", "partial offloads WDK TCP chimney offload", "failed offloads WDK TCP chimney offload", "state offloading process WDK TCP chimney offload , failed offloads", "offloading state process WDK TCP chimney offload , failed offloads"]
+keywords:
+- state offloading process WDK TCP chimney offload , partial offloads
+- offloading state process WDK TCP chimney offload , partial offloads
+- partial offloads WDK TCP chimney offload
+- failed offloads WDK TCP chimney offload
+- state offloading process WDK TCP chimney offload , failed offloads
+- offloading state process WDK TCP chimney offload , failed offloads
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Partial Offloads and Offload Failures
@@ -10,7 +22,7 @@ keywords: ["state offloading process WDK TCP chimney offload , partial offloads"
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-partial-offloads-and-offload-failures-ng"></a>
+
 
 
 When a [*MiniportInitiateOffload*](https://msdn.microsoft.com/library/windows/hardware/ff559393) request fails, the stack expects the offload target to set the **Status** member of the [**NDIS\_MINIPORT\_OFFLOAD\_BLOCK\_LIST**](https://msdn.microsoft.com/library/windows/hardware/ff566469) structure. The offload target must not modify the **Status** member of any of the [**NET\_BUFFER\_LIST**](https://msdn.microsoft.com/library/windows/hardware/ff568388) structures in the **NetBufferListChain** member of the **NDIS\_MINIPORT\_OFFLOAD\_BLOCK\_LIST** structure. The offload target must not call [**NdisTcpOffloadSendComplete**](https://msdn.microsoft.com/library/windows/hardware/ff564609) to complete the outstanding send data.

@@ -2,14 +2,19 @@
 title: Handling SD Card Interrupts
 author: windows-driver-content
 description: Handling SD Card Interrupts
-MS-HAID:
-- 'securedigital\_dg\_1cc707f6-a555-4ee8-bc25-c49d69c67d9d.xml'
-- 'SD.handling\_sd\_card\_interrupts'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 40c18af4-6b23-4893-b82f-7fe652929069
-keywords: ["SD WDK buses , interrupts", "interrupts WDK SD bus", "IRQLs WDK SD bus", "hardware interrupts WDK SD bus", "interrupt notifications WDK SD bus"]
+keywords:
+- SD WDK buses , interrupts
+- interrupts WDK SD bus
+- IRQLs WDK SD bus
+- hardware interrupts WDK SD bus
+- interrupt notifications WDK SD bus
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Handling SD Card Interrupts
@@ -28,6 +33,5 @@ An SD device driver specifies the IRQL at which it will run when it initializes 
  
 
 
---------------------
 
 

@@ -3,7 +3,17 @@ title: Modifying the Parameters for an I/O Operation
 author: windows-driver-content
 description: Modifying the Parameters for an I/O Operation
 ms.assetid: 8e25842f-6f10-412f-8cb2-156bea7d7983
-keywords: ["preoperation callback routines WDK file system minifilter , modifying parameters", "postoperation callback routines WDK file system minifilter , modifying parameters", "file system minifilter drivers WDK , modifying I/O parameters", "minifilter drivers WDK , modifying I/O parameters"]
+keywords:
+- preoperation callback routines WDK file system minifilter , modifying parameters
+- postoperation callback routines WDK file system minifilter , modifying parameters
+- file system minifilter drivers WDK , modifying I/O parameters
+- minifilter drivers WDK , modifying I/O parameters
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Modifying the Parameters for an I/O Operation
@@ -33,6 +43,5 @@ For more information about the parameters for an I/O operation, see [**FLT\_CALL
  
 
 
---------------------
 
 

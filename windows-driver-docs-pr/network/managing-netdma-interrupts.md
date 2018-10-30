@@ -2,7 +2,20 @@
 title: Managing NetDMA Interrupts
 description: Managing NetDMA Interrupts
 ms.assetid: cd518cc2-dc0d-47fd-ac52-aa9c64b7d882
-keywords: ["memory-to-memory data transfers WDK NetDMA , interrupts", "data transfers WDK NetDMA , interrupts", "transferring data WDK NetDMA , interrupts", "DMA transfers WDK NetDMA , interrupts", "NetDMA WDK networking , interrupts", "interrupts WDK NetDMA", "interrupts"]
+keywords:
+- memory-to-memory data transfers WDK NetDMA , interrupts
+- data transfers WDK NetDMA , interrupts
+- transferring data WDK NetDMA , interrupts
+- DMA transfers WDK NetDMA , interrupts
+- NetDMA WDK networking , interrupts
+- interrupts WDK NetDMA
+- interrupts
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Managing NetDMA Interrupts
@@ -12,7 +25,7 @@ keywords: ["memory-to-memory data transfers WDK NetDMA , interrupts", "data tran
 
  
 
-## <a href="" id="ddk-managing-netdma-interrupts-ng"></a>
+
 
 
 With the NetDMA interface, you can complete dynamic memory access (DMA) operations with an interrupt service routine (ISR). For general information about servicing interrupts in Microsoft Windows drivers, see [Servicing Interrupts](https://msdn.microsoft.com/library/windows/hardware/ff563737).

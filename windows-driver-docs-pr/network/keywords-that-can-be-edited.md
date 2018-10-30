@@ -2,13 +2,21 @@
 title: Keywords That Can Be Edited
 description: Keywords That Can Be Edited
 ms.assetid: 88c3a285-941a-4c91-9e61-25c445d07344
-keywords: ["installation keywords WDK networking , editing", "editing installation keywords"]
+keywords:
+- installation keywords WDK networking , editing
+- editing installation keywords
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Keywords That Can Be Edited
 
 
-## <a href="" id="ddk-keywords-that-can-be-edited-ng"></a>
+
 
 
 NDIS 6.0 and later versions of NDIS provide standardized keywords that can be edited for miniport drivers of network devices. These standardized keywords are associated with numeric or text values that you can edit in the user interface.
@@ -16,18 +24,18 @@ NDIS 6.0 and later versions of NDIS provide standardized keywords that can be ed
 The following example shows an INF file definition for a keyword that can be edited.
 
 ```
-HKR, Ndi\params\\<SubkeyName>,ParamDesc, 0, "<ParamDesc>"
-HKR, Ndi\params\\<SubkeyName>,Type, 0, "int"
-HKR, Ndi\params\\<SubkeyName>,Default, 0, "<IHV defined>"
-HKR, Ndi\params\\<SubkeyName>,Optional, 0, "0"
-HKR, Ndi\params\\<SubkeyName>,Min, 0, "0"
-HKR, Ndi\params\\<SubkeyName>,Max, 0, "<IHV defined>"
+HKR, Ndi\params\<SubkeyName>,ParamDesc, 0, "<ParamDesc>"
+HKR, Ndi\params\<SubkeyName>,Type, 0, "int"
+HKR, Ndi\params\<SubkeyName>,Default, 0, "<IHV defined>"
+HKR, Ndi\params\<SubkeyName>,Optional, 0, "0"
+HKR, Ndi\params\<SubkeyName>,Min, 0, "0"
+HKR, Ndi\params\<SubkeyName>,Max, 0, "<IHV defined>"
 ```
 
 The standard keywords that can be edited are:
 
 <a href="" id="---------jumbopacket"></a> \*JumboPacket  
-The size, in bytes, of the largest supported Jumbo Packet (an Ethernet frame that is greater than 1514 bytes) that the hardware can support. This is also known as a Jumbo Frame.
+The size, in bytes, of the largest supported Jumbo Packet (an Ethernet frame that is greater than 1514 bytes) that the hardware can support. This is also known as a Jumbo Frame. *\*JumboPacket*'s range of values and maximum value are IHV-defined. Some vendors permit any value between their defined minimum and maximum, while others define an enumeration of supported values. For more info, check with your IHV.
 
 <a href="" id="---------receivebuffers"></a> \*ReceiveBuffers  
 The number of receive descriptors used by the miniport adapter. The miniport driver can choose any default value that is appropriate for performance-tuning. Note that if the value is too small, the miniport adapter may run out of receive buffers under heavy load. If the value is too large, system resources are wasted.

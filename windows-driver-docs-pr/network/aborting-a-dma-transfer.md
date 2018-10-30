@@ -2,7 +2,19 @@
 title: Aborting a DMA Transfer
 description: Aborting a DMA Transfer
 ms.assetid: e63ccf75-b080-4268-b7af-03915c26a6ba
-keywords: ["memory-to-memory data transfers WDK NetDMA , aborting", "data transfers WDK NetDMA , aborting", "transferring data WDK NetDMA , aborting", "DMA transfers WDK NetDMA , aborting", "NetDMA WDK networking , aborting transfers", "aborting DMA transfers WDK NetDMA"]
+keywords:
+- memory-to-memory data transfers WDK NetDMA , aborting
+- data transfers WDK NetDMA , aborting
+- transferring data WDK NetDMA , aborting
+- DMA transfers WDK NetDMA , aborting
+- NetDMA WDK networking , aborting transfers
+- aborting DMA transfers WDK NetDMA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Aborting a DMA Transfer
@@ -12,7 +24,7 @@ keywords: ["memory-to-memory data transfers WDK NetDMA , aborting", "data transf
 
  
 
-## <a href="" id="ddk-aborting-a-dma-transfer-ng"></a>
+
 
 
 The NetDMA interface can call a NetDMA provider driver's [**ProviderAbortDma**](https://msdn.microsoft.com/library/windows/hardware/ff570392) function, if any, to abort all dynamic memory access (DMA) transfers that have been scheduled on a DMA channel.

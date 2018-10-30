@@ -2,20 +2,24 @@
 title: Print Driver Versioning
 author: windows-driver-content
 description: Print Driver Versioning
-MS-HAID:
-- 'prtinst\_17e31a0a-7873-4141-bc53-69021b034003.xml'
-- 'print.print\_driver\_versioning'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 8ce844a5-44f6-4967-8586-b302823fc862
-keywords: ["installing drivers WDK printer , versioning", "printer driver installations WDK , versioning", "version numbers WDK printer", "printer driver versioning WDK"]
+keywords:
+- installing drivers WDK printer , versioning
+- printer driver installations WDK , versioning
+- version numbers WDK printer
+- printer driver versioning WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Print Driver Versioning
 
 
-## <a href="" id="ddk-specifying-printer-driver-version-numbers-gg"></a>
+
 
 
 Unidrv- and Pscript5-based printer minidrivers, as well as monolithic printer drivers (drivers developed completely by an IHV), should use printer driver versioning on Microsoft Windows XP and later. The Windows XP and later print spooler uses the versioning information to enable it to select the correct driver files during the installation of a new operating system version or service pack, or when a new Point and Print connection is established.
@@ -117,7 +121,5 @@ Set this constant to a name that specifies the original name of the file (not in
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20Print%20Driver%20Versioning%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

@@ -2,13 +2,27 @@
 title: Advance Operations
 description: Advance Operations
 ms.assetid: 42554221-201d-4014-900d-435a47b3afa1
-keywords: ["network data WDK , advance operations", "data WDK networking , advance operations", "packets WDK networking , advance operations", "advance operations WDK networking", "sending data WDK networking", "receiving data WDK networking", "freeing MDLs", "reducing use"]
+keywords:
+- network data WDK , advance operations
+- data WDK networking , advance operations
+- packets WDK networking , advance operations
+- advance operations WDK networking
+- sending data WDK networking
+- receiving data WDK networking
+- freeing MDLs
+- reducing use
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Advance Operations
 
 
-## <a href="" id="ddk-advance-operations-ng"></a>
+
 
 
 Advance operations decrease the size of the used data space in a [**NET\_BUFFER**](https://msdn.microsoft.com/library/windows/hardware/ff568376) structure or in all of the NET\_BUFFER structures in a [**NET\_BUFFER\_LIST**](https://msdn.microsoft.com/library/windows/hardware/ff568388) structure.

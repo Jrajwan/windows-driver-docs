@@ -1,10 +1,13 @@
 ---
 title: Account provisioning
 description: Account provisioning
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 3ffcd769-253f-4918-8095-a9206445a201
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Account provisioning
@@ -19,7 +22,6 @@ The following diagram illustrates the contents and hierarchy of the provisioning
 For more info about the provisioning schema, see [CarrierControlSchema schema](https://msdn.microsoft.com/library/windows/apps/hh868312).
 
 ## <span id="Updating_the_provisioning_metadata"></span><span id="updating_the_provisioning_metadata"></span><span id="UPDATING_THE_PROVISIONING_METADATA"></span>Updating the provisioning metadata
-
 
 There are several ways you can update the provisioning metadata on a computer.
 
@@ -37,7 +39,7 @@ A mobile broadband app can use the following triggers to update the provisioning
 
 -   **Incoming SMS** You can send SMS messages that your app understands. This might define a message that initiates a refresh, or automatically checks for updated usage upon receiving a threshold notification.
 
--   **Windows Notification Service** Any Windows Store app can register for push notifications and take actions based on their content. You can use this as a notification channel for provisioning updates.
+-   **Windows Notification Service** Any UWP app can register for push notifications and take actions based on their content. You can use this as a notification channel for provisioning updates.
 
 -   **Large location changes** If different parameters apply to users who are in different locales, a change in location might trigger an app to apply updated settings for the user’s new location.
 
@@ -58,40 +60,37 @@ A provisioning file can include a directive for Windows to automatically retriev
 
 The provisioning metadata includes the following sections:
 
--   [Global](#bkmk-contents-global)
+-   [Global](#global)
 
--   [Activation](#bkmk-contents-activation)
+-   [Activation](#activation)
 
--   [Mobile broadband information](#bkmk-contents-mbninfo)
+-   [Mobile broadband information](#mobile-broadband-information)
 
--   [Wi-Fi information](#bkmk-contents-wifi)
+-   [Wi-Fi information](#wi-fi-information)
 
--   [Plan information](#bkmk-contents-plan)
+-   [Plan information](#plan-information)
 
--   [Refresh](#bkmk-contents-refresh)
+-   [Refresh](#refresh)
 
--   [Signature](#bkmk-contents-signature)
+-   [Signature](#signature)
 
--   [Permitted combinations](#bkmk-usage-permittedcombos)
+-   [Permitted combinations](#permitted-combinations)
 
 For more info about these sections, see [CarrierControlSchema schema](https://msdn.microsoft.com/library/windows/apps/hh868312).
 
-### <span id="bkmk_Contents_Global"></span><span id="bkmk_contents_global"></span><span id="BKMK_CONTENTS_GLOBAL"></span>Global
+### Global
 
 The global section is required in every provisioning file. Required elements in this section are as follows:
 
 -   [**CarrierId**](https://msdn.microsoft.com/library/windows/apps/hh868288) A GUID that uniquely identifies the organization that authored the file. If you are building a mobile broadband app, you must use the GUID that you specified in the [Service Number](https://msdn.microsoft.com/library/windows/hardware/dn236413) field of **ServiceInfo.xml** in the service metadata package. For info about the service metadata package schema, see [Service metadata package schema reference](service-metadata-package-schema-reference.md).
 
-    **Note**  
-    This is the same service number that you provided in the **Create a mobile broadband experience wizard** on the Windows Dev Center Dashboard – Hardware.
-
-     
-
-    If you are not creating a mobile broadband app, you can generate a GUID for your organization’s use. In either case, you should always use the same GUID on all provisioning files that your organization issues.
+  > [!NOTE]
+  > This is the same service number that you provided in the **Create a mobile broadband experience wizard** on the Windows Dev Center Dashboard – Hardware.
+  > If you are not creating a mobile broadband app, you can generate a GUID for your organization’s use. In either case, you should always use the same GUID on all provisioning files that your organization issues.
 
 -   [**SubscriberId**](https://msdn.microsoft.com/library/windows/apps/hh868305) A string that uniquely identifies the customer in your organization. If you are a mobile operator, this should be the IMSI or ICCID ranges for GSM operators or the provider ID or provider name for CDMA operators. If you are not a mobile operator, you can choose any sufficiently unique string.
 
-### <span id="BKMK_Contents_Activation"></span><span id="bkmk_contents_activation"></span><span id="BKMK_CONTENTS_ACTIVATION"></span>Activation
+### Activation
 
 Device activation occurs after the activation process is complete on the back end. The PC might need to follow certain instructions before connecting to the network. The provisioning engine uses the activation instructions received in the device activation element. If no value is specified, then no client action is required. Available actions include:
 
@@ -101,7 +100,7 @@ Device activation occurs after the activation process is complete on the back en
 
 -   **Data** Data or instructions that you want to send to the device to activate the connection. The Provisioning Engine passes this data as is to the device. For CDMA, this can include instructions such as **\*228** to start an OTA Programming Session and reconnect to the network.
 
-### <span id="bkmk_Contents_MBNInfo"></span><span id="bkmk_contents_mbninfo"></span><span id="BKMK_CONTENTS_MBNINFO"></span>Mobile broadband information
+### Mobile broadband information
 
 Mobile broadband information contains several elements:
 
@@ -113,7 +112,7 @@ Defines subscriber information on the mobile operator network. There are two dif
 
 -   [**DefaultProfile**](https://msdn.microsoft.com/library/windows/apps/hh868290) Every mobile broadband subscription can have one default profile that is used to connect to the home network operator. Windows Connection Manager uses this profile for auto-connecting to the network.
 
-    ``` syntax
+    ```xml
     <MBNProfiles>
         <DefaultProfile xmlns="http://www.microsoft.com/networking/CarrierControl/WWAN/v1">
           <Name>Contoso MBN</Name>
@@ -131,6 +130,13 @@ Defines subscriber information on the mobile operator network. There are two dif
     ```
 
 [**Branding**](https://msdn.microsoft.com/library/windows/apps/hh868446)
+
+> [!IMPORTANT]
+> Starting in Windows 10, version 1709, branding fields provisioned by the ProvisioningAgent API have been replaced by branding fields in the COSA database. **Logo** has been replaced by **Branding Icon** in COSA, and **Name** has been replaced by **Branding Name** in COSA.
+>
+> **Logo** and **Name** will no longer be considered when provisioning in Windows 10, version 1709 and later. The ProvisioningAgent API will not throw an error if they are used, but you should change **Branding Icon** and **Branding Name** in COSA instead.  
+>
+> For more information about **Branding Icon** and **Branding Name**, see [Desktop COSA/APN database settings (Desktop COSA only settings)](desktop-cosa-apn-database-settings.md#desktop-cosa-only-settings).
 
 Branding lets you specify how Windows displays your mobile broadband networks. This information overrides any service metadata, if present. If no information is provided, the contents of the service metadata package are used. The branding elements are as follows:
 
@@ -236,7 +242,7 @@ Because SMS messages influence Windows behavior, only trusted SMS messages can b
 
  
 
-### <span id="BKMK_Contents_WiFi"></span><span id="bkmk_contents_wifi"></span><span id="BKMK_CONTENTS_WIFI"></span>Wi-Fi information
+### Wi-Fi information
 
 This section lets you provide any number of Wi-Fi network profiles for Windows to use. The format of the section is similar to the XML schema that is used by the Windows native WLAN API.
 
@@ -402,7 +408,7 @@ This profile configures Windows to connect to an open network and use WISPr auth
 </WLANProfile>
 ```
 
-### <span id="BKMK_Contents_Plan"></span><span id="bkmk_contents_plan"></span><span id="BKMK_CONTENTS_PLAN"></span>Plan information
+### Plan information
 
 Each mobile broadband and hotspot profile references a plan. Multiple profiles can reference the same plan. Plans are described in a separate top-level section.
 
@@ -410,7 +416,7 @@ The Plan is divided into two sections—*Description* and *Usage*. This allows y
 
 This information is used to directly affect the behavior of Windows, and is provided to applications to tailor their behavior to the network. This information can be made available to third-party applications through network information APIs.
 
-### <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>Description
+### Description
 
 The elements that generally change with low frequency over a customer’s subscription period, including:
 
@@ -434,7 +440,7 @@ The elements that generally change with low frequency over a customer’s subscr
 
 -   [**UserSMSEnabled**](https://msdn.microsoft.com/library/windows/apps/hh868376) Indicates whether the plan includes user-to-user SMS support. If true, Windows will keep the device attached to the network in Connected Standby even when the mobile broadband interface is not being used. If false, Windows can power down the mobile broadband interface to conserve power, thereby resulting in the device not being addressable by the network when the computer is idle.
 
-### <span id="Usage"></span><span id="usage"></span><span id="USAGE"></span>Usage
+### Usage
 
 The following elements can change with higher frequency:
 
@@ -444,7 +450,7 @@ The following elements can change with higher frequency:
 
 -   [**Congested**](https://msdn.microsoft.com/library/windows/apps/hh868449) A Boolean value that indicates whether a lower connection speed than usual is being imposed due to excessive usage. The Congested flag indicates that the network is currently experiencing (or expects to experience) heavy load, and lower-priority transfers should be deferred until another time, if possible. You can use this flag to indicate concepts such as peak hours, or to respond to an overloaded hotspot.
 
-### <span id="BKMK_Contents_Refresh"></span><span id="bkmk_contents_refresh"></span><span id="BKMK_CONTENTS_REFRESH"></span>Refresh
+### Refresh
 
 You can push updated settings to the computer as required because of network changes or for technical support. Windows attempts periodic refreshes by using information that is provided by you or by the provisioning API. A refresh can be triggered by SMS notifications from the operator. To enable Refresh, you must provide the following information in the provisioning XML:
 
@@ -469,7 +475,7 @@ Alternatively, the mobile broadband app can provide a new provisioning file at a
     </RefreshParameters>
 ```
 
-### <span id="BKMK_Contents_Signature"></span><span id="bkmk_contents_signature"></span><span id="BKMK_CONTENTS_SIGNATURE"></span>Signature
+### Signature
 
 Because provisioning modifies system settings that persist after the user has exited or uninstalled the app, a stricter measure of verification is required than for most APIs. This verification is provided by a combination of operator-specific hardware (the SIM), cryptographic signatures, and user confirmation.
 
@@ -522,7 +528,7 @@ Provisioning requirements:
 
  
 
-### <span id="BKMK_Usage_PermittedCombos"></span><span id="bkmk_usage_permittedcombos"></span><span id="BKMK_USAGE_PERMITTEDCOMBOS"></span>Permitted combinations
+### Permitted combinations
 
 Although [**Global**](https://msdn.microsoft.com/library/windows/apps/hh868294) is the only first-level node that is required by the schema, certain combinations of other nodes are typical. This section discusses these typical combinations:
 
@@ -537,31 +543,31 @@ Although [**Global**](https://msdn.microsoft.com/library/windows/apps/hh868294) 
 
 Here are some common scenarios that you may need as you create provisioning metadata:
 
--   [Find the account provisioning schema](#bkmk-scenario-1)
+-   [Find the account provisioning schema](#find-the-account-provisioning-schema)
 
--   [Apply provisioning XML to the device](#bkmk-scenario-2)
+-   [Apply provisioning XML to the device](#apply-provisioning-xml-to-the-device)
 
--   [Provision the device to connect automatically to a mobile broadband network](#bkmk-scenario-3)
+-   [Provision the device to connect automatically to a mobile broadband network](#provision-the-device-to-connect-automatically-to-a-mobile-broadband-network)
 
--   [Provision the device to connect automatically to a Wi-Fi network](#bkmk-scenario-4)
+-   [Provision the device to connect automatically to a Wi-Fi network](#provision-the-device-to-connect-automatically-to-a-wi-fi-network)
 
--   [Provision the device to connect automatically to a WISPr-enabled hotspot](#bkmk-scenario-5)
+-   [Provision the device to connect automatically to a WISPr-enabled hotspot](#provision-the-device-to-connect-automatically-to-a-wispr-enabled-hotspot)
 
--   [Sending activation to the mobile broadband device](#bkmk-scenario-6)
+-   [Sending activation to the mobile broadband device](#sending-activation-to-the-mobile-broadband-device)
 
--   [Force the mobile broadband device to reconnect to the network after provisioning completes](#bkmk-scenario-7)
+-   [Force the mobile broadband device to reconnect to the network after provisioning completes](#force-the-mobile-broadband-device-to-reconnect-to-the-network-after-provisioning-completes)
 
--   [Updating data usage statistics for a connection profile](#bkmk-scenario-8)
+-   [Updating data usage statistics for a connection profile](#updating-data-usage-statistics-for-a-connection-profile)
 
--   [Update data usage by using an SMS message](#bkmk-scenario-9)
+-   [Update data usage by using an SMS message](#update-data-usage-by-using-an-sms-message)
 
-### <span id="BKMK_Scenario_1"></span><span id="bkmk_scenario_1"></span><span id="BKMK_SCENARIO_1"></span>Find the account provisioning schema
+### Find the account provisioning schema
 
 XSD schemas are available under **%SYSTEMROOT%\\schemas\\provisioning** on any computer that is running Windows 8, Windows 8.1, or Windows 10.
 
-### <span id="BKMK_Scenario_2"></span><span id="bkmk_scenario_2"></span><span id="BKMK_SCENARIO_2"></span>Apply provisioning XML to the device
+### Apply provisioning XML to the device
 
-You can apply a provisioning XML file to a device by using a mobile broadband app, a Windows Store app, or from a web site.
+You can apply a provisioning XML file to a device by using a mobile broadband app, a UWP app, or from a web site.
 
 To provision from a mobile broadband app:
 
@@ -571,7 +577,7 @@ To provision from a mobile broadband app:
 
 The asynchronous operation complete and the results of the provisioning operation are returned.
 
-To provision from a Windows Store app other than the mobile broadband app:
+To provision from a UWP app other than the mobile broadband app:
 
 1.  Generate a signed Account Provisioning XML document.
 
@@ -589,7 +595,7 @@ From a web site:
 
 The operation completes and the results of the provisioning operation are returned.
 
-### <span id="BKMK_Scenario_3"></span><span id="bkmk_scenario_3"></span><span id="BKMK_SCENARIO_3"></span>Provision the device to connect automatically to a mobile broadband network
+### Provision the device to connect automatically to a mobile broadband network
 
 You can define a provisioning XML document by using an **MBNProfile** section.
 
@@ -622,7 +628,7 @@ The child elements of **DefaultProfile** are required. See the provisioning XML 
 
  
 
-### <span id="BKMK_Scenario_4"></span><span id="bkmk_scenario_4"></span><span id="BKMK_SCENARIO_4"></span>Provision the device to connect automatically to a Wi-Fi network
+### Provision the device to connect automatically to a Wi-Fi network
 
 You can define a provisioning XML document by using a **WlanProfiles** section.
 
@@ -657,7 +663,7 @@ You can define a provisioning XML document by using a **WlanProfiles** section.
 
 The child elements of **MSM** define how to connect to the network. This includes any necessary EAP configuration. All child elements elements of the MSM element in the [WLAN\_profile Schema](https://msdn.microsoft.com/library/windows/desktop/ms707341) are supported. See the provisioning XML schema reference for more details.
 
-### <span id="BKMK_Scenario_5"></span><span id="bkmk_scenario_5"></span><span id="BKMK_SCENARIO_5"></span>Provision the device to connect automatically to a WISPr-enabled hotspot
+### Provision the device to connect automatically to a WISPr-enabled hotspot
 
 You can use either of the following two ways to enable hotspot authentication:
 
@@ -734,7 +740,7 @@ You can use either of the following two ways to enable hotspot authentication:
 
 You should directly define credentials when possible. Redirecting to another app has power and complexity implications.
 
-### <span id="BKMK_Scenario_6"></span><span id="bkmk_scenario_6"></span><span id="BKMK_SCENARIO_6"></span>Sending activation to the mobile broadband device
+### Sending activation to the mobile broadband device
 
 An arbitrary binary large object (BLOB) that is contained inside the [**CarrierSpecificData**](https://msdn.microsoft.com/library/windows/apps/hh868447) element can be Base64-encoded and sent to the device by using the ProvisioningAgent. You can do this by using the **Activation&lt;ServiceActivatation&gt;** directive in the provisioning XML:
 
@@ -755,7 +761,7 @@ An arbitrary binary large object (BLOB) that is contained inside the [**CarrierS
 
 This method is equivalent to invoking the [**IMbnVendorSpecificOperation::SetVendorSpecific**](https://msdn.microsoft.com/library/windows/desktop/dd323208) method of the Mobile Broadband API, and passing a SAFEARRAY together with the BLOB contents.
 
-### <span id="BKMK_Scenario_7"></span><span id="bkmk_scenario_7"></span><span id="BKMK_SCENARIO_7"></span>Force the mobile broadband device to reconnect to the network after provisioning completes
+### Force the mobile broadband device to reconnect to the network after provisioning completes
 
 There are two ways you can force the mobile broadband device to reconnect to the network after provisioning: **ReregisterToNetwork** and **ReconnectToNetwork**.
 
@@ -792,7 +798,7 @@ If the radio is successfully cycled on in a **ReregisterToNetwork** but the auto
 </CarrierProvisioning>
 ```
 
-### <span id="BKMK_Scenario_8"></span><span id="bkmk_scenario_8"></span><span id="BKMK_SCENARIO_8"></span>Updating data usage statistics for a connection profile
+### Updating data usage statistics for a connection profile
 
 You can only update usage for profiles that were provisioned by using the [**ProvisioningAgent**](https://msdn.microsoft.com/library/windows/apps/br207397) by applying a new account provisioning file that has updated plan information. You can provide a provisioning file that contains only usage information, or only plan information. Depending on how much of the system configuration you want to change, the new provisioning file can include the following:
 
@@ -804,7 +810,7 @@ You can only update usage for profiles that were provisioned by using the [**Pro
 
 If you apply new profiles and reference plans that are not defined in the XML, the provisioning results include a warning.
 
-### <span id="BKMK_Scenario_9"></span><span id="bkmk_scenario_9"></span><span id="BKMK_SCENARIO_9"></span>Update data usage by using an SMS message
+### Update data usage by using an SMS message
 
 This is accomplished in one of the following ways:
 
@@ -899,7 +905,6 @@ After you import this module, the following four PowerShell cmdlets are availabl
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bp_mb\p_mb%5D:%20Account%20provisioning%20%20RELEASE:%20%281/18/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

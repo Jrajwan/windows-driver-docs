@@ -2,13 +2,21 @@
 title: Specifying ISDN Keys and Values for an ISDN Adapter
 description: Specifying ISDN Keys and Values for an ISDN Adapter
 ms.assetid: ba2156c1-fb54-4e1e-b0ec-72aa2d950505
-keywords: ["add-registry-sections WDK networking , ISDN adapters", "ISDN adapters WDK networking"]
+keywords:
+- add-registry-sections WDK networking , ISDN adapters
+- ISDN adapters WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Specifying ISDN Keys and Values for an ISDN Adapter
 
 
-## <a href="" id="ddk-specifying-isdn-keys-and-values-for-an-isdn-adapter-ng"></a>
+
 
 
 In addition to a **WanEndpoints** value, an INF file for an ISDN adapter must add (through an *add-registry-section*) the following keys and values to the instance key for the adapter. For more information, see [Specifying WAN Endpoints for a WAN Adapter](specifying-wan-endpoints-for-a-wan-adapter.md).

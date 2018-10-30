@@ -2,13 +2,24 @@
 title: Creating Components for Using a SAN
 description: Creating Components for Using a SAN
 ms.assetid: b7405eda-734e-43f0-b0fe-747a06766291
-keywords: ["system area networks WDK , creating components", "SAN WDK , creating components", "transport drivers WDK SANs", "data transfers WDK SANs", "transferring data WDK SANs"]
+keywords:
+- system area networks WDK , creating components
+- SAN WDK , creating components
+- transport drivers WDK SANs
+- data transfers WDK SANs
+- transferring data WDK SANs
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Creating Components for Using a SAN
 
 
-## <a href="" id="ddk-creating-components-for-using-a-san-ng"></a>
+
 
 
 Windows Sockets applications can benefit from using a system area network (SAN). To use a SAN, these applications must have a SAN service provider DLL and a proxy driver for that DLL.

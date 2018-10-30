@@ -2,13 +2,25 @@
 title: Offloading the Segmentation of Large TCP Packets in NDIS 6.0
 description: Offloading the Segmentation of Large TCP Packets in NDIS 6.0
 ms.assetid: b602bb85-b597-4541-b536-732e5086e1ac
-keywords: ["LSOV1 WDK networking", "large send offload WDK networking", "LSOV2 WDK networking", "task offload porting WDK networking , segmentation of large TCP packets", "TCP/IP offload service porting WDK networking , segmentation of large TCP packets", "offload servi"]
+keywords:
+- LSOV1 WDK networking
+- large send offload WDK networking
+- LSOV2 WDK networking
+- task offload porting WDK networking , segmentation of large TCP packets
+- TCP/IP offload service porting WDK networking , segmentation of large TCP packets
+- offload servi
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Offloading the Segmentation of Large TCP Packets in NDIS 6.0
 
 
-## <a href="" id="ddk-offloading-the-segmentation-of-large-tcp-packets-in-ndis-6-0-ng"></a>
+
 
 
 Offloading the segmentation of large TCP packets at run time in NDIS 6.0 is similar to NDIS 5.*x*. The primary differences are:

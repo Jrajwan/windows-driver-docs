@@ -2,13 +2,24 @@
 title: Duplicating Socket Handles for a SAN
 description: Duplicating Socket Handles for a SAN
 ms.assetid: d8e8cb6d-fcdb-4121-9a44-a2bc884ab620
-keywords: ["Windows Sockets Direct WDK , socket handles", "SAN sockets WDK , duplicating socket handles", "suspensions WDK Windows Sockets Direct", "duplicating socket handles WDK SANs", "shared underlying sockets WDK SANs"]
+keywords:
+- Windows Sockets Direct WDK , socket handles
+- SAN sockets WDK , duplicating socket handles
+- suspensions WDK Windows Sockets Direct
+- duplicating socket handles WDK SANs
+- shared underlying sockets WDK SANs
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Duplicating Socket Handles for a SAN
 
 
-## <a href="" id="ddk-duplicating-socket-handles-for-a-san-ng"></a>
+
 
 
 Multiple applications that run in different processes can use the Windows Sockets switch to perform operations on a shared underlying socket. However, only one application at a time can perform operations on that shared underlying socket.

@@ -2,14 +2,20 @@
 title: USBCAMD2 Camera Configurations
 author: windows-driver-content
 description: USBCAMD2 Camera Configurations
-MS-HAID:
-- 'usbcmdds\_a6303556-b8ff-4488-8a3f-da08a435a4c9.xml'
-- 'stream.usbcamd2\_camera\_configurations'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 9a0dd6f9-aefb-4134-8bd5-31420a16db4a
-keywords: ["Windows 2000 Kernel Streaming Model WDK , USBCAMD2 minidriver library", "Streaming Model WDK Windows 2000 Kernel , USBCAMD2 minidriver library", "Kernel Streaming Model WDK , USBCAMD2 minidriver library", "USBCAMD2 camera configurations WDK Windows 2000 Kernel Streaming", "USB-based streaming cameras WDK USBCAMD2", "cameras WDK USBCAMD2"]
+keywords:
+- Windows 2000 Kernel Streaming Model WDK , USBCAMD2 minidriver library
+- Streaming Model WDK Windows 2000 Kernel , USBCAMD2 minidriver library
+- Kernel Streaming Model WDK , USBCAMD2 minidriver library
+- USBCAMD2 camera configurations WDK Windows 2000 Kernel Streaming
+- USB-based streaming cameras WDK USBCAMD2
+- cameras WDK USBCAMD2
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # USBCAMD2 Camera Configurations
@@ -50,7 +56,5 @@ Whereas USB 1.1 devices can be connected to a USB 2.0 bus, USBCAMD2 supports onl
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bstream\stream%5D:%20USBCAMD2%20Camera%20Configurations%20%20RELEASE:%20%288/23/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

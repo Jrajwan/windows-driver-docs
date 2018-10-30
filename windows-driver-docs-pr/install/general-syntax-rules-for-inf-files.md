@@ -2,13 +2,24 @@
 title: General Syntax Rules for INF Files
 description: General Syntax Rules for INF Files
 ms.assetid: ba11a229-d0d3-4217-bcf8-9aada2f159aa
-keywords: ["INF files WDK device installations , general syntax rules", "INF files WDK device installations , sections", "sections WDK INF files", "INF files WDK device installations , directives", "directives WDK INF files"]
+keywords:
+- INF files WDK device installations , general syntax rules
+- INF files WDK device installations , sections
+- sections WDK INF files
+- INF files WDK device installations , directives
+- directives WDK INF files
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # General Syntax Rules for INF Files
 
 
-## <a href="" id="ddk-general-syntax-rules-for-inf-files-dg"></a>
+
 
 
 An INF file is a text file organized into named sections. Some sections have system-defined names and some sections have names determined by the writer of the INF file.
@@ -59,7 +70,7 @@ The following syntax rules govern the required and optional contents of INF file
 
 -   Unless it is enclosed in double quotation marks characters (**"**), an INF-writer-defined section name must be a unique-to-the-INF unquoted string of explicitly visible characters, excluding certain characters with INF-specific meanings. In particular, an unquoted section name referenced by a section entry or directive cannot have leading or trailing spaces, a linefeed character, a return character, or any invisible control character, and it should not contain tabs. In addition, it cannot contain either of the bracket (**\[ \]**) characters, a single percent (**%**) character, a semicolon (**;**), or any internal double quotation marks (**"**) characters, and it cannot have a backslash (**\\**) as its last character.
 
-    For example, Std.Mfg and Std\_Mfg are unique and valid section names when referenced by an INF file entry or directive, but Std;Mfg (with its internal semicolon) is invalid unless it is enclosed by double quotation marks (**"**).
+    For example, Std.Mfg and Std_Mfg are unique and valid section names when referenced by an INF file entry or directive, but Std;Mfg (with its internal semicolon) is invalid unless it is enclosed by double quotation marks (**"**).
 
     Specifying an INF-writer-defined section name as a **"***quoted string***"** overrides most of the restrictions that were previously described on characters in referenced section names. Such a delimited section name can contain almost any explicitly or implicitly visible characters except the closing bracket (**\]**) as long as the corresponding section in the INF file matches this **"***quoted string***"** exactly.
 
@@ -90,6 +101,14 @@ The following syntax rules govern the required and optional contents of INF file
         CopyFiles = SomeDirectory\\
         ,SomeFile
         ```
+
+    -   The following syntax is valid and is equivalent to `CopyFiles = "SomeDirectory\",SomeFile ; comment`.
+
+        ```
+        CopyFiles = "SomeDirectory\"\ ; comment 
+        ,SomeFile
+        ```
+        Because text after a semicolon is ignored, `CopyFiles = "SomeDirectory\" ; comment ,SomeFile` does not work.
 
 -   Comments begin with a semicolon (**;**) character. When parsing and interpreting an INF file, the system assumes that the following have no relevance to the installation process:
     -   Any characters following a semicolon on the same line, unless the semicolon appears within a **"***quoted string***"** or **%***strkey***%** token

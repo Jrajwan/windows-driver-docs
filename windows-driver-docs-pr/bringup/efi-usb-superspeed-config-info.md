@@ -1,11 +1,14 @@
 ---
-title: EFI\_USB\_SUPERSPEED\_CONFIG\_INFO
+title: EFI_USB_SUPERSPEED_CONFIG_INFO
 author: windows-driver-content
-description: EFI\_USB\_SUPERSPEED\_CONFIG\_INFO
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: EFI_USB_SUPERSPEED_CONFIG_INFO
 ms.assetid: 9827B0A9-AC69-43FA-922F-384E3AE140F7
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # EFI\_USB\_SUPERSPEED\_CONFIG\_INFO
@@ -48,6 +51,5 @@ The **EFI\_USB\_CONFIG\_DESCRIPTOR** structure is defined in the UEFI specificat
  
 
 
---------------------
 
 

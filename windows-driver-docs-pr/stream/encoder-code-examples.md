@@ -2,20 +2,31 @@
 title: Encoder Code Examples
 author: windows-driver-content
 description: Encoder Code Examples
-MS-HAID:
-- 'encodeds\_75b74f82-f7a7-4ea3-9e6a-989affddc628.xml'
-- 'stream.encoder\_code\_examples'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: cbe773ad-2222-4d62-8e1e-6d47418a3e7c
-keywords: ["variable bit rates WDK encoder", "encoder devices WDK AVStream", "AVStream WDK , encoder devices", "uncompressed data streams WDK AVStream", "encoded streams WDK AVStream", "audio encoder devices WDK AVStream", "video encoder devices WDK AVStream", "ENCAPIPARAM_BITRATE_MODE", "ENCAPIPARAM_BITRATE", "bit rates WDK encoder", "registry WDK encoder"]
+keywords:
+- variable bit rates WDK encoder
+- encoder devices WDK AVStream
+- AVStream WDK , encoder devices
+- uncompressed data streams WDK AVStream
+- encoded streams WDK AVStream
+- audio encoder devices WDK AVStream
+- video encoder devices WDK AVStream
+- ENCAPIPARAM_BITRATE_MODE
+- ENCAPIPARAM_BITRATE
+- bit rates WDK encoder
+- registry WDK encoder
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Encoder Code Examples
 
 
-The following code examples are based on the [AVStream Simulated Hardware Sample Driver (AVSHwS)](http://go.microsoft.com/fwlink/p/?linkid=256083) in the MSDN Code Gallery. They demonstrate the following:
+The following code examples are based on the [AVStream Simulated Hardware Sample Driver (AVSHwS)](http://go.microsoft.com/fwlink/p/?linkid=256083). They demonstrate the following:
 
 -   How to specify the encoder's supported bit rates
 
@@ -320,7 +331,5 @@ NTSTATUS CreateDwordValueInCapabilityRegistry(IN PDEVICE_OBJECT pdo, IN GUID cat
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bstream\stream%5D:%20Encoder%20Code%20Examples%20%20RELEASE:%20%288/23/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

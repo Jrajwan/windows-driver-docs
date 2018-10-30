@@ -2,13 +2,24 @@
 title: Porting Interrupt Registration to NDIS 6.0
 description: Porting Interrupt Registration to NDIS 6.0
 ms.assetid: 824c8b48-e0d8-45a2-abf9-9713a0f51efe
-keywords: ["interrupts WDK networking , registration", "message-signaled interrupts WDK networking , registration", "MSIs WDK networking , registration", "registering interrupts", "unregistering interrupts"]
+keywords:
+- interrupts WDK networking , registration
+- message-signaled interrupts WDK networking , registration
+- MSIs WDK networking , registration
+- registering interrupts
+- unregistering interrupts
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Porting Interrupt Registration to NDIS 6.0
 
 
-## <a href="" id="ddk-porting-interrupt-registration-to-ndis-6-0-ng"></a>
+
 
 
 NDIS 6.0 drivers do not call the [**NdisMRegisterInterrupt**](https://msdn.microsoft.com/library/windows/hardware/ff553596) function. Instead, NDIS 6.0 drivers call the [**NdisMRegisterInterruptEx**](https://msdn.microsoft.com/library/windows/hardware/ff563649) function and pass it a pointer to the [**NDIS\_MINIPORT\_INTERRUPT\_CHARACTERISTICS**](https://msdn.microsoft.com/library/windows/hardware/ff566465) structure.

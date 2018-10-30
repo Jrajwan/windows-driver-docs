@@ -2,13 +2,27 @@
 title: Send and Receive Operations
 description: Send and Receive Operations
 ms.assetid: 216bfed2-92f8-4480-95fc-9909d7c1f533
-keywords: ["network data WDK , sending", "network data WDK , receiving", "data WDK networking , sending", "data WDK networking , receiving", "sending data WDK networking", "receiving data WDK networking", "NET_BUFFER_LIST", "multiple NET_BUFFER_LIST structures WDK networki"]
+keywords:
+- network data WDK , sending
+- network data WDK , receiving
+- data WDK networking , sending
+- data WDK networking , receiving
+- sending data WDK networking
+- receiving data WDK networking
+- NET_BUFFER_LIST
+- multiple NET_BUFFER_LIST structures WDK networki
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Send and Receive Operations
 
 
-## <a href="" id="ddk-send-and-receive-operations-ng"></a>
+
 
 
 In a single function call, NDIS 6.0 drivers can send multiple [**NET\_BUFFER\_LIST**](https://msdn.microsoft.com/library/windows/hardware/ff568388) structures with multiple [**NET\_BUFFER**](https://msdn.microsoft.com/library/windows/hardware/ff568376) structures on each NET\_BUFFER\_LIST structure. Also, NDIS drivers can indicate completed send operations for multiple NET\_BUFFER\_LIST structures with multiple NET\_BUFFER structures on a NET\_BUFFER\_LIST structure.

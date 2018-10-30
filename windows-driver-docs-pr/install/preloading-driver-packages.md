@@ -2,7 +2,16 @@
 title: Preloading Driver Packages
 description: Preloading Driver Packages
 ms.assetid: e617764d-0b48-4cd8-aeac-04d6039aba71
-keywords: ["installation applications WDK , preloaded driver packages", "device installation applications WDK , preloaded driver packages", "preloaded driver packages WDK device installations"]
+keywords:
+- installation applications WDK , preloaded driver packages
+- device installation applications WDK , preloaded driver packages
+- preloaded driver packages WDK device installations
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Preloading Driver Packages
@@ -18,7 +27,7 @@ After Windows is installed, a [driver package](driver-packages.md) can be preloa
 
 2.  To preload a driver package for a computer network, a network administrator can copy the driver package to a shared directory on a network server and concatenate the path of the shared directory to the **DevicePath** value entry in the registry of the network computers that have access to the shared directory.
 
-The **DevicePath** value entry is a REG\_EXPAND\_SZ-typed entry that contains the *%SystemRoot%\\inf* directory path and zero or more directory path entries. The format of the **DevicePath** value entry is the following, where each directory path is either a local directory path or a path of a shared directory on a network server where the preloaded [driver packages](driver-packages.md) are located:
+The **DevicePath** value entry is a REG_EXPAND_SZ-typed entry that contains the *%SystemRoot%\\inf* directory path and zero or more directory path entries. The format of the **DevicePath** value entry is the following, where each directory path is either a local directory path or a path of a shared directory on a network server where the preloaded [driver packages](driver-packages.md) are located:
 
 ```
 %SystemRoot%\inf;DirectoryPath1;DirectoryPath2;...

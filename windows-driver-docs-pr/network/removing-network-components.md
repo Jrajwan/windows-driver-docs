@@ -2,13 +2,24 @@
 title: Removing Network Components
 description: Removing Network Components
 ms.assetid: db1928ff-7570-411c-b770-274428a0d432
-keywords: ["notify objects WDK networking , removing network components", "network notify objects WDK , removing network components", "network component removal WDK", "removing network components", "notifications WDK networking , removing network components"]
+keywords:
+- notify objects WDK networking , removing network components
+- network notify objects WDK , removing network components
+- network component removal WDK
+- removing network components
+- notifications WDK networking , removing network components
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Removing Network Components
 
 
-## <a href="" id="ddk-removing-network-components-ng"></a>
+
 
 
 Network components are removed by the network configuration subsystem.

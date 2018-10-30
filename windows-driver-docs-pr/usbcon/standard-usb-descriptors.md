@@ -1,10 +1,13 @@
 ---
-Description: 'A USB device provides information about itself in data structures called USB descriptors. This section provides information about device, configuration, interface, and endpoint descriptors and ways to retrieve them from a USB device.'
-MS-HAID: 'buses.standard\_usb\_descriptors'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+Description: A USB device provides information about itself in data structures called USB descriptors. This section provides information about device, configuration, interface, and endpoint descriptors and ways to retrieve them from a USB device.
 title: Standard USB descriptors
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Standard USB descriptors
@@ -52,7 +55,7 @@ The host obtains the device descriptor through a control transfer. Microsoft pro
 </thead>
 <tbody>
 <tr class="odd">
-<td>Windows Store app that uses [<strong>Windows.Devices.Usb</strong>](https://msdn.microsoft.com/library/windows/apps/dn278466)</td>
+<td>UWP app that uses [<strong>Windows.Devices.Usb</strong>](https://msdn.microsoft.com/library/windows/apps/dn278466)</td>
 <td>[<strong>UsbDevice.DeviceDescriptor</strong>](https://msdn.microsoft.com/library/windows/apps/dn264002)</td>
 </tr>
 <tr class="even">
@@ -111,7 +114,7 @@ The **bConfigurationValue** field indicates the number for the configuration def
 </thead>
 <tbody>
 <tr class="odd">
-<td>Windows Store app that uses [<strong>Windows.Devices.Usb</strong>](https://msdn.microsoft.com/library/windows/apps/dn278466)</td>
+<td>UWP app that uses [<strong>Windows.Devices.Usb</strong>](https://msdn.microsoft.com/library/windows/apps/dn278466)</td>
 <td><p>[<strong>UsbDevice.ConfigurationDescriptor</strong>](https://msdn.microsoft.com/library/windows/apps/dn297689) to get the fixed length portion.</p>
 <p>[<strong>UsbConfiguration.Descriptors</strong>](https://msdn.microsoft.com/library/windows/apps/dn263802) to get the entire configuration set.</p></td>
 </tr>
@@ -172,7 +175,7 @@ In the preceding example, note **bInterfaceNumber** and **bAlternateSetting** fi
 </thead>
 <tbody>
 <tr class="odd">
-<td>Windows Store app that uses [<strong>Windows.Devices.Usb</strong>](https://msdn.microsoft.com/library/windows/apps/dn278466)</td>
+<td>UWP app that uses [<strong>Windows.Devices.Usb</strong>](https://msdn.microsoft.com/library/windows/apps/dn278466)</td>
 <td><p>[<strong>UsbInterfaceSetting.Descriptors</strong>](https://msdn.microsoft.com/library/windows/apps/dn264281) to get a particular the descriptor for a particular alternate setting.</p>
 <p>[<strong>UsbInterface.Descriptors</strong>](https://msdn.microsoft.com/library/windows/apps/dn264281) to get descriptors for all settings of an interface.</p></td>
 </tr>
@@ -230,7 +233,7 @@ The **bEndpointAddress** field specifies the unique endpoint address that contai
 </thead>
 <tbody>
 <tr class="odd">
-<td>Windows Store app that uses [<strong>Windows.Devices.Usb</strong>](https://msdn.microsoft.com/library/windows/apps/dn278466)</td>
+<td>UWP app that uses [<strong>Windows.Devices.Usb</strong>](https://msdn.microsoft.com/library/windows/apps/dn278466)</td>
 <td><p>[<strong>UsbEndpointDescriptor</strong>](https://msdn.microsoft.com/library/windows/apps/dn264052)</p></td>
 </tr>
 <tr class="even">
@@ -239,7 +242,7 @@ The **bEndpointAddress** field specifies the unique endpoint address that contai
 </tr>
 <tr class="odd">
 <td>UMDF-based client driver</td>
-<td>[<strong>IWDFUsbPipe::GetInterfaceDescriptor</strong>](BUGBUG)</td>
+<td>[<strong>WDFUsbTargetPipe::GetInformation</strong>](https://msdn.microsoft.com/library/windows/hardware/ff560403)</td>
 </tr>
 <tr class="even">
 <td>KMDF-based client driver</td>
@@ -256,16 +259,7 @@ The **bEndpointAddress** field specifies the unique endpoint address that contai
  
 
 ## Related topics
-
-
-[Concepts for all USB developers](usb-concepts-for-all-developers.md)
-
- 
-
- 
-
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20Standard%20USB%20descriptors%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
-
+[Concepts for all USB developers](usb-concepts-for-all-developers.md)  
 
 
 

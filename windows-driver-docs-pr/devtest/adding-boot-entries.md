@@ -1,14 +1,21 @@
 ---
 title: Adding Boot Entries
-description: Adding Boot Entries
+description: Adding Boot Entries in Windows Vista and later, Windows Server 2008 and later, and Windows Recovery Environment
 ms.assetid: 5027d7ea-6f8b-435a-849f-06727068d18b
-keywords: ["boot options WDK , adding boot entries", "boot entries WDK", "adding boot entries", "Boot.ini files WDK , adding boot entries"]
+keywords:
+- boot options WDK , adding boot entries
+- boot entries WDK
+- adding boot entries
+- Boot.ini files WDK , adding boot entries
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Adding Boot Entries
-
-
-## <span id="ddk_adding_boot_entries_tools"></span><span id="DDK_ADDING_BOOT_ENTRIES_TOOLS"></span>
 
 
 The first step in customizing boot options in operating systems is to add a new *boot entry* for an operating system. A *boot entry* is a set of options that define a load configuration for an operating system or bootable program.
@@ -19,13 +26,9 @@ You can add, delete, and change the options in the boot entry that Windows Insta
 
 To add a boot entry, copy an existing boot entry, and then modify the copy.
 
-This topic includes the following sections.
+This topic applies to Windows Vista and later, Windows Server 2008 and later, and Windows Recovery Environment.
 
--   [Adding a new boot entry in Windows 10, Windows 8.1, Windows 8, and Windows 7](#adding-a-new-boot-entry-in-windows-vista-and-later)
--   [Editing the boot menu in Windows 10, Windows 8.1, Windows 8, and Windows 7](#editing-the-boot-menu-in-windows-vista-and-later)
--   [Removing and deleting a boot entry in Windows 10, Windows 8.1, Windows 8, and Windows 7](#removing-a-boot-entry-in-windows-vista-and-later)
-
-### <span id="adding_a_new_boot_entry_in_windows_vista_and_later"></span><span id="ADDING_A_NEW_BOOT_ENTRY_IN_WINDOWS_VISTA_AND_LATER"></span>Adding a new boot entry in Windows 10, Windows 8.1, Windows 8, Windows 7, and Windows Vista
+## Adding a new boot entry <a name="adding-a-new-boot-entry-in-windows-vista-and-later"></a>
 
 In Windows, you use BCDEdit to modify your boot options. To add a new boot entry, open a Command Prompt window with elevated privileges (right click **Command Prompt** and click **Run as administrator** from the shortcut menu).
 
@@ -61,7 +64,7 @@ When you use the **/create** option, the new boot loader entries are not added t
 
 For information about the **/create** command parameters, type **bcdedit /? /create** in a Command Prompt window.
 
-### <span id="editing_the_boot_menu_in_windows_vista_and_later"></span><span id="EDITING_THE_BOOT_MENU_IN_WINDOWS_VISTA_AND_LATER"></span>Editing the boot menu in Windows 10, Windows 8.1, Windows 8, Windows 7, and Windows Vista
+## Editing the boot menu <a name="editing-the-boot-menu-in-windows-vista-and-later"></a>
 
 In Windows, new boot loader entries are not added to the boot menu automatically. You can place the boot loader entries in any order.
 
@@ -73,7 +76,7 @@ bcdedit /displayorder {ID} {ID} ...
 
 The ID is the GUID of the boot entry or a reserved identifier, such as **{current}**). Separate each identifier with a space. Be sure to include the braces ({}).
 
-For example, to add the DebugEntry boot entry to the boot menu after the **{current}** entry, use the following command:
+For example, to add the DebugEntry boot entry to the boot menu after the **{current}** entry, use the following command (remember to use `'{guid}'` in Windows PowerShell):
 
 ```
 bcdedit /displayorder {current} {49916baf-0e08-11db-9af4-000bdbd316a0}
@@ -82,21 +85,21 @@ bcdedit /displayorder {current} {49916baf-0e08-11db-9af4-000bdbd316a0}
 You can also use the options **/addlast, /addfirst**, and **/remove** to order and remove items from the menu. For example, the following command adds the DebugEntry boot entry as the last item on the menu:
 
 ```
-bcdedit /displayorder {49916baf-0e08-11db-9af4-000bdbd316a0} /addlast 
+bcdedit /displayorder {49916baf-0e08-11db-9af4-000bdbd316a0} /addlast
 ```
 
-### <span id="removing_a_boot_entry_in_windows_vista_and_later"></span><span id="REMOVING_A_BOOT_ENTRY_IN_WINDOWS_VISTA_AND_LATER"></span>Removing and deleting a boot entry in Windows 10, Windows 8.1, Windows 8, Windows 7, and Windows Vista
+## Removing and deleting a boot entry <a name="removing-a-boot-entry-in-windows-vista-and-later"></a>
 
 The following command removes the {49916baf-0e08-11db-9af4-000bdbd316a0} boot entry item from the boot menu.
 
 ```
-bcdedit /displayorder {49916baf-0e08-11db-9af4-000bdbd316a0} /remove 
+bcdedit /displayorder {49916baf-0e08-11db-9af4-000bdbd316a0} /remove
 ```
 
 When you remove the specified boot entry using the **/displayorder** and **/remove** options, the boot entry is removed from the boot menu, but it is still in the BCD store. To completely remove a boot loader entry from the boot menu and from the store, use the **/delete** option.
 
 ```
-bcdedit /delete {49916baf-0e08-11db-9af4-000bdbd316a0} 
+bcdedit /delete {49916baf-0e08-11db-9af4-000bdbd316a0}
 ```
 
 To verify that the display order is correct, use the following command:
@@ -111,7 +114,6 @@ The Windows Boot Manager entry also includes the boot menu display order, as the
 
 ```
 ## Windows Boot Manager
---------------------
 identifier              {bootmgr}
 device                  partition=C:
 description             Windows Boot Manager
@@ -150,13 +152,3 @@ resumeobject            {d7094401-2641-11db-baba-00e018e2b8db}
 nx                      OptIn
 debug                   Yes
 ```
-
- 
-
- 
-
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20Adding%20Boot%20Entries%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
-
-
-
-

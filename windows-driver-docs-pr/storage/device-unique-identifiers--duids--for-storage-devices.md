@@ -3,7 +3,21 @@ title: Device Unique Identifiers (DUIDs) for Storage Devices
 author: windows-driver-content
 description: Device Unique Identifiers (DUIDs) for Storage Devices
 ms.assetid: 3846961c-5b75-4a1b-bced-601fc25bf071
-keywords: ["storage drivers WDK , DUIDs", "DUIDs WDK storage", "device unique IDs WDK storage", "device IDs WDK storage", "identifiers WDK storage", "serial numbers WDK storage", "device layout signatures WDK storage", "signatures WDK , storage"]
+keywords:
+- storage drivers WDK , DUIDs
+- DUIDs WDK storage
+- device unique IDs WDK storage
+- device IDs WDK storage
+- identifiers WDK storage
+- serial numbers WDK storage
+- device layout signatures WDK storage
+- signatures WDK , storage
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Device Unique Identifiers (DUIDs) for Storage Devices
@@ -98,6 +112,5 @@ The [**CompareStorageDuids**](https://msdn.microsoft.com/library/windows/hardwar
  
 
 
---------------------
 
 

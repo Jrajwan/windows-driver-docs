@@ -2,13 +2,27 @@
 title: Initializing a Miniport Driver with a WDM Lower Edge
 description: Initializing a Miniport Driver with a WDM Lower Edge
 ms.assetid: 1c5b0ec0-5d63-423d-af21-ffd8990f6160
-keywords: ["NDIS-WDM miniport drivers WDK networking , initializing", "NDIS-WDM miniport drivers WDK networking , upper edge of", "miniport drivers WDK networking , initializing", "NDIS miniport drivers WDK , initializing", "deserialized NDIS miniport drivers WDK networking", "lower edge of NDIS miniport drivers WDK networking , driver initialization", "WDM lower edge WDK networking , driver initialization", "initializing miniport drivers"]
+keywords:
+- NDIS-WDM miniport drivers WDK networking , initializing
+- NDIS-WDM miniport drivers WDK networking , upper edge of
+- miniport drivers WDK networking , initializing
+- NDIS miniport drivers WDK , initializing
+- deserialized NDIS miniport drivers WDK networking
+- lower edge of NDIS miniport drivers WDK networking , driver initialization
+- WDM lower edge WDK networking , driver initialization
+- initializing miniport drivers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Initializing a Miniport Driver with a WDM Lower Edge
 
 
-## <a href="" id="ddk-initializing-a-miniport-driver-with-a-wdm-lower-edge-ng"></a>
+
 
 
 After a miniport driver has been loaded by the operating system, NDIS calls the miniport driver's [*MiniportInitializeEx*](https://msdn.microsoft.com/library/windows/hardware/ff559389) function to initialize a miniport instance that the miniport driver manages. To communicate through a miniport instance that has a WDM lower edge, the miniport driver must retrieve specific information to set up its communications.

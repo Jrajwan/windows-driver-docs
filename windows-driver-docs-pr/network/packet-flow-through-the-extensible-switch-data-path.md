@@ -2,6 +2,12 @@
 title: Packet Flow through the Extensible Switch Data Path
 description: Packet Flow through the Extensible Switch Data Path
 ms.assetid: 9236CE95-F959-445F-849F-14377EE91D19
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Packet Flow through the Extensible Switch Data Path
@@ -111,7 +117,7 @@ The extensible switch data path has the following parts, listed in the order tha
 
 2.  If a forwarding extension is not enabled, the extensible switch determines the destination ports for the packet and add these destination ports to the packet's OOB data before it forwards the packet up the egress data path.
 
-3.  In NDIS 6.40 and later, the HNV component performs any needed NVGRE encapsulation or decapsulation after ingress and before egress, so that the forwarding extension can see the packet in encapsulated and decapsulated form. For example, if the packet arrived from an external network adapter and is destined for an internal VM, the forwarding extension obtains the encapsulated packet (on ingress and the decapsulated packet on egress.
+3.  In NDIS 6.40 and later, the HNV component performs any needed NVGRE encapsulation or decapsulation after ingress and before egress, so that the forwarding extension can see the packet in encapsulated and decapsulated form. For example, if the packet arrived from an external network adapter and is destined for an internal VM, the forwarding extension obtains the encapsulated packet on ingress and the decapsulated packet on egress.
 
     **Note**  In the encapsulated packet, the address in the packet header is a provider address (PA) space address. In the decapsulated packet, it is a customer address (CA) space address.
 

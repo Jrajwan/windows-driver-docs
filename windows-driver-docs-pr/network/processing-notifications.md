@@ -2,13 +2,22 @@
 title: Processing Notifications
 description: Processing Notifications
 ms.assetid: f3e97d23-b463-4c3b-822d-b911f6fbe00e
-keywords: ["notify objects WDK networking , processing notifications", "network notify objects WDK , processing notifications", "notifications WDK networking , processing"]
+keywords:
+- notify objects WDK networking , processing notifications
+- network notify objects WDK , processing notifications
+- notifications WDK networking , processing
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Processing Notifications
 
 
-## <a href="" id="ddk-processing-notifications-ng"></a>
+
 
 
 The network configuration subsystem sends notifications to notify objects at the following intervals:

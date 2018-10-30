@@ -1,10 +1,13 @@
 ---
-Description: 'Describes the behavior of USB Device Emulation(UDE) class extension and tasks that a client driver must perform for an emulated host controller and devices attached to it.'
-MS-HAID: 'buses.writing\_a\_ude\_client\_driver'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+Description: Describes the behavior of USB Device Emulation(UDE) class extension and tasks that a client driver must perform for an emulated host controller and devices attached to it.
 title: Write a UDE client driver
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Write a UDE client driver
@@ -115,17 +118,17 @@ Here is the summary of the sequence in which the client driver retrieves a WDFDE
 
         ...
         
-        WdfDeviceInitSetPnpPowerEventCallbacks(WdfDeviceInit, &amp;wdfPnpPowerCallbacks);
+        WdfDeviceInitSetPnpPowerEventCallbacks(WdfDeviceInit, &wdfPnpPowerCallbacks);
 
-        WDF_OBJECT_ATTRIBUTES_INIT_CONTEXT_TYPE(&amp;wdfRequestAttributes, REQUEST_CONTEXT);
-        WdfDeviceInitSetRequestAttributes(WdfDeviceInit, &amp;wdfRequestAttributes);
+        WDF_OBJECT_ATTRIBUTES_INIT_CONTEXT_TYPE(&wdfRequestAttributes, REQUEST_CONTEXT);
+        WdfDeviceInitSetRequestAttributes(WdfDeviceInit, &wdfRequestAttributes);
 
 
         // To distinguish I/O sent to GUID_DEVINTERFACE_USB_HOST_CONTROLLER, we will enable
         // enable interface reference strings by calling WdfDeviceInitSetFileObjectConfig
         // with FileObjectClass WdfFileObjectWdfXxx.
 
-        WDF_FILEOBJECT_CONFIG_INIT(&amp;fileConfig,
+        WDF_FILEOBJECT_CONFIG_INIT(&fileConfig,
                                     WDF_NO_EVENT_CALLBACK,
                                     WDF_NO_EVENT_CALLBACK,
                                     WDF_NO_EVENT_CALLBACK // No cleanup callback function
@@ -134,7 +137,7 @@ Here is the summary of the sequence in which the client driver retrieves a WDFDE
         ...
 
         WdfDeviceInitSetFileObjectConfig(WdfDeviceInit,
-                                            &amp;fileConfig,
+                                            &fileConfig,
                                             WDF_NO_OBJECT_ATTRIBUTES);
 
         ...
@@ -145,7 +148,7 @@ Here is the summary of the sequence in which the client driver retrieves a WDFDE
 
         ...
 
-        WDF_OBJECT_ATTRIBUTES_INIT_CONTEXT_TYPE(&amp;wdfDeviceAttributes, WDFDEVICE_CONTEXT);
+        WDF_OBJECT_ATTRIBUTES_INIT_CONTEXT_TYPE(&wdfDeviceAttributes, WDFDEVICE_CONTEXT);
         wdfDeviceAttributes.EvtCleanupCallback = _ControllerWdfEvtCleanupCallback;
 
 
@@ -157,14 +160,14 @@ Here is the summary of the sequence in which the client driver retrieves a WDFDE
 
         for (instanceNumber = 0; instanceNumber < ULONG_MAX; instanceNumber++) {
 
-            status = RtlUnicodeStringPrintf(&amp;uniDeviceName,
+            status = RtlUnicodeStringPrintf(&uniDeviceName,
                                             L"%ws%d",
                                             BASE_DEVICE_NAME,
                                             instanceNumber);
 
             ...
 
-            status = WdfDeviceInitAssignName(*WdfDeviceInit, &amp;uniDeviceName);
+            status = WdfDeviceInitAssignName(*WdfDeviceInit, &uniDeviceName);
 
             ...
 
@@ -196,45 +199,45 @@ Here is the summary of the sequence in which the client driver retrieves a WDFDE
 
 
         // Create the symbolic link (also for compatibility).
-        status = RtlUnicodeStringPrintf(&amp;uniSymLinkName,
+        status = RtlUnicodeStringPrintf(&uniSymLinkName,
                                         L"%ws%d",
                                         BASE_SYMBOLIC_LINK_NAME,
                                         instanceNumber);
         ...
 
-        status = WdfDeviceCreateSymbolicLink(*WdfDevice, &amp;uniSymLinkName);
+        status = WdfDeviceCreateSymbolicLink(*WdfDevice, &uniSymLinkName);
 
         ...
 
         // Create the device interface.
 
-        RtlInitUnicodeString(&amp;refString,
+        RtlInitUnicodeString(&refString,
                              USB_HOST_DEVINTERFACE_REF_STRING);
 
         status = WdfDeviceCreateDeviceInterface(wdfDevice,
-                                                (LPGUID)&amp;GUID_DEVINTERFACE_USB_HOST_CONTROLLER,
-                                                &amp;refString);
+                                                (LPGUID)&GUID_DEVINTERFACE_USB_HOST_CONTROLLER,
+                                                &refString);
 
         ...
 
-        UDECX_WDF_DEVICE_CONFIG_INIT(&amp;controllerConfig, Controller_EvtUdecxWdfDeviceQueryUsbCapability);
+        UDECX_WDF_DEVICE_CONFIG_INIT(&controllerConfig, Controller_EvtUdecxWdfDeviceQueryUsbCapability);
 
         status = UdecxWdfDeviceAddUsbDeviceEmulation(wdfDevice,
-                                                   &amp;controllerConfig);
+                                                   &controllerConfig);
 
 
         // Create default queue. It only supports USB controller IOCTLs. (USB I/O will come through
         // in separate USB device queues.)
         // Shown later in this topic.   
 
-        WDF_IO_QUEUE_CONFIG_INIT_DEFAULT_QUEUE(&amp;defaultQueueConfig, WdfIoQueueDispatchSequential);
+        WDF_IO_QUEUE_CONFIG_INIT_DEFAULT_QUEUE(&defaultQueueConfig, WdfIoQueueDispatchSequential);
         defaultQueueConfig.EvtIoDeviceControl = ControllerEvtIoDeviceControl;
         defaultQueueConfig.PowerManaged = WdfFalse;
 
         status = WdfIoQueueCreate(wdfDevice,
-                                  &amp;defaultQueueConfig,
+                                  &defaultQueueConfig,
                                   WDF_NO_OBJECT_ATTRIBUTES,
-                                  &amp;pControllerContext->DefaultQueue);
+                                  &pControllerContext->DefaultQueue);
 
         ...
 
@@ -331,7 +334,7 @@ Controller_EvtControllerQueryUsbCapability(
     *ResultLength = 0;
 
     if (RtlCompareMemory(CapabilityType,
-                         &amp;GUID_USB_CAPABILITY_CHAINED_MDLS,
+                         &GUID_USB_CAPABILITY_CHAINED_MDLS,
                          sizeof(GUID)) == sizeof(GUID)) {
 
         //
@@ -349,7 +352,7 @@ Controller_EvtControllerQueryUsbCapability(
 }
 ```
 
-## <a href="" id="device"></a>Create a virtual USB device
+## Create a virtual USB device
 
 
 A virtual USB device behaves similar to a USB device. It supports a configuration with multiple interfaces and each interface supports alternate settings. Each setting can have one more endpoints that are used for data transfers. All descriptors (device, configuration, interface, endpoint) are set by the UDE client driver so that the device can report information much like a real USB device.
@@ -462,7 +465,7 @@ Usb_Initialize(
 
     // State changed callbacks
 
-    UDECX_USB_DEVICE_CALLBACKS_INIT(&amp;callbacks);
+    UDECX_USB_DEVICE_CALLBACKS_INIT(&callbacks);
 #ifndef SIMPLEENDPOINTS
     callbacks.EvtUsbDeviceDefaultEndpointAdd = UsbDevice_EvtUsbDeviceDefaultEndpointAdd;
     callbacks.EvtUsbDeviceEndpointAdd = UsbDevice_EvtUsbDeviceEndpointAdd;
@@ -472,7 +475,7 @@ Usb_Initialize(
     callbacks.EvtUsbDeviceLinkPowerExit = UsbDevice_EvtUsbDeviceLinkPowerExit;
     callbacks.EvtUsbDeviceSetFunctionSuspendAndWake = UsbDevice_EvtUsbDeviceSetFunctionSuspendAndWake;
 
-    UdecxUsbDeviceInitSetStateChangeCallbacks(usbContext->UdecxUsbDeviceInit, &amp;callbacks);
+    UdecxUsbDeviceInitSetStateChangeCallbacks(usbContext->UdecxUsbDeviceInit, &callbacks);
 
 
     // Set required attributes.
@@ -525,7 +528,7 @@ Usb_Initialize(
     }
 
     status = UdecxUsbDeviceInitAddStringDescriptor(usbContext->UdecxUsbDeviceInit,
-                                                 &amp;g_ManufacturerStringEnUs,
+                                                 &g_ManufacturerStringEnUs,
                                                  g_ManufacturerIndex,
                                                  US_ENGLISH);
 
@@ -534,11 +537,11 @@ Usb_Initialize(
         goto exit;
     }
 
-    WDF_OBJECT_ATTRIBUTES_INIT_CONTEXT_TYPE(&amp;attributes, UDECX_USBDEVICE_CONTEXT);
+    WDF_OBJECT_ATTRIBUTES_INIT_CONTEXT_TYPE(&attributes, UDECX_USBDEVICE_CONTEXT);
 
-    status = UdecxUsbDeviceCreate(&amp;usbContext->UdecxUsbDeviceInit,
-                                &amp;attributes,
-                                &amp;usbContext->UdecxUsbDevice);
+    status = UdecxUsbDeviceCreate(&usbContext->UdecxUsbDeviceInit,
+                                &attributes,
+                                &usbContext->UdecxUsbDevice);
 
     if (!NT_SUCCESS(status)) {
 
@@ -558,13 +561,13 @@ Usb_Initialize(
 
 #endif
 
-    UDECX_USB_DEVICE_PLUG_IN_OPTIONS_INIT(&amp;pluginOptions);
+    UDECX_USB_DEVICE_PLUG_IN_OPTIONS_INIT(&pluginOptions);
 #ifdef USB30
     pluginOptions.Usb30PortNumber = 2;
 #else
     pluginOptions.Usb20PortNumber = 1;
 #endif
-    status = UdecxUsbDevicePlugIn(usbContext->UdecxUsbDevice, &amp;pluginOptions);
+    status = UdecxUsbDevicePlugIn(usbContext->UdecxUsbDevice, &pluginOptions);
 
 exit:
 
@@ -598,7 +601,7 @@ The client driver changes the function state of the specified interface of the v
 A USB 3.0 device allows individual functions to enter lower power state. Each function is also capable of send a wake signal. The UDE class extension notifies the client driver by invoking [*EVT\_UDECX\_USB\_DEVICE\_SET\_FUNCTION\_SUSPEND\_AND\_WAKE*](https://msdn.microsoft.com/library/windows/hardware/mt595915). This event indicates a function power state change and informs the client driver of whether the function can wake from the new state. In the function, the class extension passes the interface number of the function that is waking up.
 The client driver can simulate the action of a virtual USB device initiating its own wake up from a low link power state, function suspend, or both. For a USB 2.0 device, the driver must call [**UdecxUsbDeviceSignalWake**](https://msdn.microsoft.com/library/windows/hardware/mt627982), if the driver enabled wake on the device in the most recent [*EVT\_UDECX\_USB\_DEVICE\_D0\_EXIT*](https://msdn.microsoft.com/library/windows/hardware/mt595911). For a USB 3.0 device, the driver must call [**UdecxUsbDeviceSignalFunctionWake**](https://msdn.microsoft.com/library/windows/hardware/mt627981) because the USB 3.0 wake feature is per-function. If the entire device is in a low power state, or entering such a state, **UdecxUsbDeviceSignalFunctionWake** wakes up the device.
 
-## <a href="" id="static"></a>Create simple endpoints
+## Create simple endpoints
 
 
 The client driver creates UDE endpoint objects to handle data transfers to and from the USB device. The driver creates simple endpoints after creating the UDE device and before reporting the device as plugged in.
@@ -649,14 +652,14 @@ UsbCreateControlEndpoint(
     pUsbContext = WdfDeviceGetUsbContext(WdfDevice);
     endpointInit = NULL;
 
-    WDF_IO_QUEUE_CONFIG_INIT(&amp;queueConfig, WdfIoQueueDispatchSequential);
+    WDF_IO_QUEUE_CONFIG_INIT(&queueConfig, WdfIoQueueDispatchSequential);
 
     queueConfig.EvtIoInternalDeviceControl = IoEvtControlUrb;
 
     status = WdfIoQueueCreate (Device,
-                               &amp;queueConfig,
+                               &queueConfig,
                                WDF_NO_OBJECT_ATTRIBUTES,
-                               &amp;controlQueue);
+                               &controlQueue);
 
 
     if (!NT_SUCCESS(status)) {
@@ -674,15 +677,15 @@ UsbCreateControlEndpoint(
 
     UdecxUsbEndpointInitSetEndpointAddress(endpointInit, USB_DEFAULT_ENDPOINT_ADDRESS);
 
-    UDECX_USB_ENDPOINT_CALLBACKS_INIT(&amp;callbacks, UsbEndpointReset);
-    UdecxUsbEndpointInitSetCallbacks(endpointInit, &amp;callbacks);
+    UDECX_USB_ENDPOINT_CALLBACKS_INIT(&callbacks, UsbEndpointReset);
+    UdecxUsbEndpointInitSetCallbacks(endpointInit, &callbacks);
 
     callbacks.EvtUsbEndpointStart = UsbEndpointEvtStart;
     callbacks.EvtUsbEndpointPurge = UsEndpointEvtPurge;
 
-    status = UdecxUsbEndpointCreate(&amp;endpointInit,
+    status = UdecxUsbEndpointCreate(&endpointInit,
         WDF_NO_OBJECT_ATTRIBUTES,
-        &amp;pUsbContext->UdecxUsbControlEndpoint);
+        &pUsbContext->UdecxUsbControlEndpoint);
 
     if (!NT_SUCCESS(status)) {
         goto exit;
@@ -704,7 +707,7 @@ exit:
 }
 ```
 
-## <a href="" id="dynamic"></a>Create dynamic endpoints
+## Create dynamic endpoints
 
 
 The client driver can create dynamic endpoints at the request of the UDE class extension (on behalf of the hub driver and client drivers). The class extension makes the request by invoking any of these callback functions:
@@ -751,14 +754,14 @@ UsbDevice_EvtUsbDeviceDefaultEndpointAdd(
 
     deviceContext = UdecxDeviceGetContext(UdecxUsbDevice);
 
-    WDF_IO_QUEUE_CONFIG_INIT(&amp;queueConfig, WdfIoQueueDispatchSequential);
+    WDF_IO_QUEUE_CONFIG_INIT(&queueConfig, WdfIoQueueDispatchSequential);
 
     queueConfig.EvtIoInternalDeviceControl = IoEvtControlUrb;
 
     status = WdfIoQueueCreate (deviceContext->WdfDevice,
-                               &amp;queueConfig,
+                               &queueConfig,
                                WDF_NO_OBJECT_ATTRIBUTES,
-                               &amp;controlQueue);
+                               &controlQueue);
 
     if (!NT_SUCCESS(status)) {
 
@@ -767,12 +770,12 @@ UsbDevice_EvtUsbDeviceDefaultEndpointAdd(
 
     UdecxUsbEndpointInitSetEndpointAddress(UdecxUsbEndpointInit, USB_DEFAULT_DEVICE_ADDRESS);
 
-    UDECX_USB_ENDPOINT_CALLBACKS_INIT(&amp;callbacks, UsbEndpointReset);
-    UdecxUsbEndpointInitSetCallbacks(UdecxUsbEndpointInit, &amp;callbacks);
+    UDECX_USB_ENDPOINT_CALLBACKS_INIT(&callbacks, UsbEndpointReset);
+    UdecxUsbEndpointInitSetCallbacks(UdecxUsbEndpointInit, &callbacks);
 
     status = UdecxUsbEndpointCreate(UdecxUsbEndpointInit,
         WDF_NO_OBJECT_ATTRIBUTES,
-        &amp;deviceContext->UdecxUsbControlEndpoint);
+        &deviceContext->UdecxUsbControlEndpoint);
 
     if (!NT_SUCCESS(status)) {
         goto exit;
@@ -799,7 +802,7 @@ This call is asynchronous. After the client is finished with the reset operation
 
  
 
-## <a href="" id="implement-queue-state-management-"></a>Implement queue state management
+## Implement queue state management
 
 
 The state of the framework queue object associated with a UDE endpoint object is managed by the UDE class extension. However, if the client driver forwards requests from endpoint queues to other internal queues, then the client must implement logic to handle changes in the endpoint’s I/O flow. These callback functions are registered with [**UdecxUsbEndpointInitSetCallbacks**](https://msdn.microsoft.com/library/windows/hardware/mt627985).
@@ -846,7 +849,6 @@ The client driver can complete an I/O request on a separate with a DPC. Follow t
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20Write%20a%20UDE%20client%20driver%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

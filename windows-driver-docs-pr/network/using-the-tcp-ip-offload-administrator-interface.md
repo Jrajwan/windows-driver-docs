@@ -2,13 +2,23 @@
 title: Using the TCP/IP Offload Administrator Interface
 description: Using the TCP/IP Offload Administrator Interface
 ms.assetid: 2418e577-17cd-4db7-adb0-44b705e29d38
-keywords: ["TCP/IP offload WDK networking , administrator interface", "offload WDK TCP/IP transport , administrator interface", "task offload WDK TCP/IP transport , administrator interface", "connection offload WDK TCP/IP transport , administrator interface"]
+keywords:
+- TCP/IP offload WDK networking , administrator interface
+- offload WDK TCP/IP transport , administrator interface
+- task offload WDK TCP/IP transport , administrator interface
+- connection offload WDK TCP/IP transport , administrator interface
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Using the TCP/IP Offload Administrator Interface
 
 
-## <a href="" id="ddk-using-the-task-offload-administrator-interface-ng"></a>
+
 
 
 In NDIS 6.0 and later versions, user-mode applications (or overlying drivers) can enable or disable TCP/IP offload capabilities. A system administrator can access the settings through the Microsoft Windows Management Instrumentation (WMI) interface. There might also be capabilities that are disabled through registry settings that can be enabled if they are supported in the hardware.

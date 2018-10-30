@@ -2,13 +2,22 @@
 title: Customizing the Network Upgrade Process
 description: Customizing the Network Upgrade Process
 ms.assetid: c754317c-fe31-4a61-9c73-93ae71f64b03
-keywords: ["network component upgrades WDK , customizing", "upgrading network components WDK , customizing", "customizing network upgrade process WDK networking"]
+keywords:
+- network component upgrades WDK , customizing
+- upgrading network components WDK , customizing
+- customizing network upgrade process WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Customizing the Network Upgrade Process
 
 
-## <a href="" id="ddk-customizing-the-network-upgrade-process-ng"></a>
+
 
 
 **Note**  Vendor-supplied network upgrades are not supported in Microsoft Windows XP (SP1 and later), Microsoft Windows Server 2003, and later operating systems.

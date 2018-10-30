@@ -2,7 +2,17 @@
 title: Format of a Text Log Section
 description: Format of a Text Log Section
 ms.assetid: e0f7227c-6cd8-4c66-a38b-104f222847bc
-keywords: ["sections WDK SetupAPI logging", "formats WDK SetupAPI logging", "text logs WDK SetupAPI , sections", "SetupAPI logging WDK Windows Vista , text log sections"]
+keywords:
+- sections WDK SetupAPI logging
+- formats WDK SetupAPI logging
+- text logs WDK SetupAPI , sections
+- SetupAPI logging WDK Windows Vista , text log sections
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Format of a Text Log Section
@@ -24,7 +34,7 @@ The following example of a text log section shows the general format of a typica
 
 The section body entries that are logged depend on the event level that is set for the log and the category levels that are enabled for the log. For more information about these settings, see [SetupAPI Logging Registry Settings](setupapi-logging-registry-settings.md).
 
-The following is a typical example of a text log section that the Plug and Play (PnP) manager created to log entries that pertained to the installation of a PCI device. In the section header, the *section\_title* field is "Device Install," the *instance\_identifier* field is the device instance identifier "PCI\\VEN\_104C&DEV\_8019&SUBSYS\_8010104C&REV\_00\\3&61aaa01&0&38," and the *time\_stamp* field is "2005/02/13 22:06:28.109:." In the section footer, the *status\_value* field is "0x00000000" and the *time\_stamp* field is "2005/02/13 22:06:20.000:." Only the first three section body log entries are included in this example. The event level for this example was set to TXTLOG\_DETAILS and all category levels were enabled for this example.
+The following is a typical example of a text log section that the Plug and Play (PnP) manager created to log entries that pertained to the installation of a PCI device. In the section header, the *section_title* field is "Device Install," the *instance_identifier* field is the device instance identifier "PCI\\VEN_104C&DEV_8019&SUBSYS_8010104C&REV_00\\3&61aaa01&0&38," and the *time_stamp* field is "2005/02/13 22:06:28.109:." In the section footer, the *status_value* field is "0x00000000" and the *time_stamp* field is "2005/02/13 22:06:20.000:." Only the first three section body log entries are included in this example. The event level for this example was set to TXTLOG_DETAILS and all category levels were enabled for this example.
 
 ```
 >>>  [Device Install - PCI\VEN_104C&DEV_8019&SUBSYS_8010104C&REV_00\3&61aaa01&0&38]

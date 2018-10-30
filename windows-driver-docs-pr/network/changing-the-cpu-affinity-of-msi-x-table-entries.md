@@ -2,13 +2,24 @@
 title: Changing the CPU Affinity of MSI-X Table Entries
 description: Changing the CPU Affinity of MSI-X Table Entries
 ms.assetid: 46ce91ad-76eb-4d05-af9d-a295c665640a
-keywords: ["MSI-X WDK networking , MSI-X table entry CPU affinity", "message-signaled interrupts WDK networking , MSI-X table entry CPU affinity", "MSIs WDK networking , MSI-X table entry CPU affinity", "interrupts WDK networking , MSI-X table entry CPU affinity", "CPU af"]
+keywords:
+- MSI-X WDK networking , MSI-X table entry CPU affinity
+- message-signaled interrupts WDK networking , MSI-X table entry CPU affinity
+- MSIs WDK networking , MSI-X table entry CPU affinity
+- interrupts WDK networking , MSI-X table entry CPU affinity
+- CPU af
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Changing the CPU Affinity of MSI-X Table Entries
 
 
-## <a href="" id="ddk-changing-the-cpu-affinity-of-msi-x-table-entries-ng"></a>
+
 
 
 NDIS 6.1 and later miniport drivers that support MSI-X can call the [**NdisMConfigMSIXTableEntry**](https://msdn.microsoft.com/library/windows/hardware/ff563566) function to mask, unmask, or map MSI-X table entries to device-assigned MSI-X messages. Miniport drivers that support RSS use **NdisMConfigMSIXTableEntry** to change the CPU affinity of MSI-X table entries at run time.

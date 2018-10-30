@@ -1,10 +1,13 @@
 ---
-Description: 'This topic provides an example of how to use USB ETW and Netmon to troubleshoot a USB device that Windows does not recognize.'
-MS-HAID: 'buses.case\_study\_\_troubleshooting\_an\_unknown\_usb\_device\_by\_using\_etw\_and\_netmon'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
-title: 'Case Study: Troubleshooting an unknown USB device by using ETW and Netmon'
+Description: Provides an example of how to use USB ETW and Netmon to troubleshoot a USB device that Windows does not recognize.
+title: Case Study - Troubleshooting an unknown USB device
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Case Study: Troubleshooting an unknown USB device by using ETW and Netmon
@@ -179,7 +182,7 @@ You can create custom filters in Netmon. The easiest method is to create a filte
 -   Right-click a field in the **Frame Summary** pane and select **Add \[field name\] to Display Filter**.
 
 You can change the operators (such as OR, AND, and ==) and the filter values to build the appropriate filter expressions.
-## <a href="" id="status-codes"></a>Understanding Error Events and Status Codes
+## Understanding Error Events and Status Codes
 
 
 In our unknown device example, most of the USB hub exceptions have a **fid\_DebugText** data of CreateDeviceFailure. It is not clear how serious the exception is, but the debug text gives a hint as to the cause: an operation related to the new device failed. For now, assume that the adjacent Create Device Failed events are redundant. The last two exceptions are CreateDeviceFailure\_Popup and GenErr\_UserIoctlFailed. The popup exception sounds like an error that was exposed to the user, but any and all of these errors could be related to the unknown device problem.
@@ -242,18 +245,8 @@ Combine the bRequest (GET\_DESCRIPTOR) with the Value\_DescriptorType (DEVICE), 
 For USB enumeration to continue, the device should have responded to this request with its device descriptor. Instead, the device stalled the request, which caused the enumeration to fail. Therefore, all four create-device failures were caused by stalled requests for the device descriptor. You have determined that the device is unknown because enumeration failed and that enumeration failed because the device did not complete the request for its device descriptor.
 
 ## Related topics
-
-
-[Using USB ETW](using-usb-etw.md)
-
-[USB Event Tracing for Windows](usb-event-tracing-for-windows.md)
-
- 
-
- 
-
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20Case%20Study:%20Troubleshooting%20an%20unknown%20USB%20device%20by%20using%20ETW%20and%20Netmon%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
-
+[Using USB ETW](using-usb-etw.md)  
+[USB Event Tracing for Windows](usb-event-tracing-for-windows.md)  
 
 
 

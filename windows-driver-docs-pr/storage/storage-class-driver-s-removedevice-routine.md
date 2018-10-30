@@ -3,7 +3,15 @@ title: Storage Class Driver's RemoveDevice Routine
 author: windows-driver-content
 description: Storage Class Driver's RemoveDevice Routine
 ms.assetid: fbcbfbab-676a-43d3-aa63-0ea5e5f265d2
-keywords: ["RemoveDevice", "query-remove requests WDK storage"]
+keywords:
+- RemoveDevice
+- query-remove requests WDK storage
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Storage Class Driver's RemoveDevice Routine
@@ -45,6 +53,5 @@ For more information about handling a remove request, see [Removing a Device](ht
  
 
 
---------------------
 
 

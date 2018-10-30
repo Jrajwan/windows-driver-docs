@@ -1,9 +1,15 @@
 ---
 title: Using the Windows Performance Toolkit (WPT) with WDF
 author: windows-driver-content
-description: Starting in Windows 10, you can use the Windows Performance Toolkit (WPT) to view performance data for a given Kernel-Mode Driver Framework (KMDF) or User-Mode Driver Framework (UMDF) 2 driver.
+description: Starting in Windows 10, you can use the Windows Performance Toolkit (WPT) to view performance data for a KMDF or UMDF 2 driver.
 Search.SourceType: Video
 ms.assetid: 0442E4E2-DBC7-4EB0-BEB6-49EFF5132A1D
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Using the Windows Performance Toolkit (WPT) with WDF
@@ -30,8 +36,7 @@ The WPT is part of the Windows Assessment and Deployment Kit (ADK). You can inst
 The WPT consists of two separate tools: Windows Performance Recorder and Windows Performance Analyzer (WPA). In this topic, we use WPR to record a trace, and then WPA to view the trace in a configurable GUI format.
 
 To learn how to use the Windows Performance Toolkit to measure the performance of a WDF driver, either watch the following video, or read the steps below the video. The video and the steps cover the same procedure.
-
-<iframe src="https://hubs-video.ssl.catalog.video.msn.com/embed/fc37f465-9456-45d7-bbe9-6f7d44342563/IA?csid=ux-en-us&MsnPlayerLeadsWith=html&PlaybackMode=Inline&MsnPlayerDisplayShareBar=false&MsnPlayerDisplayInfoButton=false&iframe=true&QualityOverride=HD" width="720" height="405" allowFullScreen="true" frameBorder="0" scrolling="no">Using Windows Performance Toolkit to measuring performance of a WDF driver</iframe>
+>[!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/fc37f465-9456-45d7-bbe9-6f7d44342563]
 
 **Recording and viewing an event log for a WDF driver**
 
@@ -150,7 +155,7 @@ Finally, to determine callback duration for PnP/Power callbacks, the framework r
 -   Be sure to reboot after you run the WdfPerfEnhancedVerifier.cmd script.
 -   To determine if your driver is configured to record an event log, use the **!WdfKd.wdfdriverinfo** kernel debugger command. If the driver is configured for performance tracing, you will see output like this:
 
-    ``` syntax
+    ```
     !WdfKd.WdfDriverInfo Echo.sys
     …
     …

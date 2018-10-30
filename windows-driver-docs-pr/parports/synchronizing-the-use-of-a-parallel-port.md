@@ -2,20 +2,22 @@
 title: Synchronizing the Use of a Parallel Port
 author: windows-driver-content
 description: Synchronizing the Use of a Parallel Port
-MS-HAID:
-- 'vspd\_3371cf0f-b94e-4a92-acf1-e30dd642f4f6.xml'
-- 'parports.synchronizing\_the\_use\_of\_a\_parallel\_port'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: ea3a1998-9e31-4047-9193-6b402db222c9
-keywords: ["parallel ports WDK , synchronization", "synchronization WDK parallel ports"]
+keywords:
+- parallel ports WDK , synchronization
+- synchronization WDK parallel ports
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Synchronizing the Use of a Parallel Port
 
 
-## <a href="" id="ddk-synchronizing-the-use-of-a-parallel-port-kg"></a>
+
 
 
 Clients must synchronize their use of a parallel port by allocating a parallel port before using it and freeing the port after they are done using it.
@@ -51,6 +53,5 @@ A client should use the [**PPARALLEL\_QUERY\_WAITERS\_ROUTINE**](https://msdn.mi
  
 
 
---------------------
 
 

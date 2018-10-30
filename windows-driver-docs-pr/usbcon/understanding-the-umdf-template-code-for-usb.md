@@ -1,10 +1,13 @@
 ---
-Description: 'In this topic you'll learn about the source code for a UMDF-based USB client driver.'
-MS-HAID: 'buses.understanding\_the\_umdf\_template\_code\_for\_usb'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
-title: 'Understanding the USB client driver code structure (UMDF)'
+Description: Learn about the source code for a UMDF-based USB client driver.
+title: USB client driver code structure (UMDF)
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Understanding the USB client driver code structure (UMDF)
@@ -64,14 +67,14 @@ The next portion declares the tracing macro and the tracing GUID. Note the traci
     WPP_LEVEL_LOGGER(flag)
 
 #define WPP_FLAG_LEVEL_ENABLED(flag, level)                            \
-    (WPP_LEVEL_ENABLED(flag) &amp;&amp;                                        \
+    (WPP_LEVEL_ENABLED(flag) &&                                        \
      WPP_CONTROL(WPP_BIT_ ## flag).Level >= level)
 
 #define WPP_LEVEL_FLAGS_LOGGER(lvl,flags) \
            WPP_LEVEL_LOGGER(flags)
                
 #define WPP_LEVEL_FLAGS_ENABLED(lvl, flags) \
-           (WPP_LEVEL_ENABLED(flags) &amp;&amp; WPP_CONTROL(WPP_BIT_ ## flags).Level >= lvl)
+           (WPP_LEVEL_ENABLED(flags) && WPP_CONTROL(WPP_BIT_ ## flags).Level >= lvl)
 
 ```
 
@@ -103,7 +106,7 @@ While the driver is loading and initializing, several events occur and the frame
 3.  Provides a callback class that implements **IPnpCallbackXxx** interfaces.
 4.  Gets a reference to the device object and configures it according to the client driver's requirements.
 
-## <a href="" id="driver"></a>Driver callback source code
+## Driver callback source code
 
 
 The framework creates the *driver object*, which represents the instance of the client driver loaded by Windows. The client driver provides at least one driver callback that registers the driver with the framework.
@@ -117,7 +120,7 @@ EXTERN_C const CLSID CLSID_Driver;
 
 class CMyDriver :
     public CComObjectRootEx<CComMultiThreadModel>,
-    public CComCoClass<CMyDriver, &amp;CLSID_Driver>,
+    public CComCoClass<CMyDriver, &CLSID_Driver>,
     public IDriverEntry
 {
 public:
@@ -202,7 +205,7 @@ CMyDriver::OnDeviceAdd(
 
     hr = CMyDevice::CreateInstanceAndInitialize(FxWdfDriver,
                                                 FxDeviceInit,
-                                                &amp;device);
+                                                &device);
 
     if (SUCCEEDED(hr))
     {
@@ -291,7 +294,7 @@ public:
 };
 ```
 
-## <a href="" id="device"></a>Device callback source code
+## Device callback source code
 
 
 The *framework device object* is an instance of the framework class that represents the device object that is loaded in the device stack of the client driver. For information about the functionality of a device object, see [Device Nodes and Device Stacks](https://msdn.microsoft.com/library/windows/hardware/hh406296).
@@ -343,7 +346,7 @@ CMyDevice::Initialize(
 
     FxDeviceInit->SetPowerPolicyOwnership(TRUE);
 
-    hr = this->QueryInterface(__uuidof(IUnknown), (void **)&amp;unknown);
+    hr = this->QueryInterface(__uuidof(IUnknown), (void **)&unknown);
     if (FAILED(hr))
     {
         TraceEvents(TRACE_LEVEL_ERROR,
@@ -353,7 +356,7 @@ CMyDevice::Initialize(
         goto Exit;
     }
 
-    hr = FxDriver->CreateDevice(FxDeviceInit, unknown, &amp;fxDevice);
+    hr = FxDriver->CreateDevice(FxDeviceInit, unknown, &fxDevice);
     DriverSafeRelease(unknown);
     if (FAILED(hr))
     {
@@ -400,7 +403,7 @@ CMyDevice::Configure(
 
     TraceEvents(TRACE_LEVEL_INFORMATION, TRACE_DEVICE, "%!FUNC! Entry");
 
-     hr = CMyIoQueue::CreateInstanceAndInitialize(m_FxDevice, this, &amp;m_IoQueue);
+     hr = CMyIoQueue::CreateInstanceAndInitialize(m_FxDevice, this, &m_IoQueue);
     if (FAILED(hr))
     {
         TraceEvents(TRACE_LEVEL_ERROR,
@@ -420,7 +423,7 @@ CMyDevice::Configure(
         goto Exit;
     } 
 
-    hr = m_FxDevice->CreateDeviceInterface(&amp;GUID_DEVINTERFACE_MyUSBDriver_UMDF_,NULL);
+    hr = m_FxDevice->CreateDeviceInterface(&GUID_DEVINTERFACE_MyUSBDriver_UMDF_,NULL);
     if (FAILED(hr))
     {
         TraceEvents(TRACE_LEVEL_ERROR,
@@ -487,7 +490,7 @@ CMyDevice::OnPrepareHardware(
 
     TraceEvents(TRACE_LEVEL_INFORMATION, TRACE_DEVICE, "%!FUNC! Entry");
 
-    hr = m_FxDevice->QueryInterface(IID_PPV_ARGS(&amp;usbFactory));
+    hr = m_FxDevice->QueryInterface(IID_PPV_ARGS(&usbFactory));
 
     if (FAILED(hr))
     {
@@ -498,7 +501,7 @@ CMyDevice::OnPrepareHardware(
         goto Exit;
     }
 
-    hr = usbFactory->CreateUsbTargetDevice(&amp;usbDevice);
+    hr = usbFactory->CreateUsbTargetDevice(&usbDevice);
 
     if (FAILED(hr))
     {
@@ -559,7 +562,7 @@ CMyDevice::OnReleaseHardware(
 }
 ```
 
-## <a href="" id="queue"></a>Queue source code
+## Queue source code
 
 
 The *framework queue object* represents the I/O queue for a specific framework device object. The complete source code for the queue object is in IoQueue.h and IoQueue.c.
@@ -654,7 +657,7 @@ CMyIoQueue::CreateInstanceAndInitialize(
 
     TraceEvents(TRACE_LEVEL_INFORMATION, TRACE_QUEUE, "%!FUNC! Entry");
 
-    hr = CComObject<CMyIoQueue>::CreateInstance( &amp;pMyQueue );
+    hr = CComObject<CMyIoQueue>::CreateInstance( &pMyQueue );
     if (FAILED(hr))
     {
         TraceEvents(TRACE_LEVEL_ERROR,
@@ -702,7 +705,7 @@ CMyIoQueue::Initialize(
     assert(FxDevice != NULL);
     assert(MyDevice != NULL);
 
-    hr = this->QueryInterface(__uuidof(IUnknown), (void **)&amp;unknown);
+    hr = this->QueryInterface(__uuidof(IUnknown), (void **)&unknown);
     if (FAILED(hr))
     {
         TraceEvents(TRACE_LEVEL_ERROR,
@@ -717,7 +720,7 @@ CMyIoQueue::Initialize(
                                  WdfIoQueueDispatchParallel,  // Dispatch type
                                  TRUE,     // Power managed?
                                  FALSE,     // Allow zero-length requests?
-                                 &amp;fxQueue); // I/O queue
+                                 &fxQueue); // I/O queue
     DriverSafeRelease(unknown);
 
     if (FAILED(hr))
@@ -834,7 +837,7 @@ Let's see how the queue mechanism works. To communicate with the USB device, an 
 
 When the framework invokes the client driver's event callback, it passes a handle to the framework request object that holds the request (and its input and output buffers) sent by the application. In addition, it sends a handle to the framework queue object that contains that request. In the event callback, the client driver processes the request as needed. The template code simply completes the request. The client driver can perform more involved tasks. For instance, if an application requests certain device information, in the event callback, the client driver can create a USB control request and send it to the USB driver stack to retrieve the requested device information. USB control requests are discussed in [USB Control Transfer](usb-control-transfer.md).
 
-## <a href="" id="driver-entry"></a>Driver Entry source code
+## Driver Entry source code
 
 
 In the template code, driver entry is implemented in the Dllsup.cpp.
@@ -932,7 +935,6 @@ In the preceding code snippet from Export.def included with the driver project, 
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20Understanding%20the%20%20USB%20client%20driver%20code%20structure%20%28UMDF%29%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

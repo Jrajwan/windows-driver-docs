@@ -2,13 +2,25 @@
 title: Disk Prompting and Error Handling Functions
 description: Disk Prompting and Error Handling Functions
 ms.assetid: e1afeeb3-02f0-4570-9910-f948646f07bf
-keywords: ["SetupAPI functions WDK , disk prompting", "SetupAPI functions WDK , error handling", "errors WDK SetupAPI", "disk prompting WDK SetupAPI", "prompting disk insertion WDK SetupAPI", "media prompting WDK SetupAPI"]
+keywords:
+- SetupAPI functions WDK , disk prompting
+- SetupAPI functions WDK , error handling
+- errors WDK SetupAPI
+- disk prompting WDK SetupAPI
+- prompting disk insertion WDK SetupAPI
+- media prompting WDK SetupAPI
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Disk Prompting and Error Handling Functions
 
 
-## <a href="" id="ddk-disk-prompting-and-error-handling-functions-dg"></a>
+
 
 
 You can use the general Setup functions to prompt the user to insert new media, or to handle errors that arise when files are being copied, renamed, or deleted.

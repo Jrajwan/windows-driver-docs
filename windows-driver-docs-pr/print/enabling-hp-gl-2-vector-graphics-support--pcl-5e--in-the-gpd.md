@@ -2,20 +2,22 @@
 title: Enabling HP-GL/2 Vector Graphics Support (PCL-5e) in the GPD
 author: windows-driver-content
 description: Enabling HP-GL/2 Vector Graphics Support (PCL-5e) in the GPD
-MS-HAID:
-- 'nt5gpd\_3a94800e-d1b8-4a08-b0ff-ed786dafdb83.xml'
-- 'print.enabling\_hp\_gl\_2\_vector\_graphics\_support\_\_pcl\_5e\_\_in\_the\_gpd'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 2ca5a2fe-4c37-4b7f-bd9b-d41240f8843f
-keywords: ["HP-GL/2 monochrome WDK Unidrv , enabling support", "PCL-5e WDK Unidrv , enabling support"]
+keywords:
+- HP-GL/2 monochrome WDK Unidrv , enabling support
+- PCL-5e WDK Unidrv , enabling support
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Enabling HP-GL/2 Vector Graphics Support (PCL-5e) in the GPD
 
 
-## <a href="" id="ddk-enabling-hp-gl-2-vector-graphics-support-pcl-5e-in-the-gpd-gg"></a>
+
 
 
 To enable HP-GL/2 vector support on Windows XP, you must do two things:
@@ -111,7 +113,5 @@ A GPD file for a color printer should also define a ColorMode feature, as shown 
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20Enabling%20HP-GL/2%20Vector%20Graphics%20Support%20%28PCL-5e%29%20in%20the%20GPD%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

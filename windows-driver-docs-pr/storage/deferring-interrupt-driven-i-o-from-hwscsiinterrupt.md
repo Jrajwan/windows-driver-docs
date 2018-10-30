@@ -3,7 +3,17 @@ title: Deferring Interrupt-Driven I/O from HwScsiInterrupt
 author: windows-driver-content
 description: Deferring Interrupt-Driven I/O from HwScsiInterrupt
 ms.assetid: 6bedad0c-8995-4c7b-8ee2-415ec63e0eb3
-keywords: ["SCSI miniport drivers WDK storage , HwScsiInterrupt", "HwScsiInterrupt", "interrupts WDK SCSI", "deferred interrupt-driven I/O WDK SCSI"]
+keywords:
+- SCSI miniport drivers WDK storage , HwScsiInterrupt
+- HwScsiInterrupt
+- interrupts WDK SCSI
+- deferred interrupt-driven I/O WDK SCSI
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Deferring Interrupt-Driven I/O from HwScsiInterrupt
@@ -37,6 +47,5 @@ Such a miniport driver also might call **ScsiPortNotification** with a miniport 
  
 
 
---------------------
 
 

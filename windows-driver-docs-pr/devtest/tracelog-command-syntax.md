@@ -2,13 +2,20 @@
 title: Tracelog Command Syntax
 description: Tracelog has commands (or actions) that start, stop, and control a trace session.
 ms.assetid: 13c85a1e-77ea-47d7-bb97-ff9141a8a531
-keywords: ["Tracelog Command Syntax Driver Development Tools"]
+keywords:
+- Tracelog Command Syntax Driver Development Tools
 topic_type:
 - apiref
 api_name:
 - Tracelog Command Syntax
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Tracelog Command Syntax
@@ -20,7 +27,7 @@ Tracelog has commands (or actions) that start, stop, and control a [trace sessio
 
  
 
-``` syntax
+```
     tracelog [actions] [options] | [-h | -help | -?]
 
    
@@ -29,9 +36,9 @@ Tracelog has commands (or actions) that start, stop, and control a [trace sessio
 ## <span id="Parameters"></span><span id="parameters"></span><span id="PARAMETERS"></span>Parameters
 
 
-For information about the Tracelog parameters, see \[[*actions*](#-actions-)\] \[[*options*](#-options-)\].
+For information about the Tracelog parameters, see \[[*actions*](#actions)\] \[[*options*](#options)\].
 
-### <span id="_actions_"></span><span id="_ACTIONS_"></span>\[*actions*\]
+### \[*actions*\]
 
 <span id="_______-addautologger__LoggerName_"></span><span id="_______-addautologger__loggername_"></span><span id="_______-ADDAUTOLOGGER__LOGGERNAME_"></span> **-addautologger** \[*LoggerName*\]  
 Configures the registry entries for an autologger session. An autologger session is the preferred method for tracing the activity of a driver or other trace provider during system boot. Autologger sessions are supported only on Windows Vista and later versions of Windows. You must specify the session GUID using the **-sessionguid** option. The **tracelog -addautologger** command takes the same options as the **Tracelog -start** command.
@@ -134,7 +141,7 @@ The **tracelog -stop** command both disables the trace providers and stops the t
 
 Tracelog uses the **EnableTrace** and **ControlTrace** functions to implement a **tracelog -stop** command. For more information about these functions, see the Microsoft Windows SDK documentation.
 
-When you use a **tracelog -stop GlobalLogger** command to stop a [Global Logger trace session](global-logger-trace-session.md), Tracelog stops the provider, but it does not reset the values of the registry entries. As a result, the Global Logger session restarts each time that you reboot the computer. To reset the values of the Global Logger registry entries, use **tracelog -remove**.
+If you start a [Boot-Time Global Logger session](boot-time-global-logger-session.md) which traces kernel events, you need to use the command **tracelog -stop "NT Kernel Logger"** to stop it. Otherwise, you can use the command **tracelog -stop GlobalLogger**. When you use either of the commands to stop a [Global Logger trace session](global-logger-trace-session.md), Tracelog stops the provider, but it does not reset the values of the registry entries. As a result, the Global Logger session restarts each time that you reboot the computer. To reset the values of the Global Logger registry entries, use **tracelog -remove**.
 
 <span id="-systemrundown__LoggerName_"></span><span id="-systemrundown__loggername_"></span><span id="-SYSTEMRUNDOWN__LOGGERNAME_"></span>**-systemrundown** \[*LoggerName*\]  
 Requests the SystemTraceProvider to log rundown events directed at *LoggerName* session. See [Configuring and Starting a SystemTraceProvider Session](https://msdn.microsoft.com/library/windows/desktop/jj883720) for information about starting a trace session.
@@ -170,7 +177,7 @@ A **tracelog -disable** command only disables the trace providers.
 
 Tracelog uses the **EnableTrace** and **ControlTrace** functions to implement a **tracelog -x** command. For more information about these functions, see the [EnableTrace](http://go.microsoft.com/fwlink/p/?linkid=150370) and [ControlTrace](http://go.microsoft.com/fwlink/p/?linkid=150371) topics in the Windows SDK documentation.
 
-### <span id="_options_"></span><span id="_OPTIONS_"></span>\[*options*\]
+### \[*options*\]
 
 <span id="_-addtotriagedump_______"></span><span id="_-ADDTOTRIAGEDUMP_______"></span> **-addtotriagedump**   
 Writes out buffers for triage memory dumps.
@@ -380,10 +387,10 @@ Specifies a Pid filter with *n* Pids (maximum 8 allowed). This option is availab
 Enables tracing of all page faults. This parameter is valid only for an NT Kernel Logger trace session.
 
 <span id="___________________-PkgIdFilter____Package_Full_Name____Package_Full_Name..._"></span><span id="___________________-pkgidfilter____package_full_name____package_full_name..._"></span><span id="___________________-PKGIDFILTER____PACKAGE_FULL_NAME____PACKAGE_FULL_NAME..._"></span> **-PkgIdFilter** *Package Full Name* \[ **;***Package Full Name*...\]  
-Specifies a package ID filter. You can specify a list of package files. Separate the names of the files using semi-colons. This option is available for Windows Store Apps starting in Windows 8.1.
+Specifies a package ID filter. You can specify a list of package files. Separate the names of the files using semi-colons. This option is available for UWP apps starting in Windows 8.1.
 
 <span id="___-PkgAppIdFilter_____PRAID____PRAID..._"></span><span id="___-pkgappidfilter_____praid____praid..._"></span><span id="___-PKGAPPIDFILTER_____PRAID____PRAID..._"></span> **-PkgAppIdFilter** *PRAID* \[ **;***PRAID*...\]  
-Specifies a package-relative app identifier (PRAID) filter. The PRAID is the unique identifier of the application within the package. You can specify more than one *PRAID*. Separate the ids using semi-colons. This option is available for Windows Store Apps starting in Windows 8.1.
+Specifies a package-relative app identifier (PRAID) filter. The PRAID is the unique identifier of the application within the package. You can specify more than one *PRAID*. Separate the ids using semi-colons. This option is available for UWP apps starting in Windows 8.1.
 
 <span id="-Pmc_Ctrs_Events"></span><span id="-pmc_ctrs_events"></span><span id="-PMC_CTRS_EVENTS"></span>**-Pmc** *Ctrs***:***Events*  
 Configures the performance monitor counter (PMC) sampling on events. This option is available starting in Windows 8.
@@ -529,7 +536,6 @@ For more information, see [Example 15: Measuring DPC/ISR Time](example-15--measu
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20Tracelog%20Command%20Syntax%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

@@ -2,7 +2,24 @@
 title: Pixel Fog
 description: Pixel Fog
 ms.assetid: 40896f51-87f5-44e9-9199-e92f51a1e8f1
-keywords: ["global fog WDK Direct3D", "table fog WDK Direct3D", "pixel fog WDK Direct3D", "fogging WDK Direct3D", "color fog calculations WDK Direct3D", "D3DRENDERSTATE_RANGEFOGENABLE", "D3DRENDERSTATE_FOGCOLOR", "D3DRENDERSTATE_FOGTABLEMODE", "D3DRENDERSTATE_FOGSTART", "RSTATE_FOGEND", "D3DRENDERSTATE_FOGDENSITY"]
+keywords:
+- global fog WDK Direct3D
+- table fog WDK Direct3D
+- pixel fog WDK Direct3D
+- fogging WDK Direct3D
+- color fog calculations WDK Direct3D
+- D3DRENDERSTATE_RANGEFOGENABLE
+- D3DRENDERSTATE_FOGCOLOR
+- D3DRENDERSTATE_FOGTABLEMODE
+- D3DRENDERSTATE_FOGSTART
+- RSTATE_FOGEND
+- D3DRENDERSTATE_FOGDENSITY
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Pixel Fog
@@ -67,7 +84,6 @@ If **f**, the fog blending factor, is 0.0, then the final fogged color is identi
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[display\display]:%20Pixel%20Fog%20%20RELEASE:%20%282/10/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

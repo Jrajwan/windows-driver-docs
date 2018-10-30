@@ -3,13 +3,25 @@ title: ATA Port Driver's Reset Mechanism
 author: windows-driver-content
 description: ATA Port Driver's Reset Mechanism
 ms.assetid: adc27819-d1ae-4b97-8109-5d742c0595d3
-keywords: ["ATA Port drivers WDK , reset mechanism", "reset mechanism WDK ATA Port driver", "LUN resets WDK ATA Port driver"]
+keywords:
+- ATA Port drivers WDK , reset mechanism
+- reset mechanism WDK ATA Port driver
+- LUN resets WDK ATA Port driver
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # ATA Port Driver's Reset Mechanism
 
 
 ## <span id="ddk_ata_port_drivers_reset_mechanism_kg"></span><span id="DDK_ATA_PORT_DRIVERS_RESET_MECHANISM_KG"></span>
+
+**NOTE** The ATA port driver and ATA miniport driver models may be altered or unavailable in the future. Instead, we recommend using the [Storport driver](https://msdn.microsoft.com/en-us/windows/hardware/drivers/storage/storport-driver) and [Storport miniport](https://msdn.microsoft.com/en-us/windows/hardware/drivers/storage/storport-miniport-drivers) driver models.
+
 
 
 The ATA port driver supports a two-tier reset mechanism that resembles, in some respects, the reset mechanism of the Storport driver. For more information about the Storport reset mechanism, see [Multi-Tier Reset in Storport](multi-tier-reset-in-storport.md).
@@ -25,8 +37,5 @@ The ATA port driver does not support target resets for devices that have multipl
  
 
  
-
-
---------------------
 
 

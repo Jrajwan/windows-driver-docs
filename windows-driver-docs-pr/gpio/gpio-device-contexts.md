@@ -2,10 +2,13 @@
 title: GPIO Device Contexts
 author: windows-driver-content
 description: A general-purpose I/O (GPIO) controller device is represented by a framework device object.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 4BE99C71-9BA6-44E3-A54F-DE8C3440A474
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # GPIO Device Contexts
@@ -22,6 +25,5 @@ GpioClx allocates the storage for a device object. If a GPIO controller driver h
  
 
 
---------------------
 
 

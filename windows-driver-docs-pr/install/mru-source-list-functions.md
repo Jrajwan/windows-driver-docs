@@ -2,13 +2,23 @@
 title: MRU Source List Functions
 description: MRU Source List Functions
 ms.assetid: 62c6b144-5883-45cf-a114-7b82453f275f
-keywords: ["SetupAPI functions WDK , most recently used source lists", "most recently used source lists WDK SetupAPI", "MRU source lists WDK SetupAPI", "source lists WDK MRU"]
+keywords:
+- SetupAPI functions WDK , most recently used source lists
+- most recently used source lists WDK SetupAPI
+- MRU source lists WDK SetupAPI
+- source lists WDK MRU
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # MRU Source List Functions
 
 
-## <a href="" id="ddk-mru-source-list-functions-dg"></a>
+
 
 
 Most recently used (MRU) source lists are resident on the user's computer and contain information about source paths used in previous installations. This information can be used when prompting the user for a source path.

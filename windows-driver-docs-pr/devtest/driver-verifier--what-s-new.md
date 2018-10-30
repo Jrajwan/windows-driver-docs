@@ -2,6 +2,12 @@
 title: Driver Verifier What's New
 description: Driver Verifier is available in all versions of Windows starting with Windows 2000. Each version introduces new features and checks for finding bugs in Windows drivers. This section summarizes the changes and provides links to related documentation.
 ms.assetid: EAC30108-F8A2-4914-9218-2E0672982B7E
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Driver Verifier: What's New
@@ -9,17 +15,22 @@ ms.assetid: EAC30108-F8A2-4914-9218-2E0672982B7E
 
 [Driver Verifier](driver-verifier.md) is available in all versions of Windows starting with Windows 2000. Each version introduces new features and checks for finding bugs in Windows drivers. This section summarizes the changes and provides links to related documentation.
 
--   [Driver Verifier in Windows 10](#dv-win10)
--   [Driver Verifier in Windows 8.1](#dv-win8-1)
--   [Driver Verifier in Windows 8](#dv-win8)
--   [Driver Verifier in Windows 7](#dv-win7)
--   [Driver Verifier in Windows Vista](#dv-vista)
--   [Driver Verifier in Windows XP](#dv-xp)
+-   [Driver Verifier in Windows 10](#driver-verifier-in-windows-10)
+-   [Driver Verifier in Windows 8.1](#driver-verifier-in-windows-8-1)
+-   [Driver Verifier in Windows 8](#driver-verifier-in-windows-8)
+-   [Driver Verifier in Windows 7](#driver-verifier-in-windows-7)
+-   [Driver Verifier in Windows Vista](#driver-verifier-in-windows-vista)
+-   [Driver Verifier in Windows XP](#driver-verifier-in-windows-xp)
 
-## <span id="dv_win10"></span><span id="DV_WIN10"></span>Driver Verifier in Windows 10
+## Driver Verifier in Windows 10
 
 
-*Updated: July 29, 2015*
+*Updated: May 8, 2018*
+
+> [!IMPORTANT]
+> Starting in versions after Windows 10 1803, running Driver Verifier will no longer automatically enable Windows Driver Framework (WDF) verification. Please note the following:  
+> * You can still enable WDF verification as part of Driver Verifier's `/standard` flags. See [Driver Verifier Command Syntax](https://docs.microsoft.com/windows-hardware/drivers/devtest/verifier-command-line) for more information.
+> * This change will impact you if you are enabling DV with syntax `/flags 0x209BB` as WDF verification will no longer be automatically enabled.
 
 Starting with Windows 10, driver verifier includes new driver validation rules for the following technologies:
 
@@ -28,7 +39,7 @@ Starting with Windows 10, driver verifier includes new driver validation rules 
 -   Four new [Rules for KMDF Drivers](https://msdn.microsoft.com/library/windows/hardware/ff551709)
 -   Three new [Rules for NDIS Drivers](https://msdn.microsoft.com/library/windows/hardware/ff551713)
 
-## <span id="DV_WIN8.1"></span>Driver Verifier in Windows 8.1
+## Driver Verifier in Windows 8-1
 
 
 *Updated: June 17, 2013*
@@ -44,7 +55,7 @@ Starting with Windows 8.1, Driver Verifier introduces four new options for detec
 -   The [VM switch verification](vm-switch-verification.md) option monitors filter drivers (extensible switch extensions) that run inside the [Hyper-V Extensible Switch](https://msdn.microsoft.com/library/windows/hardware/hh598161).
 -   New debugger extension: [**!ruleinfo**](https://msdn.microsoft.com/library/windows/hardware/dn265374)
 
-## <span id="dv_win8"></span><span id="DV_WIN8"></span>Driver Verifier in Windows 8
+## Driver Verifier in Windows 8
 
 
 *Updated: October 20, 2012*
@@ -59,7 +70,7 @@ Starting with Windows 8, Driver Verifier introduces five new options for detecti
 
 When you build, deploy, and test your driver using Visual Studio 2012 and the WDK for Windows 8, you can also configure Driver Verifier to run on a test computer when you deploy your driver for testing.
 
-## <span id="dv_win7"></span><span id="DV_WIN7"></span>Driver Verifier in Windows 7
+## Driver Verifier in Windows 7
 
 
 *Updated: October 22, 2012*
@@ -113,7 +124,7 @@ In this way, Driver Verifier can capture more of these IRQL transition stack tra
 
 **!analyze** can triage issues that are exposed by the Enhanced I/O Verifier checks (that are part of I/O Verifier in Windows 7). In earlier Windows versions, the Enhanced I/O Verifier error reporting consisted of displaying a description of the driver defect that was detected by Driver Verifier followed by a break into debugger. Running **!analyze** after such a break does not result in meaningful triage for many of these breaks because **!analyze** cannot use the information from the error description text that appears in the debugger. In Windows 7, the meaningful information about these driver defects is saved by Driver Verifier in memory. **!analyze** can find this information and perform a much more meaningful automatic triage for many of these breaks.
 
-## <span id="dv_vista"></span><span id="DV_VISTA"></span>Driver Verifier in Windows Vista
+## Driver Verifier in Windows Vista
 
 
 *Updated: February 9, 2009*
@@ -132,7 +143,7 @@ For Windows Vista, Driver Verifier has been enhanced with new tests and features
 -   Locked Memory Page Tracking
 -   Additional Automatic Checks
 
-## <span id="dv_xp"></span><span id="DV_XP"></span>Driver Verifier in Windows XP
+## Driver Verifier in Windows XP
 
 
 *Updated: December 4, 2001*
@@ -169,7 +180,6 @@ Driver Verifier features also include:
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20Driver%20Verifier:%20What's%20New%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

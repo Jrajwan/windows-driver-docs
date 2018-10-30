@@ -2,13 +2,25 @@
 title: Installation Requirements for Network Components
 description: Installation Requirements for Network Components
 ms.assetid: 1a775525-8ca0-4435-b14f-ca4262a48140
-keywords: ["INF files WDK network , installation requirements", "network INF files WDK , installation requirements", "installing network components WDK , installation requirements", "network component installations WDK , installation requirements", "installing network components WDK , INF files", "network component installations WDK , INF files"]
+keywords:
+- INF files WDK network , installation requirements
+- network INF files WDK , installation requirements
+- installing network components WDK , installation requirements
+- network component installations WDK , installation requirements
+- installing network components WDK , INF files
+- network component installations WDK , INF files
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Installation Requirements for Network Components
 
 
-## <a href="" id="ddk-installation-requirements-for-network-components-ng"></a>
+
 
 
 This section summarizes the installation requirements for certain types of network components. These requirements are described in the following topics:

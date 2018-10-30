@@ -2,7 +2,20 @@
 title: WHQL Release Signature
 description: WHQL Release Signature
 ms.assetid: edc815d4-596c-4f50-9bff-029b8ea19a0a
-keywords: ["driver signing WDK , WHQL digital signatures", "signing drivers WDK , WHQL digital signatures", "digital signatures WDK , WHQL", "signatures WDK , WHQL", "WHQL digital signatures WDK", "public release driver signing WDK , WHQL", "release signing WDK , WHQL"]
+keywords:
+- driver signing WDK , WHQL digital signatures
+- signing drivers WDK , WHQL digital signatures
+- digital signatures WDK , WHQL
+- signatures WDK , WHQL
+- WHQL digital signatures WDK
+- public release driver signing WDK , WHQL
+- release signing WDK , WHQL
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # WHQL Release Signature
@@ -20,7 +33,7 @@ Obtaining a WHQL release signature consists of the following:
 
 For more information about WHQL, see the [Windows Hardware Quality Labs](http://go.microsoft.com/fwlink/p/?linkid=8705) website.
 
-**Note**  WHQL does not embed signatures in driver files. If you embed a signature in a driver file, you should use a third-party commercial [release certificate](release-certificates.md). Embed the signature in the driver file before submitting the driver package to WHQL.
+**Note**  WHQL does not embed signatures in driver files. You can embed a signature in a driver file using a third-party commercial [release certificate](release-certificates.md). Embed the signature in the driver file before submitting the driver package to WHQL.
 
  
 

@@ -1,9 +1,18 @@
 ---
-title: Handling SRB\_FUNCTION\_RESET\_DEVICE
+title: Handling SRB_FUNCTION_RESET_DEVICE
 author: windows-driver-content
-description: Handling SRB\_FUNCTION\_RESET\_DEVICE
+description: Handling SRB_FUNCTION_RESET_DEVICE
 ms.assetid: d95bca21-306e-4598-a8c6-04990885e23d
-keywords: ["SCSI miniport drivers WDK storage , HwScsiStartIo", "HwScsiStartIo", "SRB_FUNCTION_RESET_DEVICE"]
+keywords:
+- SCSI miniport drivers WDK storage , HwScsiStartIo
+- HwScsiStartIo
+- SRB_FUNCTION_RESET_DEVICE
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Handling SRB\_FUNCTION\_RESET\_DEVICE
@@ -25,6 +34,5 @@ If the device reset fails or times out, or if the time-out occurs while the port
  
 
 
---------------------
 
 

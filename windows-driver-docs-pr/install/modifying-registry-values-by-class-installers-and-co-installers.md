@@ -2,13 +2,24 @@
 title: Modifying Registry Values by Class Installers and Co-installers
 description: Modifying Registry Values by Class Installers and Co-installers
 ms.assetid: 2D4B907A-622B-4b1b-A692-8E858F770F70
-keywords: ["registry WDK device installations , modifying registry values", "registry WDK device installations , modifying registry values, class installers", "registry WDK device installations , modifying registry values, co-installers", "class installers WDK device installations , modifying registry values", "co-installers WDK device installations , modifying registry values"]
+keywords:
+- registry WDK device installations , modifying registry values
+- registry WDK device installations , modifying registry values, class installers
+- registry WDK device installations , modifying registry values, co-installers
+- class installers WDK device installations , modifying registry values
+- co-installers WDK device installations , modifying registry values
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Modifying Registry Values by Class Installers and Co-installers
 
 
-**Note**  Features described in this section are not supported in universal or mobile driver packages. See [Using a Universal INF File](using-a-configurable-inf-file.md).
+**Note**  Features described in this section are not supported in universal or mobile driver packages. See [Using a Universal INF File](using-a-universal-inf-file.md).
 
  
 
@@ -26,7 +37,7 @@ The following are exceptions to this rule:
 
     Class installers and co-installers must follow the restrictions about how to use the [RunOnce registry key](runonce-registry-key.md) in [INF files](inf-files.md). In particular, this registry key must be used only for the installation of software-only devices that are enumerated by using the software device enumerator (SWENUM).
 
--   Class installers and co-installers can modify the **CoInstallers32** and **EnumPropPages32** registry values in the device?s [*software key*](https://msdn.microsoft.com/library/windows/hardware/ff556336#wdkgloss-software-key) when the installer handles [**DIF\_REGISTER\_COINSTALLERS**](https://msdn.microsoft.com/library/windows/hardware/ff543715) requests.
+-   Class installers and co-installers can modify the **CoInstallers32** and **EnumPropPages32** registry values in the device's [*software key*](https://msdn.microsoft.com/library/windows/hardware/ff556336#wdkgloss-software-key) when the installer handles [**DIF_REGISTER_COINSTALLERS**](https://msdn.microsoft.com/library/windows/hardware/ff543715) requests.
 
 The following guidelines should be followed to safely modify registry values by class installers or co-installers:
 

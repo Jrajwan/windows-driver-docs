@@ -2,13 +2,25 @@
 title: Miniport Adapter Check-for-Hang and Reset Operations
 description: Miniport Adapter Check-for-Hang and Reset Operations
 ms.assetid: 53ffc5a9-bcba-4189-8845-73adfcf6816d
-keywords: ["miniport adapters WDK networking , check-for-hang operations", "miniport adapters WDK networking , reset operations", "adapters WDK networking , check-for-hang operations", "adapters WDK networking , reset operations", "MiniportCheckForHangEx", "hang and reset o"]
+keywords:
+- miniport adapters WDK networking , check-for-hang operations
+- miniport adapters WDK networking , reset operations
+- adapters WDK networking , check-for-hang operations
+- adapters WDK networking , reset operations
+- MiniportCheckForHangEx
+- hang and reset o
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Miniport Adapter Check-for-Hang and Reset Operations
 
 
-## <a href="" id="ddk-adapter-check-for-hang-and-reset-ng"></a>
+
 
 
 NDIS calls an NDIS miniport driver's [*MiniportCheckForHangEx*](https://msdn.microsoft.com/library/windows/hardware/ff559346) function to check the operational state of an NDIS adapter that represents a network interface card (NIC). *MiniportCheckForHangEx* checks the internal state of the adapter and returns **TRUE** if it detects that the adapter is not operating correctly.

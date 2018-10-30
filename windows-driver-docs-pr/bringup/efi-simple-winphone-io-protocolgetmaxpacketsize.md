@@ -1,11 +1,14 @@
 ---
-title: EFI\_SIMPLE\_WINPHONE\_IO\_PROTOCOL.GetMaxPacketSize
+title: EFI_SIMPLE_WINPHONE_IO_PROTOCOL.GetMaxPacketSize
 author: windows-driver-content
-description: EFI\_SIMPLE\_WINPHONE\_IO\_PROTOCOL.GetMaxPacketSize
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: EFI_SIMPLE_WINPHONE_IO_PROTOCOL.GetMaxPacketSize
 ms.assetid: 8808bb5d-e00d-4b19-87ad-4a071a896e22
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # EFI\_SIMPLE\_WINPHONE\_IO\_PROTOCOL.GetMaxPacketSize
@@ -83,6 +86,5 @@ The maximum supported packet size, in bytes.
  
 
 
---------------------
 
 

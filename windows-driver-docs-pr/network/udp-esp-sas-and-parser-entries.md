@@ -2,14 +2,25 @@
 title: UDP-ESP SAs and Parser Entries
 description: UDP-ESP SAs and Parser Entries
 ms.assetid: 1682b077-07ba-4b2e-9c01-fd7662f3f189
-keywords: ["UDP-encapsulated ESP packets WDK IPsec offload , parser entries", "parser entries WDK IPsec offload", "UDP-encapsulated ESP packets WDK IPsec offload , security associations", "security associations WDK IPsec offload", "SAs WDK IPsec offload"]
+keywords:
+- UDP-encapsulated ESP packets WDK IPsec offload , parser entries
+- parser entries WDK IPsec offload
+- UDP-encapsulated ESP packets WDK IPsec offload , security associations
+- security associations WDK IPsec offload
+- SAs WDK IPsec offload
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # UDP-ESP SAs and Parser Entries
 
 \[The IPsec Task Offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-udp-esp-sas-and-parser-entries-ng"></a>
+
 
 
 A miniport driver that supports UDP-ESP encapsulation must maintain a list of parser entries. A parser entry contains information that a NIC requires to parse incoming UDP-ESP packets on offloaded security associations (SAs).

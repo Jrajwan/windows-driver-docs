@@ -2,20 +2,25 @@
 title: Supporting ACPI Devices
 author: windows-driver-content
 description: Supporting ACPI Devices
-MS-HAID:
-- 'opregdg\_66824886-328f-4879-865b-de44358b8a72.xml'
-- 'acpi.supporting\_acpi\_devices'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: ebaf2e66-4f56-48ca-93ca-f34e694c0d73
-keywords: ["Advanced Configuration and Power Interface Specification WDK", "ACPI devices WDK", "ACPI devices WDK , about ACPI devices", "definition blocks WDK ACPI", "operation regions WDK ACPI", "operation region handlers WDK ACPI", "function drivers WDK ACPI", "WDM function drivers WDK ACPI"]
+keywords:
+- Advanced Configuration and Power Interface Specification WDK
+- ACPI devices WDK
+- ACPI devices WDK , about ACPI devices
+- definition blocks WDK ACPI
+- operation regions WDK ACPI
+- operation region handlers WDK ACPI
+- function drivers WDK ACPI
+- WDM function drivers WDK ACPI
+ms.author: windowsdriverdev
+ms.date: 01/24/2018
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Supporting ACPI Devices
-
-
-## <a href="" id="ddk-supporting-acpi-devices-kg"></a>
 
 
 This section describes how a vendor can use a WDM function driver in Microsoft Windows 2000 and later versions of Windows to enhance the functionality of an Advanced Configuration and Power Interface (ACPI) device.
@@ -48,13 +53,13 @@ The following topics describe how to supply a function driver for an ACPI device
 
 For information about the system-supplied support routines that support ACPI device function drivers, see [ACPI Operation Region Handler Reference](https://msdn.microsoft.com/library/windows/hardware/ff536132).
 
-For more information about ACPI devices and namespaces, see the [Advanced Configuration and Power Interface (ACPI) Specification](http://go.microsoft.com/fwlink/p/?linkid=57185).
+For more information about ACPI devices and namespaces, see the [Advanced Configuration and Power Interface (ACPI) Specification](https://go.microsoft.com/fwlink/p/?linkid=866846).
 
  
 
  
 
 
---------------------
+
 
 

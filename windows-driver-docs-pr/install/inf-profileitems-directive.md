@@ -2,25 +2,32 @@
 title: INF ProfileItems Directive
 description: A ProfileItems directive is used in an INF DDInstall section to list one or more profile-items-sections that contain items or groups to be added to, or removed from, the Start menu.
 ms.assetid: 8cdd6dcd-de5d-4652-8842-6b0be6f5fb59
-keywords: ["INF ProfileItems Directive Device and Driver Installation"]
+keywords:
+- INF ProfileItems Directive Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF ProfileItems Directive
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF ProfileItems Directive
 
 
-**Note**  If you are building a universal or mobile driver package, this directive is not valid. See [Using a Universal INF File](using-a-configurable-inf-file.md).
+**Note**  If you are building a universal or mobile driver package, this directive is not valid. See [Using a Universal INF File](using-a-universal-inf-file.md).
 
  
 
 A **ProfileItems** directive is used in an [**INF *DDInstall* section**](inf-ddinstall-section.md) to list one or more *profile-items-sections* that contain items or groups to be added to, or removed from, the Start menu.
 
-``` syntax
+```
 [DDInstall] 
  
 ProfileItems=profile-items-section[,profile-items-section]...
@@ -29,7 +36,7 @@ ProfileItems=profile-items-section[,profile-items-section]...
 
 Each named section referenced by a **ProfileItems** directive has the following form:
 
-``` syntax
+```
 [profile-items-section]
  
 Name=link-name[,name-attributes]
@@ -53,13 +60,13 @@ The *link-name* specifies the name of the link for the menu item or group, witho
 
 The optional *name-attributes* value specifies one or more flags that affect the operation on the menu item. This value is expressed as an ORed bitmask of system-defined flag values. Possible flags include the following:
 
-<a href="" id="0x00000001--flg-profitem-currentuser-"></a>**0x00000001** (FLG\_PROFITEM\_CURRENTUSER)  
+<a href="" id="0x00000001--flg-profitem-currentuser-"></a>**0x00000001** (FLG_PROFITEM_CURRENTUSER)  
 Directs Windows to create or delete a Start menu item in the current user's profile. If this flag is not specified, Windows processes the item for all users.
 
-<a href="" id="0x00000002---flg-profitem-delete-"></a>**0x00000002** (FLG\_PROFITEM\_DELETE)  
+<a href="" id="0x00000002---flg-profitem-delete-"></a>**0x00000002** (FLG_PROFITEM_DELETE)  
 Directs Windows to delete the menu item. If this flag is not specified, the item is created.
 
-<a href="" id="0x00000004--flg-profitem-group-"></a>**0x00000004** (FLG\_PROFITEM\_GROUP)  
+<a href="" id="0x00000004--flg-profitem-group-"></a>**0x00000004** (FLG_PROFITEM_GROUP)  
 Directs Windows to create or delete a Start menu group under Start\\Programs. If this flag is not specified, Windows creates or deletes a menu item, not a menu group.
 
 If no flag is specified, Windows creates a menu item for all users.
@@ -76,7 +83,7 @@ This optional entry specifies a subdirectory (submenu) under Start\\Programs in 
 
 For example, if the *profile-items-section* has the entry "Subdir=Accessories\\Games", then the menu item is being created or deleted in the Start\\Programs\\Accessories\\Games submenu.
 
-**Note**  If FLG\_PROFITEM\_GROUP is specified for *name-attributes*, the **SubDir** entry is ignored.
+**Note**  If FLG_PROFITEM_GROUP is specified for *name-attributes*, the **SubDir** entry is ignored.
 
  
 
@@ -117,7 +124,7 @@ The *info-tip* value can also be specified as **"@***ResDllPath***\\***ResDll***
 
 Use this format to support Windows Multilingual User Interface (MUI). An example is as follows:
 
-``` syntax
+```
 InfoTip = "@%11%\shell32.dll,-22531"
 ```
 
@@ -126,7 +133,7 @@ This optional entry specifies a string resource that identifies a localizable st
 
 *ResDllPath* and *ResDll* specify the path and file name of a resource DLL, and *resID* is a positive value that represents a resource ID. An example is as follows:
 
-``` syntax
+```
 DisplayResource="%11%\shell32.dll",22019
 ```
 

@@ -1,10 +1,13 @@
 ---
 title: List of mobile broadband Windows Runtime APIs
 description: List of mobile broadband Windows Runtime APIs
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 45ec97c4-1a58-48a8-ad50-1cd8fcc4763f
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # List of mobile broadband Windows Runtime APIs
@@ -66,9 +69,9 @@ The following sections are available in this topic:
 ## <span id="mbacctapi"></span><span id="MBACCTAPI"></span>Mobile Broadband Account API
 
 
-Because it has methods that can be used to get personally identifiable information about the customer and change the network settings on mobile broadband devices, the Mobile Broadband Account API is a privileged API. This means that most Windows Store apps cannot call its methods without getting an “access denied” error. To be able to call this API, a Windows Store app must meet the following criteria:
+Because it has methods that can be used to get personally identifiable information about the customer and change the network settings on mobile broadband devices, the Mobile Broadband Account API is a privileged API. This means that most UWP apps cannot call its methods without getting an “access denied” error. To be able to call this API, a UWP app must meet the following criteria:
 
--   The app must have a device metadata or service metadata package associated with it, and it must be listed in the [PrivilegedApplications](privilegedapplications.md) XML element of the SoftwareInfo.xml file inside the package. The package does not have to be exclusive to the application; it is possible for any particular Windows Store app to be listed in the PrivilegedApplications element of several packages. That package must be associated with the service provider for a mobile broadband device that has been active at least once on the computer, so that it has been installed.
+-   The app must have a device metadata or service metadata package associated with it, and it must be listed in the [PrivilegedApplications](privilegedapplications.md) XML element of the SoftwareInfo.xml file inside the package. The package does not have to be exclusive to the application; it is possible for any particular UWP app to be listed in the PrivilegedApplications element of several packages. That package must be associated with the service provider for a mobile broadband device that has been active at least once on the computer, so that it has been installed.
 
 -   The application’s appxmanifest file needs a **&lt;DeviceCapability&gt;** entry for the Mobile Broadband Account API. You can do this by adding the following XML element as a child of the **&lt;Capabilities&gt;** element in the application’s appxmanifest file:
 
@@ -79,7 +82,7 @@ Because it has methods that can be used to get personally identifiable informati
     For more information on the **&lt;Capabilities&gt;** element, see [App Manifest File For Windows 8](https://msdn.microsoft.com/library/windows/apps/ff769509.aspx).
 
 **Note**  
-Applications that are not Windows Store apps (for example, Microsoft Win32 services or desktop apps) have unrestricted access to the Mobile Broadband Account API. This is because these applications can use existing Win32 and Component Object Model (COM) APIs to get full access to the mobile broadband network. These APIs cannot be used from Windows Store apps.
+Applications that are not UWP apps (for example, Microsoft Win32 services or desktop apps) have unrestricted access to the Mobile Broadband Account API. This is because these applications can use existing Win32 and Component Object Model (COM) APIs to get full access to the mobile broadband network. These APIs cannot be used from UWP apps.
 
  
 
@@ -102,7 +105,7 @@ Even though getting the ICCID from a network account ID requires access to the c
 Network account IDs are segregated by mobile network operator (MNO), so that if an end user has both Provider1 and Provider2 mobile broadband devices and their corresponding mobile broadband apps are installed, the Provider1 app will not be able to use any Provider2 network account IDs, and vice versa. The function that returns all network account IDs will return only the IDs of the network accounts for the MNO whose application is calling the function. An attempt to use a network account ID that belongs to a different MNO will result in an “access denied” error.
 
 **Note**  
-Apps that are not Windows Store apps (for example, Win32 services or desktop apps) have access to all network accounts regardless of network service provider.
+Apps that are not UWP apps (for example, Win32 services or desktop apps) have access to all network accounts regardless of network service provider.
 
  
 
@@ -115,7 +118,6 @@ Apps that are not Windows Store apps (for example, Win32 services or desktop app
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bp_mb\p_mb%5D:%20List%20of%20mobile%20broadband%20Windows%20Runtime%20APIs%20%20RELEASE:%20%281/18/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

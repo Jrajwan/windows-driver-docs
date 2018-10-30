@@ -1,11 +1,14 @@
 ---
-title: EFI\_USBFN\_IO\_PROTOCOL.AllocateTransferBuffer
+title: EFI_USBFN_IO_PROTOCOL.AllocateTransferBuffer
 author: windows-driver-content
-description: EFI\_USBFN\_IO\_PROTOCOL.AllocateTransferBuffer
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: EFI_USBFN_IO_PROTOCOL.AllocateTransferBuffer
 ms.assetid: dbaa4f18-97b5-4867-9e03-de19b2253722
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # EFI\_USBFN\_IO\_PROTOCOL.AllocateTransferBuffer
@@ -87,6 +90,5 @@ This function returns the following values:
  
 
 
---------------------
 
 

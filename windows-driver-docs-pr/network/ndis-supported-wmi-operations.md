@@ -2,13 +2,26 @@
 title: NDIS-Supported WMI Operations
 description: NDIS-Supported WMI Operations
 ms.assetid: 78dfe8a6-25aa-40d4-bc32-19bd1d4a41b1
-keywords: ["Windows Management Instrumentation WDK networking , NDIS operations", "WMI WDK networking , NDIS operations", "virtual connections WDK NDIS WMI", "VCs WDK NDIS WMI", "miniport adapters WDK networking , enumerating", "adapters WDK networking , enumerating", "QU"]
+keywords:
+- Windows Management Instrumentation WDK networking , NDIS operations
+- WMI WDK networking , NDIS operations
+- virtual connections WDK NDIS WMI
+- VCs WDK NDIS WMI
+- miniport adapters WDK networking , enumerating
+- adapters WDK networking , enumerating
+- QU
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NDIS-Supported WMI Operations
 
 
-## <a href="" id="ddk-ndis-supported-wmi-operations-ng"></a>
+
 
 
 NDIS supports the following WMI operations:
@@ -31,7 +44,7 @@ NDIS supports the following WMI operations:
 
 -   EXECUTE METHOD
 
-    Through NDIS, a WMI client can run a method that is associated with a data block, which corresponds to a single OID. WMI clients provide the information that NDIS requires to run the method. The NDIS\_WMI\_DEFAULT\_METHOD\_ID method identifier specifies the default method. Method requests can be associated with miniport adapters, NDIS ports, or VCs. NDIS returns the resulting information after the method is successfully run.
+    Through NDIS, a WMI client can run a method that is associated with a data block, which corresponds to a single OID. WMI clients provide the information that NDIS requires to run the method. Method requests can be associated with miniport adapters, NDIS ports, or VCs. NDIS returns the resulting information after the method is successfully run.
 
  
 

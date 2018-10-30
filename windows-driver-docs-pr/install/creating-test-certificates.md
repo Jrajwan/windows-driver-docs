@@ -2,6 +2,12 @@
 title: Creating Test Certificates
 description: Creating Test Certificates
 ms.assetid: 4e6daa96-029c-4e1c-b483-b900cb836858
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Creating Test Certificates
@@ -39,7 +45,7 @@ Where:
 
 For more information about the MakeCert tool and its command-line arguments, see [**MakeCert**](https://msdn.microsoft.com/library/windows/hardware/ff548309).
 
-Also, refer to the readme file *Selfsign\_readme.htm* and the script file *Selfsign\_example.cmd*, which are located in the *src\\general\\build\\driversigning* directory of the Windows Driver Kit (WDK). The script file *Selfsign\_example.cmd* includes a documented example of how to use MakeCert to create a test certificate.
+Also, refer to the readme file *Selfsign_readme.htm* and the script file *Selfsign_example.cmd*, which are located in the *src\\general\\build\\driversigning* directory of the Windows Driver Kit (WDK). The script file *Selfsign_example.cmd* includes a documented example of how to use MakeCert to create a test certificate.
 
  
 

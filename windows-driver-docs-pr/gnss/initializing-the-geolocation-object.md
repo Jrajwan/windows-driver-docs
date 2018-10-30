@@ -1,15 +1,20 @@
 ---
 title: Initializing the geolocation object
 author: windows-driver-content
-description: The object source file, geolocation.cpp, contains an Initialize method that initializes the settable property keys and data-field keys for the simulated geolocation-sensor. This method is invoked by the sensor manager at startup.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: Geolocation.cpp contains an Initialize method that initializes the settable property keys and data-field keys for the simulated geolocation-sensor.
 ms.assetid: 3803BD3B-9853-4AA4-A278-22F8D835B1ED
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Initializing the geolocation object
 
+> [!IMPORTANT] 
+> This documentation and the geolocation driver sample for Windows 8.1 has been deprecated.
 
 The object source file, geolocation.cpp, contains an **Initialize** method that initializes the settable property keys and data-field keys for the simulated geolocation-sensor. This method is invoked by the sensor manager at startup.
 
@@ -50,7 +55,5 @@ The **Initialize** method, in turn, invokes an **InitializeGeolocation** method.
 [Defining the geolocation object](defining-the-geolocation-object.md)  
 [Filtering data](https://msdn.microsoft.com/library/windows/hardware/hh706201)  
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bsensors\sensors%5D:%20Initializing%20the%20geolocation%20object%20%20RELEASE:%20%281/9/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

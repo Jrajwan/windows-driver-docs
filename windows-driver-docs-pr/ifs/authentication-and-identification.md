@@ -3,7 +3,16 @@ title: Authentication and Identification
 author: windows-driver-content
 description: Authentication and Identification
 ms.assetid: fe118cf3-05ce-43b1-b878-4bb99b97dc2e
-keywords: ["security WDK file systems , minimizing threats", "authentication WDK file systems", "identification WDK file systems"]
+keywords:
+- security WDK file systems , minimizing threats
+- authentication WDK file systems
+- identification WDK file systems
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Authentication and Identification
@@ -19,6 +28,5 @@ Most drivers are not involved in authentication or identification issues, leavin
  
 
 
---------------------
 
 

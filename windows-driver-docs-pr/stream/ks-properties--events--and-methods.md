@@ -2,20 +2,32 @@
 title: KS Properties, Events, and Methods
 author: windows-driver-content
 description: KS Properties, Events, and Methods
-MS-HAID:
-- 'ks-overview\_364985f9-e7db-439a-bfbd-d01e426b19e4.xml'
-- 'stream.ks\_properties\_\_events\_\_and\_methods'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 933bbe81-92d8-4bcc-b935-9ae929464ca1
-keywords: ["kernel streaming WDK , properties", "KS properties WDK kernel streaming", "kernel streaming WDK , events", "KS WDK , events", "kernel streaming WDK , methods", "KS WDK , methods", "properties WDK kernel streaming", "events WDK kernel streaming", "methods WDK kernel streaming", "alias structures WDK kernel streaming", "set operations WDK kernel streaming", "get operations WDK kernel streaming"]
+keywords:
+- kernel streaming WDK , properties
+- KS properties WDK kernel streaming
+- kernel streaming WDK , events
+- KS WDK , events
+- kernel streaming WDK , methods
+- KS WDK , methods
+- properties WDK kernel streaming
+- events WDK kernel streaming
+- methods WDK kernel streaming
+- alias structures WDK kernel streaming
+- set operations WDK kernel streaming
+- get operations WDK kernel streaming
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # KS Properties, Events, and Methods
 
 
-## <a href="" id="ddk-ks-properties-events-and-methods-ksg"></a>
+
 
 
 Kernel streaming architecture supports interaction between minidrivers and user-mode clients through [properties](ks-properties.md), [events](ks-events.md), and [methods](ks-methods.md). Using these constructs, clients of a KS object can get and set object state, register notification callbacks for events, and execute object methods.
@@ -53,7 +65,5 @@ These sections contain information about how minidrivers support the three opera
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bstream\stream%5D:%20KS%20Properties,%20Events,%20and%20Methods%20%20RELEASE:%20%288/23/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

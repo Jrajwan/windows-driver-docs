@@ -2,13 +2,23 @@
 title: Dynamic Binding in an Intermediate Driver
 description: Dynamic Binding in an Intermediate Driver
 ms.assetid: 0b825141-2a19-40c6-82cf-8e897a25b0aa
-keywords: ["intermediate drivers WDK networking , binding", "NDIS intermediate drivers WDK , binding", "dynamic binding WDK networking", "binding operations WDK networking"]
+keywords:
+- intermediate drivers WDK networking , binding
+- NDIS intermediate drivers WDK , binding
+- dynamic binding WDK networking
+- binding operations WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Dynamic Binding in an Intermediate Driver
 
 
-## <a href="" id="ddk-dynamic-binding-in-an-intermediate-driver-ng"></a>
+
 
 
 An intermediate driver must support dynamic binding to underlying miniport adapters by providing both a [*ProtocolBindAdapterEx*](https://msdn.microsoft.com/library/windows/hardware/ff570220) and a [*ProtocolUnbindAdapterEx*](https://msdn.microsoft.com/library/windows/hardware/ff570278) function.

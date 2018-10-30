@@ -2,10 +2,13 @@
 title: Windows Hello camera driver bring up guide
 author: windows-driver-content
 description: Windows Hello provides you the ability to enable face authentication to log on to a Windows 10 system or device.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 5CE619F4-E136-4F8F-8F90-F7F96DE4642E
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Windows Hello camera driver bring up guide
@@ -20,7 +23,7 @@ The following diagram shows how Windows Hello works with the new driver stack th
 
 ![windows hello and frameserver](images/windows-hello-device-model.png)
 
-## <a href="" id="face-authentication--ddis"></a>Face authentication DDIs
+## Face authentication DDIs
 
 
 There are two new face authentication DDI constructs available in Windows 10, version 1607 to support Windows Hello:
@@ -97,7 +100,7 @@ This removes the camera from **KSCATEGORY\_VIDEO**, which will block it from bei
 
 Both the **SkipCameraEnumeration** and **SensorCameraMode** entries should be placed in the **DDInstall.HW** section of the INF file.
 
-## <a href="" id="hlk-tests-for-kscategory-sensor-camera-to-assist-driver-testing"></a>HLK tests for KSCATEGORY\_SENSOR\_CAMERA to assist driver testing
+## HLK tests for KSCATEGORY\_SENSOR\_CAMERA to assist driver testing
 
 
 Hardware Logo Kit (HLK) testing is required for both IR and RGB camera modules. This testing verifies the basic functionality of RGB and IR cameras used for Windows Hello face authentication. The RGB camera requirements are already specified in the HLK test suite.
@@ -156,7 +159,5 @@ If the HLK tests listed above are not passed, Microsoft will not issue a signed 
 [Capture photos and video with MediaCapture](https://msdn.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-mediacapture)  
 [Windows.Media.Capture namespace](https://msdn.microsoft.com/library/windows/apps/windows.media.capture.aspx)  
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bstream\stream%5D:%20Windows%20Hello%20camera%20driver%20bring%20up%20guide%20%20RELEASE:%20%288/23/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

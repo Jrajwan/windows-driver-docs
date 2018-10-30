@@ -2,13 +2,22 @@
 title: Verifying the RSS Hash Calculation
 description: Verifying the RSS Hash Calculation
 ms.assetid: 321a2c3e-98f8-464b-96ad-8b6fc34d5261
-keywords: ["receive-side scaling WDK networking , hash", "RSS WDK networking , hash", "hash WDK RSS"]
+keywords:
+- receive-side scaling WDK networking , hash
+- RSS WDK networking , hash
+- hash WDK RSS
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Verifying the RSS Hash Calculation
 
 
-## <a href="" id="ddk-verifying-the-rss-hash-calculation-ng"></a>
+
 
 
 You should verify your implementation of the RSS hash calculation. To verify your calculations for the **NdisHashFunctionToeplitz** hash function, use the following secret key data:

@@ -3,7 +3,16 @@ title: Synchronizing Interrupt Code
 author: windows-driver-content
 description: Synchronizing Interrupt Code
 ms.assetid: a24477dc-f75d-4ab6-8695-d8a85247e276
-keywords: ["hardware interrupts WDK KMDF , synchronization", "interrupts WDK KMDF , synchronization", "synchronization WDK interrupts"]
+keywords:
+- hardware interrupts WDK KMDF , synchronization
+- interrupts WDK KMDF , synchronization
+- synchronization WDK interrupts
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Synchronizing Interrupt Code

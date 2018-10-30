@@ -2,13 +2,22 @@
 title: CM_PROB_DISABLED_SERVICE
 description: CM_PROB_DISABLED_SERVICE
 ms.assetid: b2447b01-c25d-4761-bc96-291d508feb15
-keywords: ["CM_PROB_DISABLED_SERVICE"]
+keywords:
+- CM_PROB_DISABLED_SERVICE
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # CM_PROB_DISABLED_SERVICE
 
+This function is reserved for system use.
 
-## <a href="" id="ddk-cm-prob-disabled-service-dg"></a>
+
+
 
 
 The driver has been disabled.

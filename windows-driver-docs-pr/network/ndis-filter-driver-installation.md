@@ -2,13 +2,22 @@
 title: NDIS Filter Driver Installation
 description: NDIS Filter Driver Installation
 ms.assetid: 8e0c47bf-6b63-4be5-98b7-7a99e9efe283
-keywords: ["filter drivers WDK networking , installation", "NDIS filter drivers WDK , installation", "installing NDIS filter drivers WDK networking"]
+keywords:
+- filter drivers WDK networking , installation
+- NDIS filter drivers WDK , installation
+- installing NDIS filter drivers WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NDIS Filter Driver Installation
 
 
-## <a href="" id="ddk-installing-ndis-filter-drivers-ng"></a>
+
 
 
 This section provides information about installing NDIS filter drivers. Filter drivers are different from filter intermediate drivers. The configuration manager installs filter drivers as autostart services, similar to protocol drivers. The configuration manager supplies NDIS with a list of filter modules for each miniport adapter. There is no virtual device (or virtual miniport) that is associated with a filter driver as there is with an NDIS filter intermediate driver.

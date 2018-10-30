@@ -1,11 +1,14 @@
 ---
-title: EFI\_SIMPLE\_WINPHONE\_IO\_PROTOCOL.Write
+title: EFI_SIMPLE_WINPHONE_IO_PROTOCOL.Write
 author: windows-driver-content
-description: EFI\_SIMPLE\_WINPHONE\_IO\_PROTOCOL.Write
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: EFI_SIMPLE_WINPHONE_IO_PROTOCOL.Write
 ms.assetid: 55475573-e904-4adc-91cf-62afe9e67927
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # EFI\_SIMPLE\_WINPHONE\_IO\_PROTOCOL.Write
@@ -103,6 +106,5 @@ In case of errors, the transmission will be terminated with the appropriate stat
  
 
 
---------------------
 
 

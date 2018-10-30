@@ -3,7 +3,14 @@ title: Initiating Filtering
 author: windows-driver-content
 description: Initiating Filtering
 ms.assetid: 79ae93bc-0a6d-412a-80ca-ec4f907fb814
-keywords: ["filtering I/O operations WDK file system minifilter"]
+keywords:
+- filtering I/O operations WDK file system minifilter
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Initiating Filtering
@@ -32,6 +39,5 @@ If the call to [**FltStartFiltering**](https://msdn.microsoft.com/library/window
  
 
 
---------------------
 
 

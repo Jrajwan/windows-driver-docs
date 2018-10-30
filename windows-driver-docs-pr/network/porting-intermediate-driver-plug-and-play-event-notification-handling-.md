@@ -1,14 +1,25 @@
 ---
-title: Porting Intermediate Driver Plug and Play Event Notification Handling to NDIS 6.0
+title: Porting Intermediate Driver PnP Event Handling to NDIS 6.0
 description: Porting Intermediate Driver Plug and Play Event Notification Handling to NDIS 6.0
 ms.assetid: 0ffaff9c-7ca1-4384-a2da-15586107ecdc
-keywords: ["NDIS intermediate drivers WDK networking , Plug and Play", "intermediate drivers WDK networking , Plug and Play", "Plug and Play WDK networking , porting event notifications", "event notifications WDK networking", "porting intermediate drivers WDK networking"]
+keywords:
+- NDIS intermediate drivers WDK networking , Plug and Play
+- intermediate drivers WDK networking , Plug and Play
+- Plug and Play WDK networking , porting event notifications
+- event notifications WDK networking
+- porting intermediate drivers WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Porting Intermediate Driver Plug and Play Event Notification Handling to NDIS 6.0
 
 
-## <a href="" id="ddk-porting-intermediate-driver-plug-and-play-event-notification-handl"></a>
+
 
 
 Like NDIS 5.*x* intermediate drivers, NDIS 6.0 intermediate drivers receive network Plug and Play events and device Plug and Play events.

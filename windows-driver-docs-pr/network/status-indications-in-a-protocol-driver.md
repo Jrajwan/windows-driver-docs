@@ -2,13 +2,22 @@
 title: Status Indications in a Protocol Driver
 description: Status Indications in a Protocol Driver
 ms.assetid: 4b0426bb-4311-4251-b9ee-38d081f061e5
-keywords: ["protocol drivers WDK networking , status indications", "NDIS protocol drivers WDK , status indications", "status indications WDK networking , protocol drivers"]
+keywords:
+- protocol drivers WDK networking , status indications
+- NDIS protocol drivers WDK , status indications
+- status indications WDK networking , protocol drivers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Status Indications in a Protocol Driver
 
 
-## <a href="" id="ddk-status-indications-in-a-protocol-driver-ng"></a>
+
 
 
 There are two different interfaces for status indications in a protocol driver. An NDIS protocol driver with a connectionless lower edge is required to supply a [**ProtocolStatusEx**](https://msdn.microsoft.com/library/windows/hardware/ff570270) function. NDIS calls *ProtocolStatusEx* when an underlying connectionless miniport driver calls [**NdisMIndicateStatusEx**](https://msdn.microsoft.com/library/windows/hardware/ff563600) to report a change in its hardware status. NDIS calls *ProtocolStatusEx* when the status change begins. For more information about status indications in connectionless protocol drivers, see [Handling Status Indications in a Protocol Driver](handling-status-indications-in-a-protocol-driver.md).

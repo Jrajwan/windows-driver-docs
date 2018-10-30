@@ -3,7 +3,16 @@ title: File System Minifilter Drivers
 author: windows-driver-content
 description: File System Minifilter Drivers
 ms.assetid: ef330fa1-2be5-472a-8868-56589d8befbc
-keywords: ["file system drivers WDK , minifilter drivers", "file system minifilter drivers WDK", "minifilter drivers WDK"]
+keywords:
+- file system drivers WDK , minifilter drivers
+- file system minifilter drivers WDK
+- minifilter drivers WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # File System Minifilter Drivers
@@ -30,6 +39,5 @@ This section includes the following topics, which describe file system minifilte
  
 
 
---------------------
 
 

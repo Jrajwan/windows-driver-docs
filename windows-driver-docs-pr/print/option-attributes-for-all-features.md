@@ -2,19 +2,19 @@
 title: Option Attributes for All Features
 author: windows-driver-content
 description: Option Attributes for All Features
-MS-HAID:
-- 'nt5gpd\_8884273f-de8d-430c-8b2c-284256a76191.xml'
-- 'print.option\_attributes\_for\_all\_features'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 0d269fdf-f4a1-431a-9f07-044289b9f0fa
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Option Attributes for All Features
 
 
-## <a href="" id="ddk-option-attributes-for-all-features-gg"></a>
+
 
 
 The following table lists, in alphabetic order, the [option attributes](option-attributes.md) available for all features and describes their parameters.
@@ -35,12 +35,13 @@ The following table lists, in alphabetic order, the [option attributes](option-a
 <tbody>
 <tr class="odd">
 <td><p>*<strong>Command</strong></p></td>
-<td><p>A <strong>CmdSelect</strong>[option selection command](option-selection-command.md), specifying the command string that must be sent to the printer in order to select the option.</p></td>
+<td><p>A <strong>CmdSelect</strong> [option selection command](option-selection-command.md), specifying the command string that must be sent to the printer in order to select the option.</p></td>
 <td><p>Required.</p></td>
 </tr>
 <tr class="even">
 <td><p>*<strong>DisabledFeatures</strong></p></td>
-<td><p>LIST of feature name strings, identifying features that should be disabled if the option is selected.</p></td>
+<td><p>LIST of feature name strings, identifying features that should be disabled if the option is selected.</p>
+<p>Currently DUPLEX and COLLATE features are supported. This option attribute must be used in a feature that has FeatureType set to PRINTER_PROPERTY.</p></td>
 <td><p>Optional.</p>
 <p>Listed features cannot have *<strong>Installable?</strong> set to <strong>TRUE</strong>. For more information, see [Handling Installable Features and Options](handling-installable-features-and-options.md).</p></td>
 </tr>
@@ -101,7 +102,5 @@ For examples, see the [sample GPD files](sample-gpd-files.md).
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20Option%20Attributes%20for%20All%20Features%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

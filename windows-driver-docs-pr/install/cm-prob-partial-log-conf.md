@@ -2,13 +2,22 @@
 title: CM_PROB_PARTIAL_LOG_CONF
 description: CM_PROB_PARTIAL_LOG_CONF
 ms.assetid: 1e8b10e8-c2c6-4a71-9af5-575206098148
-keywords: ["CM_PROB_PARTIAL_LOG_CONF"]
+keywords:
+- CM_PROB_PARTIAL_LOG_CONF
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # CM_PROB_PARTIAL_LOG_CONF
 
+This function is reserved for system use.
 
-## <a href="" id="ddk-cm-prob-partial-log-conf-dg"></a>
+
+
 
 
 The device is only partially configured.

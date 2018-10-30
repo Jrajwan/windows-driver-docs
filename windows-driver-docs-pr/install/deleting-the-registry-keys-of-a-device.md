@@ -2,7 +2,15 @@
 title: Deleting the Registry Keys of a Device
 description: Deleting the Registry Keys of a Device
 ms.assetid: BA7AB3B4-9751-4e53-98AD-2B920F7223A1
-keywords: ["registry WDK device installations , deleting a device's registry keys", "deleting registry keys WDK device installations"]
+keywords:
+- registry WDK device installations , deleting a device's registry keys
+- deleting registry keys WDK device installations
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Deleting the Registry Keys of a Device
@@ -20,7 +28,7 @@ You should not use [**SetupDiDeleteDevRegKey**](https://msdn.microsoft.com/libra
 
     [**SetupDiDeleteDevRegKey**](https://msdn.microsoft.com/library/windows/hardware/ff550991) also removes critical device installation state.
 
--   Software or hardware keys that are opened by using [**SetupDiOpenDevRegKey**](https://msdn.microsoft.com/library/windows/hardware/ff552079) with a scope of DICS\_FLAG\_GLOBAL contain data about the device installation state. Software or hardware keys that are accessed with a scope of DICS\_FLAG\_CONFIGSPECIFIC do not contain device installation state.
+-   Software or hardware keys that are opened by using [**SetupDiOpenDevRegKey**](https://msdn.microsoft.com/library/windows/hardware/ff552079) with a scope of DICS_FLAG_GLOBAL contain data about the device installation state. Software or hardware keys that are accessed with a scope of DICS_FLAG_CONFIGSPECIFIC do not contain device installation state.
 
     In either case, deleting these software or hardware keys could have implications for other device installation components.
 

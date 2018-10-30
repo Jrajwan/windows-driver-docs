@@ -1,26 +1,33 @@
 ---
 title: INF DDInstall.CoInstallers Section
-description: This optional section registers one or more device-specific co-installers supplied on the distribution media to supplement the operations of existing device class installers.
+description: The CoInstallers section registers one or more device-specific co-installers to supplement the operations of existing device class installers.
 ms.assetid: 2deb16e1-632a-4169-b718-7e3501e64562
-keywords: ["INF DDInstall.CoInstallers Section Device and Driver Installation"]
+keywords:
+- INF DDInstall.CoInstallers Section Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF DDInstall.CoInstallers Section
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF DDInstall.CoInstallers Section
 
 
-**Note**  If you are building a universal or mobile driver package, this section is not valid. See [Using a Universal INF File](using-a-configurable-inf-file.md).
+**Note**  If you are building a universal or mobile driver package, this section is not valid. See [Using a Universal INF File](using-a-universal-inf-file.md).
 
  
 
 This optional section registers one or more device-specific co-installers supplied on the distribution media to supplement the operations of existing device class installers.
 
-``` syntax
+```
 [install-section-name.CoInstallers] |
 [install-section-name.nt.CoInstallers] | 
 [install-section-name.ntx86.CoInstallers] | 
@@ -124,9 +131,9 @@ All co-installer files must be copied into the *%SystemRoot%\\system32* director
 
 ### Registering Device-Specific Co-installers
 
-Registering one or more device-specific co-installers requires adding a REG\_MULTI\_SZ-typed value entry to the registry. Specify an *add-registry-section* referenced by the [**AddReg**](inf-addreg-directive.md) directive, by using the following general form:
+Registering one or more device-specific co-installers requires adding a REG_MULTI_SZ-typed value entry to the registry. Specify an *add-registry-section* referenced by the [**AddReg**](inf-addreg-directive.md) directive, by using the following general form:
 
-``` syntax
+```
 [DDInstall.CoInstallers_DeviceAddReg]
  
 HKR,,CoInstallers32,0x00010000,"DevSpecificCoInstall.dll
@@ -144,7 +151,7 @@ For more information, see [Registering a Device-Specific Co-installer](registeri
 
 To add a value entry (and setup-class subkey, if it does not exist already) for one or more device-class co-installers to the registry, an *add-registry-section* referenced by the [**AddReg**](inf-addreg-directive.md) directive has the following general form:
 
-``` syntax
+```
 [DDInstall.CoInstallers_ClassAddReg]
  
 HKLM,System\CurrentControlSet\Control
@@ -155,7 +162,7 @@ HKLM,System\CurrentControlSet\Control
 
 Each entry in such an add-registry section is listed as a single line within the INF file, and each supplied class co-installer DLL must have a unique name. If the supplied co-installers should be used for more than one [device setup class](device-setup-classes.md), this add-registry section can have more than one entry, each with the appropriate *SetupClassGUID* value.
 
-Such a supplemental device-class co-installer must not replace any already registered co-installers for an existing class installer. Therefore, the class co-installer must have a unique name and the REG\_MULTI\_SZ-type value supplied must be appended (as indicated by the **8** in the *flags* value **0x0010008**) to the class-specific co-installer entries, if any, already present in the **{***SetupClassGUID***}** subkey.
+Such a supplemental device-class co-installer must not replace any already registered co-installers for an existing class installer. Therefore, the class co-installer must have a unique name and the REG_MULTI_SZ-type value supplied must be appended (as indicated by the **8** in the *flags* value **0x0010008**) to the class-specific co-installer entries, if any, already present in the **{***SetupClassGUID***}** subkey.
 
 **Note**  The [SetupAPI](setupapi.md) functions never append a duplicate *DevClssCoInstall***.dll** to a value entry if a co-installer of the same name is already registered.
 

@@ -2,13 +2,23 @@
 title: Intermediate Driver DriverEntry Function
 description: Intermediate Driver DriverEntry Function
 ms.assetid: 85b4d5c0-8ec9-41a9-a34e-578a85d411e3
-keywords: ["intermediate drivers WDK networking , entry points", "NDIS intermediate drivers WDK , entry points", "entry points WDK networking", "DriverEntry WDK networking"]
+keywords:
+- intermediate drivers WDK networking , entry points
+- NDIS intermediate drivers WDK , entry points
+- entry points WDK networking
+- DriverEntry WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Intermediate Driver DriverEntry Function
 
 
-## <a href="" id="ddk-intermediate-driver-driverentry-function-ng"></a>
+
 
 
 An intermediate driver's initial required entry point must be explicitly named [**DriverEntry**](https://msdn.microsoft.com/library/windows/hardware/ff544113) so that the loader can properly identify it. All other exported driver functions, which are described in this section as *MiniportXxx* and *ProtocolXxx*, can have any vendor-specified name because they are passed as addresses to NDIS.

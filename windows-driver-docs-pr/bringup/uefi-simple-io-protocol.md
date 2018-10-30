@@ -2,10 +2,13 @@
 title: UEFI simple I/O protocol
 author: windows-driver-content
 description: UEFI simple I/O protocol
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 0cb55bf5-71e9-4b59-aef1-7d74eb331a18
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # UEFI simple I/O protocol
@@ -21,7 +24,7 @@ The simple I/O protocol is used by flashing tools to enable communication betwee
 
  
 
-## <a href="" id="efi-simple-winphone-io-protocol"></a>EFI\_SIMPLE\_WINPHONE\_IO\_PROTOCOL
+## EFI\_SIMPLE\_WINPHONE\_IO\_PROTOCOL
 
 
 This section provides a detailed description of **EFI\_SIMPLE\_WINPHONE\_IO\_PROTOCOL**. This protocol enables simple communication between host and device in a pre-boot environment.
@@ -79,6 +82,5 @@ Returns the maximum packet size supported by this protocol. See [EFI\_SIMPLE\_WI
  
 
 
---------------------
 
 

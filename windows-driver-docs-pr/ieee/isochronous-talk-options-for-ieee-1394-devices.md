@@ -2,20 +2,27 @@
 title: Isochronous Talk Options for IEEE 1394 Devices
 author: windows-driver-content
 description: Isochronous Talk Options for IEEE 1394 Devices
-MS-HAID:
-- '1394-isoch\_f0773adc-147c-4af8-a0dd-c4712da15f43.xml'
-- 'IEEE.isochronous\_talk\_options\_for\_ieee\_1394\_devices'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: b3df5dd5-9903-48b4-9cb2-17b8d3a08f8f
-keywords: ["isochronous I/O WDK IEEE 1394 bus , talk options", "talk options WDK IEEE 1394 bus", "headers WDK IEEE 1394 bus", "fixed-size data packets WDK IEEE 1394 bus", "variable-size data packets WDK IEEE 1394 bus", "header elements WDK IEEE 1394 bus", "buffers WDK IEEE 1394 bus"]
+keywords:
+- isochronous I/O WDK IEEE 1394 bus , talk options
+- talk options WDK IEEE 1394 bus
+- headers WDK IEEE 1394 bus
+- fixed-size data packets WDK IEEE 1394 bus
+- variable-size data packets WDK IEEE 1394 bus
+- header elements WDK IEEE 1394 bus
+- buffers WDK IEEE 1394 bus
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Isochronous Talk Options for IEEE 1394 Devices
 
 
-## <a href="" id="ddk-isochronous-talk-options-for-ieee-1394-devices-kg"></a>
+
 
 
 There are three ways of organizing output data in isochronous talk operations: packets with no headers, fixed-sized data packets with headers, and variable-size data packets with headers.
@@ -147,6 +154,5 @@ isochDescriptor->mdl = IoAllocateMdl(BufferAddress, ... and so on.)
  
 
 
---------------------
 
 

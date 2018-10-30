@@ -2,13 +2,22 @@
 title: CM_PROB_INVALID_DATA
 description: CM_PROB_INVALID_DATA
 ms.assetid: c9a43ace-e8e6-4cf4-8d71-aa27fb2f09a4
-keywords: ["CM_PROB_INVALID_DATA"]
+keywords:
+- CM_PROB_INVALID_DATA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # CM_PROB_INVALID_DATA
 
+This function is reserved for system use.
 
-## <a href="" id="ddk-cm-prob-invalid-data-dg"></a>
+
+
 
 
 Invalid [device IDs](device-ids.md) have been detected.

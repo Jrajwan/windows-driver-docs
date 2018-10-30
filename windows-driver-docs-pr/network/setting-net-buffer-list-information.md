@@ -1,14 +1,23 @@
 ---
-title: Setting NET\_BUFFER\_LIST Information
-description: Setting NET\_BUFFER\_LIST Information
+title: Setting NET_BUFFER_LIST Information
+description: Setting NET_BUFFER_LIST Information
 ms.assetid: 28f50ab4-043b-47bb-af70-e8c892288f21
-keywords: ["NET_BUFFER_LIST", "header-data split WDK , NET_BUFFER_LIST", "flags WDK header-data split"]
+keywords:
+- NET_BUFFER_LIST
+- header-data split WDK , NET_BUFFER_LIST
+- flags WDK header-data split
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Setting NET\_BUFFER\_LIST Information
 
 
-## <a href="" id="ddk-setting-net-buffer-list-information-ng"></a>
+
 
 
 A header-data split provider must set the header-data split flags in the **NblFlags** member of the [**NET\_BUFFER\_LIST**](https://msdn.microsoft.com/library/windows/hardware/ff568388) structures for receive indications. For split frames, a NIC must also provide the physical address of the data portion of the received frame in the **DataPhysicalAddress** member of each [**NET\_BUFFER**](https://msdn.microsoft.com/library/windows/hardware/ff568376) structure.

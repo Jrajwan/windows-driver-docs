@@ -2,7 +2,16 @@
 title: ACPI IPMI Operation Region
 description: ACPI IPMI Operation Region
 ms.assetid: fb953ee1-2628-4cd1-a2d3-a725cf59cc9f
-keywords: ["Power Metering and Budgeting WDK , ACPI IPMI operation region", "ACPI IPMI operation region WDK Power Meter", "IPMI WDK Power Meter"]
+keywords:
+- Power Metering and Budgeting WDK , ACPI IPMI operation region
+- ACPI IPMI operation region WDK Power Meter
+- IPMI WDK Power Meter
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # ACPI IPMI Operation Region
@@ -21,6 +30,5 @@ For more information, refer to the [IPMI version 2.0 Specification](http://go.mi
  
 
 
---------------------
 
 

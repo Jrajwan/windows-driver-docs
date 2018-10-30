@@ -1,19 +1,19 @@
 ---
-title: Calling a PCMCIA\_INTERFACE\_STANDARD Interface Routine
-description: Calling a PCMCIA\_INTERFACE\_STANDARD Interface Routine
-MS-HAID:
-- 'mcch2\_051ca28a-f0dc-481e-ab30-476a555f56b8.xml'
-- 'PCMCIA.calling\_a\_pcmcia\_interface\_standard\_interface\_routine'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+title: Calling a PCMCIA_INTERFACE_STANDARD Interface Routine
+description: Calling a PCMCIA_INTERFACE_STANDARD Interface Routine
 ms.assetid: 468d2037-a7d5-4851-9f41-d1e6c9006750
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Calling a PCMCIA\_INTERFACE\_STANDARD Interface Routine
 
 
-## <a href="" id="ddk-calling-a-pcmcia-interface-standard-interface-routine-kg"></a>
+
 
 
 This section describes how to call a PCMCIA\_INTERFACE\_STANDARD interface routine.

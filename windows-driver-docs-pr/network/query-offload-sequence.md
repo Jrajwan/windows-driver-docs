@@ -2,7 +2,14 @@
 title: Query Offload Sequence
 description: Query Offload Sequence
 ms.assetid: c0570be7-f85f-443f-8472-b8881ecf27e6
-keywords: ["querying offloaded TCP chimney state, sequence"]
+keywords:
+- querying offloaded TCP chimney state, sequence
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Query Offload Sequence
@@ -10,7 +17,7 @@ keywords: ["querying offloaded TCP chimney state, sequence"]
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-query-offload-sequence-ng"></a>
+
 
 
 After the host stack sends a query request to NDIS, NDIS calls the offload target's [**MiniportQueryOffload**](https://msdn.microsoft.com/library/windows/hardware/ff559423) function. The *MiniportQueryOffload* function inputs the following parameters:

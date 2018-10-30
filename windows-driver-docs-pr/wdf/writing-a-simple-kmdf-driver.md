@@ -3,7 +3,17 @@ title: Writing a Simple WDF Driver
 author: windows-driver-content
 description: This topic describes the minimal functionality you need to write a Kernel-Mode Driver Framework (KMDF) driver. You need the same minimal functionality to write a User-Mode Driver Framework (UMDF) driver starting in UMDF version 2.
 ms.assetid: 6225b81c-e0da-473a-ba38-24846436dae7
-keywords: ["kernel-mode drivers WDK KMDF , writing a simple driver", "KMDF WDK , writing a simple driver", "Kernel-Mode Driver Framework WDK , writing a simple driver", "framework-based drivers WDK KMDF , writing a simple driver"]
+keywords:
+- kernel-mode drivers WDK KMDF , writing a simple driver
+- KMDF WDK , writing a simple driver
+- Kernel-Mode Driver Framework WDK , writing a simple driver
+- framework-based drivers WDK KMDF , writing a simple driver
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Writing a Simple WDF Driver
@@ -11,7 +21,7 @@ keywords: ["kernel-mode drivers WDK KMDF , writing a simple driver", "KMDF WDK ,
 
 This topic describes the minimal functionality you need to write a Kernel-Mode Driver Framework (KMDF) driver. You need the same minimal functionality to write a User-Mode Driver Framework (UMDF) driver starting in UMDF version 2.
 
-## <a href="" id="ddk-writing-a-simple-framework-based-driver-df"></a>
+
 
 
 When you create a new KMDF or UMDF driver, you must select a driver name that has 32 characters or less. This length limit is defined in wdfglobals.h. If your driver name exceeds the maximum length, your driver will fail to load.

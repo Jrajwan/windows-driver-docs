@@ -3,7 +3,18 @@ title: Security Identifier
 author: windows-driver-content
 description: Security Identifier
 ms.assetid: e4c39d83-6f32-406c-b8d5-d41305a8976f
-keywords: ["security descriptors WDK file systems , security identifiers", "descriptors WDK file systems , security identifiers", "security identifiers WDK file systems", "SIDs WDK file systems", "well known identifiers WDK file systems"]
+keywords:
+- security descriptors WDK file systems , security identifiers
+- descriptors WDK file systems , security identifiers
+- security identifiers WDK file systems
+- SIDs WDK file systems
+- well known identifiers WDK file systems
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Security Identifier
@@ -107,6 +118,5 @@ Either of these approaches are valid, although the latter code is preferred. Not
  
 
 
---------------------
 
 

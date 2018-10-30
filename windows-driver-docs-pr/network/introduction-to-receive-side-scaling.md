@@ -2,13 +2,22 @@
 title: Introduction to Receive Side Scaling
 description: Introduction to Receive Side Scaling
 ms.assetid: 492628a7-ca2e-40cd-bf81-53a925130422
-keywords: ["receive-side scaling WDK networking , about receive-side scaling", "RSS WDK networking , about receive-side scaling", "CPU determination WDK RSS"]
+keywords:
+- receive-side scaling WDK networking , about receive-side scaling
+- RSS WDK networking , about receive-side scaling
+- CPU determination WDK RSS
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Introduction to Receive Side Scaling
 
 
-## <a href="" id="ddk-introduction-to-receive-side-scaling-ng"></a>
+
 
 
 Receive side scaling (RSS) is a network driver technology that enables the efficient distribution of network receive processing across multiple CPUs in multiprocessor systems.

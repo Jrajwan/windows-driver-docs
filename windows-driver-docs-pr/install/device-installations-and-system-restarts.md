@@ -2,13 +2,25 @@
 title: Device Installations and System Restarts
 description: Device Installations and System Restarts
 ms.assetid: c09d2150-60ae-4912-86f5-6489c818853e
-keywords: ["device installations WDK , reboots", "installing devices WDK , reboots", "Device setup WDK device installations , reboots", "rebooting WDK device installations", "initiating reboots during device installations", "restarting during device installations"]
+keywords:
+- device installations WDK , reboots
+- installing devices WDK , reboots
+- Device setup WDK device installations , reboots
+- rebooting WDK device installations
+- initiating reboots during device installations
+- restarting during device installations
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Device Installations and System Restarts
 
 
-## <a href="" id="ddk-device-installations-requiring-a-reboot-dg"></a>
+
 
 
 Device installations should not force the user to restart the system unless absolutely necessary. The following circumstances are the only ones for which a system restart should be necessary:
@@ -21,7 +33,7 @@ For these earlier devices, a user typically must shut down the system before phy
  
 
 <a href="" id="updating-a-driver-for-a-system-boot-device--"></a>Updating a driver for a system boot device.   
-If a device can potentially hold the system's paging, hibernation, or crash dump file, its drivers must service [**IRP\_MN\_DEVICE\_USAGE\_NOTIFICATION**](https://msdn.microsoft.com/library/windows/hardware/ff550841) requests. The system sends this request before putting one of these files on the disk. If the drivers succeed the request, they must fail any subsequent [**IRP\_MN\_QUERY\_REMOVE\_DEVICE**](https://msdn.microsoft.com/library/windows/hardware/ff551705) requests. When a driver for the device fails an IRP\_MN\_QUERY\_REMOVE\_DEVICE request, the system prompts the user to restart the system.
+If a device can potentially hold the system's paging, hibernation, or crash dump file, its drivers must service [**IRP_MN_DEVICE_USAGE_NOTIFICATION**](https://msdn.microsoft.com/library/windows/hardware/ff550841) requests. The system sends this request before putting one of these files on the disk. If the drivers succeed the request, they must fail any subsequent [**IRP_MN_QUERY_REMOVE_DEVICE**](https://msdn.microsoft.com/library/windows/hardware/ff551705) requests. When a driver for the device fails an IRP_MN_QUERY_REMOVE_DEVICE request, the system prompts the user to restart the system.
 
 **Note**  The device's setup files should not initiate a system restart.
 

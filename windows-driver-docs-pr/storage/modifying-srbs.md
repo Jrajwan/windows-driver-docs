@@ -3,7 +3,16 @@ title: Modifying SRBs
 author: windows-driver-content
 description: Modifying SRBs
 ms.assetid: 9077cfab-c17c-4c8e-9740-0895f227fb4b
-keywords: ["SCSI miniport drivers WDK storage , HwScsiStartIo", "HwScsiStartIo", "SRB modifications WDK storage"]
+keywords:
+- SCSI miniport drivers WDK storage , HwScsiStartIo
+- HwScsiStartIo
+- SRB modifications WDK storage
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Modifying SRBs
@@ -132,6 +141,5 @@ The SCSI port driver reserves LUN 0xFF to indicate all logical units.
  
 
 
---------------------
 
 

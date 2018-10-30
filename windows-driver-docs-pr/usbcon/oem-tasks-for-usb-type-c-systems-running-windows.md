@@ -1,10 +1,13 @@
 ---
-Description: 'This table describes the use cases is supported by Windows 10, and the additional tasks OEMs must perform for those use case to work.'
-MS-HAID: 'buses.oem\_tasks\_for\_usb\_type-c\_systems\_running\_windows'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
-title: 'OEM tasks for USB Type-C systems'
+Description: This table describes the use cases is supported by Windows 10, and the additional tasks OEMs must perform for those use case to work.
+title: OEM tasks for USB Type-C systems
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # OEM tasks for USB Type-C systems
@@ -14,7 +17,7 @@ title: 'OEM tasks for USB Type-C systems'
 
 This table describes the use cases is supported by Windows 10, and the additional tasks OEMs must perform for those use case to work.
 
-## <a href="" id="oem"></a>
+
 
 
 <table>
@@ -77,7 +80,7 @@ This table describes the use cases is supported by Windows 10, and the addition
 <p>See, [USB device class drivers included in Windows](supported-usb-classes.md).</p></td>
 <td><p>If your system wants to connect to a custom USB device for which Windows does not include a driver, you can choose to load the generic driver (Winusb.sys) or write a driver. For guidance, see [Choosing a driver model for developing a USB client driver](winusb-considerations.md).</p>
 <p>We recommend that you write a single driver that runs on Windows 10 for desktop editions and Windows 10 Mobile. For more information, see [Getting Started with Universal Windows drivers](https://msdn.microsoft.com/windows-drivers/develop/getting_started_with_universal_drivers).</p>
-<p>To write an application that communicates the device, use Windows Runtime APIs. For more information, see [Talking to USB devices, start to finish (Windows Store app)](talking-to-usb-devices-start-to-finish.md).</p></td>
+<p>To write an application that communicates the device, use Windows Runtime APIs. For more information, see [Talking to USB devices, start to finish (UWP app)](talking-to-usb-devices-start-to-finish.md).</p></td>
 </tr>
 <tr class="odd">
 <td><strong>Alternate modes</strong>
@@ -137,16 +140,7 @@ For the best results, make sure that the alternate mode device or adapter’s re
 USB Type-C connectors can be used for wired docking, which allows the system to connect to a dock that delivers power to the system and attaches other peripherals. If the system detects an alternate display, the system can project to that display. To enable wired docking, make sure you have completed OEM tasks listed for Power delivery, Connecting USB devices and peripherals, and Alternate modes use cases in the preceding table.
 
 ## Related topics
-
-
-[Windows support for USB Type-C connectors](oem-tasks-for-bringing-up-a-usb-typec.md)
-
- 
-
- 
-
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20OEM%20tasks%20for%20USB%20Type-C%20systems%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
-
+[Windows support for USB Type-C connectors](oem-tasks-for-bringing-up-a-usb-typec.md)  
 
 
 

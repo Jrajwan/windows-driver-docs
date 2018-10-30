@@ -2,13 +2,23 @@
 title: Opening and Closing an INF File
 description: Opening and Closing an INF File
 ms.assetid: da270688-4b8b-43b3-afdb-8f31d15ef50c
-keywords: ["INF files WDK device installations , opening", "INF files WDK device installations , closing", "opening INF files", "closing INF files"]
+keywords:
+- INF files WDK device installations , opening
+- INF files WDK device installations , closing
+- opening INF files
+- closing INF files
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Opening and Closing an INF File
 
 
-## <a href="" id="ddk-opening-and-closing-an-inf-file-dg"></a>
+
 
 
 Before a [*device installation application*](https://msdn.microsoft.com/library/windows/hardware/ff556277#wdkgloss-device-installation-application) can access the information in an INF file, it must open the file by calling [**SetupOpenInfFile**](https://msdn.microsoft.com/library/windows/desktop/aa377409). This function returns a handle to the INF file.

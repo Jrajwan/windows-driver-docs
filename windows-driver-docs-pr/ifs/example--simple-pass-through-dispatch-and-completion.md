@@ -3,7 +3,14 @@ title: Example Simple Pass-Through Dispatch and Completion
 author: windows-driver-content
 description: Example Simple Pass-Through Dispatch and Completion
 ms.assetid: dae3a450-37b1-470b-a0f3-4108075e06ac
-keywords: ["IRP completion routines WDK file system , examples"]
+keywords:
+- IRP completion routines WDK file system , examples
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Example: Simple Pass-Through Dispatch and Completion
@@ -65,6 +72,5 @@ Because it runs in an arbitrary thread context at IRQL &lt;= DISPATCH\_LEVEL, a 
  
 
 
---------------------
 
 

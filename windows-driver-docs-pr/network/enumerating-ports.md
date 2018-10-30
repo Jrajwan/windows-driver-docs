@@ -2,13 +2,23 @@
 title: Enumerating Ports
 description: Enumerating Ports
 ms.assetid: b38c5556-5124-45ea-af2f-4a4cd9313cc7
-keywords: ["enumerating NDIS ports WDK NDIS", "ports WDK NDIS , OID requests", "NDIS ports WDK , OID requests", "OID requests WDK NDIS ports"]
+keywords:
+- enumerating NDIS ports WDK NDIS
+- ports WDK NDIS , OID requests
+- NDIS ports WDK , OID requests
+- OID requests WDK NDIS ports
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Enumerating Ports
 
 
-## <a href="" id="ddk-enumerating-ports-ng"></a>
+
 
 
 NDIS protocol drivers and filter drivers can use an [OID\_GEN\_ENUMERATE\_PORTS](https://msdn.microsoft.com/library/windows/hardware/ff569583) OID query request to determine the characteristics of the active NDIS ports that are associated with an underlying miniport adapter. NDIS handles this OID, and miniport drivers do not receive this OID query.

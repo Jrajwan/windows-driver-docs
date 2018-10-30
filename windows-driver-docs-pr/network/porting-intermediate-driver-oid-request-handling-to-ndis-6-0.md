@@ -2,13 +2,23 @@
 title: Porting Intermediate Driver OID Request Handling to NDIS 6.0
 description: Porting Intermediate Driver OID Request Handling to NDIS 6.0
 ms.assetid: 715d0ae9-8a5a-487a-9eb0-8864184db1f0
-keywords: ["porting intermediate drivers WDK networking , OID requests", "OID request porting WDK networking", "OIDs WDK networking , request operation porting", "object identifiers WDK networking"]
+keywords:
+- porting intermediate drivers WDK networking , OID requests
+- OID request porting WDK networking
+- OIDs WDK networking , request operation porting
+- object identifiers WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Porting Intermediate Driver OID Request Handling to NDIS 6.0
 
 
-## <a href="" id="ddk-porting-intermediate-driver-oid-request-handling-to-ndis-6-0-nd"></a>
+
 
 
 Like NDIS 5.*x* intermediate drivers, NDIS 6.0 intermediate drivers can originate or forward OID requests. NDIS 6.0 intermediate drivers can also cancel OID requests.

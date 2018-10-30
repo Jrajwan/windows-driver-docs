@@ -1,9 +1,18 @@
 ---
-title: \ Optional\ Saving a Copy of the Registry Path String
+title: '[Optional] Saving a Copy of the Registry Path String'
 author: windows-driver-content
-description: \ Optional\ Saving a Copy of the Registry Path String
+description: '[Optional] Saving a Copy of the Registry Path String'
 ms.assetid: cf3b8649-6fb0-4ada-816c-5c7783918b2f
-keywords: ["RegistryPath string copies", "saving RegistryPath string copies", "copying RegistryPath strings"]
+keywords:
+- RegistryPath string copies
+- saving RegistryPath string copies
+- copying RegistryPath strings
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # \[Optional\] Saving a Copy of the Registry Path String
@@ -23,6 +32,5 @@ Save a copy of the *RegistryPath* string that was passed as input to **DriverEnt
  
 
 
---------------------
 
 

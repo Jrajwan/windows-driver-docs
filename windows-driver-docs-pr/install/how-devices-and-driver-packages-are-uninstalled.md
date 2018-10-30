@@ -2,6 +2,12 @@
 title: How Devices and Driver Packages are Uninstalled
 description: How Devices and Driver Packages are Uninstalled
 ms.assetid: 0f4f0bbf-ca8f-47ef-b70b-d023bba9b842
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # How Devices and Driver Packages are Uninstalled
@@ -31,7 +37,7 @@ This uninstall action removes the device node ([*devnode*](https://msdn.microsof
 
 -   Device Manager. For more information, see [Using Device Manager](using-device-manager.md).
 
--   A device installation application that calls the [SetupAPI](setupapi.md) [**SetupDiCallClassInstaller**](https://msdn.microsoft.com/library/windows/hardware/ff550922) function with a request of [**DIF\_REMOVE**](https://msdn.microsoft.com/library/windows/hardware/ff543717). For more information, see [Using General Setup Functions](using-general-setup-functions.md).
+-   A device installation application that calls the [SetupAPI](setupapi.md) [**SetupDiCallClassInstaller**](https://msdn.microsoft.com/library/windows/hardware/ff550922) function with a request of [**DIF_REMOVE**](https://msdn.microsoft.com/library/windows/hardware/ff543717). For more information, see [Using General Setup Functions](using-general-setup-functions.md).
 
 -   A device installation application that calls the SetupAPI [**DiUninstallDevice**](https://msdn.microsoft.com/library/windows/hardware/ff544754) function (Windows 7 and later versions of Windows). For more information, see [Using Device Installation Functions](using-device-installation-functions.md).
 

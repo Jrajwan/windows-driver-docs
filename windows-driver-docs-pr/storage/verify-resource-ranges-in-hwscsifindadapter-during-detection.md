@@ -3,7 +3,19 @@ title: Verify Resource Ranges in HwScsiFindAdapter During Detection
 author: windows-driver-content
 description: Verify Resource Ranges in HwScsiFindAdapter During Detection
 ms.assetid: 2909aac2-714e-4353-8006-06cf68e4dfc8
-keywords: ["SCSI miniport drivers WDK storage , PnP", "PnP WDK SCSI", "Plug and Play WDK SCSI", "converting SCSI miniport drivers", "resource ranges WDK SCSI", "HwScsiFindAdapter"]
+keywords:
+- SCSI miniport drivers WDK storage , PnP
+- PnP WDK SCSI
+- Plug and Play WDK SCSI
+- converting SCSI miniport drivers
+- resource ranges WDK SCSI
+- HwScsiFindAdapter
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Verify Resource Ranges in HwScsiFindAdapter During Detection
@@ -21,6 +33,5 @@ The miniport driver should call [**ScsiPortValidateRange**](https://msdn.microso
  
 
 
---------------------
 
 

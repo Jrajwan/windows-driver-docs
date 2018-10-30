@@ -3,7 +3,14 @@ title: SCSI Miniport Driver's DriverEntry Routine
 author: windows-driver-content
 description: SCSI Miniport Driver's DriverEntry Routine
 ms.assetid: b143bb19-2c9e-4e43-841f-a3c47c7f1a1b
-keywords: ["DriverEntry WDK storage"]
+keywords:
+- DriverEntry WDK storage
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # SCSI Miniport Driver's DriverEntry Routine
@@ -41,6 +48,5 @@ A [**DriverEntry**](https://msdn.microsoft.com/library/windows/hardware/ff552654
  
 
 
---------------------
 
 

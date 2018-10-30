@@ -3,7 +3,16 @@ title: SCSI Miniport Driver's HwScsiDisableInterruptsCallback Routine
 author: windows-driver-content
 description: SCSI Miniport Driver's HwScsiDisableInterruptsCallback Routine
 ms.assetid: d6c668cc-cb8d-42f4-a6e0-74bbd8b1b27a
-keywords: ["SCSI miniport drivers WDK storage , HwScsiDisableInterruptsCallback", "HwScsiDisableInterruptsCallback", "interrupts WDK SCSI"]
+keywords:
+- SCSI miniport drivers WDK storage , HwScsiDisableInterruptsCallback
+- HwScsiDisableInterruptsCallback
+- interrupts WDK SCSI
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # SCSI Miniport Driver's HwScsiDisableInterruptsCallback Routine
@@ -25,6 +34,5 @@ Note that this routine must execute as quickly as possible to avoid using I/O op
  
 
 
---------------------
 
 

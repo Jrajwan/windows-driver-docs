@@ -2,13 +2,22 @@
 title: Driver Rank Example
 description: Driver Rank Example
 ms.assetid: 20fe0f63-5d6c-4617-b5df-b2adb941f257
-keywords: ["driver rank ranges WDK device installations", "rank ranges WDK device installations", "range ranking WDK device installations"]
+keywords:
+- driver rank ranges WDK device installations
+- rank ranges WDK device installations
+- range ranking WDK device installations
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Driver Rank Example
 
 
-Consider a device that has the following lists of [device identification strings](device-identification-strings.md), where the HwID\_*N* and CID\_*N* names represent actual [hardware IDs](hardware-ids.md) and [compatible IDs](compatible-ids.md):
+Consider a device that has the following lists of [device identification strings](device-identification-strings.md), where the HwID_*N* and CID_*N* names represent actual [hardware IDs](hardware-ids.md) and [compatible IDs](compatible-ids.md):
 
 -   List of hardware IDs
     ```
@@ -20,9 +29,9 @@ Consider a device that has the following lists of [device identification strings
     CID_1, and CID_2
     ```
 
-The first hardware ID in a list of hardware IDs is the most specific identifier for the device. In this example, that is HwID\_1.
+The first hardware ID in a list of hardware IDs is the most specific identifier for the device. In this example, that is HwID_1.
 
-Also assume there is an INF file that has an [**INF *Models* section**](inf-models-section.md) that has the following entry, where the INF\_*XXX\_N* names represent actual hardware IDs and compatible IDs:
+Also assume there is an INF file that has an [**INF *Models* section**](inf-models-section.md) that has the following entry, where the INF_*XXX_N* names represent actual hardware IDs and compatible IDs:
 
 ```
 DeviceDesc1 = InstallSection1, INF_HWID_1, INF_CID_1, INF_CID_2

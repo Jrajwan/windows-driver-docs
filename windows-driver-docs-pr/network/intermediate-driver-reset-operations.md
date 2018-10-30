@@ -2,13 +2,22 @@
 title: Intermediate Driver Reset Operations
 description: Intermediate Driver Reset Operations
 ms.assetid: 473dce77-4636-40da-ac38-cda1676eba3f
-keywords: ["intermediate drivers WDK networking , reset operations", "NDIS intermediate drivers WDK , reset operations", "resetting intermediate drivers"]
+keywords:
+- intermediate drivers WDK networking , reset operations
+- NDIS intermediate drivers WDK , reset operations
+- resetting intermediate drivers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Intermediate Driver Reset Operations
 
 
-## <a href="" id="ddk-intermediate-driver-reset-operations-ng"></a>
+
 
 
 An intermediate driver must be prepared to handle the situation where its outstanding sends on a binding to an underlying driver can be dropped because the underlying NIC is reset.

@@ -2,13 +2,24 @@
 title: Splitting Ethernet Frames
 description: Splitting Ethernet Frames
 ms.assetid: 7b857dee-2805-4004-8f31-452f0cff0e0c
-keywords: ["header-data split WDK , Ethernet frame splitting", "splitting Ethernet frames", "Ethernet frame splitting WDK networking", "Ethernet frame splitting WDK networking , about Ethernet frame splitting", "header-data split providers WDK"]
+keywords:
+- header-data split WDK , Ethernet frame splitting
+- splitting Ethernet frames
+- Ethernet frame splitting WDK networking
+- Ethernet frame splitting WDK networking , about Ethernet frame splitting
+- header-data split providers WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Splitting Ethernet Frames
 
 
-## <a href="" id="ddk-splitting-ethernet-frames-ng"></a>
+
 
 
 This section describes the specific header-data split requirements that apply to header-data split providers, depending on the type of Ethernet frame that the provider is splitting.

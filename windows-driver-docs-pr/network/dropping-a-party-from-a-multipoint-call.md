@@ -2,13 +2,23 @@
 title: Dropping a Party from a Multipoint Call
 description: Dropping a Party from a Multipoint Call
 ms.assetid: db23e911-7c70-432e-992a-fdfdf8cb28ae
-keywords: ["parties WDK CoNDIS", "multipoint calls WDK CoNDIS", "dropping party from multipoint calls", "removing party from multipoint calls"]
+keywords:
+- parties WDK CoNDIS
+- multipoint calls WDK CoNDIS
+- dropping party from multipoint calls
+- removing party from multipoint calls
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Dropping a Party from a Multipoint Call
 
 
-## <a href="" id="ddk-dropping-a-party-from-a-multipoint-call-ng"></a>
+
 
 
 A connection-oriented client that serves as the root of a multipoint call must eventually drop each party from that call with [**NdisClDropParty**](https://msdn.microsoft.com/library/windows/hardware/ff561629) or [**NdisClCloseCall**](https://msdn.microsoft.com/library/windows/hardware/ff561627).

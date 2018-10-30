@@ -1,11 +1,14 @@
 ---
-title: EFI\_USBFN\_IO\_PROTOCOL.GetEndpointStallState
+title: EFI_USBFN_IO_PROTOCOL.GetEndpointStallState
 author: windows-driver-content
-description: EFI\_USBFN\_IO\_PROTOCOL.GetEndpointStallState
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: EFI_USBFN_IO_PROTOCOL.GetEndpointStallState
 ms.assetid: abf53ee7-8460-4861-a82d-827ad1dc6c40
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # EFI\_USBFN\_IO\_PROTOCOL.GetEndpointStallState
@@ -93,6 +96,5 @@ This function fails with **EFI\_INVALID\_PARAMETER** if the specified direction 
  
 
 
---------------------
 
 

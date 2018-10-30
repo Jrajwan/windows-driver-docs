@@ -2,13 +2,20 @@
 title: INF InterfaceInstall32 Section
 description: This section creates one or more new device interface classes.
 ms.assetid: 7cd576a7-aa5b-486c-a622-cdcb9e7448b5
-keywords: ["INF InterfaceInstall32 Section Device and Driver Installation"]
+keywords:
+- INF InterfaceInstall32 Section Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF InterfaceInstall32 Section
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF InterfaceInstall32 Section
@@ -16,7 +23,7 @@ api_type:
 
 This section creates one or more new [device interface classes](device-interface-classes.md). After a new class is created, subsequently installed devices/drivers can be registered to support the new device interface class by using [**INF *DDInstall*.Interfaces sections**](inf-ddinstall-interfaces-section.md) in their respective INF files, or by calling [**IoRegisterDeviceInterface**](https://msdn.microsoft.com/library/windows/hardware/ff549506).
 
-``` syntax
+```
 [InterfaceInstall32]
  
 {InterfaceClassGUID}=install-interface-section[,flags]
@@ -48,7 +55,7 @@ Each *install-interface-section* name must be unique within the INF file and mus
 
 Any specified *install-interface-section* has the following general form:
 
-``` syntax
+```
 [interface-install-section] | 
 [interface-install-section.nt] | 
 [interface-install-section.ntx86] | 

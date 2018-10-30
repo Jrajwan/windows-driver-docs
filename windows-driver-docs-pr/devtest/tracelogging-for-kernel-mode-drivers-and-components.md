@@ -2,6 +2,12 @@
 title: TraceLogging for kernel-mode drivers and components
 description: This topic describes how to use the TraceLogging API from within kernel-mode drivers and components.
 ms.assetid: 6AF8DD2C-400F-4E9D-A6DF-40A847BCBD76
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # <span id="devtest.tracelogging_for_kernel-mode_drivers_and_components"></span>TraceLogging for kernel-mode drivers and components
@@ -35,13 +41,13 @@ To use the TraceLogging API, include the TraceLogging header file TraceLoggingPr
 
 1.  Add the [**TRACELOGGING\_DECLARE\_PROVIDER**](https://msdn.microsoft.com/library/windows/desktop/dn904623) macro to declare the provider handle variable. The macro has the syntax:
 
-    ``` syntax
+    ```
     TRACELOGGING_DECLARE_PROVIDER(hProviderVariableName)
     ```
 
     The following example TraceLogging statement declares the variable named *g\_hProvider*.
 
-    ``` syntax
+    ```
     TRACELOGGING_DECLARE_PROVIDER(g_hProvider);
     ```
 
@@ -53,13 +59,13 @@ To use the TraceLogging API, include the TraceLogging header file TraceLoggingPr
 
 2.  Add the [**TRACELOGGING\_DEFINE\_PROVIDER**](https://msdn.microsoft.com/library/windows/desktop/dn904624) macro, and specify a name for the trace provider and the trace provider handle. The handle is the variable you declared in step 1. The syntax of the macro is:
 
-    ``` syntax
+    ```
     TRACELOGGING_DEFINE_PROVIDER(hProviderVariableName, "ProviderName", providerId [,option])
     ```
 
     For example, the following statement defines a provider called MyTraceLoggingProviderKM and assigns it to the handle g\_hProvider. The providerId parameter is the ETW provider GUID.
 
-    ``` syntax
+    ```
     TRACELOGGING_DEFINE_PROVIDER(g_hProvider, "MyTraceLoggingProviderKM", 
         (0xb3864c38, 0x4273, 0x58c5, 0x54, 0x5b, 0x8b, 0x36, 0x08, 0x34, 0x34, 0x71));
     ```
@@ -101,7 +107,7 @@ TraceLogging provides macros for logging events.
 
 The basic macro is [**TraceLoggingWrite**](https://msdn.microsoft.com/library/windows/desktop/dn904617). This macro has the following syntax:
 
-``` syntax
+```
 TraceLoggingWrite(g_hProvider, "EventName", args...)
 ```
 
@@ -132,7 +138,6 @@ For examples of how to capture and view TraceLogging data, see [Capture and view
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20TraceLogging%20for%20kernel-mode%20drivers%20and%20components%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

@@ -2,13 +2,22 @@
 title: Implementation Tips and Requirements for WDM Lower Edge
 description: Implementation Tips and Requirements for WDM Lower Edge
 ms.assetid: 760c62ec-eeca-4b62-97ec-7cda5ee353a8
-keywords: ["NDIS-WDM miniport drivers WDK networking , implemention tips", "lower edge of NDIS miniport drivers WDK networking , driver implemention", "WDM lower edge WDK networking , driver implemention"]
+keywords:
+- NDIS-WDM miniport drivers WDK networking , implemention tips
+- lower edge of NDIS miniport drivers WDK networking , driver implemention
+- WDM lower edge WDK networking , driver implemention
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Implementation Tips and Requirements for WDM Lower Edge
 
 
-## <a href="" id="ddk-implementation-tips-and-requirements-for-wdm-lower-edge-ng"></a>
+
 
 
 This topic describes tips and requirements for implementing an NDIS-WDM miniport driver. An NDIS-WDM miniport driver can call both NDIS and non-NDIS functions. These non-NDIS functions include, for example, WDM-kernel-mode support routines and functions for a particular bus-driver interface.

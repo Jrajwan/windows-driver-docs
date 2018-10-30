@@ -2,13 +2,25 @@
 title: Troubleshooting Device and Driver Installations
 description: Troubleshooting Device and Driver Installations
 ms.assetid: 1ffad62b-140d-4a0a-9174-245e0344e605
-keywords: ["Device setup WDK device installations , troubleshooting", "device installations WDK , troubleshooting", "installing devices WDK , troubleshooting", "troubleshooting device installations WDK", "Device setup WDK device installations , SetupAPI", "installing devices WDK , SetupAPI"]
+keywords:
+- Device setup WDK device installations , troubleshooting
+- device installations WDK , troubleshooting
+- installing devices WDK , troubleshooting
+- troubleshooting device installations WDK
+- Device setup WDK device installations , SetupAPI
+- installing devices WDK , SetupAPI
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Troubleshooting Device and Driver Installations
 
 
-## <a href="" id="ddk-troubleshooting-device-installation-dg"></a>
+
 
 
 You can use the following guidelines to either verify that your device is installed correctly or diagnose problems with your device installation:
@@ -23,7 +35,7 @@ You can use the following guidelines to either verify that your device is instal
 
 -   Run test programs to exercise the device. This includes the testing and debugging tools that are supplied with the Windows Driver Kit (WDK).
 
-Additionally, in Windows Server 2003, Windows XP, and Windows 2000, a [co-installer](writing-a-co-installer.md) can provide a troubleshooter that helps users diagnose problems with your device. See [**DIF\_TROUBLESHOOTER**](https://msdn.microsoft.com/library/windows/hardware/ff543726) for more information.
+Additionally, in Windows Server 2003, Windows XP, and Windows 2000, a [co-installer](writing-a-co-installer.md) can provide a troubleshooter that helps users diagnose problems with your device. See [**DIF_TROUBLESHOOTER**](https://msdn.microsoft.com/library/windows/hardware/ff543726) for more information.
 
  
 

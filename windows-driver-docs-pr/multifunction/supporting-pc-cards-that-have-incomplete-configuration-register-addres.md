@@ -1,21 +1,21 @@
 ---
-title: Supporting PC Cards That Have Incomplete Configuration Register Addresses
+title: PC cards with incomplete configuration register addresses
 author: windows-driver-content
-description: Supporting PC Cards That Have Incomplete Configuration Register Addresses
-MS-HAID:
-- 'mf-supp\_deb675d3-7b0c-45a1-bb76-2e9399e48f76.xml'
-- 'multifunc.supporting\_pc\_cards\_that\_have\_incomplete\_configuration\_register\_addres'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: Information on supporting PC cards with incomplete configuration register addresses
 ms.assetid: 2a708ca5-a119-4ef5-81ee-d9e40e7a5255
-keywords: ["incomplete configuration registers WDK multifunction devices", "system-supplied multifunction bus drivers WDK", "mf.sys"]
+keywords:
+- incomplete configuration registers WDK multifunction devices
+- system-supplied multifunction bus drivers WDK
+- mf.sys
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
-# Supporting PC Cards That Have Incomplete Configuration Register Addresses
-
-
-## <a href="" id="ddk-supporting-pc-cards-that-have-incomplete-configuration-register-ad"></a>
+# PC cards with incomplete configuration register addresses
 
 
 If a multifunction 16-bit PC Card device has configuration registers for each function but does not contain pointers in attribute memory to all register sets (does not support the LONGLINK\_MFC tuple), the vendor of such a device can use the system-supplied multifunction bus driver (mf.sys) but must provide a custom INF file and support for the individual functions.
@@ -90,7 +90,5 @@ If the device uses a memory window that is not based at zero, the *DDInstall*.**
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bmultifunc\multifunc%5D:%20Supporting%20PC%20Cards%20That%20Have%20Incomplete%20Configuration%20Register%20Addresses%20%20RELEASE:%20%288/29/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

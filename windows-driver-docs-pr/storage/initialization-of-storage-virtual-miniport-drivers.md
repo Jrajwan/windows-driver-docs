@@ -3,7 +3,16 @@ title: Initialization of Storage Virtual Miniport Drivers
 author: windows-driver-content
 description: Initialization of Storage Virtual Miniport Drivers
 ms.assetid: 35f7bb00-56e0-4535-9f13-9fd33afaa0b5
-keywords: ["storage virtual miniport drivers WDK , initialization", "miniport drivers WDK storage", "initializing WDK storage , virtual miniport drivers"]
+keywords:
+- storage virtual miniport drivers WDK , initialization
+- miniport drivers WDK storage
+- initializing WDK storage , virtual miniport drivers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Initialization of Storage Virtual Miniport Drivers
@@ -50,6 +59,5 @@ Without holding any locks and at PASSIVE\_LEVEL, the virtual miniport driver cal
  
 
 
---------------------
 
 

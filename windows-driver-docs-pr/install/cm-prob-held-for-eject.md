@@ -2,13 +2,22 @@
 title: CM_PROB_HELD_FOR_EJECT
 description: CM_PROB_HELD_FOR_EJECT
 ms.assetid: 8d67ad71-276d-4dea-b3fb-61fedcfba789
-keywords: ["CM_PROB_HELD_FOR_EJECT"]
+keywords:
+- CM_PROB_HELD_FOR_EJECT
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # CM_PROB_HELD_FOR_EJECT
 
+This function is reserved for system use.
 
-## <a href="" id="ddk-cm-prob-held-for-eject-dg"></a>
+
+
 
 
 The device has been prepared for ejection.

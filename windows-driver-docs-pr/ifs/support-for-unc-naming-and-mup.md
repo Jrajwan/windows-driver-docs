@@ -3,7 +3,23 @@ title: Support for UNC Naming and MUP
 author: windows-driver-content
 description: Support for UNC Naming and MUP
 ms.assetid: 07c4a498-10c7-41b2-aaeb-73cab946f392
-keywords: ["kernel network redirectors WDK , UNC naming", "kernel network redirectors WDK , MUP", "MUP WDK network redirectors", "multiple UNC provider WDK network redirectors", "UNC WDK network redirectors", "names WDK file systems", "prefix resolution WDK network redirectors", "prefix cache WDK network redirectors", "serial prefix resolution WDK network redirectors", "parallel prefix resolution WDK network redirectors"]
+keywords:
+- kernel network redirectors WDK , UNC naming
+- kernel network redirectors WDK , MUP
+- MUP WDK network redirectors
+- multiple UNC provider WDK network redirectors
+- UNC WDK network redirectors
+- names WDK file systems
+- prefix resolution WDK network redirectors
+- prefix cache WDK network redirectors
+- serial prefix resolution WDK network redirectors
+- parallel prefix resolution WDK network redirectors
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Support for UNC Naming and MUP
@@ -224,7 +240,7 @@ Changes to the ProviderOrder registry value require a reboot to take effect in M
 MUP uses each provider name listed to find the provider's registry key under the following registry key:
 
 ```
-HKLM\System\CurrentControlSet\Services\\<ProviderName>
+HKLM\System\CurrentControlSet\Services\<ProviderName>
 ```
 
 MUP then reads the DeviceName value under the NetworkProvider subkey to find the device name with which the provider will register. When the provider actually registers, MUP matches the device name passed in with the list of device names of known providers and places the provider in an ordered list for the purposes of prefix resolution. The order of providers in this list is based on the order specified in the ProviderOrder registry value discussed above.
@@ -242,6 +258,5 @@ The primary reason this behavior was changed is that a "serial prefix resolution
  
 
 
---------------------
 
 

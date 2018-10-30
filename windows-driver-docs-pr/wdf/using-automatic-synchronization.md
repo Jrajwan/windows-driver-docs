@@ -3,7 +3,28 @@ title: Using Automatic Synchronization
 author: windows-driver-content
 description: Using Automatic Synchronization
 ms.assetid: be7d3c0e-c3cf-4104-ab81-5ecdcb9163c8
-keywords: ["synchronization WDK KMDF", "automatic synchronization WDK KMDF", "locking WDK KMDF", "device-level synchronization WDK KMDF", "queue-level synchronization WDK KMDF", "no synchronization WDK KMDF", "synchronization scope WDK KMDF", "execution levels WDK KMDF", "WdfExecutionLevelPassive", "WdfExecutionLevelDispatch", "WdfExecutionLevelInheritFromParent", "WdfSynchronizationScopeDevice", "WdfSynchronizationScopeQueue", "WdfSynchronizationScopeNone", "WdfSynchronizationScopeInheritFromParent"]
+keywords:
+- synchronization WDK KMDF
+- automatic synchronization WDK KMDF
+- locking WDK KMDF
+- device-level synchronization WDK KMDF
+- queue-level synchronization WDK KMDF
+- no synchronization WDK KMDF
+- synchronization scope WDK KMDF
+- execution levels WDK KMDF
+- WdfExecutionLevelPassive
+- WdfExecutionLevelDispatch
+- WdfExecutionLevelInheritFromParent
+- WdfSynchronizationScopeDevice
+- WdfSynchronizationScopeQueue
+- WdfSynchronizationScopeNone
+- WdfSynchronizationScopeInheritFromParent
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Using Automatic Synchronization
@@ -19,7 +40,7 @@ The framework implements this automatic synchronization by using a set of intern
 
 Your driver should store object-specific data in [object context space](framework-object-context-space.md). If your driver uses only framework-defined interfaces, only callback functions that receive a handle to the object can access this data. If the framework is synchronizing calls to the driver's callback functions, only one callback function will be called at a time and the object's context space will be accessible to only one callback function at a time.
 
-Unless your driver implements DIRQL) and requires additional synchronization. For more information, see [Synchronizing Interrupt Code](synchronizing-interrupt-code.md).
+Unless your driver implements [passive-level interrupt handling](supporting-passive-level-interrupts.md), code that services interrupts and accesses interrupt data must run at the device's IRQL (DIRQL) and requires additional synchronization. For more information, see [Synchronizing Interrupt Code](synchronizing-interrupt-code.md).
 
 If your driver enables automatic synchronization of the callback functions that handle I/O requests, the framework synchronizes these callback functions so that they run one at a time. The following table lists the callback functions that the framework synchronizes.
 

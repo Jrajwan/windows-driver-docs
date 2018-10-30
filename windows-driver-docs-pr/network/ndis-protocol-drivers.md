@@ -2,13 +2,23 @@
 title: NDIS Protocol Drivers
 description: NDIS Protocol Drivers
 ms.assetid: 0c93ee20-6b8a-42e7-9236-bf0db9d70aca
-keywords: ["protocol drivers WDK networking", "network drivers WDK , protocol drivers", "NDIS WDK , protocol drivers", "NDIS protocol drivers WDK"]
+keywords:
+- protocol drivers WDK networking
+- network drivers WDK , protocol drivers
+- NDIS WDK , protocol drivers
+- NDIS protocol drivers WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NDIS Protocol Drivers
 
 
-## <a href="" id="ddk-ndis-protocol-drivers-ng"></a>
+
 
 
 NDIS protocol drivers are supported in NDIS 6.0 and later. The following sections introduce NDIS protocol drivers and describe how to write and install NDIS protocol drivers:

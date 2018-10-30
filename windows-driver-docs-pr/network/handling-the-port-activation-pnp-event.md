@@ -2,13 +2,23 @@
 title: Handling the Port Activation PnP Event
 description: Handling the Port Activation PnP Event
 ms.assetid: 433018bf-daf5-4ea1-be3f-63349558f6b7
-keywords: ["ports WDK NDIS , PnP event notifications", "NDIS ports WDK , PnP event notifications", "PnP event notifications WDK NDIS ports", "activation PnP events WDK NDIS ports"]
+keywords:
+- ports WDK NDIS , PnP event notifications
+- NDIS ports WDK , PnP event notifications
+- PnP event notifications WDK NDIS ports
+- activation PnP events WDK NDIS ports
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Handling the Port Activation PnP Event
 
 
-## <a href="" id="ddk-handling-the-port-activation-pnp-event-ng"></a>
+
 
 
 Overlying drivers must handle the **NetEventPortActivation** PnP event when a miniport driver activates an NDIS port. NDIS does not initiate the binding between a protocol driver and miniport adapter until the default port has been activated. Therefore, protocol drivers should treat the call to their [*ProtocolBindAdapterEx*](https://msdn.microsoft.com/library/windows/hardware/ff570220) function as a notification that the default port is active.

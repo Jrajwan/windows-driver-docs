@@ -1,14 +1,18 @@
 ---
 title: Delivering experiences for MVNOs
 description: Delivering experiences for MVNOs
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: fcb2a3d4-bc19-4fa5-b81d-b0df287404a8
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Delivering experiences for MVNOs
 
+[!include[MBAE deprecation warning](mbae-deprecation-warning.md)]
 
 This topic provides info on how you can match service metadata to a mobile network operator (MNO) or mobile virtual network operator (MVNO) so that a mobile broadband app is automatically downloaded when the mobile broadband device is inserted.
 
@@ -16,9 +20,9 @@ To successfully match service metadata, Windows reads information from the SIM c
 
 Use the link from the following list that is appropriate for your network:
 
--   [Matching on GSM networks](#bkmk-gsm)
+-   [Matching on GSM networks](#matching-on-gsm-networks)
 
--   [Matching on CDMA networks](#bkmk-cdma)
+-   [Matching on CDMA networks](#matching-on-cdma-networks)
 
 For info about the hardware that is required to properly match service metadata to an MNO and MVNO, see [Mobile operator hardware overview](mobile-operator-hardware-overview.md).
 
@@ -26,7 +30,7 @@ For info on service metadata, see [Service metadata](service-metadata.md).
 
 For info on the service metadata package schema, see [Service metadata package schema reference](service-metadata-package-schema-reference.md).
 
-## <span id="BKMK_GSM"></span><span id="bkmk_gsm"></span>Matching on GSM networks
+## Matching on GSM networks
 
 
 For a GSM network (3GPP), Windows reads the Integrated Circuit Card Identifier (ICCID) and the International Mobile Subscriber Identity (IMSI) number from the SIM card. These numbers must be set and retrievable from the device. If a SIM is PIN-locked and the IMSI information is hidden, Windows does not take action until the SIM PIN is unlocked. Windows also reads the Home Provider Name from the SIM or mobile broadband device.
@@ -198,7 +202,7 @@ If none of these methods works for the MNO’s network (for example, the MNO can
 
 **Service metadata**
 
-This method creates a service metadata package that covers the entire MNO network. This is usually done by submitting an IMSI range that covers all the MCC+MNC values on the MNO network, and no ICCID ranges. MVNO ranges are not described. The service metadata package features generic branding and a generic network name that displays in the Windows Connection Manager. The service metadata then references a generic app that is automatically downloaded from the Windows Store when the MNO’s SIM is detected.
+This method creates a service metadata package that covers the entire MNO network. This is usually done by submitting an IMSI range that covers all the MCC+MNC values on the MNO network, and no ICCID ranges. MVNO ranges are not described. The service metadata package features generic branding and a generic network name that displays in the Windows Connection Manager. The service metadata then references a generic app that is automatically downloaded from the Microsoft Store when the MNO’s SIM is detected.
 
 **Determining network affiliation**
 
@@ -261,7 +265,7 @@ If you want to dynamically reprogram SIMs to change the IMSI or the ICCID, you s
 
 To get new service metadata (which results in new branding), and to get a new mobile broadband app to download the ICCID and the IMSI, you must change both the service data and the mobile broadband app by using the operator’s reprogramming method.
 
-## <span id="BKMK_CDMA"></span><span id="bkmk_cdma"></span>Matching on CDMA networks
+## Matching on CDMA networks
 
 
 For a CDMA network (3GPP2), Windows reads the SID and the Provider Name values that are reported by the device to a corresponding service metadata package in WMIS. If no matches are found, no service metadata package is downloaded. Windows checks approximately every eight days to see if new metadata exists for the device. If service metadata exists for a SID and a separate service metadata package exists for a Provider Name, and both values match the SID and Provider Name values that the device is reporting, matching preference is given to SID. In this case, the Provider Name package is not matched.
@@ -363,7 +367,6 @@ For more information about mobile broadband metadata see [Using metadata to conf
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bp_mb\p_mb%5D:%20Delivering%20experiences%20for%20MVNOs%20%20RELEASE:%20%281/18/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

@@ -2,12 +2,24 @@
 title: How to Test-Sign a Driver Package
 description: How to Test-Sign a Driver Package
 ms.assetid: 992f0974-0b0e-4c96-ad16-c5894067896c
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # How to Test-Sign a Driver Package
 
 
-This section provides information about the basic steps that you have to follow when you test-sign a [driver package](driver-packages.md). This section includes topics that describe these steps and provide examples, such as the following
+This section provides information about the basic steps that you have to follow when you test-sign a [driver package](driver-packages.md). 
+
+Test-signing refers to using a test certificate to sign a prerelease version of a [driver package](driver-packages.md) for use on test computers. In particular, this allows developers to sign kernel-mode binaries by using self-signed certificates, such as those the [**MakeCert**](https://msdn.microsoft.com/library/windows/hardware/ff548309) tool generates. This capability allows developers to test kernel-mode binaries on Windows with driver signature verification enabled.
+
+Windows supports test-signed drivers only for development and testing purposes. Test-signed drivers must not be used for production purposes or released to customers.
+
+This section includes topics that describe these steps and provide examples, such as the following:
 
 -   Creating a test certificate that is used to sign a driver package. In this section, steps are described to create and use a self-signed test certificate named *Contoso.com(Test)*. This certificate is used in many examples that are discussed in this section.
 
@@ -33,7 +45,7 @@ This is the computer that is used to install and test the test-signed driver pac
 
 The topics of this section use the *ToastPkg* sample driver package to introduce the test-signing process. Within the WDK installation directory, the *ToastPkg* driver package is located in the *src\\general\\toaster\\toastpkg* directory.
 
-**Note**  The WDK contains a sample command script that shows the step-by-step procedure to correctly test-sign the *ToastPkg* sample [driver package](driver-packages.md). You can modify this script to test-sign your own driver package. Within the WDK installation directory, the example is located at *src\\general\\build\\driversigning\\selfsign\_example.cmd*. Additional instructions for test-signing are described in *src\\general\\build\\driversigning\\selfsign\_readme.htm*.
+**Note**  The WDK contains a sample command script that shows the step-by-step procedure to correctly test-sign the *ToastPkg* sample [driver package](driver-packages.md). You can modify this script to test-sign your own driver package. Within the WDK installation directory, the example is located at *src\\general\\build\\driversigning\\selfsign_example.cmd*. Additional instructions for test-signing are described in *src\\general\\build\\driversigning\\selfsign_readme.htm*.
 
  
 

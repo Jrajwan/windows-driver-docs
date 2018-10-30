@@ -2,20 +2,24 @@
 title: Implementing an Operation Region Handler
 author: windows-driver-content
 description: Implementing an Operation Region Handler
-MS-HAID:
-- 'opregdg\_d0eabdd0-b0b2-40be-a313-a098d04be4a8.xml'
-- 'acpi.implementing\_an\_operation\_region\_handler'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: e435393c-d637-45c1-ab65-0b23f796ec02
-keywords: ["ACPI devices WDK , operation regions", "operation regions WDK ACPI", "function drivers WDK ACPI , operation regions", "WDM function drivers WDK ACPI , operation regions"]
+keywords:
+- ACPI devices WDK , operation regions
+- operation regions WDK ACPI
+- function drivers WDK ACPI , operation regions
+- WDM function drivers WDK ACPI , operation regions
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Implementing an Operation Region Handler
 
 
-## <a href="" id="ddk-implementing-an-operation-region-handler-kg"></a>
+
 
 
 The driver must provide an operation region handler, which is a [**PACPI\_OP\_REGION\_HANDLER**](https://msdn.microsoft.com/library/windows/hardware/ff536153)-typed callback. The ACPI driver calls the operation handler to access the data fields in the driver's operation region. The combined operation of the function driver and the ACPI BIOS is vendor-defined and device-specific. In general, the function driver and the ACPI BIOS access indexes in an operation region that result in device-specific operations and return whatever information is appropriate.
@@ -43,6 +47,5 @@ In addition to the previously described parameters, the ACPI driver also passes 
  
 
 
---------------------
 
 

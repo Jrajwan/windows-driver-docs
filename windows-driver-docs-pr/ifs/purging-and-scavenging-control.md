@@ -3,7 +3,19 @@ title: Purging and Scavenging Control
 author: windows-driver-content
 description: Purging and Scavenging Control
 ms.assetid: 103b05e6-333a-441a-a4f8-784ae43df59e
-keywords: ["RDBSS WDK file systems , purge and scavenge structures", "Redirected Drive Buffering Subsystem WDK file systems , purge and scavenge structures", "purging WDK network redirectors", "scavenging WDK network redirectors", "FOBX structure", "cleanup FOBX structures WDK network redirectors"]
+keywords:
+- RDBSS WDK file systems , purge and scavenge structures
+- Redirected Drive Buffering Subsystem WDK file systems , purge and scavenge structures
+- purging WDK network redirectors
+- scavenging WDK network redirectors
+- FOBX structure
+- cleanup FOBX structures WDK network redirectors
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Purging and Scavenging Control
@@ -60,6 +72,5 @@ The RDBSS purging and scavenging routines include the following:
  
 
 
---------------------
 
 

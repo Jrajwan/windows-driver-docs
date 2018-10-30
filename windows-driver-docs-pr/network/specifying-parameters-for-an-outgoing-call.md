@@ -2,13 +2,25 @@
 title: Specifying Parameters for an Outgoing Call
 description: Specifying Parameters for an Outgoing Call
 ms.assetid: 6e11dcd7-33ae-4b9e-8609-1baccec691d5
-keywords: ["CoNDIS WAN drivers WDK networking , outgoing calls", "telephonic services WDK WAN , outgoing calls", "CoNDIS TAPI WDK networking , outgoing calls", "voice streaming WDK networing , outgoing calls", "outgoing calls WDK CoNDIS WAN", "calls WDK CoNDIS WAN"]
+keywords:
+- CoNDIS WAN drivers WDK networking , outgoing calls
+- telephonic services WDK WAN , outgoing calls
+- CoNDIS TAPI WDK networking , outgoing calls
+- voice streaming WDK networing , outgoing calls
+- outgoing calls WDK CoNDIS WAN
+- calls WDK CoNDIS WAN
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Specifying Parameters for an Outgoing Call
 
 
-## <a href="" id="ddk-specifying-parameters-for-an-outgoing-call-ng"></a>
+
 
 
 When making an outgoing call, a call manager or MCM that supports voice streaming must supply the following values in the [**CO\_CALL\_MANAGER\_PARAMETERS**](https://msdn.microsoft.com/library/windows/hardware/ff545381) structure:

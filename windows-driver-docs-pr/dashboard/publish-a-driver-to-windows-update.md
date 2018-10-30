@@ -1,10 +1,13 @@
 ---
 title: Publish a driver to Windows Update
 description: To publish a driver to Windows Update, create a hardware submission and then follow the steps below.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: E62AADCF-E481-40CA-98F1-BE4629C3EE35
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Publish a driver to Windows Update
@@ -79,14 +82,28 @@ To publish a driver to Windows Update, [create a hardware submission](create-a-n
 
     ![screenshot that shows targeting section and pnps](images/publish-targeting-windows-update.png)
 
-7.  If you want to add Computer Hardware IDs (CHIDs), enter each CHID into the text box and select **Add CHID(s)**. To bulk add multiple CHIDs, ensure that each CHID is separated by a newline, select **Add multiple CHIDs**, and paste your CHIDs into the text box. You can view all added CHIDs in the list below the text box.
+7.  If you want to add Computer Hardware IDs (CHIDs), enter each CHID into the text box and select **Add CHID(s)**. To bulk add multiple CHIDs, ensure that each CHID is separated by a newline, select **Add multiple CHIDs**, and paste your CHIDs into the text box. You can view all added CHIDs in the list below the text box. To remove a CHID from the list, select **Remove**
 
-    To remove a CHID from the list, select **Remove**
+>[!IMPORTANT]
+> CHIDs are not supported for the following versions of windows:
+> * Windows 8.1 or earlier
+> * Windows Server 2012 R2 or earlier
+>
+> If your driver targets either of these operating systems, create two shipping labels: one for Windows 10 (where you can add CHIDs) and one for down-level operating systems (where no CHIDs will be added).
 
-8.  Select **Publish** to send your request to Windows Update. If you do not want to publish the shipping label right now, you can select **Save**. You can publish the shipping label later by either opening the shipping label and selecting **Publish**, or you can select **Publish all pending** from the hardware submission page. Note that selecting **Publish all pending** will publish all unpublished shipping labels.
+
+
+8. If your driver targets Windows 10 in S mode, you must select both boxes, confirming the following:
+
+  *	Your driver is compatible with and follows the driver policies outlined in the [Windows 10 in S mode Driver Requirements](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/Windows10SDriverRequirements).
+  * You verify that your driver follows the additional code integrity policies outlined in the Windows 10 in S mode guidelines.
+  * Your driver does not contain any non-Microsoft UI components or applications in the driver package.
+
+  ![A screenshot of the two checkboxes you must select when submitting a driver for Windows 10 S](images/win-cloud-checkboxes.png)
+
+9.  Select **Publish** to send your request to Windows Update. If you do not want to publish the shipping label right now, you can select **Save**. You can publish the shipping label later by either opening the shipping label and selecting **Publish**, or you can select **Publish all pending** from the hardware submission page. Note that selecting **Publish all pending** will publish all unpublished shipping labels.
 
  
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bhw_dashboard\hw_dashboard%5D:%20Publish%20a%20driver%20to%20Windows%20Update%20%20RELEASE:%20%281/3/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")

@@ -1,14 +1,25 @@
 ---
-title: Using a NET\_LUID Index
-description: Using a NET\_LUID Index
+title: Using a NET_LUID Index
+description: Using a NET_LUID Index
 ms.assetid: 21e0a73b-a02c-4ab4-b7c2-efcb8bfc806d
-keywords: ["NDIS network interfaces WDK , NET_LUID", "network interfaces WDK , NET_LUID", "NET_LUID", "index operations WDK network interface", "locally unique identifier WDK network interface"]
+keywords:
+- NDIS network interfaces WDK , NET_LUID
+- network interfaces WDK , NET_LUID
+- NET_LUID
+- index operations WDK network interface
+- locally unique identifier WDK network interface
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Using a NET\_LUID Index
 
 
-## <a href="" id="ddk-using-net-luid-indexes-ng"></a>
+
 
 
 NDIS provides functions to allocate and free the [**NET\_LUID**](https://msdn.microsoft.com/library/windows/hardware/ff568747) indexes that are required to create NET\_LUID values. An NDIS interface provider must allocate a NET\_LUID value to register an interface.

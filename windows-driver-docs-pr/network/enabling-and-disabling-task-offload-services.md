@@ -1,8 +1,16 @@
 ---
 title: Enabling and Disabling Task Offload Services
-description: A protocol driver can enable or disable task offload services for an underlying miniport adapter by issuing an OID\_OFFLOAD\_ENCAPSULATION OID set request.
+description: A protocol driver can enable or disable task offload services for an underlying miniport adapter by issuing an OID_OFFLOAD_ENCAPSULATION OID set request.
 ms.assetid: cc803af4-d4ed-4b51-9e0e-77443e0eb023
-keywords: ["task offload WDK TCP/IP transport , enabling services", "task offload WDK TCP/IP transport , disabling services"]
+keywords:
+- task offload WDK TCP/IP transport , enabling services
+- task offload WDK TCP/IP transport , disabling services
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Enabling and Disabling Task Offload Services
@@ -10,7 +18,7 @@ keywords: ["task offload WDK TCP/IP transport , enabling services", "task offloa
 
 A protocol driver can enable or disable task offload services for an underlying miniport adapter by issuing an [OID\_OFFLOAD\_ENCAPSULATION](https://msdn.microsoft.com/library/windows/hardware/ff569762) OID set request. This OID request sets the required encapsulation type and tells the miniport driver to activate all of the available task offload services.
 
-## <a href="" id="ddk-enabling-and-disabling-task-offload-services-ng"></a>
+
 
 
 Before issuing the the [OID\_OFFLOAD\_ENCAPSULATION](https://msdn.microsoft.com/library/windows/hardware/ff569762) OID set request, the protocol driver should make sure that the underlying miniport adapter supports the required encapsulation type. There are two ways to do this:

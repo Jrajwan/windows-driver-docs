@@ -1,20 +1,26 @@
 ---
 title: Requirements for Routing PC Card Interrupts
 description: Requirements for Routing PC Card Interrupts
-MS-HAID:
-- 'mcch2\_d34a3266-ca23-49f5-8376-c6dfc33c324f.xml'
-- 'PCMCIA.requirements\_for\_routing\_pc\_card\_interrupts'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: dbe01864-f05b-4004-9b04-bdefc5055e78
-keywords: ["IRQ routing WDK PCMCIA bus", "PCMCIA WDK buses , IRQ routing", "PC Cards WDK PCMCIA bus", "interrupts WDK PCMCIA bus", "PCI interrupts WDK PCMCIA bus", "ISA interrupts WDK PCMCIA bus"]
+keywords:
+- IRQ routing WDK PCMCIA bus
+- PCMCIA WDK buses , IRQ routing
+- PC Cards WDK PCMCIA bus
+- interrupts WDK PCMCIA bus
+- PCI interrupts WDK PCMCIA bus
+- ISA interrupts WDK PCMCIA bus
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Requirements for Routing PC Card Interrupts
 
 
-## <a href="" id="ddk-requirements-for-routing-pc-card-interrupts-kg"></a>
+
 
 
 In order to use PCI interrupts instead of ISA interrupts, 16-bit PC Cards must meet the following two basic requirements.

@@ -2,13 +2,25 @@
 title: Including a MOF File
 description: Including a MOF File
 ms.assetid: 87ef7156-d204-4797-b805-a50d9a4c509d
-keywords: ["custom GUIDs WDK networking", "WMI WDK networking , GUIDs", "OIDs WDK networking , WMI", "GUIDs WDK networking", "Windows Management Instrumentation WDK networking , GUIDs", "MOF files WDK networking"]
+keywords:
+- custom GUIDs WDK networking
+- WMI WDK networking , GUIDs
+- OIDs WDK networking , WMI
+- GUIDs WDK networking
+- Windows Management Instrumentation WDK networking , GUIDs
+- MOF files WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Including a MOF File
 
 
-## <a href="" id="ddk-including-a-mof-file-ng"></a>
+
 
 
 You must include a description of all of the custom GUIDs that map to a miniport driver's custom OIDs in a managed object format (MOF) file that must be compiled and included in the miniport driver's resource (\*.rc) file.

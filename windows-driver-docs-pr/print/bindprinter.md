@@ -1,15 +1,16 @@
 ---
 title: BindPrinter
 author: windows-driver-content
-description: The IPrintTicketProvider BindPrinter method binds a printer or print queue to a specific version of the Print Ticket schema. This enables the core driver to associate a set of private namespace URIs with a device.
-MS-HAID:
-- 'drvarch\_39837C3E-C46D-4fb3-93C0-AB2262DD2D59.xml'
-- 'print.bindprinter'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: The IPrintTicketProvider BindPrinter method binds a printer or print queue to a specific version of the Print Ticket schema.
 ms.assetid: 81f32a9a-417a-4851-972e-373112590e1c
-keywords: ["BindPrinter"]
+keywords:
+- BindPrinter
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # BindPrinter
@@ -39,7 +40,5 @@ BindPrinter( THIS_ HANDLE    hPrinter,
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20BindPrinter%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

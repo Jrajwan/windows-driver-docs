@@ -2,14 +2,21 @@
 title: GDL Association Search Criteria
 author: windows-driver-content
 description: GDL Association Search Criteria
-MS-HAID:
-- 'gplfiles\_618b04c9-aea7-44ac-84c2-910c6f124c9e.xml'
-- 'print.gdl\_association\_search\_criteria'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: f591e944-a6dc-406a-a15e-7af0cc70d7f5
-keywords: ["templates WDK GDL , associating templates with keywords", "keywords WDK GDL , associating templates with keywords", "templates WDK GDL , association search criteria", "association search criteria WDK GDL", "GDL WDK , searching for entries", "GDL WDK , entries", "unidentified entries WDK GDL"]
+keywords:
+- templates WDK GDL , associating templates with keywords
+- keywords WDK GDL , associating templates with keywords
+- templates WDK GDL , association search criteria
+- association search criteria WDK GDL
+- GDL WDK , searching for entries
+- GDL WDK , entries
+- unidentified entries WDK GDL
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # GDL Association Search Criteria
@@ -26,7 +33,5 @@ The search will end when a template that qualifies to represent the data entry h
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20GDL%20Association%20Search%20Criteria%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

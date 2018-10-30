@@ -1,14 +1,25 @@
 ---
-title: Derived NET\_BUFFER\_LIST Structures
-description: Derived NET\_BUFFER\_LIST Structures
+title: Derived NET_BUFFER_LIST Structures
+description: Derived NET_BUFFER_LIST Structures
 ms.assetid: 6660aef5-ba67-4f15-98b6-547fa753bc76
-keywords: ["NET_BUFFER_LIST", "network data WDK , structures", "data WDK networking , structures", "packets WDK networking , data structures", "derived structures WDK networking"]
+keywords:
+- NET_BUFFER_LIST
+- network data WDK , structures
+- data WDK networking , structures
+- packets WDK networking , data structures
+- derived structures WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Derived NET\_BUFFER\_LIST Structures
 
 
-## <a href="" id="ddk-derived-net-buffer-list-structures-ng"></a>
+
 
 
 NDIS provides functions that drivers can use to manage [**NET\_BUFFER\_LIST**](https://msdn.microsoft.com/library/windows/hardware/ff568388) structures that are derived from other NET\_BUFFER\_LIST structures. These functions are typically used by intermediate drivers.

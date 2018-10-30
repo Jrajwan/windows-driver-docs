@@ -2,7 +2,14 @@
 title: Enterprise CA Test Certificate
 description: Enterprise CA Test Certificate
 ms.assetid: c2b075c9-cb85-446d-ac07-65aad5507e62
-keywords: ["Enterprise CA test certificates WDK"]
+keywords:
+- Enterprise CA test certificates WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Enterprise CA Test Certificate
@@ -30,7 +37,7 @@ Detailed information on how to configure an Enterprise CA is beyond the scope of
 
 the Windows Server 2003 Deployment Kit, the Windows Server 2003 Help and Support Center, and the [Public Key Infrastructures](http://go.microsoft.com/fwlink/p/?linkid=62645) webpage of the [Microsoft TechNet](http://go.microsoft.com/fwlink/p/?linkid=62647) website. The TechNet website includes information about certificates, certificate services, and certificate templates.
 
-Information about configuring an Enterprise CA to test-sign [driver packages](driver-packages.md) is also provided in the readme file *Selfsign\_readme.htm*, which located in the *src\\general\\build\\driversigning* directory of the WDK.
+Information about configuring an Enterprise CA to test-sign [driver packages](driver-packages.md) is also provided in the readme file *Selfsign_readme.htm*, which located in the *src\\general\\build\\driversigning* directory of the WDK.
 
  
 

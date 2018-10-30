@@ -2,13 +2,23 @@
 title: Updating Bus-Specific Configuration Space Access for NDIS 6.0
 description: Updating Bus-Specific Configuration Space Access for NDIS 6.0
 ms.assetid: 1b2c590a-c5b4-43cd-93ee-6c6fd3798761
-keywords: ["bus configuration space WDK networking", "miniport adapters WDK networking , bus configuration space", "adapters WDK networking , bus configuration space", "porting miniport drivers WDK networking , adapters"]
+keywords:
+- bus configuration space WDK networking
+- miniport adapters WDK networking , bus configuration space
+- adapters WDK networking , bus configuration space
+- porting miniport drivers WDK networking , adapters
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Updating Bus-Specific Configuration Space Access for NDIS 6.0
 
 
-## <a href="" id="ddk-updating-bus-specific-configuration-space-access-for-ndis-6-0-ng"></a>
+
 
 
 To read or write to the bus configuration space, a miniport driver calls the [**NdisMGetBusData**](https://msdn.microsoft.com/library/windows/hardware/ff563591) or [**NdisMSetBusData**](https://msdn.microsoft.com/library/windows/hardware/ff563670) function, respectively. These functions replace the [**NdisReadPciSlotInformation**](https://msdn.microsoft.com/library/windows/hardware/ff554554) and [**NdisWritePciSlotInformation**](https://msdn.microsoft.com/library/windows/hardware/ff554871) functions.

@@ -2,7 +2,14 @@
 title: Delivery Algorithm
 description: Delivery Algorithm
 ms.assetid: 13e80cec-03f5-4498-94ab-ce974a8b9697
-keywords: ["delivering received data WDK TCP chimney offload , algorithm"]
+keywords:
+- delivering received data WDK TCP chimney offload , algorithm
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Delivery Algorithm
@@ -10,7 +17,7 @@ keywords: ["delivering received data WDK TCP chimney offload , algorithm"]
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-receive-algorithm-ng"></a>
+
 
 
 The following three flowcharts illustrate the algorithm that the offload target must use to process each of the following events:

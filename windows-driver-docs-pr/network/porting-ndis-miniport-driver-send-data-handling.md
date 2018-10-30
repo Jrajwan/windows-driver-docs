@@ -2,13 +2,20 @@
 title: Porting NDIS Miniport Driver Send Data Handling
 description: Porting NDIS Miniport Driver Send Data Handling
 ms.assetid: 0179ca24-f736-4937-b8ab-42e364d2c63b
-keywords: ["send operation porting WDK networking"]
+keywords:
+- send operation porting WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Porting NDIS Miniport Driver Send Data Handling
 
 
-## <a href="" id="ddk-porting-ndis-miniport-driver-send-data-handling-ng"></a>
+
 
 
 The [*MiniportSendNetBufferLists*](https://msdn.microsoft.com/library/windows/hardware/ff559440) function replaces the [**MiniportSendPackets**](https://msdn.microsoft.com/library/windows/hardware/ff550524) function. *MiniportSendNetBufferLists* receives a pointer to a linked list of [**NET\_BUFFER\_LIST**](https://msdn.microsoft.com/library/windows/hardware/ff568388) structures, each of which contains a linked list of [**NET\_BUFFER**](https://msdn.microsoft.com/library/windows/hardware/ff568376) structures. *MiniportSendNetBufferLists* does not return a completion status. A miniport driver should therefore always complete a send operation asynchronously by calling the [**NdisMSendNetBufferListsComplete**](https://msdn.microsoft.com/library/windows/hardware/ff563668) function.

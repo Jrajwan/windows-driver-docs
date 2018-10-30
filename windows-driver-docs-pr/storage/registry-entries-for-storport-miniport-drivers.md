@@ -3,6 +3,12 @@ title: Registry Entries for StorPort Miniport Drivers
 author: windows-driver-content
 description: StorPort defines a set of registry entries to configure the behavior of StorPort and miniport operations.
 ms.assetid: 543EC6A4-113C-4525-8063-28854B50760E
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Registry Entries for StorPort Miniport Drivers
@@ -817,6 +823,5 @@ Registry entries for the miniport are keyed by the *\\Parameters* subkey and the
  
 
 
---------------------
 
 

@@ -1,10 +1,13 @@
 ---
-Description: 'This topic describes how KMDF function drivers support USB selective suspend.'
-MS-HAID: 'buses.selective\_suspend\_in\_a\_kmdf\_function\_driver'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+Description: This topic describes how KMDF function drivers support USB selective suspend.
 title: Selective suspend in USB KMDF function drivers
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 05/09/2018
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Selective suspend in USB KMDF function drivers
@@ -59,7 +62,7 @@ After the device has been suspended, the framework automatically resumes the dev
 
 To resume the device, KMDF sends a power-up request down the device stack and then invokes the driver’s callback functions in the same way that it would for any other power-up sequence.
 
-For detailed information about the callbacks that are involved in the power-down and power-up sequences, see “Plug and Play and Power Management in WDF Drivers” on the WHDC Web site.
+For detailed information about the callbacks that are involved in the power-down and power-up sequences, see the [Plug and Play and Power Management in WDF Drivers](http://download.microsoft.com/download/5/d/6/5d6eaf2b-7ddf-476b-93dc-7cf0072878e6/WDF-pnpPower.docx) white paper.
 
 ## Supporting USB selective suspend in a KMDF function driver
 
@@ -106,11 +109,11 @@ NTSTATUS    status = STATUS_SUCCESS;
 //
 // Initialize the idle policy structure.
 //
-WDF_DEVICE_POWER_POLICY_IDLE_SETTINGS_INIT(&amp;idleSettings, 
+WDF_DEVICE_POWER_POLICY_IDLE_SETTINGS_INIT(&idleSettings, 
      IdleUsbSelectiveSuspend);
 idleSettings.IdleTimeout = 10000; // 10 sec
 
-status = WdfDeviceAssignS0IdleSettings(Device, &amp;idleSettings);
+status = WdfDeviceAssignS0IdleSettings(Device, &idleSettings);
 if ( !NT_SUCCESS(status)) {
      TraceEvents(TRACE_LEVEL_ERROR, DBG_PNP,
                  "WdfDeviceSetPowerPolicyS0IdlePolicy failed %x\n", 
@@ -170,12 +173,12 @@ The following example from the Osrusbfx2 KMDF sample shows how to call this meth
 // capabilites such as speed, power, etc.
 //
 
-WDF_USB_DEVICE_INFORMATION_INIT(&amp;deviceInfo);
+WDF_USB_DEVICE_INFORMATION_INIT(&deviceInfo);
 
 status = WdfUsbTargetDeviceRetrieveInformation(
                             pDeviceContext->UsbDevice,
-                            &amp;deviceInfo);
-waitWakeEnable = deviceInfo.Traits &amp; WDF_USB_DEVICE_TRAIT_REMOTE_WAKE_CAPABLE;
+                            &deviceInfo);
+waitWakeEnable = deviceInfo.Traits & WDF_USB_DEVICE_TRAIT_REMOTE_WAKE_CAPABLE;
 ```
 
 ### Enabling remote wakeup
@@ -192,8 +195,8 @@ The following code snippet from the Osrusbfx2 sample shows how to initialize wak
 ```
 WDF_DEVICE_POWER_POLICY_WAKE_SETTINGS wakeSettings;
 
-WDF_DEVICE_POWER_POLICY_WAKE_SETTINGS_INIT(&amp;wakeSettings);
-status = WdfDeviceAssignSxWakeSettings(Device, &amp;wakeSettings);
+WDF_DEVICE_POWER_POLICY_WAKE_SETTINGS_INIT(&wakeSettings);
+status = WdfDeviceAssignSxWakeSettings(Device, &wakeSettings);
 if (!NT_SUCCESS(status)) {
     return status;
 }
@@ -204,16 +207,7 @@ For USB devices that support selective suspend, the underlying bus driver prepar
 For the same reason, USB function drivers rarely require a *EvtDeviceWakeFromS0Triggered* or *EvtDeviceWakeFromSxTriggered* callback. Instead, the framework and the underlying bus driver handle all requirements for returning the device to the working state.
 
 ## Related topics
-
-
-[Selective suspend in USB drivers (WDF)](selective-suspend-in-usb-drivers-wdf.md)
-
- 
-
- 
-
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20Selective%20suspend%20in%20USB%20KMDF%20function%20drivers%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
-
+[Selective suspend in USB drivers (WDF)](selective-suspend-in-usb-drivers-wdf.md)  
 
 
 

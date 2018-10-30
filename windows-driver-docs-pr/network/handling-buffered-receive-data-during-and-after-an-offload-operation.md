@@ -2,7 +2,16 @@
 title: Handling Buffered Receive Data During and After an Offload Operation
 description: Handling Buffered Receive Data During and After an Offload Operation
 ms.assetid: ff260798-2bcd-4240-b5bf-36cfd4302084
-keywords: ["state offloading process WDK TCP chimney offload , buffered receive data", "offloading state process WDK TCP chimney offload , buffered receive data", "buffered receive data WDK TCP chimney offload"]
+keywords:
+- state offloading process WDK TCP chimney offload , buffered receive data
+- offloading state process WDK TCP chimney offload , buffered receive data
+- buffered receive data WDK TCP chimney offload
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Handling Buffered Receive Data During and After an Offload Operation
@@ -10,7 +19,7 @@ keywords: ["state offloading process WDK TCP chimney offload , buffered receive 
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-handling-buffered-receive-data-during-and-after-an-offload-operati"></a>
+
 
 
 When the host stack initiates the offload of a TCP connection, there might be undelivered receive data on the connection. This data is data that the host stack has received off the wire, processed, and acknowledged but that it has not delivered to a client application--perhaps because no preposted receive buffers were available from the client application.

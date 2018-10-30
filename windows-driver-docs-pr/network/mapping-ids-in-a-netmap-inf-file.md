@@ -2,13 +2,26 @@
 title: Mapping IDs in a Netmap.inf File
 description: Mapping IDs in a Netmap.inf File
 ms.assetid: 7cab4aa1-8b0b-4cdc-a093-b91be6170961
-keywords: ["network component upgrades WDK , netmap.inf files", "upgrading network components WDK , netmap.inf files", "netmap.inf files WDK", "mapping network component IDs", "ID mapping WDK netmap.inf", "device IDs WDK netmap.inf", "vendor-supplied files WDK netmap.inf file"]
+keywords:
+- network component upgrades WDK , netmap.inf files
+- upgrading network components WDK , netmap.inf files
+- netmap.inf files WDK
+- mapping network component IDs
+- ID mapping WDK netmap.inf
+- device IDs WDK netmap.inf
+- vendor-supplied files WDK netmap.inf file
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Mapping IDs in a Netmap.inf File
 
 
-## <a href="" id="ddk-mapping-ids-in-a-netmap-inf-file-ng"></a>
+
 
 
 **Note**  Vendor-supplied network upgrades are not supported in Microsoft Windows XP (SP1 and later), Microsoft Windows Server 2003, and later operating systems.

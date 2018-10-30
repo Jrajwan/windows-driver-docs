@@ -2,13 +2,23 @@
 title: Initializing a Virtual Miniport
 description: Initializing a Virtual Miniport
 ms.assetid: 5f2e23a9-375b-4b0d-95d2-5a3af1acb3be
-keywords: ["initializing virtual miniports", "virtual miniports WDK networking", "NDIS intermediate drivers WDK , virtual miniports", "intermediate drivers WDK networking , virtual miniports"]
+keywords:
+- initializing virtual miniports
+- virtual miniports WDK networking
+- NDIS intermediate drivers WDK , virtual miniports
+- intermediate drivers WDK networking , virtual miniports
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Initializing a Virtual Miniport
 
 
-## <a href="" id="ddk-initializing-a-virtual-miniport-ng"></a>
+
 
 
 To initiate the initialization of a virtual miniport, an intermediate driver calls the [**NdisIMInitializeDeviceInstanceEx**](https://msdn.microsoft.com/library/windows/hardware/ff562727) function. The intermediate driver usually makes this call from its [*ProtocolBindAdapterEx*](https://msdn.microsoft.com/library/windows/hardware/ff570220) function. After the intermediate driver calls **NdisIMInitializeDeviceInstanceEx** and the Plug an Play manager requests NDIS to start the virtual device, NDIS calls the driver's [*MiniportInitializeEx*](https://msdn.microsoft.com/library/windows/hardware/ff559389) function.

@@ -2,13 +2,23 @@
 title: One-to-Many ID Mapping
 description: One-to-Many ID Mapping
 ms.assetid: 395d3f20-7410-496b-9ec3-1052cd731ae3
-keywords: ["mapping network component IDs", "ID mapping WDK netmap.inf", "one-to-many ID mapping WDK networking", "preupgrade IDs WDK networking"]
+keywords:
+- mapping network component IDs
+- ID mapping WDK netmap.inf
+- one-to-many ID mapping WDK networking
+- preupgrade IDs WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # One-to-Many ID Mapping
 
 
-## <a href="" id="ddk-one-to-many-id-mapping-ng"></a>
+
 
 
 **Note**  Vendor-supplied network upgrades are not supported in Microsoft Windows XP (SP1 and later), Microsoft Windows Server 2003, and later operating systems.

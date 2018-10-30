@@ -2,13 +2,24 @@
 title: Setting Up a SAN Connection
 description: Setting Up a SAN Connection
 ms.assetid: f5d5e759-d77c-4db8-9b63-fb4c79344dff
-keywords: ["Windows Sockets Direct WDK , connection setup", "connections WDK SANs", "SAN connection setup WDK", "SAN connection setup WDK , about SAN connection setup", "SAN service providers WDK , connection setup"]
+keywords:
+- Windows Sockets Direct WDK , connection setup
+- connections WDK SANs
+- SAN connection setup WDK
+- SAN connection setup WDK , about SAN connection setup
+- SAN service providers WDK , connection setup
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Setting Up a SAN Connection
 
 
-## <a href="" id="ddk-setting-up-a-san-connection-ng"></a>
+
 
 
 During connection setup, the Windows Sockets switch determines which service provider will service the TCP socket. This provider will handle most subsequent operations on the socket. Regardless of whether the switch chooses a SAN service provider, the TCP/IP provider exclusively handles a few types of setup operations.

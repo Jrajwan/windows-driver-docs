@@ -1,11 +1,14 @@
 ---
-title: EFI\_USBFN\_IO\_PROTOCOL.ConfigureEnableEndpointsEx
+title: EFI_USBFN_IO_PROTOCOL.ConfigureEnableEndpointsEx
 author: windows-driver-content
-description: EFI\_USBFN\_IO\_PROTOCOL.ConfigureEnableEndpointsEx
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: EFI_USBFN_IO_PROTOCOL.ConfigureEnableEndpointsEx
 ms.assetid: 54DE0D7F-788F-49C3-AF5C-7EDAA0D09D20
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # EFI\_USBFN\_IO\_PROTOCOL.ConfigureEnableEndpointsEx
@@ -83,6 +86,5 @@ This function must ignore the *bMaxPacketSize0* field of the Standard Device Des
  
 
 
---------------------
 
 

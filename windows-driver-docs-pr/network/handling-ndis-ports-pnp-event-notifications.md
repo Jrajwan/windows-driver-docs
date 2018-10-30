@@ -2,13 +2,26 @@
 title: Handling NDIS Ports PnP Event Notifications
 description: Handling NDIS Ports PnP Event Notifications
 ms.assetid: 2f542b62-43a0-42fa-b72d-f789e029d3f0
-keywords: ["ports WDK NDIS , PnP event notifications", "NDIS ports WDK , PnP event notifications", "PnP event notifications WDK NDIS ports", "event notifications WDK networking", "notifications WDK networking", "notifications WDK PnP , NDIS ports", "events WDK networkin"]
+keywords:
+- ports WDK NDIS , PnP event notifications
+- NDIS ports WDK , PnP event notifications
+- PnP event notifications WDK NDIS ports
+- event notifications WDK networking
+- notifications WDK networking
+- notifications WDK PnP , NDIS ports
+- events WDK networkin
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Handling NDIS Ports PnP Event Notifications
 
 
-## <a href="" id="ddk-handling-ndis-ports-pnp-notifications-ng"></a>
+
 
 
 NDIS forwards PnP events to notify overlying drivers when ports are activated or deactivated. NDIS and miniport drivers do not generate a PnP event when a port is allocated. Miniport drivers notify NDIS that ports have been activated with the **NetEventPortActivation** PnP event and miniport drivers generate a **NetEventPortDeactivation** PnP event to notify NDIS that some ports have been deactivated.

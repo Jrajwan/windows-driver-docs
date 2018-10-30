@@ -1,14 +1,24 @@
 ---
-title: Supporting Header-Data Split in Protocol Driver and Filter Drivers
-description: Supporting Header-Data Split in Protocol Driver and Filter Drivers
+title: Supporting header-data split in protocol and filter drivers
+description: Supporting Header-Data Split in Protocol Drivers and Filter Drivers
 ms.assetid: ba1566f2-7da6-4472-b00b-e25bf7acc294
-keywords: ["header-data split WDK , protocol drivers", "header-data split WDK , filter drivers", "protocol drivers WDK networking , header-data split", "filter drivers WDK networking , header-data split"]
+keywords:
+- header-data split WDK , protocol drivers
+- header-data split WDK , filter drivers
+- protocol drivers WDK networking , header-data split
+- filter drivers WDK networking , header-data split
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
-# Supporting Header-Data Split in Protocol Driver and Filter Drivers
+# Supporting Header-Data Split in Protocol Drivers and Filter Drivers
 
 
-## <a href="" id="ddk-supporting-header-data-split-in-protocol-driver-and-filter-drivers"></a>
+
 
 
 NDIS 6.0 and later protocol drivers and filter drivers must support receive indications with the header and data in non-contiguous buffers.

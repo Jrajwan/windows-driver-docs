@@ -3,7 +3,19 @@ title: Rename and Hard Link Processing
 author: windows-driver-content
 description: Rename and Hard Link Processing
 ms.assetid: 53eb3c9b-cb48-4d5f-8e26-dc93b7607813
-keywords: ["security WDK file systems , semantic model checks", "semantic model checks WDK file systems , rename operations", "rename operations WDK file systems", "semantic model checks WDK file systems , hard link operations", "hard link operations WDK file systems", "names WDK file systems"]
+keywords:
+- security WDK file systems , semantic model checks
+- semantic model checks WDK file systems , rename operations
+- rename operations WDK file systems
+- semantic model checks WDK file systems , hard link operations
+- hard link operations WDK file systems
+- names WDK file systems
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Rename and Hard Link Processing
@@ -129,6 +141,5 @@ The following code example to handle a rename operation mimics the file system c
  
 
 
---------------------
 
 

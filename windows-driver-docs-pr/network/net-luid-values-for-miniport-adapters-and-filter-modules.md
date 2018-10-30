@@ -1,14 +1,25 @@
 ---
-title: NET\_LUID Values for Miniport Adapters and Filter Modules
-description: NET\_LUID Values for Miniport Adapters and Filter Modules
+title: NET_LUID Values for Miniport Adapters and Filter Modules
+description: NET_LUID Values for Miniport Adapters and Filter Modules
 ms.assetid: d9135438-3399-4845-a28d-d445471cb41d
-keywords: ["NDIS network interfaces WDK , NET_LUID", "network interfaces WDK , NET_LUID", "NET_LUID", "miniport adapters WDK networking , NET_LUID value", "filter modules WDK networking , NET_LUID value"]
+keywords:
+- NDIS network interfaces WDK , NET_LUID
+- network interfaces WDK , NET_LUID
+- NET_LUID
+- miniport adapters WDK networking , NET_LUID value
+- filter modules WDK networking , NET_LUID value
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NET\_LUID Values for Miniport Adapters and Filter Modules
 
 
-## <a href="" id="ddk-net-luid-values-for-miniport-adapters-and-filter-modules-ng"></a>
+
 
 
 NDIS registers interfaces on behalf of miniport drivers (for each miniport adapter) and filter drivers (for each filter module). A protocol driver can query NDIS for the interface index and [**NET\_LUID**](https://msdn.microsoft.com/library/windows/hardware/ff568747) value of a miniport adapter that the driver is bound to by using its binding handle. For example, the protocol-driver lower edge of a MUX intermediate driver might obtain the NET\_LUID values to specify the layering order of its internal interfaces.

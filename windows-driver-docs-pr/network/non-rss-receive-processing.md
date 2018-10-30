@@ -2,13 +2,22 @@
 title: Non-RSS Receive Processing
 description: Non-RSS Receive Processing
 ms.assetid: 9fe262c3-9ce5-4625-8d29-ff7dc4ccb90a
-keywords: ["receive-side scaling WDK networking , non-RSS receive processing", "RSS WDK networking , non-RSS receive processing", "non-RSS receive processing WDK RSS"]
+keywords:
+- receive-side scaling WDK networking , non-RSS receive processing
+- RSS WDK networking , non-RSS receive processing
+- non-RSS receive processing WDK RSS
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Non-RSS Receive Processing
 
 
-## <a href="" id="ddk-non-rss-receive-processing-ng"></a>
+
 
 
 Miniport drivers that do not support RSS handle receive processing as described in this topic.

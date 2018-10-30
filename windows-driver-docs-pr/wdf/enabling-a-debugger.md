@@ -3,7 +3,20 @@ title: How to Enable Debugging of a UMDF Driver
 author: windows-driver-content
 description: How to Enable Debugging of a UMDF Driver
 ms.assetid: ea37eb7b-09fa-4c8d-aff7-273b07bc0007
-keywords: ["debuggers WDK UMDF", "debuggers WDK UMDF , enabling", "User-Mode Driver Framework WDK , enabling a debugger", "UMDF WDK , enabling a debugger", "user-mode drivers WDK UMDF , enabling a debugger", "debugging drivers WDK UMDF , enabling a debugger", "driver debugging WDK UMDF , enabling a debugger"]
+keywords:
+- debuggers WDK UMDF
+- debuggers WDK UMDF , enabling
+- User-Mode Driver Framework WDK , enabling a debugger
+- UMDF WDK , enabling a debugger
+- user-mode drivers WDK UMDF , enabling a debugger
+- debugging drivers WDK UMDF , enabling a debugger
+- driver debugging WDK UMDF , enabling a debugger
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # How to Enable Debugging of a UMDF Driver
@@ -26,7 +39,7 @@ The following are recommended settings. You can set these manually, or use the [
 
 -   Enable Application Verifier on WUDFHost.exe:
 
-    ``` syntax
+    ```
     AppVerif –enable Heaps Exceptions Handles Locks Memory TLS Leak –for WudfHost.exe
     ```
 

@@ -2,20 +2,23 @@
 title: Registering and Deregistering an Operation Region Handler
 author: windows-driver-content
 description: Registering and Deregistering an Operation Region Handler
-MS-HAID:
-- 'opregdg\_32a2162f-28c6-4bce-863a-02883229566b.xml'
-- 'acpi.registering\_and\_deregistering\_an\_operation\_region\_handler'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: de40488d-7935-431c-b1f4-87f8aff1125b
-keywords: ["ACPI devices WDK , operation regions", "operation regions WDK ACPI", "function drivers WDK ACPI , operation regions", "WDM function drivers WDK ACPI , operation regions", "registering operation region handlers", "deregistering operation region handlers"]
+keywords:
+- ACPI devices WDK , operation regions
+- operation regions WDK ACPI
+- function drivers WDK ACPI , operation regions
+- WDM function drivers WDK ACPI , operation regions
+- registering operation region handlers
+- deregistering operation region handlers
+ms.author: windowsdriverdev
+ms.date: 01/24/2018
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Registering and Deregistering an Operation Region Handler
-
-
-## <a href="" id="ddk-registering-and-deregistering-an-operation-region-handler-kg"></a>
 
 
 An ACPI device function driver registers an operation region handler by calling [**RegisterOpRegionHandler**](https://msdn.microsoft.com/library/windows/hardware/ff536158) and supplying the following information:
@@ -52,9 +55,6 @@ Typically, a driver deregisters an operation region handler in the driver's Plug
 
  
 
- 
 
-
---------------------
 
 

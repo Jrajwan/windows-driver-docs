@@ -2,13 +2,22 @@
 title: Writing NDIS Filter Drivers
 description: Writing NDIS Filter Drivers
 ms.assetid: c98c4bc5-e2fe-45b6-b0fa-7f594ad42041
-keywords: ["filter drivers WDK networking , writing", "NDIS filter drivers WDK , writing", "writing NDIS filter drivers WDK networking"]
+keywords:
+- filter drivers WDK networking , writing
+- NDIS filter drivers WDK , writing
+- writing NDIS filter drivers WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Writing NDIS Filter Drivers
 
 
-## <a href="" id="ddk-writing-ndis-filter-drivers-ng"></a>
+
 
 
 Before you try to write a filter driver, you should read about NDIS miniport and protocol drivers. For more information about miniport drivers, see [Writing NDIS Miniport Drivers](writing-ndis-miniport-drivers.md). For more information about protocol drivers, see [Writing NDIS Protocol Drivers](writing-ndis-protocol-drivers.md).

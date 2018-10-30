@@ -2,7 +2,17 @@
 title: Linking Path State Objects to a New Neighbor State Object
 description: Linking Path State Objects to a New Neighbor State Object
 ms.assetid: 2e4096d9-59b7-438e-82c0-83fccefca450
-keywords: ["updating offloaded TCP chimney state, relinking path state objects", "inking path state objects WDK TCP chimney offload", "reinking path state objects WDK TCP chimney offload", "path state object relinking WDK TCP chimney offload"]
+keywords:
+- updating offloaded TCP chimney state, relinking path state objects
+- inking path state objects WDK TCP chimney offload
+- reinking path state objects WDK TCP chimney offload
+- path state object relinking WDK TCP chimney offload
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Linking Path State Objects to a New Neighbor State Object
@@ -10,7 +20,7 @@ keywords: ["updating offloaded TCP chimney state, relinking path state objects",
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-linking-path-state-objects-to-a-new-neighbor-state-object-ng"></a>
+
 
 
 When the next hop address changes--for example, because of a router failure that results in a failover to a new router with a new IP address--the host stack can relink the effected offloaded path state objects to a new neighbor state object that represents the new router. The sequence of relinking the effected offloaded path state objectsis as follows:

@@ -2,13 +2,22 @@
 title: DDInstall Section in a Network INF File
 description: DDInstall Section in a Network INF File
 ms.assetid: f6621796-0d1f-4d96-9850-720718e7ac44
-keywords: ["INF files WDK network , DDInstall section", "network INF files WDK , DDInstall section", "DDInstall section WDK networking"]
+keywords:
+- INF files WDK network , DDInstall section
+- network INF files WDK , DDInstall section
+- DDInstall section WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # DDInstall Section in a Network INF File
 
 
-## <a href="" id="ddk-ddinstall-section-ng"></a>
+
 
 
 A *DDInstall* section in a network INF file is based on the generic [**INF DDInstall section**](https://msdn.microsoft.com/library/windows/hardware/ff547344).

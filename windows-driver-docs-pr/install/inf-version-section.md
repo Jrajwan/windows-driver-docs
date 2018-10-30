@@ -2,13 +2,20 @@
 title: INF Version Section
 description: By convention, the Version section appears first in INF files. Every INF file must have this section.
 ms.assetid: 53e30950-28a3-4ae3-a351-a917b02c84a5
-keywords: ["INF Version Section Device and Driver Installation"]
+keywords:
+- INF Version Section Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF Version Section
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF Version Section
@@ -16,7 +23,7 @@ api_type:
 
 By convention, the **Version** section appears first in INF files. Every INF file must have this section.
 
-``` syntax
+```
 [Version]
  
 Signature="signature-name"
@@ -29,7 +36,7 @@ Signature="signature-name"
 [CatalogFile.ntx86=unique-filename.cat]
 [CatalogFile.ntia64=unique-filename.cat]  (Windows XP and later versions of Windows)
 [CatalogFile.ntamd64=unique-filename.cat]  (Windows XP and later versions of Windows)
-DriverVer=mm/dd/yyyy[,w.x.y.z]
+DriverVer=mm/dd/yyyy,w.x.y.z
 [DontReflectOffline=1] (Windows Vista and later versions of Windows)
 [PnpLockDown=0|1] (Windows Vista and later versions of Windows)
 [DriverPackageDisplayName=%driver-package-description%]
@@ -82,7 +89,7 @@ For a new [device setup class](device-setup-classes.md), the INF must specify a 
  
 
 <a href="" id="provider--inf-creator-"></a>**Provider=%***INF-creator***%**  
-Identifies the provider of the INF file. Typically, this is specified as an **%***OrganizationName***%** token that is expanded later in the INF file's [**Strings**](inf-strings-section.md) section. The maximum length, in characters, of a provider name is LINE\_LEN.
+Identifies the provider of the INF file. Typically, this is specified as an **%***OrganizationName***%** token that is expanded later in the INF file's [**Strings**](inf-strings-section.md) section. The maximum length, in characters, of a provider name is LINE_LEN.
 
 For example, INF files supplied with the system typically specify the *INF-creator* as **%**Msft**%** and define **%**Msft**% = "**Microsoft**"** in their [**Strings**](inf-strings-section.md) sections.
 
@@ -116,7 +123,7 @@ For more information about how to use the system-defined **.nt**, **.ntx86**, **
 
  
 
-<a href="" id="driverver-mm-dd-yyyy--w-x-y-z-"></a>**DriverVer=***mm/dd/yyyy*\[**,***w.x.y.z*\]  
+<a href="" id="driverver-mm-dd-yyyy--w-x-y-z-"></a>**DriverVer=** **mm/dd/yyyy**,**w.x.y.z**  
 This entry specifies version information for drivers that are installed by this INF file. Starting with Windows 2000, this entry is required.
 
 For information about how to specify this entry, see [**INF DriverVer Directive**](inf-driverver-directive.md).
@@ -142,7 +149,7 @@ Starting with Windows Vista, a driver package should set **PnpLockDown** to 1 to
 <a href="" id="driverpackagedisplayname--driver-package-description-"></a>**DriverPackageDisplayName=%**driver-package-description**%**  
 Specifies a string token that corresponds to a string key entry in an INF [**Strings**](inf-strings-section.md) section. The string key entry supplies the [driver package](driver-packages.md) display name. Driver Install Frameworks (DIFx) uses the driver package display name to describe the purpose of driver package to end-users.
 
-<a href="" id="driverpackagetype-packagetype"></a>**DriverPackageType=***PackageType*  
+<a href="" id="driverpackagetype-packagetype"></a>**DriverPackageType=** *PackageType*  
 Specifies the [driver package](driver-packages.md) type. Driver Install Frameworks (DIFx) uses the driver package type to determine the type of driver package.
 
 Remarks

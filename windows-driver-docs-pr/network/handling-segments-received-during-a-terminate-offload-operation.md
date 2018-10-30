@@ -2,7 +2,18 @@
 title: Handling Segments Received During a Terminate Offload Operation
 description: Handling Segments Received During a Terminate Offload Operation
 ms.assetid: 19924d55-80c0-4cb3-bce2-cf0e2fc0758d
-keywords: ["terminating offload state WDK TCP chimney offload , segments received during", "out-of-order segments WDK TCP chimney offload", "segments received during termination WDK TCP chimney offload", "TCP SACK WDK TCP chimney offload", "selective acknowledgment for out-of-order segments WDK TCP chimney offload"]
+keywords:
+- terminating offload state WDK TCP chimney offload , segments received during
+- out-of-order segments WDK TCP chimney offload
+- segments received during termination WDK TCP chimney offload
+- TCP SACK WDK TCP chimney offload
+- selective acknowledgment for out-of-order segments WDK TCP chimney offload
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Handling Segments Received During a Terminate Offload Operation
@@ -10,7 +21,7 @@ keywords: ["terminating offload state WDK TCP chimney offload , segments receive
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-handling-segments-received-during-a-terminate-offload-operation-ng"></a>
+
 
 
 If the offload target receives any segments on an offloaded TCP connection that is being terminated, it should not process the segments. Instead, it should indicate the received data through the non-offload NDIS interface by calling the [**NdisMIndicateReceiveNetBufferLists**](https://msdn.microsoft.com/library/windows/hardware/ff563598) function. The host stack will not forward such indicated receive data back to the offload target.

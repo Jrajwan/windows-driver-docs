@@ -3,7 +3,17 @@ title: Storage Device Stacks, Storage Volumes, and File System Stacks
 author: windows-driver-content
 description: Storage Device Stacks, Storage Volumes, and File System Stacks
 ms.assetid: 5240ce9b-acfa-4e9c-9962-bc776878827c
-keywords: ["storage devices WDK file system", "stacks WDK file system", "device objects WDK file system", "volumes WDK file system"]
+keywords:
+- storage devices WDK file system
+- stacks WDK file system
+- device objects WDK file system
+- volumes WDK file system
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Storage Device Stacks, Storage Volumes, and File System Stacks
@@ -25,6 +35,5 @@ Before exploring how file system filter drivers attach to file systems and volum
  
 
 
---------------------
 
 

@@ -2,13 +2,22 @@
 title: NDIS Network Interface Services
 description: NDIS Network Interface Services
 ms.assetid: c37d9b7e-bc56-41e6-b41f-92a6df890e8e
-keywords: ["NDIS network interfaces WDK , services", "network interfaces WDK , services", "services WDK network interface"]
+keywords:
+- NDIS network interfaces WDK , services
+- network interfaces WDK , services
+- services WDK network interface
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NDIS Network Interface Services
 
 
-## <a href="" id="ddk-ndis-network-interface-services-ng"></a>
+
 
 
 The NDIS network interfaces programming interface provides services to:

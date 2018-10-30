@@ -2,7 +2,18 @@
 title: NetDMA Provider Services
 description: NetDMA Provider Services
 ms.assetid: f93eef62-3a6b-4bee-99b9-fca2c02142d1
-keywords: ["NetDMA provider drivers WDK networking , services", "NetDMA provider services WDK networking", "memory-to-memory data transfers WDK NetDMA , provider services", "data transfers WDK NetDMA , provider services", "transferring data WDK NetDMA , provider service"]
+keywords:
+- NetDMA provider drivers WDK networking , services
+- NetDMA provider services WDK networking
+- memory-to-memory data transfers WDK NetDMA , provider services
+- data transfers WDK NetDMA , provider services
+- transferring data WDK NetDMA , provider service
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NetDMA Provider Services
@@ -12,7 +23,7 @@ keywords: ["NetDMA provider drivers WDK networking , services", "NetDMA provider
 
  
 
-## <a href="" id="ddk-netdma-provider-services-ng"></a>
+
 
 
 The NetDMA interface requires *ProviderXxx* functions that the NetDMA provider driver supplies to service NetDMA requests. The *ProviderXxx* function entry points are defined in the [**NET\_DMA\_PROVIDER\_CHARACTERISTICS**](https://msdn.microsoft.com/library/windows/hardware/ff568738) structure that the NetDMA provider driver passes to the [**NetDmaRegisterProvider**](https://msdn.microsoft.com/library/windows/hardware/ff568336) function.

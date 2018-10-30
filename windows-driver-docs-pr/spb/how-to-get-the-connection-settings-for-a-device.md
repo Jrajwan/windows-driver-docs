@@ -1,11 +1,14 @@
 ---
 title: How to Get the Connection Settings for a Device
 author: windows-driver-content
-description: If your SPB controller driver registers an EvtSpbTargetConnect callback function, the SPB framework extension (SpbCx) calls this function when a client (peripheral driver) of the controller sends an IRP\_MJ\_CREATE request to open a logical connection to a target device on the bus. In response to the EvtSpbTargetConnect callback, the SPB controller driver should call the SpbTargetGetConnectionParameters method to get the connection settings for the target device. The SPB controller driver stores these settings and uses them later to access the device in response to I/O requests from the client.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: If your SPB controller driver registers an EvtSpbTargetConnect callback function, the SPB framework extension (SpbCx) calls this function when a client (peripheral driver) of the controller sends an IRP_MJ_CREATE request to open a logical connection to a target device on the bus. In response to the EvtSpbTargetConnect callback, the SPB controller driver should call the SpbTargetGetConnectionParameters method to get the connection settings for the target device. The SPB controller driver stores these settings and uses them later to access the device in response to I/O requests from the client.
 ms.assetid: B614993A-0EA9-4B91-A336-80EEF9BE3E69
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # How to Get the Connection Settings for a Device
@@ -15,7 +18,7 @@ If your SPB controller driver registers an [*EvtSpbTargetConnect*](https://msdn.
 
 For example, the connection settings for a target device on an I2C bus include the bus address of the device, the address width (7 or 10 bits), and the bus clock frequency to use during accesses of the device. The I2C controller driver uses these settings to configure the controller to access the device over the I2C bus.
 
-An SPB controller driver calls **SpbTargetGetConnectionParameters** to get a pointer to a *serial bus connection descriptor* that describes the connection of a target device to a serial bus of type I2C or SPI. This descriptor contains connection information that is common to both serial bus types, and is followed by information that is specific to the serial bus to which the device is connected. For more information about the format for this descriptor, see revision 5.0 of the Advanced Configuration and Power Interface Specification (the ACPI 5.0 specification) at the [ACPI](http://www.acpi.info) website.
+An SPB controller driver calls **SpbTargetGetConnectionParameters** to get a pointer to a *serial bus connection descriptor* that describes the connection of a target device to a serial bus of type I2C or SPI. This descriptor contains connection information that is common to both serial bus types, and is followed by information that is specific to the serial bus to which the device is connected. For more information about the format for this descriptor, see the [ACPI 5.0 specification](https://www.uefi.org/specifications).
 
 In the following code example, an I2C controller driver defines a **PNP\_I2C\_SERIAL\_BUS\_DESCRIPTOR** structure. This structure represents an *I2C serial bus connection descriptor*, which is the term the ACPI 5.0 specification uses to describe a serial bus connection descriptor that is followed by connection settings that are specific to the I2C bus. The first member of the **PNP\_I2C\_SERIAL\_BUS\_DESCRIPTOR** structure, **SerialBusDescriptor**, is a [**PNP\_SERIAL\_BUS\_DESCRIPTOR**](https://msdn.microsoft.com/library/windows/hardware/jj938062) structure that represents the serial bus connection descriptor. The **ConnectionSpeed** and **SlaveAddress** members contain I2C-specific connection settings.
 
@@ -115,6 +118,5 @@ At the end of the preceding code example, the \*`Settings` structure contains th
  
 
 
---------------------
 
 

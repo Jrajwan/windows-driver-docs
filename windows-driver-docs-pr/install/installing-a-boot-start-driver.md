@@ -2,13 +2,28 @@
 title: Installing a Boot-Start Driver
 description: Installing a Boot-Start Driver
 ms.assetid: 0b93233b-266c-4d2e-a5d8-01d2d477dd13
-keywords: ["Device setup WDK device installations , boot drivers", "device installations WDK , boot drivers", "installing devices WDK , boot drivers", "boot drivers WDK device installations", "boot driver distribution disks WDK device installations", "distribution disks WDK", "platform-specific distribution disks WDK", "cross-platform distribution disks WDK", "vendor-supplied boot drivers WDK"]
+keywords:
+- Device setup WDK device installations , boot drivers
+- device installations WDK , boot drivers
+- installing devices WDK , boot drivers
+- boot drivers WDK device installations
+- boot driver distribution disks WDK device installations
+- distribution disks WDK
+- platform-specific distribution disks WDK
+- cross-platform distribution disks WDK
+- vendor-supplied boot drivers WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Installing a Boot-Start Driver
 
 
-## <a href="" id="ddk-installing-a-boot-driver-dg"></a>
+
 
 
 A [*boot-start driver*](https://msdn.microsoft.com/library/windows/hardware/ff556272#wdkgloss-boot-start-driver) is a driver for a device that must be installed to start the Microsoft Windows operating system. Most boot-start drivers are included "in-the-box" with Windows, and Windows automatically installs these boot-start drivers during the text-mode setup phase of Windows installation. If a boot-start driver for a device is not included "in-the-box" with Windows, a user can install an additional vendor-supplied boot-start driver for the device during text-mode setup.
@@ -89,17 +104,17 @@ The following requirements and recommendations apply to platform-specific and cr
     <tr class="odd">
     <td align="left"><p>x86-based</p></td>
     <td align="left"><p>A:\i386</p></td>
-    <td align="left"><p>A:\\</p></td>
+    <td align="left"><p>A:\\\\</p></td>
     </tr>
     <tr class="even">
     <td align="left"><p>Itanium-based</p></td>
     <td align="left"><p>A:\ia64</p></td>
-    <td align="left"><p>A:\\</p></td>
+    <td align="left"><p>A:\\\\</p></td>
     </tr>
     <tr class="odd">
     <td align="left"><p>x64-based</p></td>
     <td align="left"><p>A:\amd64</p></td>
-    <td align="left"><p>A:\\</p></td>
+    <td align="left"><p>A:\\\\</p></td>
     </tr>
     </tbody>
     </table>

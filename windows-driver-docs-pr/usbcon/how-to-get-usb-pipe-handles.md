@@ -1,10 +1,13 @@
 ---
-Description: 'This topic provides an overview of USB pipes and describes the steps required by a USB client driver to obtain pipe handles from the USB driver stack.'
-MS-HAID: 'buses.how\_to\_get\_usb\_pipe\_handles'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+Description: This topic provides an overview of USB pipes and describes the steps required by a USB client driver to obtain pipe handles from the USB driver stack.
 title: How to enumerate USB pipes
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # How to enumerate USB pipes
@@ -18,7 +21,7 @@ During device configuration, the USB driver stack creates a *USB pipe* (on the h
 
 All attributes of a pipe are derived from the associated endpoint descriptor. For instance, depending on the type of the endpoint, the USB driver stack assigns a type for the pipe. For a bulk endpoint, the USB driver stack creates a bulk pipe; for an isochronous endpoint, an isochronous pipe is created, and so on. Another important attribute is the amount of data that the host controller can send to the endpoint point in a request. Depending on that value, the client driver must determine the layout of the transfer buffer.
 
-Windows Driver Foundation (WDF) provides specialized I/O target objects in [Kernel-Mode Driver Framework](https://msdn.microsoft.com/library/windows/hardware/ff557565) and [User-Mode Driver Framework](https://msdn.microsoft.com/library/windows/hardware/ff557565) that simplify many of the configuration tasks for the client driver. By using those objects, the client driver can retrieve information about the current configuration, such as the number of interfaces, alternate setting within each interface, and their endpoints. One of those objects, called the *target pipe object*, performs endpoint-related tasks. This topic describes how to obtain pipe information by using the target pipe object.
+Windows Driver Foundation (WDF) provides specialized I/O target objects in [Kernel-Mode Driver Framework](https://docs.microsoft.com/windows-hardware/drivers/wdf/) and [User-Mode Driver Framework](https://docs.microsoft.com/windows-hardware/drivers/wdf/) that simplify many of the configuration tasks for the client driver. By using those objects, the client driver can retrieve information about the current configuration, such as the number of interfaces, alternate setting within each interface, and their endpoints. One of those objects, called the *target pipe object*, performs endpoint-related tasks. This topic describes how to obtain pipe information by using the target pipe object.
 
 For Windows Driver Model (WDM) client drivers, the USB driver stack returns an array of [**USBD\_PIPE\_INFORMATION**](https://msdn.microsoft.com/library/windows/hardware/ff539114) structures. The number of elements in the array depends on the number of endpoints defined for the active alternate setting of an interface in the selected configuration. Each element contains information about the pipe created for a particular endpoint. For information about selecting a configuration and getting the array of pipe information, see [How to Select a Configuration for a USB Device](how-to-select-a-configuration-for-a-usb-device.md).
 
@@ -27,8 +30,8 @@ For Windows Driver Model (WDM) client drivers, the USB driver stack returns an a
 
 ### Technologies
 
--   [Kernel-Mode Driver Framework](https://msdn.microsoft.com/library/windows/hardware/ff557565)
--   [User-Mode Driver Framework](https://msdn.microsoft.com/library/windows/hardware/ff557565)
+-   [Kernel-Mode Driver Framework](https://docs.microsoft.com/windows-hardware/drivers/wdf/)
+-   [User-Mode Driver Framework](https://docs.microsoft.com/windows-hardware/drivers/wdf/)
 
 ### Prerequisites
 
@@ -165,12 +168,12 @@ NTSTATUS
     // Enumerate the pipes and get pipe information for each pipe.
     for (i = 0; i < pDeviceContext->NumberConfiguredPipes; i++) 
     {
-        WDF_USB_PIPE_INFORMATION_INIT(&amp;pipeInfo); 
+        WDF_USB_PIPE_INFORMATION_INIT(&pipeInfo); 
 
         pipe =  WdfUsbInterfaceGetConfiguredPipe(
             pDeviceContext->UsbInterface,  
             i, 
-            &amp;pipeInfo); 
+            &pipeInfo); 
 
         if (pipe == NULL)
         {
@@ -184,7 +187,7 @@ NTSTATUS
         // Use the endpoint as an IN bulk endpoint.
         // Store the maximum packet size.
 
-        if ((WdfUsbPipeTypeBulk == pipeInfo.PipeType) &amp;&amp;
+        if ((WdfUsbPipeTypeBulk == pipeInfo.PipeType) &&
             WdfUsbTargetPipeIsInEndpoint (pipe))
         {
 
@@ -195,7 +198,7 @@ NTSTATUS
                 Device,
                 pipe);
 
-            if ((pipeContext->IsStreamsCapable) &amp;&amp;
+            if ((pipeContext->IsStreamsCapable) &&
                 (pipeContext->MaxStreamsSupported > 0))
             {           
                 status = OpenStreams (
@@ -228,7 +231,7 @@ NTSTATUS
             continue;
         }
 
-        if ((WdfUsbPipeTypeBulk == pipeInfo.PipeType) &amp;&amp;
+        if ((WdfUsbPipeTypeBulk == pipeInfo.PipeType) &&
             WdfUsbTargetPipeIsOutEndpoint (pipe))
         {
             // Check if this is a streams IN endpoint. If it is,
@@ -238,7 +241,7 @@ NTSTATUS
                 Device,
                 pipe);
 
-            if ((pipeContext->IsStreamsCapable) &amp;&amp;
+            if ((pipeContext->IsStreamsCapable) &&
                 (pipeContext->MaxStreamsSupported > 0))
             {           
                 status = OpenStreams (
@@ -271,7 +274,7 @@ NTSTATUS
             continue;
         }
 
-        if ((WdfUsbPipeTypeInterrupt == pipeInfo.PipeType) &amp;&amp;
+        if ((WdfUsbPipeTypeInterrupt == pipeInfo.PipeType) &&
             WdfUsbTargetPipeIsInEndpoint (pipe))
         {
             pDeviceContext->InterruptPipe = pipe;
@@ -346,8 +349,8 @@ VOID RetrieveStreamInfoFromEndpointDesc (
     // Get the configuration descriptor of the currently selected configuration
     status = FX3RetrieveConfigurationDescriptor (
         deviceContext->UsbDevice,
-        &amp;deviceContext->ConfigurationNumber,
-        &amp;configDescriptor);
+        &deviceContext->ConfigurationNumber,
+        &configDescriptor);
 
     if (!NT_SUCCESS (status))
     {
@@ -369,8 +372,8 @@ VOID RetrieveStreamInfoFromEndpointDesc (
     }
 
     // Get the Endpoint Address of the pipe
-    WDF_USB_PIPE_INFORMATION_INIT(&amp;pipeInfo);  
-    WdfUsbTargetPipeGetInformation (Pipe, &amp;pipeInfo);
+    WDF_USB_PIPE_INFORMATION_INIT(&pipeInfo);  
+    WdfUsbTargetPipeGetInformation (Pipe, &pipeInfo);
 
 
     // Parse the ConfigurationDescriptor (including all Interface and
@@ -605,7 +608,7 @@ HRESULT  CMyDevice::CreateUsbIoTargets()
   
         WUDF_TEST_DRIVER_ASSERT(1 == NumInterfaces);  
           
-        hr = pIUsbTargetDevice->RetrieveUsbInterface(0, &amp;pIUsbInterface);  
+        hr = pIUsbTargetDevice->RetrieveUsbInterface(0, &pIUsbInterface);  
         if (FAILED(hr))  
         {  
             TraceEvents(TRACE_LEVEL_ERROR,   
@@ -644,7 +647,7 @@ HRESULT  CMyDevice::CreateUsbIoTargets()
         for (UCHAR PipeIndex = 0; PipeIndex < NumEndPoints; PipeIndex++)  
         {  
             hr = pIUsbInterface->RetrieveUsbPipeObject(PipeIndex,   
-                                                  &amp;pIUsbPipe);  
+                                                  &pIUsbPipe);  
   
             if (FAILED(hr))  
             {  
@@ -672,7 +675,7 @@ HRESULT  CMyDevice::CreateUsbIoTargets()
                         pIUsbPipe->DeleteWdfObject();  
                     }                        
                 }  
-                else if ( pIUsbPipe->IsOutEndPoint() &amp;&amp; (UsbdPipeTypeBulk == pIUsbPipe->GetType()) )  
+                else if ( pIUsbPipe->IsOutEndPoint() && (UsbdPipeTypeBulk == pIUsbPipe->GetType()) )  
                 {  
                     m_pIUsbOutputPipe = pIUsbPipe;  
                 }  
@@ -701,9 +704,15 @@ HRESULT  CMyDevice::CreateUsbIoTargets()
 
 ```
 
+<<<<<<< HEAD
+In UMDF, the client driver uses a pipe index to send data transfer requests. A pipe index is a number assigned by the USB driver stack when it opens pipes for the endpoints in a setting. To obtain the pipe index, call the [**IWDFUsbTargetPipe::GetInformation**](https://msdn.microsoft.com/library/windows/hardware/ff560403) method. The method populates a [**WINUSB_PIPE_INFORMATION**](https://msdn.microsoft.com/library/windows/hardware/ff540285) structure. The **PipeId** value indicates the pipe index.
+
+One way of performing read and write operations on the target pipe is to call [**IWDFUsbInterface::GetWinUsbHandle**](https://msdn.microsoft.com/library/windows/hardware/ff560337) to obtaining a WinUSB handle and then call [WinUSB Functions](https://msdn.microsoft.com/library/windows/hardware/ff540046#winusb). For example, the driver can call the [**WinUsb_ReadPipe**](https://msdn.microsoft.com/library/windows/hardware/ff540297) or [**WinUsb_WritePipe**](https://msdn.microsoft.com/library/windows/hardware/ff540322) function. In those function calls, the driver must specify the pipe index. For more information, see [How to Access a USB Device by Using WinUSB Functions](using-winusb-api-to-communicate-with-a-usb-device.md).
+=======
 In UMDF, the client driver uses a pipe index to send data transfer requests. A pipe index is a number assigned by the USB driver stack when it opens pipes for the endpoints in a setting. To obtain the pipe index, call the[**IWDFUsbTargetPipe::GetInformation**](https://msdn.microsoft.com/library/windows/hardware/ff560403) method. The method populates a [**WINUSB\_PIPE\_INFORMATION**](https://msdn.microsoft.com/library/windows/hardware/ff540285) structure. The **PipeId** value indicates the pipe index.
 
 One way of performing read and write operations on the target pipe is to call [**IWDFUsbInterface::GetWinUsbHandle**](https://msdn.microsoft.com/library/windows/hardware/ff560337) to obtaining a WinUSB handle and then call [WinUSB Functions](https://msdn.microsoft.com/library/windows/hardware/ff540046#winusb). For example, the driver can call the [**WinUsb\_ReadPipe**](https://msdn.microsoft.com/library/windows/hardware/ff540297) or [**WinUsb\_WritePipe**](https://msdn.microsoft.com/library/windows/hardware/ff540322) function. In those function calls, the driver must specify the pipe index. For more information, see [How to Access a USB Device by Using WinUSB Functions](using-winusb-api-to-communicate-with-a-usb-device.md).
+>>>>>>> master
 
 Remarks
 -------
@@ -723,22 +732,10 @@ The client driver then submits the URB to the USB driver stack. The USB driver s
 The URB contains information about the request such as the target pipe handle, transfer buffer, and its length. Each structure within the [**URB**](https://msdn.microsoft.com/library/windows/hardware/ff538923) union shares certain members: **TransferFlags**, **TransferBuffer**, **TransferBufferLength**, and **TransferBufferMDL**. There are type-specific flags in the **TransferFlags** member that correspond to each URB type. For all data transfer URBs, the USBD\_TRANSFER\_DIRECTION\_IN flag in **TransferFlags** specifies the direction of the transfer. Client drivers set the USBD\_TRANSFER\_DIRECTION\_IN flag to read data from the device. Drivers clear this flag to send data to the device. Data may be read from or written to either a buffer resident in memory or an MDL. In either case, the driver specifies the size of the buffer in the **TransferBufferLength** member. The driver provides a resident buffer in the **TransferBuffer** member and an MDL in the **TransferBufferMDL** member. Whichever one the driver provides, the other must be NULL.
 
 ## Related topics
-
-
-[USB I/O Transfers](usb-device-i-o.md)
-
-[How to Select a Configuration for a USB Device](how-to-select-a-configuration-for-a-usb-device.md)
-
-[How to select an alternate setting in a USB interface](select-a-usb-alternate-setting.md)
-
-[Common tasks for USB client drivers](wdk-resources-for-usb-driver-development.md)
-
- 
-
- 
-
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20How%20to%20enumerate%20USB%20pipes%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
-
+[USB I/O Transfers](usb-device-i-o.md)  
+[How to Select a Configuration for a USB Device](how-to-select-a-configuration-for-a-usb-device.md)  
+[How to select an alternate setting in a USB interface](select-a-usb-alternate-setting.md)  
+[Common tasks for USB client drivers](wdk-resources-for-usb-driver-development.md)  
 
 
 

@@ -3,7 +3,16 @@ title: Miscellaneous Network Mini-Redirector Routines
 author: windows-driver-content
 description: Miscellaneous Network Mini-Redirector Routines
 ms.assetid: bad5847c-8ac5-4e63-a0a5-3bbf13424928
-keywords: ["mini-redirectors WDK , miscellaneous routines", "connection IDs WDK network redirectors", "buffering state WDK network redirectors"]
+keywords:
+- mini-redirectors WDK , miscellaneous routines
+- connection IDs WDK network redirectors
+- buffering state WDK network redirectors
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Miscellaneous Network Mini-Redirector Routines
@@ -49,6 +58,5 @@ The following table lists the routines that can be implemented by a network mini
  
 
 
---------------------
 
 

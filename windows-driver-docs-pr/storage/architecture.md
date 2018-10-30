@@ -3,6 +3,12 @@ title: Architecture
 author: windows-driver-content
 description: Architecture
 ms.assetid: 6a50cba8-f989-4662-8e1d-2df462cb48d9
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Architecture
@@ -108,6 +114,5 @@ In other cases, vendors may want to provide more restricted access to the silo. 
  
 
 
---------------------
 
 

@@ -2,6 +2,12 @@
 title: Specifying a Packet Coalescing Receive Filter
 description: Specifying a Packet Coalescing Receive Filter
 ms.assetid: 0369A63D-4CDE-448A-8472-EEEB7B859B8D
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Specifying a Packet Coalescing Receive Filter
@@ -23,7 +29,7 @@ The overlying driver downloads receive filters to the miniport driver by issuing
 
     For more information about how to initialize these structures, see [Specifying Header Field Tests](#specifying-header-field-test).
 
-## <a href="" id="specifying-receive-filter"></a>Specifying a Receive Filter
+## Specifying a Receive Filter
 
 
 An overlying driver specifies a packet coalescing receive filter by initializing an [**NDIS\_RECEIVE\_FILTER\_PARAMETERS**](https://msdn.microsoft.com/library/windows/hardware/ff567181) structure with the configuration parameters for the filter. When it initializes the **NDIS\_RECEIVE\_FILTER\_PARAMETERS** structure, the overlying driver must follow these rules:
@@ -38,11 +44,9 @@ An overlying driver specifies a packet coalescing receive filter by initializing
 
 -   If the overlying driver is creating a new receive filter, it must set the **FilterId** member to NDIS\_DEFAULT\_RECEIVE\_FILTER\_ID.
 
-    **Note**  NDIS will generate a unique filter identifier (ID) for the receive filter before it forwards the OID method request of [OID\_RECEIVE\_FILTER\_SET\_FILTER](https://msdn.microsoft.com/library/windows/hardware/ff569795) to the miniport driver.
+    **Note**  NDIS will generate a unique filter identifier (ID) for the receive filter before it forwards the OID method request of [OID\_RECEIVE\_FILTER\_SET\_FILTER](https://msdn.microsoft.com/library/windows/hardware/ff569795) to the miniport driver.     
 
-     
-
-    If the overlying driver is modifying an existing receive filter, it must set the **FilterId** member to the nonzero filter ID of the receive filter. The overlying driver obtains the filter ID for the receive filter when it issues an OID method request of [OID\_RECEIVE\_FILTER\_ENUM\_FILTERS](https://msdn.microsoft.com/library/windows/hardware/ff569787). For more information about how to modify a receive filter, see [Modifying Packet Coalescing Receive Filters](modifying-packet-coalescing-receive-filters.md).
+-  If the overlying driver is modifying an existing receive filter, it must set the **FilterId** member to the nonzero filter ID of the receive filter. The overlying driver obtains the filter ID for the receive filter when it issues an OID method request of [OID\_RECEIVE\_FILTER\_ENUM\_FILTERS](https://msdn.microsoft.com/library/windows/hardware/ff569787). For more information about how to modify a receive filter, see [Modifying Packet Coalescing Receive Filters](modifying-packet-coalescing-receive-filters.md).
 
 -   The **FieldParametersArrayOffset**, **FieldParametersArrayNumElements**, and **FieldParametersArrayElementSize** members of the [**NDIS\_RECEIVE\_FILTER\_PARAMETERS**](https://msdn.microsoft.com/library/windows/hardware/ff567181) structure must be set to define a field parameter's array. Each element in the array is an [**NDIS\_RECEIVE\_FILTER\_FIELD\_PARAMETERS**](https://msdn.microsoft.com/library/windows/hardware/ff567169) structure that specifies the parameters for a header field test of a receive filter.
 
@@ -54,7 +58,7 @@ The overlying driver must order the header field tests in the field parameters a
 
 For example, before the overlying driver specifies the filter parameters for an IP version 4 (IPv4) protocol field, it must first specify the filter parameters for a MAC header protocol field (NdisMacHeaderFieldProtocol). In this manner, the driver specifies a header field test that verifies the field is set to the correct EtherType value (0x0800) for IPv4 packets. If the test fails, the adapter does not have to perform the test of the IPV4 protocol field.
 
-## <a href="" id="specifying-header-field-test"></a>Specifying Header Field Tests
+## Specifying Header Field Tests
 
 
 Each receive filter can specify one or more test criteria (*header field tests*). The network adapter performs these tests to determine whether a received packet should be coalesced in a hardware coalescing buffer on the adapter. Also, the overlying driver can specify separate filter tests for various media access control (MAC), IP version 4 (IPv4), and IP version 6 (IPv6) header fields.

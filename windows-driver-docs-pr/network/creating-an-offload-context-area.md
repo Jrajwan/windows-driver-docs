@@ -2,7 +2,16 @@
 title: Creating an Offload Context Area
 description: Creating an Offload Context Area
 ms.assetid: 5509ba04-aaad-4934-bc11-49d5c795db59
-keywords: ["state offloading process WDK TCP chimney offload , context area", "offloading state process WDK TCP chimney offload , context area", "context area WDK TCP chimney offload"]
+keywords:
+- state offloading process WDK TCP chimney offload , context area
+- offloading state process WDK TCP chimney offload , context area
+- context area WDK TCP chimney offload
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Creating an Offload Context Area
@@ -10,7 +19,7 @@ keywords: ["state offloading process WDK TCP chimney offload , context area", "o
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-creating-an-offload-context-area-ng"></a>
+
 
 
 For each [offload state object](offload-state-objects.md) that it offloads from a state tree, an offload target must allocate an offload context area in which to store the offloaded state object. This context area can be in host memory or NIC memory.

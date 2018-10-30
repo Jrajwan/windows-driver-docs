@@ -2,13 +2,20 @@
 title: INF DDInstall.Services Section
 description: Each per-Models DDInstall.Services section contains one or more INF AddService directives that reference additional INF-writer-defined sections in an INF file.
 ms.assetid: 30efb094-cc18-4c01-8851-4bc5dba1ae1d
-keywords: ["INF DDInstall.Services Section Device and Driver Installation"]
+keywords:
+- INF DDInstall.Services Section Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF DDInstall.Services Section
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF DDInstall.Services Section
@@ -16,7 +23,7 @@ api_type:
 
 Each per-Models *DDInstall***.Services** section contains one or more [**INF AddService directives**](inf-addservice-directive.md) that reference additional INF-writer-defined sections in an INF file.
 
-``` syntax
+```
 [install-section-name.Services] |
 [install-section-name.nt.Services] |
 [install-section-name.ntx86.Services] |
@@ -34,10 +41,9 @@ You can provide a *DDInstall***.Services** section with at least one **AddServic
 
 ## Entries
 
-
-<a href="" id="addservice-servicename--flags--service-install-section"></a>**AddService=***ServiceName*,\[*flags*\]**,***service-install-section*  
-
-<a href="" id="------------------------------------------------event-log-install-section---eventlogtype---eventname-------"></a>                                       \[,*event-log-install-section*\[**,**\[*EventLogType*\]\[**,***EventName*\]\]\]...\]  
+<a href="" id="addservice-servicename--flags--service-install-section"></a>
+<a href="" id="------------------------------------------------event-log-install-section---eventlogtype---eventname-------"></a>
+**AddService=***ServiceName*,\[*flags*\]**,***service-install-section*\[,*event-log-install-section*\[**,**\[*EventLogType*\]\[**,***EventName*\]\]\]...\]  
 This directive references an INF-writer-defined *service-install-section* and, possibly, an *event-log-install-section* elsewhere in the INF file for the drivers of the devices covered by this *DDInstall* section. For more information, see [**INF AddService Directive**](inf-addservice-directive.md).
 
 <a href="" id="delservice-servicename---flags----eventlogtype---eventname------"></a>**DelService=***ServiceName*\[**,**\[*flags*\]\[**,**\[*EventLogType*\]\[**,***EventName*\]\]\]...  
@@ -65,7 +71,7 @@ For more information about how to use the system-defined **.nt**, **.ntx86**, **
 Examples
 --------
 
-This example shows the *DDInstall***.Services** section for the **Ser\_Inst** section shown as an example for the [**INF *DDInstall* section**](inf-ddinstall-section.md).
+This example shows the *DDInstall***.Services** section for the **Ser_Inst** section shown as an example for the [**INF *DDInstall* section**](inf-ddinstall-section.md).
 
 ```
 [Ser_Inst.Services]

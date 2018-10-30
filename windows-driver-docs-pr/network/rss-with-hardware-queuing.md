@@ -2,13 +2,23 @@
 title: RSS with Hardware Queuing
 description: RSS with Hardware Queuing
 ms.assetid: f37caef9-6d22-4d17-8628-0c3f93de470e
-keywords: ["receive-side scaling WDK networking , hardware queuing", "RSS WDK networking , hardware queuing", "hardware queuing WDK RSS", "receive queuing WDK RSS"]
+keywords:
+- receive-side scaling WDK networking , hardware queuing
+- RSS WDK networking , hardware queuing
+- hardware queuing WDK RSS
+- receive queuing WDK RSS
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # RSS with Hardware Queuing
 
 
-## <a href="" id="ddk-rss-with-hardware-queuing-ng"></a>
+
 
 
 RSS with hardware queuing improves system performance relative to RSS with a single hardware receive queue solution. NICs that support hardware queuing assign received data to multiple receive queues. The receive queues are associated with a CPU. The NIC assigns received data to CPUs based on hash values and an indirection table.

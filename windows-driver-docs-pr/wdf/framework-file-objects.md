@@ -3,13 +3,23 @@ title: Framework File Objects
 author: windows-driver-content
 description: Framework File Objects
 ms.assetid: 93ec5dd7-8ef0-4cea-9253-ea5d7869d4b8
-keywords: ["I/O requests WDK KMDF , file objects", "file objects WDK KMDF", "request processing WDK KMDF , file objects", "framework objects WDK KMDF , file objects"]
+keywords:
+- I/O requests WDK KMDF , file objects
+- file objects WDK KMDF
+- request processing WDK KMDF , file objects
+- framework objects WDK KMDF , file objects
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Framework File Objects
 
 
-## <a href="" id="ddk-using-framework-file-objects-df"></a>
+
 
 
 When an application or a driver attempts to access a device, typically by creating or opening a file, the operating system sends a file creation request to the driver stack. When the application or driver has finished using the device, the system sends file cleanup and close requests to the driver stack. The [request types](https://msdn.microsoft.com/library/windows/hardware/ff552503) of these three requests are **WdfRequestTypeCreate**, **WdfRequestTypeCleanup**, and **WdfRequestTypeClose**, respectively.

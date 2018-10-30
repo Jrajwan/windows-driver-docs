@@ -2,7 +2,16 @@
 title: Miscellaneous Checks
 description: Miscellaneous Checks
 ms.assetid: 4d7b14ae-5a3a-49b4-9678-6527cbacc4d4
-keywords: ["Miscellaneous Checks option WDK Driver Verifier", "lookasides WDK Driver Verifier", "freed memory WDK Driver Verifier"]
+keywords:
+- Miscellaneous Checks option WDK Driver Verifier
+- lookasides WDK Driver Verifier
+- freed memory WDK Driver Verifier
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Miscellaneous Checks
@@ -65,7 +74,7 @@ You can activate the Miscellaneous Checks option for one or more drivers by usin
 
     On Windows Vista and later versions of Windows, you can also activate and deactivate Miscellaneous Checks without rebooting the computer by adding the **/volatile** parameter to the command. For example:
 
-    ``` syntax
+    ```
     verifier /volatile /flags 0x800 /adddriver MyDriver.sys
     ```
 
@@ -73,7 +82,7 @@ You can activate the Miscellaneous Checks option for one or more drivers by usin
 
     The Miscellaneous Checks option is also included in the standard settings. For example:
 
-    ``` syntax
+    ```
     verifier  /standard /driver MyDriver.sys
     ```
 
@@ -92,7 +101,7 @@ To view the results of the Miscellaneous Checks option, use the **!verifier** ex
 
 In the following example, the Miscellaneous Checks option detected an active ERESOURCE structure in memory that the driver was trying to free, resulting in [**Bug Check 0xC4: DRIVER\_VERIFIER\_DETECTED\_VIOLATION**](https://msdn.microsoft.com/library/windows/hardware/ff560187). The Bug Check 0xC4 display includes the address of the ERESOURCE and the affected memory.
 
-``` syntax
+```
 1: kd> !verifier 1
 
 Verify Level 800 ... enabled options are:
@@ -145,7 +154,7 @@ Pool page 9655d468 region is Paged pool
 
 To find information about the ERESOURCE, use the [**!locks (!kdext\*.locks)**](https://msdn.microsoft.com/library/windows/hardware/ff563980) debugger extension with the address of the structure.
 
-``` syntax
+```
 1: kd> !locks 0x9655D4A8     <<<<<- ERESOURCE @0x9655D4A8 lives inside the pool block being freed
 
 Resource @ 0x9655d4a8    Available
@@ -154,7 +163,7 @@ Resource @ 0x9655d4a8    Available
 
 You can also use the **kb** debugger command to display a stack trace of the calls that led to the failure. The following example shows the stack, including the call to **ExFreePoolWithTag** that Driver Verifier intercepted.
 
-``` syntax
+```
 1: kd> kb
 ChildEBP RetAddr  Args to Child
 92f6374c 82c2c95a 00000003 92f68cdc 00000000 nt!RtlpBreakWithStatusInstruction 
@@ -180,7 +189,6 @@ ChildEBP RetAddr  Args to Child
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20Miscellaneous%20Checks%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

@@ -2,7 +2,17 @@
 title: 802.1Q and 802.1p Processing on an Offloaded TCP Connection
 description: 802.1Q and 802.1p Processing on an Offloaded TCP Connection
 ms.assetid: 9655702e-4bec-45a1-b2a1-e2effc85a7f4
-keywords: ["data I/O WDK TCP chimney offload , 802.1Q and 802.1p information", "I/O WDK TCP chimney offload , 802.1Q and 802.1p information", "received data processing WDK TCP chimney offload , 802.1Q and 802.1p information", "802.1Q and 802.1p information WDK TCP chimney offload"]
+keywords:
+- data I/O WDK TCP chimney offload , 802.1Q and 802.1p information
+- I/O WDK TCP chimney offload , 802.1Q and 802.1p information
+- received data processing WDK TCP chimney offload , 802.1Q and 802.1p information
+- 802.1Q and 802.1p information WDK TCP chimney offload
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # 802.1Q and 802.1p Processing on an Offloaded TCP Connection
@@ -10,7 +20,7 @@ keywords: ["data I/O WDK TCP chimney offload , 802.1Q and 802.1p information", "
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-802-1q-and-802-1p-processing-on-an-offloaded-tcp-connection-ng"></a>
+
 
 
 This section describes how an offload target processes IEEE 802.1Q and 802.1p information about an offloaded TCP connection. This section includes:

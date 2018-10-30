@@ -1,11 +1,14 @@
 ---
-title: EFI\_USBFN\_IO\_PROTOCOL.GetEndpointMaxPacketSize
+title: EFI_USBFN_IO_PROTOCOL.GetEndpointMaxPacketSize
 author: windows-driver-content
-description: EFI\_USBFN\_IO\_PROTOCOL.GetEndpointMaxPacketSize
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: EFI_USBFN_IO_PROTOCOL.GetEndpointMaxPacketSize
 ms.assetid: 0af72372-7c58-490d-8eec-bd38bce09b0d
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # EFI\_USBFN\_IO\_PROTOCOL.GetEndpointMaxPacketSize
@@ -90,6 +93,5 @@ This function returns the following values:
  
 
 
---------------------
 
 

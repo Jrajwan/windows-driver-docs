@@ -1,10 +1,13 @@
 ---
-Description: 'Frequently asked questions for OEMs who want to build Windows systems with USB Type-C connectors.'
-MS-HAID: 'buses.faq\_\_usb\_type-c\_connector\_on\_a\_windows\_system'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
-title: 'FAQ: USB Type-C connector on a Windows system'
+Description: Frequently asked questions for OEMs who want to build Windows systems with USB Type-C connectors.
+title: FAQ - USB Type-C connector on a Windows system
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # FAQ: USB Type-C connector on a Windows system
@@ -43,7 +46,7 @@ Frequently asked questions for OEMs who want to build Windows systems with USB T
 -   [How do I test my UCMCx client driver on Windows 10 to make sure it meets Windows's requirement? What's tool or method can be used to test on Windows by user?](#how-do-i-test-my-ucmcx-client-driver-on-windows-10-to-make-sure-it-meets-windows-s-requirement--what-s-tool-or-method-can-be-used-to-test-on-windows-by-user-----)
 -   [Is VBus/VConn control and role switch operations handled by the UCM class extension? Or partner would need to implement Event callback function to handle VBUS control and USB mode switch.](#is-vbus-vconn-control-and-role-switch-operations-handled-by-the-ucm-class-extension--or-partner-would-need-to-implement-event-callback-function-to-handle-vbus-control-and-usb-mode-switch-----)
 
-## <a href="" id="features"></a>USB Type-C connector features
+## USB Type-C connector features
 
 
 -   **Symmetric and reversible design**
@@ -90,7 +93,7 @@ No. The operating system (or any Microsoft-provided software component) plays no
 
 Enabling pre-OS charging is owned by the OEM. You can choose to not implement [USB Power Delivery](http://go.microsoft.com/fwlink/p/?LinkID=623310), and charge at USB Type-C power levels until you boot into the operating system.
 
-## <a href="" id="how-can-i-charge-the-phone-when--it-is-a-usb-host--to-enable-docking-scenarios-like-continuum-"></a>How can I charge the phone when it is a USB host, to enable docking scenarios like Continuum?
+## How can I charge the phone when it is a USB host, to enable docking scenarios like Continuum?
 
 
 Here are a few things to consider:
@@ -101,12 +104,12 @@ Here are a few things to consider:
 
     The initial DFP is the power source, so you must change the data role. The initial UFP is the power sink, so you must change the power role. You can perform those operations in your implementation of these callback functions:
 
-## <a href="" id="does-windows-10-mobile-support-usb-billboard-devices--"></a>Does Windows 10 Mobile support USB billboard devices?
+## Does Windows 10 Mobile support USB billboard devices?
 
 
 Yes, if you connect the phone to a device that supports a USB Billboard, as per the [USB Device Class Definition for Billboard Devices specification](http://go.microsoft.com/fwlink/p/?linkid=620207), the user is notified. Your USB connector manager (UCM) client driver is not required to handle the notification. If your system does not recognize the alternate mode, do not enter the mode.
 
-## <a href="" id="do-windows-8-1--windows-8--windows-7-support-usb-type-c--"></a>Do Windows 8.1, Windows 8, Windows 7 support USB Type-C?
+## Do Windows 8.1, Windows 8, Windows 7 support USB Type-C?
 
 
 No. USB Type-C is not supported on versions of Windows prior to Windows 10.
@@ -116,7 +119,7 @@ No. USB Type-C is not supported on versions of Windows prior to Windows 10.
 
 No. UCSI is not supported on versions of Windows prior to Windows 10.
 
-## <a href="" id="how-do-we-test-our-implementation-of-ucsi-----"></a>How do we test our implementation of UCSI?
+## How do we test our implementation of UCSI?
 
 
 To test your implementation, follow the guidelines given in [USB Type-C manual interoperability test procedures](type.md). We recommend running USB tests in Windows Hardware Lab Kit (HLK) for Windows 10. These tests are listed in [Windows Hardware Certification Kit Tests for USB](windows-hardware-certification-kit-tests-for-usb.md).
@@ -124,14 +127,14 @@ To test your implementation, follow the guidelines given in [USB Type-C manual i
 ## What is the exact condition and UI for the different errors?
 
 
-Windows 10 can show a set of USB Type-C error messages to help educate users about the limitations with different combinations of USB Type-C hardware and software. For example, the user might get "Device is charging slowly" message if the charger connected to the USB Type-C connector is not powerful enough, not compatible with the system, or is connected to a non-charging port. For more information, see [Troubleshoot messages for a USB Type-C Windows system](introduction-to-usb-type-c-connectors.md).
+Windows 10 can show a set of USB Type-C error messages to help educate users about the limitations with different combinations of USB Type-C hardware and software. For example, the user might get "Device is charging slowly" message if the charger connected to the USB Type-C connector is not powerful enough, not compatible with the system, or is connected to a non-charging port. For more information, see [Troubleshoot messages for a USB Type-C Windows system](http://go.microsoft.com/fwlink/?LinkId=526894).
 
-## <a href="" id="what-happens-when-a-non-pd-port-is-connected-to-pd-provider-----conversely--what-happens-when-a-pd-consumer-is-connected-to-a-system-that-is-not-a-pd-provider-----"></a>What happens when a non-PD port is connected to PD provider? Conversely, what happens when a PD consumer is connected to a system that is not a PD provider?
+## What happens when a non-PD port is connected to PD provider? Conversely, what happens when a PD consumer is connected to a system that is not a PD provider?
 
 
 The non-PD port attempts to charge the system by using USB Type-C current levels. For more information, see [USB 3.1 and USB Type-C specifications](http://go.microsoft.com/fwlink/p/?LinkId=699515).
 
-## <a href="" id="what-happens-when-thunderbolt--supermhl--or-pci-express--is-connected-to-a-pc-that-does-not-support-those-capabilities-----"></a>What happens when Thunderbolt, SuperMHL, or PCI express, is connected to a PC that does not support those capabilities?
+## What happens when Thunderbolt, SuperMHL, or PCI express, is connected to a PC that does not support those capabilities?
 
 
 The alternate mode feature allows non-USB protocols (such as Thunderbolt, SuperMHL) to run over the USB cable, while simultaneously preserving USB 2.0 and charging functionality. If a user connects a USB Type-C alternate mode device or adapter that is not supported by the attached PC or phone running Windows 10, an error condition is detected and a message is shown to the user.
@@ -141,12 +144,12 @@ The alternate mode feature allows non-USB protocols (such as Thunderbolt, SuperM
 
 For the best results, make sure that the alternate mode device or adapter’s requirements are met by PC or phone or cable.
 
-## <a href="" id="is--mtp-over-usb-type-c-supported-in-windows--are--there-any-limitations-"></a>Is MTP over USB Type-C supported in Windows? Are there any limitations?
+## Is MTP over USB Type-C supported in Windows? Are there any limitations?
 
 
 Windows 10 for desktop editions supports MTP in the initiator role; Windows 10 Mobile supports MTP in the responder role.
 
-## <a href="" id="how-do-downstream-devices-and-hubs-connect-and-communicate-with-usb-connector-manager--ucm------"></a>How do downstream devices and hubs connect and communicate with USB Connector Manager (UCM)?
+## How do downstream devices and hubs connect and communicate with USB Connector Manager (UCM)?
 
 
 UCM is its own device stack (see [Architecture: USB Type-C design for a Windows system](architecture--usb-type-c-in-a-windows-system.md)). Windows 10 support for USB Type-C includes the required plumbing to make sure that the different class drivers know how to communicate with the different USB Type-C connectors. In order to get Windows 10 support for USB Type-C, you must plug into the UCM device stack.
@@ -156,7 +159,7 @@ UCM is its own device stack (see [Architecture: USB Type-C design for a Windows 
 
 The Windows HLK for Windows 10 contains tests for USB host and function controllers. To test your system, use a USB C-A adapter. These tests are listed in [Windows Hardware Certification Kit Tests for USB](windows-hardware-certification-kit-tests-for-usb.md).
 
-## <a href="" id="will-microsoft-support-p2p-data-transfer-between-same-windows-10-sku-----"></a>Will Microsoft support P2P data transfer between same Windows 10 SKU?
+## Will Microsoft support P2P data transfer between same Windows 10 SKU?
 
 
 This is not a valid connection.
@@ -168,12 +171,12 @@ If the user attempts to make such a connection, Windows shows an error message. 
 
 The only valid connection is between a Windows Mobile device and Windows desktop device.
 
-## <a href="" id="does-ucm-class-extension--ucmcx--communicate-with-pmic-or-battery-driver-to-get-set-charging-status-or-does-the-client-driver-that-supports-pd-need-to-communicate-with-the-pmic-or-battery-driver-directly-----"></a>Does UCM class extension (UcmCx) communicate with PMIC or battery driver to get/set charging status or does the client driver that supports PD need to communicate with the PMIC or battery driver directly?
+## Does UCM class extension (UcmCx) communicate with PMIC or battery driver to get/set charging status or does the client driver that supports PD need to communicate with the PMIC or battery driver directly?
 
 
 On software-assisted charging platforms, UcmCx communicates with PMIC and the battery subsystem. The client driver may determine the charging levels by communicating with the hardware through hardware interfaces. On hardware-assisted platforms, the embedded controller is responsible for charging. UcmCx takes no part in the process.
 
-## <a href="" id="does-the-hlk-support-usb-type-c-----"></a>Does the HLK support USB Type-C?
+## Does the HLK support USB Type-C?
 
 
 In Windows HLK for Windows 10, there are no USB Type-C specific tests. We recommend running USB tests in Windows HLK for Windows 10. These tests are listed in [Windows Hardware Certification Kit Tests for USB](windows-hardware-certification-kit-tests-for-usb.md).
@@ -185,17 +188,17 @@ USB Type-C Connector System Software Interface (UCSI) Specification describes th
 
 Microsoft provides an in-box driver with Windows, UcmUcsi.sys, that implements the features defined by the specification. This driver is intended for systems with embedded controllers.
 
-## <a href="" id="how-can-we-check-if-our-ucsi-implementation-works-correctly-with-windows-10-----"></a>How can we check if our UCSI implementation works correctly with Windows 10?
+## How can we check if our UCSI implementation works correctly with Windows 10?
 
 
 We recommend running USB tests in Windows HLK for Windows 10. These tests are listed in [Windows Hardware Certification Kit Tests for USB](windows-hardware-certification-kit-tests-for-usb.md).
 
-## <a href="" id="how-do-i-test-my-ucmcx-client-driver-on-windows-10-to-make-sure-it-meets-windows-s-requirement--what-s-tool-or-method-can-be-used-to-test-on-windows-by-user-----"></a>How do I test my UCMCx client driver on Windows 10 to make sure it meets Windows's requirement? What's tool or method can be used to test on Windows by user?
+## How do I test my UCMCx client driver on Windows 10 to make sure it meets Windows's requirement? What's tool or method can be used to test on Windows by user?
 
 
 We recommend running USB tests in Windows HLK for Windows 10. These tests are listed in [Windows Hardware Certification Kit Tests for USB](windows-hardware-certification-kit-tests-for-usb.md).
 
-## <a href="" id="is-vbus-vconn-control-and-role-switch-operations-handled-by-the-ucm-class-extension--or-partner-would-need-to-implement-event-callback-function-to-handle-vbus-control-and-usb-mode-switch-----"></a>Is VBus/VConn control and role switch operations handled by the UCM class extension? Or partner would need to implement Event callback function to handle VBUS control and USB mode switch.
+## Is VBus/VConn control and role switch operations handled by the UCM class extension? Or partner would need to implement Event callback function to handle VBUS control and USB mode switch.
 
 
 The UCM class extension might get requests from the operating system to change data or power direction of the connector. When it gets those requests, it invokes client driver's implementation of [*EVT\_UCM\_CONNECTOR\_SET\_DATA\_ROLE*](https://msdn.microsoft.com/library/windows/hardware/mt187818) and [*EVT\_UCM\_CONNECTOR\_SET\_POWER\_ROLE*](https://msdn.microsoft.com/library/windows/hardware/mt187819) callback functions (if the connector implements PD). In the implementation, the client driver is expected control the VBUS and VCONN pins. For more information about those callback functions, see [Write a USB Type-C connector driver](bring-up-a-usb-type-c-connector-on-a-windows-system.md).
@@ -204,7 +207,6 @@ The UCM class extension might get requests from the operating system to change d
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20FAQ:%20USB%20Type-C%20connector%20on%20a%20Windows%20system%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

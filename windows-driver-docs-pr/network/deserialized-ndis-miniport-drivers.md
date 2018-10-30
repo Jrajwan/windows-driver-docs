@@ -2,13 +2,22 @@
 title: Deserialized NDIS Miniport Drivers
 description: Deserialized NDIS Miniport Drivers
 ms.assetid: d133370a-48f4-425b-a2bd-d95ec8b5c369
-keywords: ["miniport drivers WDK networking , types", "NDIS miniport drivers WDK , types", "deserialized NDIS miniport drivers WDK networking"]
+keywords:
+- miniport drivers WDK networking , types
+- NDIS miniport drivers WDK , types
+- deserialized NDIS miniport drivers WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Deserialized NDIS Miniport Drivers
 
 
-## <a href="" id="ddk-deserialized-ndis-miniport-drivers-ng"></a>
+
 
 
 All NDIS 6.0 and later drivers are *deserialized*.

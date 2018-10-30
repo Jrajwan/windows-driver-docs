@@ -2,13 +2,24 @@
 title: Pausing a Binding
 description: Pausing a Binding
 ms.assetid: 7f693904-d995-4fcb-8b88-9343a567602e
-keywords: ["protocol drivers WDK networking , binding pause", "NDIS protocol drivers WDK , binding pause", "binding pause WDK networking", "binding states WDK networking", "pausing binding for protocol driver"]
+keywords:
+- protocol drivers WDK networking , binding pause
+- NDIS protocol drivers WDK , binding pause
+- binding pause WDK networking
+- binding states WDK networking
+- pausing binding for protocol driver
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Pausing a Binding
 
 
-## <a href="" id="ddk-pausing-a-binding-ng"></a>
+
 
 
 After NDIS sends a protocol driver a network Plug and Play (PnP) pause event notification for a binding, the binding enters the Pausing state.

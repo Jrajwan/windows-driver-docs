@@ -2,14 +2,17 @@
 title: Recognizing the First Tuning Request
 author: windows-driver-content
 description: Recognizing the First Tuning Request
-MS-HAID:
-- 'vidcapds\_a4fc0d80-6805-4f72-8af4-467e0b796680.xml'
-- 'stream.recognizing\_the\_first\_tuning\_request'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: dc18a056-16f8-4b99-97e3-52c92464a2b2
-keywords: ["first tuning requests WDK video capture", "recognizing first tuning requests WDK video capture", "radio tuners WDK video capture"]
+keywords:
+- first tuning requests WDK video capture
+- recognizing first tuning requests WDK video capture
+- radio tuners WDK video capture
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Recognizing the First Tuning Request
@@ -32,7 +35,5 @@ If you want *KsTvTune.ax* to retry at least once after an initial request, alway
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bstream\stream%5D:%20Recognizing%20the%20First%20Tuning%20Request%20%20RELEASE:%20%288/23/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

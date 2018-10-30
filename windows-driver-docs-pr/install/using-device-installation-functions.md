@@ -2,13 +2,21 @@
 title: Using Device Installation Functions
 description: Using Device Installation Functions
 ms.assetid: a7cfa359-a45c-45fa-a854-ee70de66b12e
-keywords: ["SetupAPI functions WDK , device installation functions", "device installation functions WDK SetupAPI"]
+keywords:
+- SetupAPI functions WDK , device installation functions
+- device installation functions WDK SetupAPI
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Using Device Installation Functions
 
 
-## <a href="" id="ddk-using-device-installation-functions-dg"></a>
+
 
 
 This section summarizes the [device installation functions](https://msdn.microsoft.com/library/windows/hardware/ff541299). By using the device installation functions, the installation software can perform the following types of operations:
@@ -25,7 +33,7 @@ This section summarizes the [device installation functions](https://msdn.microso
 
 -   Manage icons and other bitmaps.
 
-To perform device installation operations that are not supported by the SetupAPI functions described in this section, call the appropriate [general Setup functions](https://msdn.microsoft.com/library/windows/hardware/ff544985) or [PnP Configuration Manager functions](https://msdn.microsoft.com/library/windows/hardware/ff549717) (CM\_*Xxx* functions*).*
+To perform device installation operations that are not supported by the SetupAPI functions described in this section, call the appropriate [general Setup functions](https://msdn.microsoft.com/library/windows/hardware/ff544985) or [PnP Configuration Manager functions](https://msdn.microsoft.com/library/windows/hardware/ff549717) (CM_*Xxx* functions*).*
 
 The following tables provide summaries of the following types of functions:
 

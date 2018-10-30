@@ -3,13 +3,29 @@ title: Power Management for I/O Queues
 author: windows-driver-content
 description: Power Management for I/O Queues
 ms.assetid: 2e1bf9d2-615b-49b0-b677-f41b23c42eda
-keywords: ["power management WDK KMDF , I/O queues", "I/O queues WDK KMDF , power management", "I/O requests WDK KMDF , power management", "power-managed I/O queues WDK KMDF", "working states WDK KMDF", "PowerManaged settings WDK KMDF", "low-power states WDK KMDF", "sleep power management WDK KMDF", "power states WDK KMDF", "device power states WDK KMDF"]
+keywords:
+- power management WDK KMDF , I/O queues
+- I/O queues WDK KMDF , power management
+- I/O requests WDK KMDF , power management
+- power-managed I/O queues WDK KMDF
+- working states WDK KMDF
+- PowerManaged settings WDK KMDF
+- low-power states WDK KMDF
+- sleep power management WDK KMDF
+- power states WDK KMDF
+- device power states WDK KMDF
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Power Management for I/O Queues
 
 
-When the framework receives an I/O request that is directed to one of your driver's devices, the framework puts the request in an I/O queue. The driver can obtain I/O requests from the I/O queue by providing request handlers or by polling the queue. For more information about I/O queues, see [Handling I/O Requests in Framework-Based Drivers](handling-i-o-requests-in-wdf-drivers.md).
+When the framework receives an I/O request that is directed to one of your driver's devices, the framework puts the request in an I/O queue. The driver can obtain I/O requests from the I/O queue by providing request handlers or by polling the queue. For more information about I/O queues, see [Framework Queue Objects](framework-queue-objects.md).
 
 As you are designing your driver, you should group the I/O requests that your driver will receive into two categories:
 

@@ -3,7 +3,18 @@ title: NFP message subscriptions
 author: windows-driver-content
 description: NFP message subscriptions
 ms.assetid: ECE9C495-978F-4BD7-95BC-B68432F9B81E
-keywords: ["NFC", "near field communications", "proximity", "near field proximity", "NFP"]
+keywords:
+- NFC
+- near field communications
+- proximity
+- near field proximity
+- NFP
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NFP message subscriptions

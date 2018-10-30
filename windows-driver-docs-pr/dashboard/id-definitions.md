@@ -1,7 +1,13 @@
 ---
 title: Windows Hardware Dev Center Dashboard ID Definitions
 description: Windows Hardware Dev Center Dashboard ID Definitions
-ms.assetid:
+ms.assetid: 
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Dashboard ID definitions
@@ -32,10 +38,10 @@ The Windows Hardware Dev Center Dashboard lists each of these IDs on the driver 
 </tr>
 <tr class="even">
 <td><p>Private Product ID</p></td>
-<td><p>The private product ID is the top level identifier that is generated with each new product creation. This ID is most useful for personal reference of specific products, and predicting their URLs.</p>
-
+<td><p>The private product ID is the top level identifier that is generated with each new product creation. This ID is most useful for personal reference of specific products, and predicting their URLs.
 > [!NOTE]
 > when you share a driver with someone else, they will be assigned a new private product ID. If you want to communicate about a product, use the Shared Product ID.
+</p>
 
 </td>
 </tr>

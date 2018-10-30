@@ -3,7 +3,19 @@ title: Access Control Entry
 author: windows-driver-content
 description: Access Control Entry
 ms.assetid: 4dc72f43-e5a7-441d-8586-f8893b9c1084
-keywords: ["security descriptors WDK file systems , access control entry", "descriptors WDK file systems , access control entry", "access control entry WDK file systems", "ACE WDK file systems", "security identifiers WDK file systems", "SIDs WDK file systems"]
+keywords:
+- security descriptors WDK file systems , access control entry
+- descriptors WDK file systems , access control entry
+- access control entry WDK file systems
+- ACE WDK file systems
+- security identifiers WDK file systems
+- SIDs WDK file systems
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Access Control Entry
@@ -41,6 +53,5 @@ A driver may construct an access control entry of ACCESS\_ALLOWED\_ACE\_TYPE usi
  
 
 
---------------------
 
 

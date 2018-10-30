@@ -1,11 +1,14 @@
 ---
-title: EFI\_USBFN\_POLICY\_TYPE
+title: EFI_USBFN_POLICY_TYPE
 author: windows-driver-content
-description: EFI\_USBFN\_POLICY\_TYPE
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: EFI_USBFN_POLICY_TYPE
 ms.assetid: 51f615d4-a226-45d5-b5e9-fea4859640a9
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # EFI\_USBFN\_POLICY\_TYPE
@@ -141,6 +144,5 @@ Even if the controller hardware is capable of supporting automatic zero-length t
  
 
 
---------------------
 
 

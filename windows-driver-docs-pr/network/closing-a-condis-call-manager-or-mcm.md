@@ -2,13 +2,24 @@
 title: Closing a CoNDIS Call Manager or MCM
 description: Closing a CoNDIS Call Manager or MCM
 ms.assetid: 6ef64e4c-eec4-4477-a06c-f80e21d5b1c7
-keywords: ["call managers WDK networking , CoNDIS", "MCMs WDK networking , closing", "miniport call managers WDK networking , closing", "closing call managers", "closing miniport call managers"]
+keywords:
+- call managers WDK networking , CoNDIS
+- MCMs WDK networking , closing
+- miniport call managers WDK networking , closing
+- closing call managers
+- closing miniport call managers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Closing a CoNDIS Call Manager or MCM
 
 
-## <a href="" id="ddk-closing-a-condis-call-manager-or-mcm-ng"></a>
+
 
 
 When a stand-alone call manager is unbinding from an underlying miniport adapter, the call manager must notify all of the affected CoNDIS clients that they must close the associated AF. To notify each client, NDIS stand-alone call managers call the [**NdisCmNotifyCloseAddressFamily**](https://msdn.microsoft.com/library/windows/hardware/ff561680) function.

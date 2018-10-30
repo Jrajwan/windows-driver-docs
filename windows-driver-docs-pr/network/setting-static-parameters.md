@@ -2,13 +2,22 @@
 title: Setting Static Parameters
 description: Setting Static Parameters
 ms.assetid: 0a41d8b4-8dd8-4a6b-a9b9-d19d07acd083
-keywords: ["add-registry-sections WDK networking , static parameters", "static parameters WDK networking", "parameters WDK networking"]
+keywords:
+- add-registry-sections WDK networking , static parameters
+- static parameters WDK networking
+- parameters WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Setting Static Parameters
 
 
-## <a href="" id="ddk-setting-static-parameters-ng"></a>
+
 
 
 An INF file sets a static parameter only once. This parameter cannot be reconfigured through a properties page in the user interface.

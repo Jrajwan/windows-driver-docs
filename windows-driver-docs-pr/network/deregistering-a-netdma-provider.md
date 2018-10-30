@@ -2,7 +2,16 @@
 title: Deregistering a NetDMA Provider
 description: Deregistering a NetDMA Provider
 ms.assetid: 4fe5f378-2683-44e7-8056-581783045ad4
-keywords: ["NetDMA provider drivers WDK networking , deregistering", "deregistering NetDMA provider drivers", "unegistering NetDMA provider drivers"]
+keywords:
+- NetDMA provider drivers WDK networking , deregistering
+- deregistering NetDMA provider drivers
+- unegistering NetDMA provider drivers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Deregistering a NetDMA Provider
@@ -12,7 +21,7 @@ keywords: ["NetDMA provider drivers WDK networking , deregistering", "deregister
 
  
 
-## <a href="" id="ddk-deregistering-a-netdma-provider-ng"></a>
+
 
 
 A NetDMA provider driver calls the [**NetDmaDeregisterProvider**](https://msdn.microsoft.com/library/windows/hardware/ff568328) function to deregister a NetDMA provider that it previously registered by calling the [**NetDmaRegisterProvider**](https://msdn.microsoft.com/library/windows/hardware/ff568336) function. For more information about registering a NetDMA provider, see [Registering a NetDMA Provider](registering-a-netdma-provider.md).

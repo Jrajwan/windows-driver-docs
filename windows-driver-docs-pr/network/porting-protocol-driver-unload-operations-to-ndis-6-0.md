@@ -2,13 +2,23 @@
 title: Porting Protocol Driver Unload Operations to NDIS 6.0
 description: Porting Protocol Driver Unload Operations to NDIS 6.0
 ms.assetid: 0726ee66-dabc-49d6-b17a-ec6651855b44
-keywords: ["protocol drivers WDK networking , unloading", "NDIS protocol drivers WDK , unloading", "porting protocol drivers WDK networking , unload operations", "unloading protocol drivers"]
+keywords:
+- protocol drivers WDK networking , unloading
+- NDIS protocol drivers WDK , unloading
+- porting protocol drivers WDK networking , unload operations
+- unloading protocol drivers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Porting Protocol Driver Unload Operations to NDIS 6.0
 
 
-## <a href="" id="ddk-porting-protocol-driver-unload-operations-to-ndis-6-0-nd"></a>
+
 
 
 In NDIS 6.0, a protocol driver must call the [**NdisDeregisterProtocolDriver**](https://msdn.microsoft.com/library/windows/hardware/ff561743) function, in its [**Unload**](https://msdn.microsoft.com/library/windows/hardware/ff564886) routine, to deregister the protocol driver. The driver passes **NdisDeregisterProtocolDriver** the handle that it obtained at *NdisProtocolHandle* when it called the [**NdisRegisterProtocolDriver**](https://msdn.microsoft.com/library/windows/hardware/ff564520) function.

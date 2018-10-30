@@ -2,13 +2,21 @@
 title: Specifying Binding Interfaces
 description: Specifying Binding Interfaces
 ms.assetid: 49ef3eae-88e6-4424-8c3b-19e8c3bb734f
-keywords: ["add-registry-sections WDK networking , binding interfaces", "binding interfaces WDK networking"]
+keywords:
+- add-registry-sections WDK networking , binding interfaces
+- binding interfaces WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Specifying Binding Interfaces
 
 
-## <a href="" id="ddk-specifying-binding-interfaces-ng"></a>
+
 
 
 For each network component that it installs, a network INF file must specify the upper and lower binding interfaces for the component by adding the **Interfaces** key to the **Ndi** key.

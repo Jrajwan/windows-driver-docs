@@ -2,13 +2,23 @@
 title: Offloading TCP/IP Connections in NDIS 6.0
 description: Offloading TCP/IP Connections in NDIS 6.0
 ms.assetid: f446c948-a91f-4701-a8ae-042a90e267e8
-keywords: ["TCP/IP offload service porting WDK networking , connections", "offload service porting WDK networking , connections", "connection offload WDK networking", "chimney offload WDK networking"]
+keywords:
+- TCP/IP offload service porting WDK networking , connections
+- offload service porting WDK networking , connections
+- connection offload WDK networking
+- chimney offload WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Offloading TCP/IP Connections in NDIS 6.0
 
 
-## <a href="" id="ddk-offloading-tcp-ip-connections-in-ndis-6-0-ng"></a>
+
 
 
 Offloading TCP/IP connections is supported in NDIS 6.0 and later.

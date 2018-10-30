@@ -2,6 +2,12 @@
 title: Device and Driver Installation Advanced Topics
 description: Device and Driver Installation Advanced Topics
 ms.assetid: 8db37a91-72e3-4536-ac31-1be282e2fc48
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Device and Driver Installation Advanced Topics
@@ -16,6 +22,8 @@ This section provides advanced information for device and driver installation.
 This section includes the following topics:
 
 [Creating Secure Device Installations](creating-secure-device-installations.md)
+
+[Using a Component INF File](using-a-component-inf-file.md)
 
 [Device Identification and Properties](device-identification-and-properties.md)
 

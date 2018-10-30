@@ -2,10 +2,13 @@
 title: New AVStream Interfaces for Windows 8.1
 author: windows-driver-content
 description: AVStream streaming media driver interfaces are extended to support new camera platform functionality starting with Windows 8.1.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 1D06A754-236B-441D-A0BB-A78B419270E9
+ms.author: windowsdriverdev
+ms.date: 05/15/2018
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # New AVStream Interfaces for Windows 8.1
@@ -16,7 +19,7 @@ AVStream streaming media driver interfaces are extended to support new camera pl
 ## Camera platform
 
 
-Camera controls are extended starting with Windows 8.1. For info on how to implement these camera controls, see the topics under [Camera Control Properties](camera-control-properties.md#win8-1-extended-props).
+Camera controls are extended starting with Windows 8.1. For info on how to implement these camera controls, see the topics under [Camera Control Properties](camera-control-properties.md).
 
 These device driver interfaces (DDIs) support these extensions and are new or updated:
 
@@ -62,7 +65,5 @@ These device driver interfaces (DDIs) support these extensions and are new or up
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bstream\stream%5D:%20New%20AVStream%20Interfaces%20for%20Windows%208.1%20%20RELEASE:%20%288/23/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

@@ -3,7 +3,16 @@ title: SCSI Miniport Driver's HwScsiTimer Routine
 author: windows-driver-content
 description: SCSI Miniport Driver's HwScsiTimer Routine
 ms.assetid: 57ac7a6e-ada5-4185-89cf-b6c5ef9006d4
-keywords: ["SCSI miniport drivers WDK storage , HwScsiTimer", "HwScsiTimer", "timers WDK SCSI"]
+keywords:
+- SCSI miniport drivers WDK storage , HwScsiTimer
+- HwScsiTimer
+- timers WDK SCSI
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # SCSI Miniport Driver's HwScsiTimer Routine
@@ -31,6 +40,5 @@ The interval passed in to **ScsiPortNotification** is in microseconds, and the m
  
 
 
---------------------
 
 

@@ -2,20 +2,31 @@
 title: DirectX 5.0 Interface
 author: windows-driver-content
 description: DirectX 5.0 Interface
-MS-HAID:
-- 'di\_51ddb57a-206e-4bf3-bb81-c2bbf4766307.xml'
-- 'hid.directx\_5\_0\_interface'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 416a9187-d64f-48a4-8868-fd5158d58a25
-keywords: ["joysticks WDK HID , interfaces", "virtual joystick drivers WDK HID , interfaces", "VJoyD WDK HID , interfaces", "interfaces WDK joysticks", "joysticks WDK HID , callbacks", "virtual joystick drivers WDK HID , callbacks", "VJoyD WDK HID , callbacks", "callbacks WDK joysticks", "polling WDK joysticks", "joysticks WDK HID , versions", "VJoyD WDK HID , versions"]
+keywords:
+- joysticks WDK HID , interfaces
+- virtual joystick drivers WDK HID , interfaces
+- VJoyD WDK HID , interfaces
+- interfaces WDK joysticks
+- joysticks WDK HID , callbacks
+- virtual joystick drivers WDK HID , callbacks
+- VJoyD WDK HID , callbacks
+- callbacks WDK joysticks
+- polling WDK joysticks
+- joysticks WDK HID , versions
+- VJoyD WDK HID , versions
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 #  DirectX 5.0 Interface
 
 
-## <a href="" id="ddk-the-directx-5-0-interface-di"></a>
+
 
 
 VJoyD and any of its previous versions cannot recognize the DirectX 5.0, and later interfaces. So, it is imperative that a minidriver checks the version of VJoyD before it attempts to register. VJoyD does not support the standard version message. So, you must get the device descriptor block (DDB) for VJoyD to implement this manually, and then check the version marked in the DDB. For more information on how this can be implemented, see the sample driver for an example. Notice that the version marked in the DDB is not the same as the version marked in the version resource.
@@ -76,7 +87,5 @@ The [*Initialize*](https://msdn.microsoft.com/library/windows/hardware/ff541025)
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bhid\hid%5D:%20%20DirectX%205.0%20Interface%20%20RELEASE:%20%287/18/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

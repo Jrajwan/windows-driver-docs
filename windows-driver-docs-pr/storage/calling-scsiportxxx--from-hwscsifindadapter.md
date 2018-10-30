@@ -3,7 +3,17 @@ title: Calling ScsiPortXxx from HwScsiFindAdapter
 author: windows-driver-content
 description: Calling ScsiPortXxx from HwScsiFindAdapter
 ms.assetid: 17cfca31-ff93-4882-872c-ab8af6cdc3cf
-keywords: ["HwScsiFindAdapter", "SCSI miniport drivers WDK storage , HwScsiFindAdapter", "calling ScsiPortXxx routines WDK storage", "ScsiPortXxx calls"]
+keywords:
+- HwScsiFindAdapter
+- SCSI miniport drivers WDK storage , HwScsiFindAdapter
+- calling ScsiPortXxx routines WDK storage
+- ScsiPortXxx calls
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Calling ScsiPortXxx from HwScsiFindAdapter
@@ -33,6 +43,5 @@ For more information about these **ScsiPort***Xxx* routines, see [SCSI Port Libr
  
 
 
---------------------
 
 

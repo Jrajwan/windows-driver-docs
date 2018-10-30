@@ -2,13 +2,22 @@
 title: Specifying Filter Driver Binding Relationships
 description: Specifying Filter Driver Binding Relationships
 ms.assetid: 0f0b81f4-2ac1-456c-aef0-73f3bbb7ce0e
-keywords: ["filter drivers WDK networking , binding relationships", "NDIS filter drivers WDK , binding relationships", "binding relationships WDK networking"]
+keywords:
+- filter drivers WDK networking , binding relationships
+- NDIS filter drivers WDK , binding relationships
+- binding relationships WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Specifying Filter Driver Binding Relationships
 
 
-## <a href="" id="ddk-specifiying-filter-driver-binding-relationships-ng"></a>
+
 
 
 In a network driver INF file, the **UpperRange** entry lists the possible upper bindings and the **LowerRange** entry lists the possible lower bindings. These entries can contain various system-defined values.

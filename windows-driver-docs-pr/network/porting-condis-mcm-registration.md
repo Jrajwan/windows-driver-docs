@@ -2,13 +2,24 @@
 title: Porting CoNDIS MCM Registration
 description: Porting CoNDIS MCM Registration
 ms.assetid: 996eb9a5-6ba3-4f37-823a-767a5b7663e7
-keywords: ["CoNDIS drivers WDK networking , registering CoNDIS drivers", "connection-oriented drivers WDK networking , registering CoNDIS drivers", "registering CoNDIS drivers WDK networking", "miniport drivers WDK networking , CoNDIS registration", "NDIS miniport driver"]
+keywords:
+- CoNDIS drivers WDK networking , registering CoNDIS drivers
+- connection-oriented drivers WDK networking , registering CoNDIS drivers
+- registering CoNDIS drivers WDK networking
+- miniport drivers WDK networking , CoNDIS registration
+- NDIS miniport driver
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Porting CoNDIS MCM Registration
 
 
-## <a href="" id="ddk-porting-condis-mcm-registration-nd"></a>
+
 
 
 In NDIS 5.*x*, miniport call managers (MCMs) specify CoNDIS *MiniportXxx* functions when they call the [**NdisMRegisterMiniport**](https://msdn.microsoft.com/library/windows/hardware/ff553602) function during driver registration.

@@ -1,7 +1,13 @@
 ---
 ms.assetid: D4B35683-5BD1-40F8-9734-95DADF9E0F20
 title: Installing the WDK Build Environment in a Lab
-description: The Windows Driver Kit \(WDK\) 8.1 provides a feature that enables you to copy components of Visual Studio and the WDK to a new location and then launch the build environment from the command line.
+description: The Windows Driver Kit (WDK) 8.1 enables you to copy components of Visual Studio and the WDK to a new location and then launch the build environment from the command line.
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Installing the WDK 8.1 Build Environment in a Lab
@@ -10,7 +16,7 @@ The Windows Driver Kit (WDK) 8.1 provides a feature that enables you to copy co
 
 You might find this feature useful if you need to integrate the WDK with your build process, or if you want to distribute the build process in a lab or test environment.
 
-**Note**  You can only use this feature for building drivers and applications that use C and C++. This feature cannot be used for managed code or Windows Store apps.
+**Note**  You can only use this feature for building drivers and applications that use C and C++. This feature cannot be used for managed code or UWP apps.
 
 
 ## 1. Download the Visual Studio and WDK and SDK setup files
@@ -64,7 +70,7 @@ The build lab support files include the **setup.ps1** PowerShell command file, w
 
     For example, the following command runs the script from BuildLabSupport directory and installs the build environment in C:\\BuildLabInstall directory.
 
-    ``` syntax
+    ```
     c:\BuildLabSupport>powershell -executionpolicy bypass -file Setup.ps1 -DeployBuildLab -VSInstallerPath c:\VSSetup -KitInstallersPath c:\Kits -E
     xpansionRoot C:\BuildLabInstall -CatalogFile  files.xml
     ```
@@ -78,7 +84,7 @@ The build lab support files include the **setup.ps1** PowerShell command file, w
 2.  Launch the build environment by running **LaunchBuildEnv.cmd**.
 3.  Use MSBuild commands to build your driver projects and solutions. For example:
 
-    ``` syntax
+    ```
     msbuild /t:clean /t:build .\MyDriver.vcxproj /p:Configuration="Win8.1 Debug" /p:Platform=Win32
     ```
 

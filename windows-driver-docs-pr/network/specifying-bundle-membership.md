@@ -2,13 +2,21 @@
 title: Specifying Bundle Membership
 description: Specifying Bundle Membership
 ms.assetid: aa73c7fd-a5c8-4ef5-99fd-229fbcc6b4df
-keywords: ["add-registry-sections WDK networking , bundle membership", "bundle membership WDK networking"]
+keywords:
+- add-registry-sections WDK networking , bundle membership
+- bundle membership WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Specifying Bundle Membership
 
 
-## <a href="" id="ddk-specifying-bundle-membership-ng"></a>
+
 
 > [!NOTE]
 > Bundle membership has been deprecated in Windows Vista and later. 

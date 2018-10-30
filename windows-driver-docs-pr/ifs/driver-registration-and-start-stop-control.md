@@ -3,7 +3,19 @@ title: Driver Registration and Start/Stop Control
 author: windows-driver-content
 description: Driver Registration and Start/Stop Control
 ms.assetid: 66f44703-1277-49fe-a481-c8712172db0f
-keywords: ["RDBSS WDK file systems , start/stop control", "Redirected Drive Buffering Subsystem WDK file systems , start/stop control", "start/stop controls WDK RDBSS", "RDBSS WDK file systems , driver registration", "Redirected Drive Buffering Subsystem WDK file systems , driver registration", "driver registrations WDK RDBSS"]
+keywords:
+- RDBSS WDK file systems , start/stop control
+- Redirected Drive Buffering Subsystem WDK file systems , start/stop control
+- start/stop controls WDK RDBSS
+- RDBSS WDK file systems , driver registration
+- Redirected Drive Buffering Subsystem WDK file systems , driver registration
+- driver registrations WDK RDBSS
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Driver Registration and Start/Stop Control
@@ -118,6 +130,5 @@ The following macro is defined in the mrx.h header file that calls one of these 
  
 
 
---------------------
 
 

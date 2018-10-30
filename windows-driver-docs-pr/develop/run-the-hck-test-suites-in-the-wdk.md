@@ -2,6 +2,12 @@
 ms.assetid: 3FC63BAD-4B95-40AB-BFBE-88A3274B76E8
 title: How to run the HCK Test Suites in WDK 8.1
 description: To make testing Windows drivers easier in the WDK, starting with WDK 8.1 you can now select HCK test suites to run on the test computers.
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # How to run the HCK Test Suites in WDK 8.1
@@ -48,7 +54,7 @@ You can also copy one of the provided HCK Test Suites and export it, along with 
 1.  Open a Visual Studio Command Prompt window. Navigate to the %WindowsSdkDir%\\Testing\\Tests\\HCK Tests\\Basic directory. For example, C:\\Program Files (x86)\\Windows Kits\\8.1\\Testing\\Tests\\HCK Tests\\Basic
 2.  Run the **CopyMe.cmd** script and specify the name of test suite and destination directory. The script has the following syntax:
 
-    ``` syntax
+    ```
     CopyMe.cmd testSuite destinationPath
     ```
 
@@ -68,7 +74,7 @@ You can also copy one of the provided HCK Test Suites and export it, along with 
 
     The *destinationPath* can be any valid path, including UNC paths. For example, you can copy an HCK Test Suite to a USB flash drive, or to a share on a server.
 
-    ``` syntax
+    ```
     C:\Program Files (x86)\Windows Kits\8.1\Testing\Tests\HCK Tests\Basic>CopyMe "De
     vice.Device Fundamentals" d:\temp\devfund
     Copying test target setup installers
@@ -96,13 +102,13 @@ You can also copy one of the provided HCK Test Suites and export it, along with 
 
 2.  Run the **RunMe.cmd** script and specify the path and name of the INF file. The script has the following syntax:
 
-    ``` syntax
+    ```
     RunMe.cmd infFileName
     ```
 
     For example:
 
-    ``` syntax
+    ```
     RunMe.cmd myDriver.inf
     ```
 

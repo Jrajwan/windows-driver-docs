@@ -2,13 +2,25 @@
 title: Binding States of a Protocol Driver
 description: Binding States of a Protocol Driver
 ms.assetid: 15bc6217-e258-4e07-abc8-6c46fd01d85b
-keywords: ["protocol drivers WDK networking , binding states", "NDIS protocol drivers WDK , binding states", "binding states WDK networking", "protocol bindings WDK networking", "protocol drivers WDK networking , protocol bindings", "NDIS protocol drivers WDK , protocol"]
+keywords:
+- protocol drivers WDK networking , binding states
+- NDIS protocol drivers WDK , binding states
+- binding states WDK networking
+- protocol bindings WDK networking
+- protocol drivers WDK networking , protocol bindings
+- NDIS protocol drivers WDK , protocol
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Binding States of a Protocol Driver
 
 
-## <a href="" id="ddk-binding-states-of-a-protocol-driver-ng"></a>
+
 
 
 An [NDIS protocol driver](ndis-protocol-drivers2.md) must support the following operational states for each binding that the driver manages:

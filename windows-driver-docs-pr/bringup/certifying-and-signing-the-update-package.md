@@ -1,11 +1,14 @@
 ---
 title: Certifying and signing the update package
 author: windows-driver-content
-description: Because the firmware update is delivered as a driver package, it will need to go through all of the same verification and signing processes as a regular driver package.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: The firmware update is delivered as a driver package and must go through the same verification and signing processes as a regular driver package.
 ms.assetid: 054E98A5-E860-43BD-9AD2-7CCE55D2164B
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Certifying and signing the update package
@@ -78,6 +81,5 @@ Submitting the firmware update package to the Microsoft Windows Dev Center Hardw
 [Authoring a firmware update package](authoring-a-firmware-update-package.md)  
 [Installing the update](installing-the-update.md)  
 
---------------------
 
 

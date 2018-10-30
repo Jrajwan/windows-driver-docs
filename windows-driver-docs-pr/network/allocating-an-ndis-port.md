@@ -2,13 +2,28 @@
 title: Allocating an NDIS Port
 description: Allocating an NDIS Port
 ms.assetid: 39c77921-5841-40f5-90ba-0fba89b3b55e
-keywords: ["ports WDK NDIS , allocating", "NDIS ports WDK , allocating", "allocating NDIS ports", "ports WDK NDIS , maximum number", "NDIS ports WDK , maximum number", "maximum number of ports WDK NDIS", "port states WDK NDIS", "allocated port state WDK NDIS", "port numbers"]
+keywords:
+- ports WDK NDIS , allocating
+- NDIS ports WDK , allocating
+- allocating NDIS ports
+- ports WDK NDIS , maximum number
+- NDIS ports WDK , maximum number
+- maximum number of ports WDK NDIS
+- port states WDK NDIS
+- allocated port state WDK NDIS
+- port numbers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Allocating an NDIS Port
 
 
-## <a href="" id="ddk-allocating-ndis-ports-ng"></a>
+
 
 
 To allocate an NDIS port for a miniport adapter, a miniport driver calls the [**NdisMAllocatePort**](https://msdn.microsoft.com/library/windows/hardware/ff562779) function. **NdisMAllocatePort** is synchronous and returns after NDIS has successfully allocated the resources that are required for the port.

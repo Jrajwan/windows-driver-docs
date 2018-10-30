@@ -2,7 +2,15 @@
 title: Handling a NetDMA Interrupt DPC
 description: Handling a NetDMA Interrupt DPC
 ms.assetid: 92da9324-5bc2-4a19-9c27-811cd7ad4572
-keywords: ["interrupts WDK NetDMA , DPC", "DPCs WDK NetDMA"]
+keywords:
+- interrupts WDK NetDMA , DPC
+- DPCs WDK NetDMA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Handling a NetDMA Interrupt DPC
@@ -12,7 +20,7 @@ keywords: ["interrupts WDK NetDMA , DPC", "DPCs WDK NetDMA"]
 
  
 
-## <a href="" id="ddk-handling-a-netdma-interrupt-dpc-ng"></a>
+
 
 
 Dynamic memory access (DMA) providers call the [**NetDmaInterruptDpc**](https://msdn.microsoft.com/library/windows/hardware/ff568330) function in their interrupt deferred procedure call (DPC) handler. For more information about DPC handlers, see [DPC Objects and DPCs](https://msdn.microsoft.com/library/windows/hardware/ff544084).

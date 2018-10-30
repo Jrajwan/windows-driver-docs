@@ -2,6 +2,12 @@
 title: ELAM Prerequisites
 description: Early Launch Antimalware drivers must adhere to the following program requirements to be signed by WHQL and loaded by Windows.
 ms.assetid: 48759EB3-F8F9-4881-BD30-6D1252F08DFE
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # ELAM Prerequisites
@@ -12,12 +18,12 @@ Early Launch Antimalware drivers must adhere to the following program requiremen
 ## Antimalware Vendor Participation Requirements
 
 
-Microsoft requires that Early Launch Antimalware vendors be members of the Microsoft Virus Initiative (MVI). This membership ensures that the vendors are active antimalware community participants with a positive industry reputation. Please reach out to wscisv@microsoft.com if you have any questions about ELAM driver signing.
+Microsoft requires that Early Launch Antimalware vendors either be members of the [**Microsoft Virus Initiative (MVI)**](https://www.microsoft.com/en-us/wdsi/alliances/virus-initiative) or pre-approved members of the [**Virus Information Alliance (VIA)**](https://www.microsoft.com/en-us/wdsi/alliances/virus-information-alliance). This membership ensures that the vendors are active antimalware community participants with a positive industry reputation. Please reach out to [**mvi@microsoft.com**](mailto:mvi@microsoft.com) if you have questions about ELAM driver signing or becoming a pre-approved VIA member.
 
 ## Hardware Certification Kit Tests
 
 
-Each driver must pass the following HCK tests, which are administered by the ISV:
+Each driver targeting a pre-Windows 10 operating system must pass the following HCK tests, which are administered by the ISV:
 
 PERFORMANCE TEST
 -   CALLBACK LATENCY - Each early launch AM driver is required to return the driver verification callbacks from the kernel within .5ms. This time is measured from when the kernel issues the callback to the driver to the time the driver returns the callback.
@@ -38,11 +44,8 @@ The AM driver must be a single binary (not import any other DLLs).
 
 ## Windows Hardware Quality Lab (WHQL) submission
 
-
--   The ISV submits the driver package, along with its HCK test results, to the **WHQL** Portal. A parameter of the submission is an indication that the driver is an early launch driver.
--   The **WHQL** process verifies that the vendor is permitted to submit early launch drivers, and it verifies that the driver has passed its HCK tests.
--   The **WHQL** process creates a code signing catalog for the driver package.
--   **WHQL** returns to the vendor the signed catalog as well as the driver’s binaries signed by a special code signing certificate.
+-   Submit your driver for verification as documented at [ELAM Driver Submission](elam-driver-submission.md)
+-   The **WHQL** process will verify that the vendor is permitted to submit early launch drivers.  Your submission will fail if you are not an MVI member, or a pre-approved VIA member.
 
  
 

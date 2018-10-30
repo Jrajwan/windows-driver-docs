@@ -3,7 +3,17 @@ title: Returning Status from Dispatch Routines
 author: windows-driver-content
 description: Returning Status from Dispatch Routines
 ms.assetid: 76bd651a-344f-4e22-a435-b62fdf2d7ddc
-keywords: ["IRP dispatch routines WDK file system , returning status", "status values WDK file system", "success status values WDK file system", "returning status WDK file system"]
+keywords:
+- IRP dispatch routines WDK file system , returning status
+- status values WDK file system
+- success status values WDK file system
+- returning status WDK file system
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Returning Status from Dispatch Routines
@@ -33,6 +43,5 @@ For more information about returning status from a dispatch routine, see [Constr
  
 
 
---------------------
 
 

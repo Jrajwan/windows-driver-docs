@@ -1,9 +1,23 @@
 ---
-title: Propagating the DO\_BUFFERED\_IO and DO\_DIRECT\_IO Flags
+title: Propagating the DO_BUFFERED_IO and DO_DIRECT_IO Flags
 author: windows-driver-content
-description: Propagating the DO\_BUFFERED\_IO and DO\_DIRECT\_IO Flags
+description: Propagating the DO_BUFFERED_IO and DO_DIRECT_IO Flags
 ms.assetid: a0cb4f1a-3c27-4608-a208-ffcf4113b722
-keywords: ["filter drivers WDK file system , attaching filters", "file system filter drivers WDK , attaching filters", "attaching filters to file system or volume", "volumes WDK file system , attaching filters", "DO_BUFFERED_IO", "propagating DO_BUFFERED_IO flag", "DO_DIRECT_IO", "propagating DO_DIRECT_IO flag"]
+keywords:
+- filter drivers WDK file system , attaching filters
+- file system filter drivers WDK , attaching filters
+- attaching filters to file system or volume
+- volumes WDK file system , attaching filters
+- DO_BUFFERED_IO
+- propagating DO_BUFFERED_IO flag
+- DO_DIRECT_IO
+- propagating DO_DIRECT_IO flag
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Propagating the DO\_BUFFERED\_IO and DO\_DIRECT\_IO Flags
@@ -30,6 +44,5 @@ In the above code snippet, *DeviceObject* is a pointer to the device object to w
  
 
 
---------------------
 
 

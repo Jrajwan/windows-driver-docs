@@ -1,11 +1,14 @@
 ---
-title: EFI\_BATTERY\_CHARGING\_PROTOCOL.ChargeBattery
+title: EFI_BATTERY_CHARGING_PROTOCOL.ChargeBattery
 author: windows-driver-content
-description: EFI\_BATTERY\_CHARGING\_PROTOCOL.ChargeBattery
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: EFI_BATTERY_CHARGING_PROTOCOL.ChargeBattery
 ms.assetid: 362b812f-b64b-4b6c-84a6-61c09a60f8a3
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # EFI\_BATTERY\_CHARGING\_PROTOCOL.ChargeBattery
@@ -93,6 +96,5 @@ To detect errors, the event type contained in *CompletionToken* must be EVT\_NOT
 [EFI\_BATTERY\_CHARGING\_PROTOCOL](efi-battery-charging-protocol.md)  
 [EFI\_BATTERY\_CHARGING\_COMPLETION\_TOKEN](efi-battery-charging-completion-token.md)  
 
---------------------
 
 

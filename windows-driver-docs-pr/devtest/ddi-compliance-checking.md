@@ -2,6 +2,12 @@
 title: DDI compliance checking
 description: The DDI compliance checking option determines whether the driver correctly interacts with the Windows operating system kernel.
 ms.assetid: 1E536DE0-071B-4529-B228-DB5DAE71099C
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # DDI compliance checking
@@ -9,7 +15,7 @@ ms.assetid: 1E536DE0-071B-4529-B228-DB5DAE71099C
 
 The DDI compliance checking option determines whether the driver correctly interacts with the Windows operating system kernel.
 
-**Note**  This option is available starting with Windows 8. Starting in Windows 8.1, you can test additional rules, by selecting [DDI compliance checking (additional)](#ddi-compliance-checking-additional).
+**Note**  This option is available starting with Windows 8. Starting in Windows 8.1, you can test additional rules, by selecting [Activating the DDI compliance checking (additional) option](#activating-the-ddi-compliance-checking-additional-option).
 
  
 
@@ -101,7 +107,7 @@ You can activate the DDI compliance checking feature for one or more drivers by 
 
     At the command line, DDI compliance checking is represented by **verifier /flags 0x00020000** (Bit 17). To activate DDI compliance checking, use a flag value of 0x00020000 or add 0x00020000 to the flag value. For example:
 
-    ``` syntax
+    ```
     verifier /flags 0x00020000 /driver MyDriver.sys
     ```
 
@@ -131,7 +137,7 @@ Starting in Windows 8.1, the **DDI compliance checking (additional) option** op
 
 -   [**SpinlockRelease**](https://msdn.microsoft.com/library/windows/hardware/ff552780)
 
-## <span id="Activating_the_DDI_compliance_checking__additional__option"></span><span id="activating_the_ddi_compliance_checking__additional__option"></span><span id="ACTIVATING_THE_DDI_COMPLIANCE_CHECKING__ADDITIONAL__OPTION"></span>Activating the DDI compliance checking (additional) option
+## Activating the DDI compliance checking (additional) option
 
 
 You can activate the **DDI compliance checking (additional)** rules for one or more drivers by using Driver Verifier Manager or the Verifier.exe command line. For details, see [Selecting Driver Verifier Options](selecting-driver-verifier-options.md). You must restart the computer to activate or deactivate the **DDI compliance checking (additional)** option.
@@ -140,7 +146,7 @@ You can activate the **DDI compliance checking (additional)** rules for one or m
 
     At the command line, DDI compliance checking is represented by **verifier /flags 0x00080000** (Bit 19). To activate **DDI compliance checking (additional)**, use a flag value of 0x00080000 or add 0x00080000 to the flag value. For example:
 
-    ``` syntax
+    ```
     verifier /flags 0x00080000 /driver MyDriver.sys
     ```
 
@@ -158,7 +164,6 @@ You can activate the **DDI compliance checking (additional)** rules for one or m
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20DDI%20compliance%20checking%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

@@ -2,6 +2,12 @@
 title: Step 2 A Driver for the Device is Selected
 description: Step 2 A Driver for the Device is Selected
 ms.assetid: 2134cab6-58ea-4258-9a45-09bf54156e0a
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Step 2: A Driver for the Device is Selected
@@ -56,7 +62,7 @@ For example, if a user plugs a wireless local area network (WLAN) adapter into a
 
 -   The device installation process searches for a matching driver package from one of the following locations:
 
-    -   The Universal Naming Convention (*UNC*) paths that are identified by the **DevicePath** registry value of **HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion**.
+    -   The Universal Naming Convention (*UNC*) paths that are identified by the **DevicePath** registry value of **HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion**.
 
     -   Windows Update
 

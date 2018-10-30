@@ -2,7 +2,22 @@
 title: Device Identification Strings
 description: The Plug and Play (PnP) manager and other device installation components use device identification strings to identify devices that are installed in a computer.
 ms.assetid: dae23185-63d9-4a0f-9786-c7fa66368826
-keywords: ["compatible IDs WDK device installations", "device IDs WDK device installations", "device instance IDs WDK device installations", "driver nodes WDK device installations", "hardware IDs WDK device installations", "instance IDs WDK device installations", "Device setup WDK device installations , device identification strings", "device installations WDK , device identification strings", "installing devices WDK , device identification strings"]
+keywords:
+- compatible IDs WDK device installations
+- device IDs WDK device installations
+- device instance IDs WDK device installations
+- driver nodes WDK device installations
+- hardware IDs WDK device installations
+- instance IDs WDK device installations
+- Device setup WDK device installations , device identification strings
+- device installations WDK , device identification strings
+- installing devices WDK , device identification strings
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Device Identification Strings
@@ -10,7 +25,7 @@ keywords: ["compatible IDs WDK device installations", "device IDs WDK device ins
 
 The Plug and Play (PnP) manager and other [device installation components](https://msdn.microsoft.com/library/windows/hardware/ff541277) use device identification strings to identify devices that are installed in a computer.
 
-## <a href="" id="ddk-device-identification-strings-dg"></a>
+
 
 
 Windows uses the following device identification strings to locate the information (INF) file that best matches the device. These strings are reported by a device's [*enumerator*](https://msdn.microsoft.com/library/windows/hardware/ff556279#wdkgloss-enumerator):

@@ -3,7 +3,21 @@ title: Creating an INF File for a Minifilter Driver
 author: windows-driver-content
 description: Creating an INF File for a Minifilter Driver
 ms.assetid: 2ae41287-e3c5-4df5-8dec-8575343d5319
-keywords: ["INF files WDK file system , minifilter drivers", "DestinationDirs section WDK file system", "Version section WDK file system", "Strings section WDK file system", "DefaultUninstall section WDK file system", "ServiceInstall section WDK file system", "DefaultInstall section WDK file system", "AddRegistry section WDK file system"]
+keywords:
+- INF files WDK file system , minifilter drivers
+- DestinationDirs section WDK file system
+- Version section WDK file system
+- Strings section WDK file system
+- DefaultUninstall section WDK file system
+- ServiceInstall section WDK file system
+- DefaultInstall section WDK file system
+- AddRegistry section WDK file system
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Creating an INF File for a Minifilter Driver
@@ -301,6 +315,5 @@ Instance3.Flags    = 0x1 ; Suppress automatic attachments
  
 
 
---------------------
 
 

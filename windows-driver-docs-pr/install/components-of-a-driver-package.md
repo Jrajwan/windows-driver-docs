@@ -2,21 +2,34 @@
 title: Components of a Driver Package
 description: Components of a Driver Package
 ms.assetid: 3e09b17f-9a62-43fd-be00-29fe2e6140c5
-keywords: ["components WDK", "driver packages WDK , components", "packages WDK , components", "files WDK driver packages", "co-installers WDK device installations , driver packages", "installation files WDK", ".sys files", "SYS files", ".cat files"]
+keywords:
+- components WDK
+- driver packages WDK , components
+- packages WDK , components
+- files WDK driver packages
+- co-installers WDK device installations , driver packages
+- installation files WDK
+- .sys files
+- SYS files
+- .cat files
+ms.author: windowsdriverdev
+ms.date: 05/09/2018
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Components of a Driver Package
 
 
-## <a href="" id="ddk-components-of-a-driver-package-pg"></a>
+
 
 
 The following components are necessary to install and support a device on a Windows operating system:
 
 <a href="" id="the-device-itself"></a>**The device itself**  
 If you plan to design and build a new device, follow industry hardware standards. When you follow these standards, you are more likely to have a streamlined development process as well as lower your support costs. Not only do test suites exist for such devices, but, in many cases, generic drivers exist for standard types. Therefore, you might not have to write a new driver.
-
-For more information about industry standards and specifications, see the [Windows Hardware Developer Central (WHDC)](http://go.microsoft.com/fwlink/p/?linkid=8703) website.
 
 <a href="" id="the-driver-package-for-the-device"></a>**The driver package for the device**  
 A driver package includes all the software components that you must supply to ensure that your device is supported with Windows. Typically, a driver package contains the following components:

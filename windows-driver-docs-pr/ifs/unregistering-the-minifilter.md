@@ -3,7 +3,14 @@ title: Unregistering the Minifilter
 author: windows-driver-content
 description: Unregistering the Minifilter
 ms.assetid: 4af2d4fd-bfbe-4a75-bbfb-2a1c4b5c2032
-keywords: ["unregistering minifilters"]
+keywords:
+- unregistering minifilters
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Unregistering the Minifilter
@@ -29,6 +36,5 @@ Outstanding rundown references can also happen if the minifilter driver has call
  
 
 
---------------------
 
 

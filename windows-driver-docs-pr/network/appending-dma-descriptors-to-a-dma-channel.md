@@ -2,7 +2,18 @@
 title: Appending DMA Descriptors to a DMA Channel
 description: Appending DMA Descriptors to a DMA Channel
 ms.assetid: 02b1b617-4021-4a88-8091-6510abb74fbb
-keywords: ["memory-to-memory data transfers WDK NetDMA , appending DMA descriptors", "data transfers WDK NetDMA , appending DMA descriptors", "transferring data WDK NetDMA , appending DMA descriptors", "DMA transfers WDK NetDMA , appending DMA descriptors", "NetDMA WDK n"]
+keywords:
+- memory-to-memory data transfers WDK NetDMA , appending DMA descriptors
+- data transfers WDK NetDMA , appending DMA descriptors
+- transferring data WDK NetDMA , appending DMA descriptors
+- DMA transfers WDK NetDMA , appending DMA descriptors
+- NetDMA WDK n
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Appending DMA Descriptors to a DMA Channel
@@ -12,7 +23,7 @@ keywords: ["memory-to-memory data transfers WDK NetDMA , appending DMA descripto
 
  
 
-## <a href="" id="ddk-appending-dma-descriptors-to-a-dma-channel-ng"></a>
+
 
 
 The NetDMA interface calls a NetDMA provider driver's [**ProviderAppendDma**](https://msdn.microsoft.com/library/windows/hardware/ff570394) function to finish appending a linked list of dynamic memory access (DMA) descriptors after the last descriptor on a DMA channel. The NetDMA interface always starts a DMA transfer before appending descriptors to a DMA channel. For more information about starting a DMA transfer, see [Starting a DMA Transfer](starting-a-dma-transfer.md).

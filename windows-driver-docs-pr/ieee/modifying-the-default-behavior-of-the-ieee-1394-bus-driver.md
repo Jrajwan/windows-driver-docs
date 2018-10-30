@@ -2,10 +2,13 @@
 title: Modifying the Default Behavior of the IEEE 1394 Bus Driver
 author: windows-driver-content
 description: Windows 7 includes 1394ohci.sys, a new IEEE 1394 bus driver that is implemented by using the kernel-mode driver framework (KMDF).
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: B636943E-EE52-4D0D-A638-89C05AD41F1A
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Modifying the Default Behavior of the IEEE 1394 Bus Driver
@@ -26,7 +29,7 @@ The following registry location contains the global 1394 registry values:
 
 The following registry location contains the individual 1394 controller registry values:
 
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class \{6BDD1FC1-810F-11D0-BEC7-08002BE2092F}\\<NNNN>`
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class \{6BDD1FC1-810F-11D0-BEC7-08002BE2092F}\<NNNN>`
 
 `<NNNN>` represents the instance identification number for each 1394 controller.
 
@@ -109,6 +112,5 @@ The following table describes the registry values that the new 1394 bus driver s
 [The IEEE 1394 Driver Stack](https://msdn.microsoft.com/library/windows/hardware/ff538867)  
 [IEEE 1394 Bus Driver in Windows 7](https://msdn.microsoft.com/library/windows/hardware/gg266402)  
 
---------------------
 
 

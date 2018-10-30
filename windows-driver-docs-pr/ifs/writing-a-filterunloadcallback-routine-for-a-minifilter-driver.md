@@ -3,7 +3,17 @@ title: Writing a FilterUnloadCallback Routine for a Minifilter Driver
 author: windows-driver-content
 description: Writing a FilterUnloadCallback Routine for a Minifilter Driver
 ms.assetid: 0f4eac6d-08ef-47d5-8c1f-5397f058ecb2
-keywords: ["file system minifilter drivers WDK , FilterUnloadCallback routine", "minifilter drivers WDK , FilterUnloadCallback routine", "FilterUnloadCallback", "unload routines WDK file system minifilter"]
+keywords:
+- file system minifilter drivers WDK , FilterUnloadCallback routine
+- minifilter drivers WDK , FilterUnloadCallback routine
+- FilterUnloadCallback
+- unload routines WDK file system minifilter
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Writing a FilterUnloadCallback Routine for a Minifilter Driver
@@ -29,6 +39,5 @@ This section includes:
  
 
 
---------------------
 
 

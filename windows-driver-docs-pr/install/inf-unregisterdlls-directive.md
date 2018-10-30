@@ -2,25 +2,32 @@
 title: INF UnregisterDlls Directive
 description: An UnregisterDlls directive references one or more INF sections used to specify files that are OLE controls and require self-unregistration (self-removal).
 ms.assetid: 11d29c7f-9bd8-4097-9842-ce7431389241
-keywords: ["INF UnregisterDlls Directive Device and Driver Installation"]
+keywords:
+- INF UnregisterDlls Directive Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF UnregisterDlls Directive
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF UnregisterDlls Directive
 
 
-**Note**  If you are building a universal or mobile driver package, this directive is not valid. See [Using a Universal INF File](using-a-configurable-inf-file.md).
+**Note**  If you are building a universal or mobile driver package, this directive is not valid. See [Using a Universal INF File](using-a-universal-inf-file.md).
 
  
 
 An **UnregisterDlls** directive references one or more INF sections used to specify files that are OLE controls and require self-unregistration (self-removal).
 
-``` syntax
+```
 [DDInstall]
   
 UnregisterDlls=unregister-dll-section[,unregister-dll-section]...
@@ -28,7 +35,7 @@ UnregisterDlls=unregister-dll-section[,unregister-dll-section]...
 
 Each INF section referenced by an **UnregisterDlls** directive must have the following entry format:
 
-``` syntax
+```
 [unregister-dll-section] 
   
 dirid,[subdir],filename,registration-flags[,[timeout][,argument]] 
@@ -51,10 +58,10 @@ Identifies the file name of the OLE control to be unregistered.
 <a href="" id="registration-flags"></a>*registration-flags*  
 Indicates the registration operations to perform on the OLE control. One or both of the following flags must be specified.
 
-<a href="" id="0x00000001--flg-regsvr-dllregister-"></a>**0x00000001** (FLG\_REGSVR\_DLLREGISTER)  
+<a href="" id="0x00000001--flg-regsvr-dllregister-"></a>**0x00000001** (FLG_REGSVR_DLLREGISTER)  
 Call the **DllUnRegisterServer** function (described in the Windows SDK documentation).
 
-<a href="" id="0x00000002--flg-regsvr-dllinstall--"></a>**0x00000002** (FLG\_REGSVR\_DLLINSTALL)   
+<a href="" id="0x00000002--flg-regsvr-dllinstall--"></a>**0x00000002** (FLG_REGSVR_DLLINSTALL)   
 Call the OLE control's **DllInstall** function (described in the Windows SDK documentation).
 
 <a href="" id="timeout"></a>*timeout*  

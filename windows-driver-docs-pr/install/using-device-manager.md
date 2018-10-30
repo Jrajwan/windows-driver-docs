@@ -2,13 +2,21 @@
 title: Using Device Manager
 description: Using Device Manager
 ms.assetid: 3c229347-b36f-43e7-9e9c-3ba6ec1e6108
-keywords: ["Device Manager WDK", "Device Manager WDK , about Device Manager"]
+keywords:
+- Device Manager WDK
+- Device Manager WDK , about Device Manager
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Using Device Manager
 
 
-## <a href="" id="ddk-using-device-manager-dg"></a>
+
 
 
 To start Device Manager, right-click the My Computer icon, select **Manage** from the menu, and select **Device Manager** from the System Tools that are listed in the resulting display.

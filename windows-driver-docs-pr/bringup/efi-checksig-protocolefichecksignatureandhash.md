@@ -1,11 +1,14 @@
 ---
-title: EFI\_CHECKSIG\_PROTOCOL.EfiCheckSignatureAndHash
+title: EFI_CHECKSIG_PROTOCOL.EfiCheckSignatureAndHash
 author: windows-driver-content
-description: EFI\_CHECKSIG\_PROTOCOL.EfiCheckSignatureAndHash
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: EFI_CHECKSIG_PROTOCOL.EfiCheckSignatureAndHash
 ms.assetid: 7c6d1756-a3db-4754-9edb-af6ba1ecf65b
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # EFI\_CHECKSIG\_PROTOCOL.EfiCheckSignatureAndHash
@@ -98,6 +101,5 @@ The call to this function is synchronous.
  
 
 
---------------------
 
 

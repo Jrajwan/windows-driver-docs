@@ -2,13 +2,23 @@
 title: Adding a NIC
 description: Adding a NIC
 ms.assetid: 3da89acc-5504-4362-b148-e8228795721f
-keywords: ["NICs WDK networking , adding", "network interface cards WDK networking , adding", "Plug and Play WDK NDIS miniport , adding NIC", "adding NICs WDK networking"]
+keywords:
+- NICs WDK networking , adding
+- network interface cards WDK networking , adding
+- Plug and Play WDK NDIS miniport , adding NIC
+- adding NICs WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Adding a NIC
 
 
-## <a href="" id="ddk-adding-a-nic-ng"></a>
+
 
 
 The following description starts with the loading of the miniport driver and describes how a NIC is added. For the initial processing that the PnP manager performs when a NIC is added to a running system, see steps 1-11 of [Adding a PnP Device to a Running System](https://msdn.microsoft.com/library/windows/hardware/ff540535).

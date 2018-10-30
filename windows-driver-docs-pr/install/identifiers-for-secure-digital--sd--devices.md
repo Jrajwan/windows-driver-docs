@@ -2,7 +2,21 @@
 title: Identifiers for Secure Digital (SD) Devices
 description: Identifiers for Secure Digital (SD) Devices
 ms.assetid: d5e112b7-29ed-4950-858c-81fe0d19a902
-keywords: ["device identification strings WDK , SD devices", "identification strings WDK device , SD devices", "identifiers WDK device , SD devices", "SD device IDs WDK device installations", "Secure Digital device IDs WDK device installations", "device IDs WDK device installations", "hardware IDs WDK device installations", "compatible IDs WDK device installations"]
+keywords:
+- device identification strings WDK , SD devices
+- identification strings WDK device , SD devices
+- identifiers WDK device , SD devices
+- SD device IDs WDK device installations
+- Secure Digital device IDs WDK device installations
+- device IDs WDK device installations
+- hardware IDs WDK device installations
+- compatible IDs WDK device installations
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Identifiers for Secure Digital (SD) Devices
@@ -16,7 +30,7 @@ Because the internal configuration of an SD memory device is significantly diffe
 
 The device ID of an SD memory device uses the following format:
 
-SD\\VID\_v(2)&OID\_o(4)&PID\_p(0-5)&REV\_n(1).m(1)
+SD\\VID_v(2)&OID_o(4)&PID_p(0-5)&REV_n(1).m(1)
 
 Where:
 
@@ -28,7 +42,7 @@ Where:
 
 The device ID of an SDIO device uses the following format:
 
-SD\\VID\_v(4)&PID\_p(4)
+SD\\VID_v(4)&PID_p(4)
 
 Where:
 
@@ -36,13 +50,13 @@ Where:
 
 -   *p(4)* is the four-digit hexadecimal product and/or revision number that the vendor assigns to the device.
 
-The SD bus driver extracts the vendor and product codes from the CISTPL\_MANFID tuple in the device's Card Information Structure (CIS) area.
+The SD bus driver extracts the vendor and product codes from the CISTPL_MANFID tuple in the device's Card Information Structure (CIS) area.
 
 ### <a href="" id="sd-hardware-ids"></a> SD hardware IDs
 
 For SD memory devices, the bus driver supplies two hardware IDs: one that is identical to the device ID, and another that is the same as the device ID, but without the revision information. The ID with revision information uses the following format:
 
-SD\\VID\_v(2)&OID\_o(4)&PID\_p(0-5)
+SD\\VID_v(2)&OID_o(4)&PID_p(0-5)
 
 Where, as with the device ID:
 
@@ -60,11 +74,11 @@ In addition to device and hardware IDs, the SD bus driver generates a compatible
 
 For SD memory devices, the bus driver always generates the following compatible ID:
 
-SD\\CLASS\_STORAGE
+SD\\CLASS_STORAGE
 
 For SDIO devices, the SD bus driver generates the following compatible ID, provided the value in the function basic register (FBR) is not zero:
 
-SD\\CLASS\_c(2)
+SD\\CLASS_c(2)
 
 where *c(2)* is the two-digit hexadecimal device interface code.
 

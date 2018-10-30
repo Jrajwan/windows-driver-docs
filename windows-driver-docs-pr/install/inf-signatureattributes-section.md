@@ -2,13 +2,20 @@
 title: INF SignatureAttributes Section
 description: This section allows users to request additional signatures as required by certain certification scenarios.
 ms.assetid: 8169686B-C45B-4D67-8B09-CD5F9977898D
-keywords: ["INF SignatureAttributes Section Device and Driver Installation"]
+keywords:
+- INF SignatureAttributes Section Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF SignatureAttributes Section
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF SignatureAttributes Section
@@ -16,7 +23,7 @@ api_type:
 
 This section allows users to request additional signatures as required by certain certification scenarios. Examples of these scenarios are: Protected Environment media playback, Early Launch Antimalware, and third party HAL extensions. These additional signatures will only be applied if your Hardware Certification Kit package contains the proper Features and passing Tests.
 
-``` syntax
+```
 [SignatureAttributes]
 FileOne = SignatureAttributes.SigType
 
@@ -34,6 +41,7 @@ Defines which signature or catalog attribute needs to be applied to the file. Sh
 -   HalExt
 -   PETrust
 -   DRM
+-   WindowsHello
 
 <a href="" id="attribute-attribute-name"></a>**Attribute=***attribute-name*  
 Each Signature Type has a corresponding attribute and value, as listed below. Use these definitions for your SignatureAttributes subsections:
@@ -42,6 +50,7 @@ Each Signature Type has a corresponding attribute and value, as listed below. Us
 -   **SignatureAttributes.HalExt**: HalExt = true
 -   **SignatureAttributes.DRM**: DRMLevel = {1300 | 1200}
 -   **SignatureAttributes.PETrust**: PETrust = true
+-   **SignatureAttributes.WindowsHello**: WindowsHello = true
 
 Remarks
 -------
@@ -96,6 +105,17 @@ ELAMFILE.dll=SignatureAttributes.Elam
 [SignatureAttributes.Elam]
 Elam=true
 ```
+
+The following examples demonstrate how to enumerate and request additional signatures for Windows Hello:
+
+```
+[SignatureAttributes]
+WindowsHelloFile.dll=SignatureAttributes.WindowsHello
+
+[SignatureAttributes.WindowsHello]
+WindowsHello=true
+```
+
 
 ## See also
 

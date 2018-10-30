@@ -1,30 +1,36 @@
 ---
-title: Debugging memory leaks - DRIVER\_VERIFIER\_DETECTED\_VIOLATION (C4) 0x62
-description: Driver Verifier generates Bug Check 0xC4 DRIVER\_VERIFIER\_DETECTED\_VIOLATION with a parameter 1 value of 0x62 when a driver unloads without first freeing all of its pool allocations.
+title: Debugging memory leaks - DRIVER_VERIFIER_DETECTED_VIOLATION (C4) 0x62
+description: Driver Verifier generates Bug Check 0xC4 DRIVER_VERIFIER_DETECTED_VIOLATION with a parameter 1 value of 0x62 when a driver unloads without first freeing all of its pool allocations.
 ms.assetid: CDBE9A18-4126-4AD7-8E53-6D75DCA8B022
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
-# <span id="devtest.debugging_memory_leaks_-_driver_verifier_detected_violation__c4___0x62"></span>Debugging memory leaks - DRIVER\_VERIFIER\_DETECTED\_VIOLATION (C4): 0x62
+# Debugging memory leaks - DRIVER\_VERIFIER\_DETECTED\_VIOLATION (C4): 0x62
 
 
 [Driver Verifier](driver-verifier.md) generates [**Bug Check 0xC4: DRIVER\_VERIFIER\_DETECTED\_VIOLATION**](https://msdn.microsoft.com/library/windows/hardware/ff560187) with a parameter 1 value of 0x62 when a driver unloads without first freeing all of its pool allocations. Unfreed memory allocations (also called memory leaks) are a common cause of lowered operating system performance. These can fragment the system pools and eventually cause system crashes.
 
 When you have a kernel debugger connected to a test computer running [Driver Verifier](driver-verifier.md), if Driver Verifier detects a violation, Windows breaks into the debugger and displays a brief description of the error.
 
-## <span id="Debugging_memory_leaks_at_driver_unload"></span><span id="debugging_memory_leaks_at_driver_unload"></span><span id="DEBUGGING_MEMORY_LEAKS_AT_DRIVER_UNLOAD"></span>Debugging memory leaks at driver unload
+## >Debugging memory leaks at driver unload
 
 
--   [Use !analyze to display information about the bug check](#use--analyze-to-display-information-about-the-bug-check)
--   [Use the !verifier 3 extension command to find out about the pool allocations](#use-the--verifier-3-extension-command-to-find-out-about-the-pool-allocations)
--   [If you have symbols, you can locate where in the source files the memory allocations occurred](#if-you-have-symbols--you-can-locate-where-in-the-source-files-the-memory-allocations-occurred-)
+-   [Use !analyze to display information about the bug check](#use-analyze-to-display-information-about-the-bug-check)
+-   [Use the !verifier 3 extension command to find out about the pool allocations](#use-the-verifier-3-extension-command-to-find-out-about-the-pool-allocations)
+-   [If you have symbols you can locate where in the source files the memory allocations occurred](#if-you-have-symbols-you-can-locate-where-in-the-source-files-the-memory-allocations-occurred)
 -   [Examine the log for memory allocations](#examine-the-log-for-memory-allocations)
 -   [Fixing memory leaks](#fixing-memory-leaks)
 
-### <span id="Use__analyze_to_display_information_about_the_bug_check"></span><span id="use__analyze_to_display_information_about_the_bug_check"></span><span id="USE__ANALYZE_TO_DISPLAY_INFORMATION_ABOUT_THE_BUG_CHECK"></span>Use !analyze to display information about the bug check
+### Use !analyze to display information about the bug check
 
 As with any bug check that occurs, once you have control of the debugger, the best first step is to run the [**!analyze -v**](https://msdn.microsoft.com/library/windows/hardware/ff562112) command.
 
-``` syntax
+```
 kd> !analyze -v
 Connected to Windows 8 9600 x86 compatible target
 Loading Kernel Symbols
@@ -71,11 +77,11 @@ The driver is unloading without first freeing its pool allocations. In Windows 
 Specify [Pool Tracking](pool-tracking.md) (**verifier /flags 0x8**). The Pool Tracking option is enabled with Standard Flags (**verifier /standard** ).
  
 
-### <span id="Use_the__verifier_3_extension_command_to_find_out_about_the_pool_allocations"></span><span id="use_the__verifier_3_extension_command_to_find_out_about_the_pool_allocations"></span><span id="USE_THE__VERIFIER_3_EXTENSION_COMMAND_TO_FIND_OUT_ABOUT_THE_POOL_ALLOCATIONS"></span>Use the !verifier 3 extension command to find out about the pool allocations
+### Use the !verifier 3 extension command to find out about the pool allocations
 
 For this particular bug check, the information provided in parameter 4 (Arg4) is the most important. Arg4 shows number of allocations that weren’t freed. The output of the [**!analyze**](https://msdn.microsoft.com/library/windows/hardware/ff562112) command also shows the [**!verifier**](https://msdn.microsoft.com/library/windows/hardware/ff565591) debugger extension command that you can use to display what those allocations were. The full output of **!verifier 3 MyDriver.sys** command is shown in the following example:
 
-``` syntax
+```
 kd> !verifier 3 Mydriver.sys
 
 Verify Flags Level 0x000209bb
@@ -153,11 +159,11 @@ In example, the driver, MyDriver.sys, has two memory allocations and one I/O wor
 
 Of the tags displayed, only one (for the allocation at address 0x8645a000) was supplied by the driver itself (**mdrv**). The tag **VMdl** is used whenever a driver being verified by Driver Verifier makes calls [**IoAllocateMdl**](https://msdn.microsoft.com/library/windows/hardware/ff548263). Similarly, the tag **Vfwi** is used whenever a driver being verified by Driver Verifier makes a request to allocate a work item using [**IoAllocateWorkItem**](https://msdn.microsoft.com/library/windows/hardware/ff548276).
 
-### <span id="If_you_have_symbols__you_can_locate_where_in_the_source_files_the_memory_allocations_occurred_"></span><span id="if_you_have_symbols__you_can_locate_where_in_the_source_files_the_memory_allocations_occurred_"></span><span id="IF_YOU_HAVE_SYMBOLS__YOU_CAN_LOCATE_WHERE_IN_THE_SOURCE_FILES_THE_MEMORY_ALLOCATIONS_OCCURRED_"></span>If you have symbols, you can locate where in the source files the memory allocations occurred
+### If you have symbols you can locate where in the source files the memory allocations occurred
 
 When symbols are loaded for the driver, if those symbols contain the line number information, you can use the **ln** *CallerAddress* command to show the line where the call was made. This output will also show the offset in the function that made the allocation.
 
-``` syntax
+```
 kd> ln 0x9a3bf6ac  
 d:\coding\wdmdrivers\mydriver\handleioctl.c(50)+0x15
 (9a3bf660)   MyDriver!DeviceControlDispatch+0x4c   |  (9a3bf6d0)   MyDriver!DeviceControlDispatch
@@ -171,13 +177,13 @@ d:\coding\wdmdrivers\mydriver\handleioctl.c(72)+0xa
 (9a3bf6d0)   MyDriver!GetNecessaryObjects+0x1d   |  (9a3bf71c)   MyDriver!GetNecessaryObjects
 ```
 
-### <span id="Examine_the_log_for_memory_allocations"></span><span id="examine_the_log_for_memory_allocations"></span><span id="EXAMINE_THE_LOG_FOR_MEMORY_ALLOCATIONS"></span>Examine the log for memory allocations
+### Examine the log for memory allocations
 
 Driver Verifier also keeps a circular log of all memory allocations made in kernel space when pool tracking is enabled. By default, the most recent 65,536 (0x10000) allocations are kept. As a new allocation is made, the oldest allocation in the log is overwritten. If the allocations were made recently before the crash, it may be possible to get additional information about the allocation than shown above, specifically the thread address and frames of the kernel stack at the time of the allocation.
 
 This log can be accessed by using the command **!verifier 0x80** *AddressOfPoolAllocation*. Note that this will list all of the allocations and frees in the log for this particular address. To cancel or stop display of the log history, use the keyboard shortcuts: **Ctrl + Break** with WinDbg and **Ctrl + C** with KD.
 
-``` syntax
+```
 kd> !verifier 0x80 0x982a8fe0
 
 Log of recent kernel pool Allocate and Free operations:
@@ -254,7 +260,7 @@ Pool block 9a836fd0, Size 00000030, Thread 88758740
 81307518 nt!IopXxxControlFile+0x3e8
 ```
 
-### <span id="Fixing_memory_leaks"></span><span id="fixing_memory_leaks"></span><span id="FIXING_MEMORY_LEAKS"></span>Fixing memory leaks
+### Fixing memory leaks
 
 This Driver Verifier bug check is designed to prevent the driver from leaking kernel memory. In each case, the proper fix is to identify any existing code paths where the allocated objects are not freed and ensure they’re freed properly.
 
@@ -262,7 +268,7 @@ This Driver Verifier bug check is designed to prevent the driver from leaking ke
 
 For other techniques you can use, including scenarios where Driver Verifier is not involved, see [Finding a Kernel-Mode Memory Leak](https://msdn.microsoft.com/library/windows/hardware/ff545403).
 
-## <span id="related_topics"></span>Related topics
+## Related topics
 
 
 [Finding a Kernel-Mode Memory Leak](https://msdn.microsoft.com/library/windows/hardware/ff545403)
@@ -277,7 +283,6 @@ For other techniques you can use, including scenarios where Driver Verifier is n
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20Debugging%20memory%20leaks%20-%20DRIVER_VERIFIER_DETECTED_VIOLATION%20%28C4%29:%200x62%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

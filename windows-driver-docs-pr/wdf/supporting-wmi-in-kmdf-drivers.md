@@ -1,9 +1,21 @@
 ---
 title: Supporting WMI in KMDF Drivers
 author: windows-driver-content
-description: The topics in this section describe how a Kernel-Mode Driver Framework (KMDF) driver registers as a WMI data provider, responds to requests for instance data, and sends events to registered WMI clients.
+description: This section describes how a KMDF driver registers as a WMI data provider, responds to requests for instance data, and sends events to registered WMI clients.
 ms.assetid: 821c4b4f-162a-4a2f-8846-47e5173ad412
-keywords: ["Windows Management Instrumentation WDK KMDF", "kernel-mode drivers WDK KMDF , WMI", "KMDF WDK , WMI", "Kernel-Mode Driver Framework WDK , WMI", "framework-based drivers WDK KMDF , WMI", "data blocks WDK KMDF"]
+keywords:
+- Windows Management Instrumentation WDK KMDF
+- kernel-mode drivers WDK KMDF , WMI
+- KMDF WDK , WMI
+- Kernel-Mode Driver Framework WDK , WMI
+- framework-based drivers WDK KMDF , WMI
+- data blocks WDK KMDF
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Supporting WMI in KMDF Drivers
@@ -13,7 +25,7 @@ keywords: ["Windows Management Instrumentation WDK KMDF", "kernel-mode drivers W
 
 The topics in this section describe how a Kernel-Mode Driver Framework (KMDF) driver registers as a WMI data provider, responds to requests for instance data, and sends events to registered WMI clients.
 
-## <a href="" id="ddk-handling-wmi-in-framework-based-drivers-df"></a>
+
 
 
 ## In this section

@@ -2,13 +2,22 @@
 title: Initializing a SAN Service Provider
 description: Initializing a SAN Service Provider
 ms.assetid: 73e923e9-c7bd-4d46-9d21-fc1392a79c65
-keywords: ["Windows Sockets Direct WDK , initializing SAN usage", "initializing SAN usage", "SAN service providers WDK , initializing"]
+keywords:
+- Windows Sockets Direct WDK , initializing SAN usage
+- initializing SAN usage
+- SAN service providers WDK , initializing
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Initializing a SAN Service Provider
 
 
-## <a href="" id="ddk-initializing-a-san-service-provider-ng"></a>
+
 
 
 The Windows Sockets switch initializes a SAN service provider as described in the following figure.

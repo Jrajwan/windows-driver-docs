@@ -2,13 +2,23 @@
 title: Portability in Network Drivers
 description: Portability in Network Drivers
 ms.assetid: 2cc74131-a80b-4d21-b969-56b61d1f7269
-keywords: ["network drivers WDK , porting drivers", "portability WDK networking", "porting drivers WDK networking", "NDIS porting drivers WDK"]
+keywords:
+- network drivers WDK , porting drivers
+- portability WDK networking
+- porting drivers WDK networking
+- NDIS porting drivers WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Portability in Network Drivers
 
 
-## <a href="" id="ddk-portability-ng"></a>
+
 
 
 NDIS drivers should be written so that they are easily portable across all platforms that support Microsoft Windows operating systems. In general, porting from one hardware platform to another should only require recompilation with a system-compatible compiler.

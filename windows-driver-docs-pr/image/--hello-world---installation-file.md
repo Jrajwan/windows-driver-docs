@@ -2,19 +2,19 @@
 title: Hello World' Installation File
 author: windows-driver-content
 description: Hello World' Installation File
-MS-HAID:
-- 'WIA\_db\_hello\_ddcea0a6-0d94-428a-bdd2-2ed160e476c0.xml'
-- 'image.\_\_hello\_world\_\_\_installation\_file'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 826f4f99-16bd-4586-9cc1-0afde2fcee65
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # 'Hello World' Installation File
 
 
-## <a href="" id="ddk--hello-world-installation-file-si"></a>
+
 
 
 A minidriver requires a setup information (INF) file to be installed. An INF file is a text file containing all of the information needed to install the device. For information about INF files, see the [INF Files for WIA Devices](inf-files-for-wia-devices.md) and [Creating an INF File](https://msdn.microsoft.com/library/windows/hardware/ff549520) section.
@@ -95,7 +95,5 @@ Location="Hello World WIA Minidriver Installation Source"
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bimage\image%5D:%20'Hello%20World'%20Installation%20File%20%20RELEASE:%20%288/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

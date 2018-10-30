@@ -2,7 +2,15 @@
 title: NDIS Core Functionality
 description: NDIS Core Functionality
 ms.assetid: b312e5c6-8f37-494f-9336-6f63add67753
-keywords: ["NDIS WDK", "Network Driver Interface Specification WDK"]
+keywords:
+- NDIS WDK
+- Network Driver Interface Specification WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NDIS Core Functionality
@@ -36,11 +44,7 @@ This section includes:
 
 [Installing and Upgrading Network Components](installing-and-upgrading-network-components.md)
 
- 
+[NDIS core functionality OIDs](ndis-core-functionality-oids.md)
 
- 
-
-
-
-
+[NDIS core functionality status indications](ndis-core-functionality-status-indications.md)
 

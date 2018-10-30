@@ -2,10 +2,13 @@
 title: UEFI check signature protocol
 author: windows-driver-content
 description: UEFI check signature protocol
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 71df491f-c507-4ca4-831b-50ca95167fb3
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # UEFI check signature protocol
@@ -21,7 +24,7 @@ The check signature protocol enables flashing tools to validate the signature on
 
  
 
-## <a href="" id="efi-checksig-protocol"></a>EFI\_CHECKSIG\_PROTOCOL
+## EFI\_CHECKSIG\_PROTOCOL
 
 
 This section provides a detailed description of the **EFI\_CHECKSIG\_PROTOCOL**.
@@ -67,6 +70,5 @@ Verifies the signature and hash of the FFU catalog file. See [EFI\_CHECKSIG\_PRO
  
 
 
---------------------
 
 

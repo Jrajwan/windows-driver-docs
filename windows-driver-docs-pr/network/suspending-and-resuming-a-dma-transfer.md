@@ -2,7 +2,19 @@
 title: Suspending and Resuming a DMA Transfer
 description: Suspending and Resuming a DMA Transfer
 ms.assetid: 0d46f60d-58a7-4108-b683-2f1322fa8211
-keywords: ["memory-to-memory data transfers WDK NetDMA , suspending", "data transfers WDK NetDMA , suspending", "transferring data WDK NetDMA , suspending", "DMA transfers WDK NetDMA , suspending DMA transfers", "NetDMA WDK networking , suspending DMA transfers", "suspendi"]
+keywords:
+- memory-to-memory data transfers WDK NetDMA , suspending
+- data transfers WDK NetDMA , suspending
+- transferring data WDK NetDMA , suspending
+- DMA transfers WDK NetDMA , suspending DMA transfers
+- NetDMA WDK networking , suspending DMA transfers
+- suspendi
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Suspending and Resuming a DMA Transfer
@@ -12,7 +24,7 @@ keywords: ["memory-to-memory data transfers WDK NetDMA , suspending", "data tran
 
  
 
-## <a href="" id="ddk-suspending-and-resuming-a-dma-transfer-ng"></a>
+
 
 
 The NetDMA interface can call a NetDMA provider driver's [**ProviderSuspendDma**](https://msdn.microsoft.com/library/windows/hardware/ff570405) function, if any, to temporarily suspend any dynamic memory access (DMA) transfers that are in progress on a DMA channel. The NetDMA provider returns the physical address of the last DMA descriptor that it processed at the address that the *pLastDescriptor* parameter specifies in **ProviderSuspendDma**.

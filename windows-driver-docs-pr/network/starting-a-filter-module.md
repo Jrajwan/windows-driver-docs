@@ -2,13 +2,23 @@
 title: Starting a Filter Module
 description: Starting a Filter Module
 ms.assetid: 493cb922-22bc-4845-b5a2-6f610559534d
-keywords: ["filter modules WDK networking , starting", "starting filter modules", "filter drivers WDK networking , starting filter modules", "NDIS filter drivers WDK , starting filter modules"]
+keywords:
+- filter modules WDK networking , starting
+- starting filter modules
+- filter drivers WDK networking , starting filter modules
+- NDIS filter drivers WDK , starting filter modules
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Starting a Filter Module
 
 
-## <a href="" id="ddk-starting-a-filter-module-ng"></a>
+
 
 
 To start a paused filter module, NDIS calls the filter driver's [*FilterSetModuleOptions*](https://msdn.microsoft.com/library/windows/hardware/ff549970) function, if any, followed by a call to the [*FilterRestart*](https://msdn.microsoft.com/library/windows/hardware/ff549962) function. The filter module enters the *Restarting* state at the start of execution in the *FilterRestart* function.

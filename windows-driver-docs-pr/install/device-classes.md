@@ -2,13 +2,23 @@
 title: Device Classes
 description: Device Classes
 ms.assetid: 40776fec-808d-4325-8309-b7b0f0c19607
-keywords: ["Device setup WDK device installations , device classes", "device installations WDK , device classes", "installing devices WDK , device classes", "classes WDK device installations"]
+keywords:
+- Device setup WDK device installations , device classes
+- device installations WDK , device classes
+- installing devices WDK , device classes
+- classes WDK device installations
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Device Classes
 
 
-## <a href="" id="ddk-device-classes-dg"></a>
+
 
 
 This section provides information about two device classes used to put devices and drivers into groups whose members have similar characteristics:

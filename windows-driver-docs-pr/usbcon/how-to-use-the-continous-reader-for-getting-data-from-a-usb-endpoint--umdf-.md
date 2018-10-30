@@ -1,10 +1,13 @@
 ---
-Description: 'This topic describes the WDF-provided continuous reader object. The procedures in this topic provide step-by-step instructions about how to configure the object and use it to read data from a USB pipe.'
-MS-HAID: 'buses.how\_to\_use\_the\_continous\_reader\_for\_getting\_data\_from\_a\_usb\_endpoint\_\_umdf\_'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+Description: This topic describes the WDF-provided continuous reader object. The procedures in this topic provide step-by-step instructions about how to configure the object and use it to read data from a USB pipe.
 title: How to use the continuous reader for reading data from a USB pipe
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # How to use the continuous reader for reading data from a USB pipe
@@ -23,8 +26,8 @@ The continuous reader is not automatically power managed by the framework. This 
 
 ### Technologies
 
--   [Kernel-Mode Driver Framework](https://msdn.microsoft.com/library/windows/hardware/ff557565)
--   [User-Mode Driver Framework](https://msdn.microsoft.com/library/windows/hardware/ff557565)
+-   [Kernel-Mode Driver Framework](https://docs.microsoft.com/windows-hardware/drivers/wdf/)
+-   [User-Mode Driver Framework](https://docs.microsoft.com/windows-hardware/drivers/wdf/)
 
 ### Prerequisites
 
@@ -90,7 +93,7 @@ Instructions
         pipeContext = GetPipeContext (Pipe);
 
         WDF_USB_CONTINUOUS_READER_CONFIG_INIT(  
-            &amp;readerConfig,  
+            &readerConfig,  
             FX3EvtReadComplete,  
             pDeviceContext,  
             pipeContext->MaxPacketSize);  
@@ -100,7 +103,7 @@ Instructions
 
         status = WdfUsbTargetPipeConfigContinuousReader(  
             Pipe,  
-            &amp;readerConfig);  
+            &readerConfig);  
 
         if (!NT_SUCCESS (status))
         {
@@ -276,7 +279,7 @@ Before you start using the continuous reader, you must configure the reader in y
 
 **Configure the continuous reader**
 
-1.  Call [**IWDFUsbTargetPipe::QueryInterface**](BUGBUG) on the target pipe object and query for the [**IWDFUsbTargetPipe2**](BUGBUG2) interface.
+1.  Call **QueryInterface** on the target pipe object ([**IWDFUsbTargetPipe**](https://msdn.microsoft.com/library/windows/hardware/ff560391)) and query for the [**IWDFUsbTargetPipe2**](https://msdn.microsoft.com/library/windows/hardware/ff560394) interface.
 2.  Call **QueryInterface** on the device callback object and query for the [**IUsbTargetPipeContinuousReaderCallbackReadComplete**](https://msdn.microsoft.com/library/windows/hardware/ff556908) interface. In order to use the continuous reader, you must implement IUsbTargetPipeContinuousReaderCallbackReadComplete. The implementation is described later in this topic.
 3.  Call **QueryInterface** on the device callback object and query for the [IUsbTargetPipeContinuousReaderCallbackReadersFailed](https://msdn.microsoft.com/library/windows/hardware/ff556914) interface if you have implemented a failure callback. The implementation is described later in this topic.
 4.  Call the [**IWDFUsbTargetPipe2::ConfigureContinuousReader**](https://msdn.microsoft.com/library/windows/hardware/ff560395) method and specify the configuration parameters, such as header, trailer, number of pending requests, and references to the completion and failure callback methods.
@@ -302,21 +305,21 @@ HRESULT CDeviceCallback::ConfigureContinuousReader (IWDFUsbTargetPipe* pFxPipe)
     // Set up the continuous reader to read from the target pipe object.
 
     //Get a pointer to the target pipe2 object.
-    hr = pFxPipe->QueryInterface(IID_PPV_ARGS(&amp;pFxUsbPipe2));
+    hr = pFxPipe->QueryInterface(IID_PPV_ARGS(&pFxUsbPipe2));
     if (FAILED(hr))
     {   
         goto ConfigureContinuousReaderExit;
     }
 
     //Get a pointer to the completion callback.
-    hr = QueryInterface(IID_PPV_ARGS(&amp;pOnCompletionCallback));
+    hr = QueryInterface(IID_PPV_ARGS(&pOnCompletionCallback));
     if (FAILED(hr))
     {   
         goto ConfigureContinuousReaderExit;
     }
 
     //Get a pointer to the failure callback.
-    hr = QueryInterface(IID_PPV_ARGS(&amp;pOnFailureCallback));
+    hr = QueryInterface(IID_PPV_ARGS(&pOnFailureCallback));
     if (FAILED(hr))
     {   
         goto ConfigureContinuousReaderExit;
@@ -371,7 +374,7 @@ The continuous reader does not use power-managed queues to submit requests. Ther
 
 **Implement state management**
 
-1.  In your implementation of [**IPnpCallbackHardware::OnPrepareHardware**](https://msdn.microsoft.com/library/windows/hardware/ff556766), call [**IWDFUsbTargetPipe::QueryInterface**](BUGBUG) on the target pipe object and query for the [**IWDFIoTargetStateManagement**](https://msdn.microsoft.com/library/windows/hardware/ff559198) interface. Store the reference in a member variable of your device callback class.
+1.  In your implementation of [**IPnpCallbackHardware::OnPrepareHardware**](https://msdn.microsoft.com/library/windows/hardware/ff556766), call[**QueryInterface** on the target pipe object ([**IWDFUsbTargetPipe**](https://msdn.microsoft.com/library/windows/hardware/ff560391)) and query for the [**IWDFIoTargetStateManagement**](https://msdn.microsoft.com/library/windows/hardware/ff559198) interface. Store the reference in a member variable of your device callback class.
 2.  Implement the [**IPnpCallback**](https://msdn.microsoft.com/library/windows/hardware/ff556762) interface on the device callback object.
 3.  In the implementation of the [**IPnpCallback::OnD0Entry**](https://msdn.microsoft.com/library/windows/hardware/ff556799) method, call [**IWDFIoTargetStateManagement::Start**](https://msdn.microsoft.com/library/windows/hardware/ff559213) to start the continuous reader.
 4.  In the implementation of the [**IPnpCallback::OnD0Exit**](https://msdn.microsoft.com/library/windows/hardware/ff556803) method, call [**IWDFIoTargetStateManagement::Stop**](https://msdn.microsoft.com/library/windows/hardware/ff559217) to stop the continuous reader.
@@ -417,15 +420,15 @@ The following example code shows how to get a pointer to the IWDFIoTargetStateMa
 
     for (UCHAR index = 0; index < NumEndpoints; index++)
     {
-        hr = pFxInterface->RetrieveUsbPipeObject(index, &amp;pFxPipe);
+        hr = pFxInterface->RetrieveUsbPipeObject(index, &pFxPipe);
 
-        if (SUCCEEDED (hr) &amp;&amp; pFxPipe)
+        if (SUCCEEDED (hr) && pFxPipe)
         {
-            if ((pFxPipe->IsInEndPoint()) &amp;&amp; (pFxPipe->GetType()==UsbdPipeTypeInterrupt))
+            if ((pFxPipe->IsInEndPoint()) && (pFxPipe->GetType()==UsbdPipeTypeInterrupt))
             {
                 //Pipe is for an interrupt IN endpoint.
 
-                hr = pFxPipe->QueryInterface(IID_PPV_ARGS(&amp;m_pFxIoTargetInterruptPipeStateMgmt));
+                hr = pFxPipe->QueryInterface(IID_PPV_ARGS(&m_pFxIoTargetInterruptPipeStateMgmt));
 
                 if (m_pFxIoTargetInterruptPipeStateMgmt)
                 {               
@@ -450,7 +453,7 @@ The following example code shows how to get a pointer to the IWDFIoTargetStateMa
     }
 ```
 
-The following example code shows how to get a pointer to the [**IWDFIoTargetStateManagement**](https://msdn.microsoft.com/library/windows/hardware/ff559198) interface of the target pipe object in the [**IPnpCallback::OnPrepareHardware**](BUGBUG) method.
+The following example code shows how to get a pointer to the [**IWDFIoTargetStateManagement**](https://msdn.microsoft.com/library/windows/hardware/ff559198) interface of the target pipe object in the [**IPnpCallbackHardware::OnPrepareHardware**](https://msdn.microsoft.com/library/windows/hardware/ff556766) method.
 
 ```
  HRESULT CDeviceCallback::OnD0Entry(
@@ -614,7 +617,7 @@ The following example code shows how to get data from the buffer returned by [**
 
     if (pBuff)
     {
-        CopyMemory(&amp;CurrentData, pBuff, sizeof(CurrentData));
+        CopyMemory(&CurrentData, pBuff, sizeof(CurrentData));
         sprintf_s(data, 20, "%d\n", CurrentData);
         OutputDebugString(data);
         pBuff = NULL;
@@ -635,7 +638,7 @@ The client driver can get notifications from the framework when a failure occurs
 2.  Make sure the **QueryInterface** implementation of the device callback object increments the reference count of the callback object and then returns the [**IUsbTargetPipeContinuousReaderCallbackReadersFailed**](https://msdn.microsoft.com/library/windows/hardware/ff556914) interface pointer.
 3.  In the implementation of the [**IUsbTargetPipeContinuousReaderCallbackReadersFailed::OnReaderFailure**](https://msdn.microsoft.com/library/windows/hardware/ff556915) method, provide error handling of the failed read request.
 
-    If the continuous reader fails to complete a read request and the client driver provides a failure callback, the framework invokes the [**OnReaderFailure**](BUGBUG) method. The framework provides an HRESULT value in the *hrStatus* parameter that indicates the error code that occurred in the target pipe object. Based on that error code you might provide certain error handling. For example, if you want the framework to reset the pipe and then restart the continuous reader, make sure that the callback returns TRUE.
+    If the continuous reader fails to complete a read request and the client driver provides a failure callback, the framework invokes the [**IUsbTargetPipeContinuousReaderCallbackReadersFailed::OnReaderFailure**](https://msdn.microsoft.com/library/windows/hardware/ff556915) method. The framework provides an HRESULT value in the *hrStatus* parameter that indicates the error code that occurred in the target pipe object. Based on that error code you might provide certain error handling. For example, if you want the framework to reset the pipe and then restart the continuous reader, make sure that the callback returns TRUE.
 
     **Note**  Do not call [**IWDFIoTargetStateManagement::Start**](https://msdn.microsoft.com/library/windows/hardware/ff559213) and [**IWDFIoTargetStateManagement::Stop**](https://msdn.microsoft.com/library/windows/hardware/ff559217) within the failure callback.
 
@@ -749,24 +752,11 @@ The following example code shows an implementation of a failure callback. If a r
 If the client driver does not provide a failure callback and an error occurs, the framework resets the USB pipe and restarts the continuous reader.
 
 ## Related topics
-
-
-[USB I/O Transfers](usb-device-i-o.md)
-
-[How to enumerate USB pipes](how-to-get-usb-pipe-handles.md)
-
-[How to Select a Configuration for a USB Device](how-to-select-a-configuration-for-a-usb-device.md)
-
-[How to select an alternate setting in a USB interface](select-a-usb-alternate-setting.md)
-
-[Common tasks for USB client drivers](wdk-resources-for-usb-driver-development.md)
-
- 
-
- 
-
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20How%20to%20use%20the%20continuous%20reader%20for%20reading%20data%20from%20a%20USB%20pipe%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
-
+[USB I/O Transfers](usb-device-i-o.md)  
+[How to enumerate USB pipes](how-to-get-usb-pipe-handles.md)  
+[How to Select a Configuration for a USB Device](how-to-select-a-configuration-for-a-usb-device.md)  
+[How to select an alternate setting in a USB interface](select-a-usb-alternate-setting.md)  
+[Common tasks for USB client drivers](wdk-resources-for-usb-driver-development.md)  
 
 
 

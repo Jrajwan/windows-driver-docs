@@ -3,7 +3,22 @@ title: Filtering IRPs and Fast I/O
 author: windows-driver-content
 description: Filtering IRPs and Fast I/O
 ms.assetid: fad124b0-525d-4ff9-8f2c-3817fc76685c
-keywords: ["filter drivers WDK file system , IRP filtering", "file system filter drivers WDK , IRP filtering", "IRPs WDK file system", "filtering IRPs WDK file system", "filtering fast I/O WDK file system", "fast I/O filtering WDK file system", "I/O WDK file systems", "dispatch routines WDK file system", "I/O requests WDK file system"]
+keywords:
+- filter drivers WDK file system , IRP filtering
+- file system filter drivers WDK , IRP filtering
+- IRPs WDK file system
+- filtering IRPs WDK file system
+- filtering fast I/O WDK file system
+- fast I/O filtering WDK file system
+- I/O WDK file systems
+- dispatch routines WDK file system
+- I/O requests WDK file system
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Filtering IRPs and Fast I/O
@@ -34,6 +49,5 @@ This section covers the following topics:
  
 
 
---------------------
 
 

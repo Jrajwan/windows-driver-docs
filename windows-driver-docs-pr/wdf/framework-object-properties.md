@@ -3,13 +3,23 @@ title: Framework Object Properties
 author: windows-driver-content
 description: Framework Object Properties
 ms.assetid: d95a7f51-fe22-4cd6-8c46-6d571f7d9169
-keywords: ["framework objects WDK KMDF , properties", "properties WDK KMDF", "get method WDK KMDF", "set method WDK KMDF"]
+keywords:
+- framework objects WDK KMDF , properties
+- properties WDK KMDF
+- get method WDK KMDF
+- set method WDK KMDF
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Framework Object Properties
 
 
-## <a href="" id="ddk-framework-object-properties-df"></a>
+
 
 
 Most framework objects contain sets of properties. Properties represent information that is available to a driver. From the driver's perspective, some properties are read-only and some are read/write.

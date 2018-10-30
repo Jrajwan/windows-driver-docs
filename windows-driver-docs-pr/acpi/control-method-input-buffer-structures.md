@@ -2,13 +2,13 @@
 title: Control Method Input Buffer Structures
 author: windows-driver-content
 description: Control Method Input Buffer Structures
-MS-HAID:
-- 'acpi-meth-eval-dg\_4c8a9454-7235-414f-812d-77a0ae4fe0fa.xml'
-- 'acpi.control\_method\_input\_buffer\_structures'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 41d4c53f-9dc7-4723-9707-ae48ff07f5f4
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Control Method Input Buffer Structures
@@ -49,6 +49,5 @@ To obtain the path and name of child objects in the ACPI namespace of a device, 
  
 
 
---------------------
 
 

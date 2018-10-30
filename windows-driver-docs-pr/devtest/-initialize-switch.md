@@ -1,14 +1,21 @@
 ---
 title: /Initialize Switch
-description: The /Initialize switch of the Enhanced Storage Certificate Management tool initializes the authentication silo certificate (ASC) store in an IEEE 1667-compliant USB storage device to its original manufacturer's state.Note  In this topic, the specified IEEE 1667-compliant USB storage device is referred to as the target device.�
+description: The /Initialize switch initializes the authentication silo certificate (ASC) store in an IEEE 1667-compliant USB storage device to its original manufacturer's state.
 ms.assetid: 4e04a099-8ad6-4eb6-9ac7-d466b7d828d4
-keywords: ["/Initialize Switch Driver Development Tools"]
+keywords:
+- /Initialize Switch Driver Development Tools
 topic_type:
 - apiref
 api_name:
 - /Initialize
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # /Initialize Switch
@@ -20,7 +27,7 @@ The **/Initialize** switch of the Enhanced Storage Certificate Management tool i
 
  
 
-``` syntax
+```
     EhStorCertMgrCmd /Initialize  -Volume:
     VolumeName 
     [-Quiet]
@@ -58,7 +65,6 @@ EhStorCertMgrCmd /Initialize -Volume:"\\?\usbstor#ieee1667control&ven_&prod_&rev
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20/Initialize%20Switch%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

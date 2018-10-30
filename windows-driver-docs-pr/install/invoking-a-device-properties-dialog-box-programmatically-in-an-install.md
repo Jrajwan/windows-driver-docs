@@ -1,8 +1,20 @@
 ---
-title: Invoking a Device Properties Dialog Box Programmatically in an Installation Application
+title: Invoke Device Properties Dialog Box in Installation Application
 description: Invoking a Device Properties Dialog Box Programmatically in an Installation Application
 ms.assetid: c573acac-581e-44f1-b46b-eceb1f3d5484
-keywords: ["device properties dialog box WDK device installations", "invoking device properties dialog box", "DeviceProperties_RunDLL WDK device installations", "programmatically invoke device properties dialog box WDK", "pDeviceProperties function pointer WDK", "machin"]
+keywords:
+- device properties dialog box WDK device installations
+- invoking device properties dialog box
+- DeviceProperties_RunDLL WDK device installations
+- programmatically invoke device properties dialog box WDK
+- pDeviceProperties function pointer WDK
+- machin
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Invoking a Device Properties Dialog Box Programmatically in an Installation Application
@@ -10,15 +22,15 @@ keywords: ["device properties dialog box WDK device installations", "invoking de
 
 To invoke the device properties dialog box programmatically in an installation application, the application code should do the following:
 
--   Include macro definitions and type definitions in the application code that ensure that the appropriate version of [DeviceProperties\_RunDLL](deviceproperties-rundll-function-prototype.md) is linked when the application is built. Windows supports a Unicode version and an ASCII version.
+-   Include macro definitions and type definitions in the application code that ensure that the appropriate version of [DeviceProperties_RunDLL](deviceproperties-rundll-function-prototype.md) is linked when the application is built. Windows supports a Unicode version and an ASCII version.
 
 -   Load *devmgr.dll*.
 
--   Obtain a pointer to the **DeviceProperties\_RunDLL** function.
+-   Obtain a pointer to the **DeviceProperties_RunDLL** function.
 
--   Call **DeviceProperties\_RunDLL**, supplying the appropriate parameters.
+-   Call **DeviceProperties_RunDLL**, supplying the appropriate parameters.
 
-The following code example shows how to define a *pDeviceProperties* function pointer that references the **DeviceProperties\_RunDLL** function. If the \_UNICODE macro is defined when the code is complied, *pDeviceProperties* is a pointer to the Unicode version of the function; otherwise *pDeviceProperties* is a pointer to the ASCII version of the function.
+The following code example shows how to define a *pDeviceProperties* function pointer that references the **DeviceProperties_RunDLL** function. If the _UNICODE macro is defined when the code is complied, *pDeviceProperties* is a pointer to the Unicode version of the function; otherwise *pDeviceProperties* is a pointer to the ASCII version of the function.
 
 ```
 #ifdef _UNICODE 
@@ -42,7 +54,7 @@ The following code example shows how to define a *pDeviceProperties* function po
 PDEVICEPROPERTIES pDeviceProperties;
 ```
 
-The following code example uses the definition of *pDeviceProperties* that was provided in the preceding code example and shows how to load *devmgr.dll* programmatically and how to obtain the function pointer to the appropriate version of **DeviceProperties\_RunDLL**.
+The following code example uses the definition of *pDeviceProperties* that was provided in the preceding code example and shows how to load *devmgr.dll* programmatically and how to obtain the function pointer to the appropriate version of **DeviceProperties_RunDLL**.
 
 ```
 HINSTANCE  hDevMgr = LoadLibrary(_TEXT("devmgr.dll"));
@@ -51,7 +63,7 @@ HINSTANCE  hDevMgr = LoadLibrary(_TEXT("devmgr.dll"));
 }
 ```
 
-After obtaining a *pDeviceProperties* function pointer, you must supply a computer name and [device instance identifier](device-instance-ids.md) in a call to **DeviceProperties\_RunDLL**. The following code example illustrates the appropriate format and requirements for these items:
+After obtaining a *pDeviceProperties* function pointer, you must supply a computer name and [device instance identifier](device-instance-ids.md) in a call to **DeviceProperties_RunDLL**. The following code example illustrates the appropriate format and requirements for these items:
 
 -   (Windows XP and later) An optional *machine-name-parameter* field is not supplied, which indicates, by default, that the computer is the local computer. A required *device-instance-ID-parameter* field supplies the device instance identifier "root\\system\\0000".
     ```
@@ -60,7 +72,7 @@ After obtaining a *pDeviceProperties* function pointer, you must supply a comput
     };
     ```
 
--   (Windows XP and later) An optional *machine-name-parameter* field is not supplied, which indicates, by default, that the computer is the local computer. A required *device-instance-ID-parameter* field supplies the device instance identifier "PCI\\VEN\_8086&DEV\_2445 &SUBSYS\_010E1028&REV\_12\\3&172E68DD&0&FD".
+-   (Windows XP and later) An optional *machine-name-parameter* field is not supplied, which indicates, by default, that the computer is the local computer. A required *device-instance-ID-parameter* field supplies the device instance identifier "PCI\\VEN_8086&DEV_2445 &SUBSYS_010E1028&REV_12\\3&172E68DD&0&FD".
     ```
     if (pDeviceProperties){
      pDeviceProperties(m_hWnd, NULL, _TEXT("/DeviceID PCI\\VEN_8086\&DEV_2445\&SUBSYS_010E1028\&REV_12\\3\&172E68DD\&0\&FD"), NULL);

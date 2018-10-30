@@ -1,9 +1,18 @@
 ---
-title: Handling SRB\_FUNCTION\_RESET\_BUS
+title: Handling SRB_FUNCTION_RESET_BUS
 author: windows-driver-content
-description: Handling SRB\_FUNCTION\_RESET\_BUS
+description: Handling SRB_FUNCTION_RESET_BUS
 ms.assetid: 285cbd5c-e364-4f0f-9020-0bc6f3d45cac
-keywords: ["SCSI miniport drivers WDK storage , HwScsiStartIo", "HwScsiStartIo", "SRB_FUNCTION_RESET_BUS"]
+keywords:
+- SCSI miniport drivers WDK storage , HwScsiStartIo
+- HwScsiStartIo
+- SRB_FUNCTION_RESET_BUS
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Handling SRB\_FUNCTION\_RESET\_BUS
@@ -21,6 +30,5 @@ However, it is possible for the [**HwScsiStartIo**](https://msdn.microsoft.com/l
  
 
 
---------------------
 
 

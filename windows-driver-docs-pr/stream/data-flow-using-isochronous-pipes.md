@@ -2,20 +2,28 @@
 title: Data Flow Using Isochronous Pipes
 author: windows-driver-content
 description: Data Flow Using Isochronous Pipes
-MS-HAID:
-- 'usbcmdds\_df2cba6f-05d7-4c1c-a1cb-e9a24071f039.xml'
-- 'stream.data\_flow\_using\_isochronous\_pipes'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: a66f4191-53ce-4ca2-aae7-8fb24a1a9a16
-keywords: ["isochronous pipes WDK USBCAMD2", "Windows 2000 Kernel Streaming Model WDK , USBCAMD2 minidriver library", "Streaming Model WDK Windows 2000 Kernel , USBCAMD2 minidriver library", "Kernel Streaming Model WDK , USBCAMD2 minidriver library", "USBCAMD2 minidriver library WDK Windows 2000 Kernel Streaming", "USB-based streaming cameras WDK USBCAMD2", "cameras WDK USBCAMD2", "data flow WDK USBCAMD2"]
+keywords:
+- isochronous pipes WDK USBCAMD2
+- Windows 2000 Kernel Streaming Model WDK , USBCAMD2 minidriver library
+- Streaming Model WDK Windows 2000 Kernel , USBCAMD2 minidriver library
+- Kernel Streaming Model WDK , USBCAMD2 minidriver library
+- USBCAMD2 minidriver library WDK Windows 2000 Kernel Streaming
+- USB-based streaming cameras WDK USBCAMD2
+- cameras WDK USBCAMD2
+- data flow WDK USBCAMD2
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Data Flow Using Isochronous Pipes
 
 
-## <a href="" id="ddk-data-flow-using-isochronous-pipes-ksg"></a>
+
 
 
 USBCAMD2 begins streaming on the isochronous pipe by requesting two transfers of 32 packets. Each packet has a maximum size that corresponds to the maximum size in the selected alternate setting.
@@ -41,7 +49,5 @@ While streaming is in progress, USBCAMD2 and the camera minidriver repeat the fo
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bstream\stream%5D:%20Data%20Flow%20Using%20Isochronous%20Pipes%20%20RELEASE:%20%288/23/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

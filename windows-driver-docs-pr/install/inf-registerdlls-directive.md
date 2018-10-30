@@ -2,25 +2,30 @@
 title: INF RegisterDlls Directive
 description: A RegisterDlls directive references one or more INF sections used to specify files that are OLE controls and require self-registration.
 ms.assetid: 59da13e6-f801-4efe-8cd3-d0305e503c24
-keywords: ["INF RegisterDlls Directive Device and Driver Installation"]
+keywords:
+- INF RegisterDlls Directive Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF RegisterDlls Directive
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF RegisterDlls Directive
 
 
-**Note**  If you are building a universal or mobile driver package, this directive is not valid. See [Using a Universal INF File](using-a-configurable-inf-file.md).
-
- 
+**Note**  If you are building a universal or mobile driver package, this directive is not valid. You can use the [Reg2inf tool](../devtest/reg2inf.md) to convert existing [INF RegisterDlls directives](../install/inf-registerdlls-directive.md) into [INF AddReg directives](../install/inf-addreg-directive.md) in order to make a driver package universal.  For more info, see [Using a Universal INF File](using-a-universal-inf-file.md).
 
 A **RegisterDlls** directive references one or more INF sections used to specify files that are OLE controls and require self-registration.
 
-``` syntax
+```
 [DDInstall]
   
 RegisterDlls=register-dll-section[,register-dll-section]...
@@ -28,7 +33,7 @@ RegisterDlls=register-dll-section[,register-dll-section]...
 
 Each INF section referenced by a **RegisterDlls** directive must have the following entry format:
 
-``` syntax
+```
 [register-dll-section] 
   
 dirid,[subdir],filename,registration-flags[,[timeout][,argument]] 
@@ -51,10 +56,10 @@ Identifies the file name of the OLE control to be registered.
 <a href="" id="registration-flags"></a>*registration-flags*  
 Indicates the registration operations to perform on the OLE control. One or both of the following flags must be specified.
 
-<a href="" id="0x00000001--flg-regsvr-dllregister-"></a>**0x00000001** (FLG\_REGSVR\_DLLREGISTER)  
+<a href="" id="0x00000001--flg-regsvr-dllregister-"></a>**0x00000001** (FLG_REGSVR_DLLREGISTER)  
 Call the OLE control's **DllRegisterServer** function (described in the Windows SDK documentation).
 
-<a href="" id="0x00000002--flg-regsvr-dllinstall--"></a>**0x00000002** (FLG\_REGSVR\_DLLINSTALL)   
+<a href="" id="0x00000002--flg-regsvr-dllinstall--"></a>**0x00000002** (FLG_REGSVR_DLLINSTALL)   
 Call the OLE control's **DllInstall** function (described in the Windows SDK documentation).
 
 <a href="" id="timeout"></a>*timeout*  

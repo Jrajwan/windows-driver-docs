@@ -1,11 +1,14 @@
 ---
-title: EFI\_BATTERY\_CHARGING\_COMPLETION\_TOKEN
+title: EFI_BATTERY_CHARGING_COMPLETION_TOKEN
 author: windows-driver-content
-description: EFI\_BATTERY\_CHARGING\_COMPLETION\_TOKEN
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: EFI_BATTERY_CHARGING_COMPLETION_TOKEN
 ms.assetid: 1151643e-8b22-4034-b043-ac4d44c01082
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # EFI\_BATTERY\_CHARGING\_COMPLETION\_TOKEN
@@ -46,6 +49,5 @@ EFI\_BATTERY\_CHARGING\_COMPLETION\_TOKEN is returned in the *CompletionToken* p
 [EFI\_BATTERY\_CHARGING\_PROTOCOL.ChargeBattery](efi-battery-charging-protocolchargebattery.md)  
 [EFI\_BATTERY\_CHARGING\_STATUS](efi-battery-charging-status.md)  
 
---------------------
 
 

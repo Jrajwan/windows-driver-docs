@@ -2,13 +2,22 @@
 title: Intermediate Driver UpperRange And LowerRange INF File Entries
 description: Intermediate Driver UpperRange And LowerRange INF File Entries
 ms.assetid: 12a8561c-d410-45d0-8e96-898af6343f89
-keywords: ["INF files WDK network , intermediate drivers", "UpperRange INF file entries", "LowerRange INF file entries"]
+keywords:
+- INF files WDK network , intermediate drivers
+- UpperRange INF file entries
+- LowerRange INF file entries
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Intermediate Driver UpperRange And LowerRange INF File Entries
 
 
-## <a href="" id="ddk-intermediate-driver-upperrange-and-lowerrange-inf-file-entries-ng"></a>
+
 
 
 This topic describes how to use the **UpperRange** and **LowerRange** INF file entries to define NDIS intermediate driver binding relationships.

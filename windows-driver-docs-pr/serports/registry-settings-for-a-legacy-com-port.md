@@ -2,20 +2,24 @@
 title: Registry Settings for a Legacy COM Port
 author: windows-driver-content
 description: Registry Settings for a Legacy COM Port
-MS-HAID:
-- 'sseovr\_4e5ce195-0190-441b-8e78-6ca67c77e206.xml'
-- 'serports.registry\_settings\_for\_a\_legacy\_com\_port'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 043ac1f5-eeb1-4828-8417-b3c6d76b4322
-keywords: ["Serial driver WDK , COM ports", "COM ports WDK serial devices", "serial devices WDK , COM ports", "legacy COM ports WDK serial devices"]
+keywords:
+- Serial driver WDK , COM ports
+- COM ports WDK serial devices
+- serial devices WDK , COM ports
+- legacy COM ports WDK serial devices
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Registry Settings for a Legacy COM Port
 
 
-## <a href="" id="ddk-registry-settings-for-a-legacy-com-port-kg"></a>
+
 
 
 This topic describes the registry settings that Serial uses with legacy [COM ports](configuration-of-com-ports.md). Serial always configures a legacy serial device as a COM port.
@@ -79,7 +83,5 @@ Boolean flag that indicates whether Serial has previously reported the device to
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bserports\serports%5D:%20Registry%20Settings%20for%20a%20Legacy%20COM%20Port%20%20RELEASE:%20%288/4/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

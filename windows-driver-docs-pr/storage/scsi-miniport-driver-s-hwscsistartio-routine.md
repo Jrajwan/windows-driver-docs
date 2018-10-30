@@ -3,7 +3,16 @@ title: SCSI Miniport Driver's HwScsiStartIo Routine
 author: windows-driver-content
 description: SCSI Miniport Driver's HwScsiStartIo Routine
 ms.assetid: cb818e5f-b91f-44cb-972b-22f75459edeb
-keywords: ["SCSI miniport drivers WDK storage , HwScsiStartIo", "HwScsiStartIo", "incoming I/O requests WDK SCSI"]
+keywords:
+- SCSI miniport drivers WDK storage , HwScsiStartIo
+- HwScsiStartIo
+- incoming I/O requests WDK SCSI
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # SCSI Miniport Driver's HwScsiStartIo Routine
@@ -23,6 +32,5 @@ If the **DriverEntry** routine requested that memory be allocated for SRB extens
  
 
 
---------------------
 
 

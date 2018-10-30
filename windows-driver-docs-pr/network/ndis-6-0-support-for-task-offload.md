@@ -2,13 +2,27 @@
 title: NDIS 6.0 Support for Task Offload
 description: NDIS 6.0 Support for Task Offload
 ms.assetid: b083be9e-3b06-4bb0-b7e6-13b246fddd90
-keywords: ["checksum tasks WDK networking", "LSOV1 WDK networking", "IPsec WDK networking", "large send offload WDK networking", "LSOV2 WDK networking", "connection offload WDK networking", "chimney offload WDK networking", "task offload porting WDK networking , type"]
+keywords:
+- checksum tasks WDK networking
+- LSOV1 WDK networking
+- IPsec WDK networking
+- large send offload WDK networking
+- LSOV2 WDK networking
+- connection offload WDK networking
+- chimney offload WDK networking
+- task offload porting WDK networking , type
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NDIS 6.0 Support for Task Offload
 
 
-## <a href="" id="ddk-ndis-6-0-support-for-task-offload-ng"></a>
+
 
 
 NDIS 6.0 and later support updated versions of the following task offload services, which are provided by NDIS 5.1 and earlier drivers:

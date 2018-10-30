@@ -2,13 +2,21 @@
 title: Specifying WAN Endpoints for a WAN Adapter
 description: Specifying WAN Endpoints for a WAN Adapter
 ms.assetid: e6dd12c3-03e3-4f7d-8ad7-2511bf46c4f8
-keywords: ["add-registry-sections WDK networking , WAN adapter endpoints", "WAN adapter endpoints WDK networking"]
+keywords:
+- add-registry-sections WDK networking , WAN adapter endpoints
+- WAN adapter endpoints WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Specifying WAN Endpoints for a WAN Adapter
 
 
-## <a href="" id="ddk-specifying-wan-endpoints-for-a-wan-adapter-ng"></a>
+
 
 
 A INF file for a WAN adapter must add a **WanEndpoints** value to the instance key for the adapter. **WanEndpoints** is a REG\_DWORD value that specifies the number of endpoints (also known as channels, circuits or bearer channels) that are supported by the WAN adapter. For example, the **WanEndpoints** value for a *basic rate interface* (BRI) ISDN adapter is 2, whereas the **WanEndpoints** value for a *primary rate interface* (PRI) ISDN adapter is typically 23.

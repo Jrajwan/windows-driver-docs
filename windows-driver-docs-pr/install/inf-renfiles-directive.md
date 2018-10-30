@@ -2,25 +2,32 @@
 title: INF RenFiles Directive
 description: A RenFiles directive references an INF-writer-defined section elsewhere in the INF file, which causes that list of files to be renamed in the context of operations on the section in which the referring RenFiles directive is specified.
 ms.assetid: 269171f7-88f6-47bb-9997-8fdcbe3fa688
-keywords: ["INF RenFiles Directive Device and Driver Installation"]
+keywords:
+- INF RenFiles Directive Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF RenFiles Directive
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF RenFiles Directive
 
 
-**Note**  If you are building a universal or mobile driver package, this directive is not valid. See [Using a Universal INF File](using-a-configurable-inf-file.md).
+**Note**  If you are building a universal or mobile driver package, this directive is not valid. See [Using a Universal INF File](using-a-universal-inf-file.md).
 
  
 
 A **RenFiles** directive references an INF-writer-defined section elsewhere in the INF file, which causes that list of files to be renamed in the context of operations on the section in which the referring **RenFiles** directive is specified.
 
-``` syntax
+```
 [DDInstall] | 
 [DDInstall.CoInstallers] | 
 [ClassInstall32] | 
@@ -38,7 +45,7 @@ A **RenFiles** directive can be specified within any of the sections shown in th
 
 Each named section referenced by a **RenFiles** directive has one or more entries of the following form:
 
-``` syntax
+```
 [file-list-section]
  
 new-dest-file-name,old-source-file-name 

@@ -2,20 +2,24 @@
 title: System-Supplied Parallel Drivers
 author: windows-driver-content
 description: System-Supplied Parallel Drivers
-MS-HAID:
-- 'sspd\_27044104-2b16-450e-a56b-8621d4d5382c.xml'
-- 'parports.system\_supplied\_parallel\_drivers'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: c38d31f9-ad7c-40aa-9464-6cc6ac03c9a5
-keywords: ["parallel ports WDK , system supplied drivers", "system-supplied parallel drivers WDK", "parallel drivers WDK", "parallel devices WDK , system supplied drivers"]
+keywords:
+- parallel ports WDK , system supplied drivers
+- system-supplied parallel drivers WDK
+- parallel drivers WDK
+- parallel devices WDK , system supplied drivers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # System-Supplied Parallel Drivers
 
 
-## <a href="" id="ddk-system-supplied-parallel-drivers-kg"></a>
+
 
 
 This section describes the following about the system-supplied parallel drivers for parallel ports and devices that are attached to parallel ports:
@@ -41,6 +45,5 @@ For more information about support for parallel ports and devices, see:
  
 
 
---------------------
 
 

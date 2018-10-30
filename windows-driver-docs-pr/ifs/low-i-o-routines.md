@@ -3,7 +3,17 @@ title: Low I/O Routines
 author: windows-driver-content
 description: Low I/O Routines
 ms.assetid: 5317917d-9abc-43f9-ab4a-f070e491c816
-keywords: ["RDBSS WDK file systems , low I/O routines", "Redirected Drive Buffering Subsystem WDK file systems , low I/O routines", "low I/O routines WDK RDBSS", "I/O WDK RDBSS"]
+keywords:
+- RDBSS WDK file systems , low I/O routines
+- Redirected Drive Buffering Subsystem WDK file systems , low I/O routines
+- low I/O routines WDK RDBSS
+- I/O WDK RDBSS
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Low I/O Routines
@@ -52,6 +62,5 @@ Low I/O routines represent the basic IRP\_MJ\_XXX asynchronous operations on a f
  
 
 
---------------------
 
 

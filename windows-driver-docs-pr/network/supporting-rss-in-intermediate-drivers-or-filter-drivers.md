@@ -2,13 +2,25 @@
 title: Supporting RSS in Intermediate Drivers or Filter Drivers
 description: Supporting RSS in Intermediate Drivers or Filter Drivers
 ms.assetid: 5e1bfbb0-0b7a-4a9d-a228-4089f7208880
-keywords: ["receive-side scaling WDK networking , intermediate drivers", "RSS WDK networking , intermediate drivers", "receive-side scaling WDK networking , filter drivers", "RSS WDK networking , filter drivers", "filter drivers WDK RSS", "intermediate drivers WDK RSS"]
+keywords:
+- receive-side scaling WDK networking , intermediate drivers
+- RSS WDK networking , intermediate drivers
+- receive-side scaling WDK networking , filter drivers
+- RSS WDK networking , filter drivers
+- filter drivers WDK RSS
+- intermediate drivers WDK RSS
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Supporting RSS in Intermediate Drivers or Filter Drivers
 
 
-## <a href="" id="ddk-supporting-rss-in-intermediate-drivers-or-filter-drivers-ng"></a>
+
 
 
 All intermediate drivers and filter drivers should, at a minimum, pass on OID requests, other requests, and status indications. Intermediate drivers or filter drivers should provide additional driver-specific support for receive side scaling (RSS) if the driver does any of the following:

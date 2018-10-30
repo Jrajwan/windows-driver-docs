@@ -2,13 +2,13 @@
 title: Data Transfer Between Legacy Application and Windows Vista Driver
 author: windows-driver-content
 description: Data Transfer Between Legacy Application and Windows Vista Driver
-MS-HAID:
-- 'WIA\_Fundamentals\_b19b14f0-63a5-4627-8122-7d1b29a8b06a.xml'
-- 'image.data\_transfer\_between\_legacy\_application\_and\_windows\_vista\_driver'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 83817277-3526-4f64-8e7c-7e02c8cd77bd
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Data Transfer Between Legacy Application and Windows Vista Driver
@@ -45,7 +45,5 @@ The **IWiaDataTransfer**, **IWiaTransfer**, **IWiaItem**, **IWiaItem2**, and **I
 ## Related topics
 [**IWiaMiniDrvTransferCallback**](https://msdn.microsoft.com/library/windows/hardware/jj151550)  
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bimage\image%5D:%20Data%20Transfer%20Between%20Legacy%20Application%20and%20Windows%20Vista%20Driver%20%20RELEASE:%20%288/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

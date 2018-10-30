@@ -2,14 +2,18 @@
 title: Connections Between Two Unit Plugs in Different AV/C Units
 author: windows-driver-content
 description: Connections Between Two Unit Plugs in Different AV/C Units
-MS-HAID:
-- 'AVCguide\_ff4d94ee-f403-4133-8dc8-515840ee0e5e.xml'
-- 'stream.connections\_between\_two\_unit\_plugs\_in\_different\_av\_c\_units'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: b9c45304-33a2-4d02-9c38-1d124a33f0f2
-keywords: ["connections WDK AV/C", "AV/C WDK , connection scenarios", "AVCCONNECTINFO", "AVCPRECONNECTINFO"]
+keywords:
+- connections WDK AV/C
+- AV/C WDK , connection scenarios
+- AVCCONNECTINFO
+- AVCPRECONNECTINFO
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Connections Between Two Unit Plugs in Different AV/C Units
@@ -172,7 +176,5 @@ The following list describes the meaning of values that appear in the preceding 
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bstream\stream%5D:%20Connections%20Between%20Two%20Unit%20Plugs%20in%20Different%20AV/C%20Units%20%20RELEASE:%20%288/23/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

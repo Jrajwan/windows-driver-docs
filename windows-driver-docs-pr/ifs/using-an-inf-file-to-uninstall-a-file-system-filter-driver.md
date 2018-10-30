@@ -3,7 +3,15 @@ title: Using an INF File to Uninstall a File System Filter Driver
 author: windows-driver-content
 description: Using an INF File to Uninstall a File System Filter Driver
 ms.assetid: e41deb65-7977-479c-ac42-c550aa6a3f1b
-keywords: ["INF files WDK file system , uninstalling filter drivers", "uninstalling filter drivers WDK file system"]
+keywords:
+- INF files WDK file system , uninstalling filter drivers
+- uninstalling filter drivers WDK file system
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Using an INF File to Uninstall a File System Filter Driver
@@ -55,6 +63,5 @@ For more information about uninstall applications, see [Writing a Device Install
  
 
 
---------------------
 
 

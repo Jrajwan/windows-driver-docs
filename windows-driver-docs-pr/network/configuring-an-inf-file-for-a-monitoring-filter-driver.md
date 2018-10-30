@@ -2,13 +2,21 @@
 title: Configuring an INF File for a Monitoring Filter Driver
 description: Configuring an INF File for a Monitoring Filter Driver
 ms.assetid: b45c6f40-7254-4cc1-a007-d40eaa74a290
-keywords: ["INF files WDK network , filter drivers", "monitoring filter drivers WDK networking"]
+keywords:
+- INF files WDK network , filter drivers
+- monitoring filter drivers WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Configuring an INF File for a Monitoring Filter Driver
 
 
-## <a href="" id="ddk-monitoring-filter-driver-installation-ng"></a>
+
 
 
 The following NDIS filter driver installation issues are associated with monitoring filter drivers:

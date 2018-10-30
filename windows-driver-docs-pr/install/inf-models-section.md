@@ -1,14 +1,21 @@
 ---
 title: INF Models Section
-description: A per-manufacturer Models section identifies at least one device, references the DDInstall section of the INF file for that device, and specifies a unique-to-the-model-section hardware identifier (ID) for that device.
+description: A Models section identifies a device, references its DDInstall section, and specifies a hardware identifier for the device.
 ms.assetid: b870e8fb-21b4-439b-b858-c45bf9be2ec1
-keywords: ["INF Models Section Device and Driver Installation"]
+keywords:
+- INF Models Section Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF Models Section
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF Models Section
@@ -18,7 +25,7 @@ A per-manufacturer *Models* section identifies at least one device, references t
 
 Any entry in the per-manufacturer *Models* section can also specify one or more additional device IDs for models that are compatible with the device designated by the initial hardware ID and are controlled by the same drivers.
 
-``` syntax
+```
 [models-section-name] |
 [models-section-name.TargetOSVersion]  (Windows XP and later versions of Windows)
 
@@ -30,7 +37,7 @@ device-description=install-section-name[,hw-id][,compatible-id...]
 
 
 <a href="" id="device-description"></a>*device-description*  
-Identifies a device to be installed, expressed as any unique combination of visible characters or as a **%***strkey***%** token defined in an [**INF Strings section**](inf-strings-section.md). The maximum length, in characters, of a device description is LINE\_LEN.
+Identifies a device to be installed, expressed as any unique combination of visible characters or as a **%***strkey***%** token defined in an [**INF Strings section**](inf-strings-section.md). The maximum length, in characters, of a device description is LINE_LEN.
 
 <a href="" id="install-section-name"></a>*install-section-name*  
 Specifies the undecorated name of the INF install sections to be used for the device (and compatible models of device, if any). For more information, see [**INF *DDInstall* Section**](inf-ddinstall-section.md).

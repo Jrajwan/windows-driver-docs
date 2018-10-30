@@ -2,13 +2,22 @@
 title: Installation Requirements for Network Adapters
 description: Installation Requirements for Network Adapters
 ms.assetid: 682a262a-a712-4fab-a753-d0c6fc08bac8
-keywords: ["network adapter installation requirements WDK", "adapters WDK networking , installation requirements", "WAN WDK networking , adapter installation requirements"]
+keywords:
+- network adapter installation requirements WDK
+- adapters WDK networking , installation requirements
+- WAN WDK networking , adapter installation requirements
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Installation Requirements for Network Adapters
 
 
-## <a href="" id="ddk-installation-requirements-for-network-adapters-ng"></a>
+
 
 
 This topic summarizes the installation requirements for network adapters.

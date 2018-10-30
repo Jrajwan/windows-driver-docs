@@ -2,10 +2,13 @@
 title: UEFI USB function protocol
 author: windows-driver-content
 description: UEFI USB function protocol
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: eac35cf4-82b4-4d7e-ae69-8f506f12ae5d
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # UEFI USB function protocol
@@ -17,7 +20,7 @@ ms.assetid: eac35cf4-82b4-4d7e-ae69-8f506f12ae5d
 
 The USB function protocol defines a generic and lightweight USB transport in the UEFI environment. This protocol is used by flashing tools, USB mass storage mode, and other tools that require bidirectional communication between a device that is booted into the UEFI environment and a host computer.
 
-## <a href="" id="efi-usbfn-io-protocol"></a>EFI\_USBFN\_IO\_PROTOCOL
+## EFI\_USBFN\_IO\_PROTOCOL
 
 
 Like other UEFI device drivers, the entry point for a USB function driver attaches **EFI\_DRIVER\_BINDING\_PROTOCOL** to image handle of **EFI\_USBFN\_IO\_PROTOCOL** driver
@@ -186,6 +189,5 @@ The following table lists the functions that are supported in each version of th
  
 
 
---------------------
 
 

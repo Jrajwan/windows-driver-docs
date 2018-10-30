@@ -2,13 +2,28 @@
 title: Installing a Filter Driver
 description: Installing a Filter Driver
 ms.assetid: 48ffa6db-3254-4108-b8bb-5884b9168a9d
-keywords: ["Device setup WDK device installations , filter drivers", "device installations WDK , filter drivers", "installing devices WDK , filter drivers", "filter drivers WDK device installations", "device-specific filter drivers WDK device installations", "class filter drivers WDK device installations", "SetupInstallFilesFromInfSection", "UpperFilters", "LowerFilters"]
+keywords:
+- Device setup WDK device installations , filter drivers
+- device installations WDK , filter drivers
+- installing devices WDK , filter drivers
+- filter drivers WDK device installations
+- device-specific filter drivers WDK device installations
+- class filter drivers WDK device installations
+- SetupInstallFilesFromInfSection
+- UpperFilters
+- LowerFilters
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Installing a Filter Driver
 
 
-## <a href="" id="ddk-installing-a-filter-driver-dg"></a>
+
 
 
 A PnP filter driver can support a specific device or all devices in a setup class and can attach below a device's function driver (a lower filter) or above a device's function driver (an upper filter). See [Types of WDM Drivers](https://msdn.microsoft.com/library/windows/hardware/ff564862) for more information about PnP driver layers.
@@ -81,13 +96,13 @@ ServiceBinary = %12%\upperfilt.sys
 
 The device installation application would:
 
-1.  Call **SetupInstallFilesFromInfSection** for the \[upperfilter\_inst\] section.
+1.  Call **SetupInstallFilesFromInfSection** for the \[upperfilter_inst\] section.
 
-2.  Call **SetupInstallServicesFromInfSection** for the \[upperfilter\_inst.Services\] section.
+2.  Call **SetupInstallServicesFromInfSection** for the \[upperfilter_inst.Services\] section.
 
-3.  Call **SetupInstallFromInfSection** for the \[upperfilter\_inst\] section, once for each class key it wants to register the *upperfilt* service for.
+3.  Call **SetupInstallFromInfSection** for the \[upperfilter_inst\] section, once for each class key it wants to register the *upperfilt* service for.
 
-Each call would specify **SPINST\_REGISTRY** for the *Flags* argument, to indicate that only registry modifications need to be performed.
+Each call would specify **SPINST_REGISTRY** for the *Flags* argument, to indicate that only registry modifications need to be performed.
 
  
 

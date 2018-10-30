@@ -2,7 +2,22 @@
 title: Source and Destination Page Break
 description: Source and Destination Page Break
 ms.assetid: 11e3c064-96e8-40b8-8824-e32a5ce637e4
-keywords: ["memory-to-memory data transfers WDK NetDMA , page breaks", "data transfers WDK NetDMA , page breaks", "transferring data WDK NetDMA , page breaks", "DMA transfers WDK NetDMA , page breaks", "NetDMA WDK networking , page breaks", "source page breaks WDK NetDMA", "destination page breaks WDK NetDMA", "page breaks WDK NetDMA", "NetDMA 2.0 WDK networking , page breaks"]
+keywords:
+- memory-to-memory data transfers WDK NetDMA , page breaks
+- data transfers WDK NetDMA , page breaks
+- transferring data WDK NetDMA , page breaks
+- DMA transfers WDK NetDMA , page breaks
+- NetDMA WDK networking , page breaks
+- source page breaks WDK NetDMA
+- destination page breaks WDK NetDMA
+- page breaks WDK NetDMA
+- NetDMA 2.0 WDK networking , page breaks
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Source and Destination Page Break
@@ -12,7 +27,7 @@ keywords: ["memory-to-memory data transfers WDK NetDMA , page breaks", "data tra
 
  
 
-## <a href="" id="ddk-source-and-destination-page-break-ng"></a>
+
 
 
 The NetDMA interface before version 2.0 supports one physical address per descriptor for the source or destination of the DMA transfer. Because there is one address in each descriptor in NetDMA 1.0, even when the total length of DMA transfer is less than a 4 KB page or the total length that the DMA engine supports (typically 4 KB), if the source or destination spans multiple non-contiguous pages, the NetDMA interface must break the DMA transfer into multiple descriptors.

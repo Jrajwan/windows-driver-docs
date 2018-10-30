@@ -1,21 +1,27 @@
 ---
-title: Remote NDIS Communication
-description: Remote NDIS Communication
-ms.assetid: c9fd6e3b-bdcc-48f7-8b5a-d571d20917df
-keywords: ["Remote NDIS WDK networking , communication"]
+title: 'Remote NDIS Communication'
+author: windows-driver-content
+Description: 'Remote NDIS Communication'
+ms.assetid: abaa4434-4043-4265-92b9-81383c2080ce
+ms.author: windowsdriverdev
+ms.date: 07/31/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Remote NDIS Communication
 
 
-## <a href="" id="ddk-remote-ndis-communication-ng"></a>
+
 
 
 This section includes the following topics:
 
-[Remote NDIS Control Messages](https://msdn.microsoft.com/library/windows/hardware/ff570597)
+[Remote NDIS Control Messages](remote-ndis-control-messages.md)
 
-[Remote NDIS Data Message](https://msdn.microsoft.com/library/windows/hardware/ff570604)
+[Remote NDIS Data Message](remote-ndis-data-message.md)
 
 [Setting Device-Specific Parameters](setting-device-specific-parameters.md)
 
@@ -26,12 +32,4 @@ This section includes the following topics:
 [Remote NDIS Version](remote-ndis-version.md)
 
 [Status Values](status-values.md)
-
- 
-
- 
-
-
-
-
 

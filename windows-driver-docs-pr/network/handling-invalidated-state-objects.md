@@ -2,7 +2,14 @@
 title: Handling Invalidated State Objects
 description: Handling Invalidated State Objects
 ms.assetid: 83104164-e5f2-4aa4-aea2-1a1c1e6abe9c
-keywords: ["invalidating offloaded state WDK TCP chimney offload , offload target response"]
+keywords:
+- invalidating offloaded state WDK TCP chimney offload , offload target response
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Handling Invalidated State Objects
@@ -10,7 +17,7 @@ keywords: ["invalidating offloaded state WDK TCP chimney offload , offload targe
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-treatment-of-invalidated-state-objects-ng"></a>
+
 
 
 If the host stack requests to invalidate state, an offload target should respond as follows:

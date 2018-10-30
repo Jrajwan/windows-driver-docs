@@ -2,7 +2,15 @@
 title: Enumerating Installed Devices
 description: Enumerating Installed Devices
 ms.assetid: 98EF9A16-6415-4778-BB5D-C0B7160C1509
-keywords: ["enumerating installed devices WDK", "installed devices WDK , enumerating"]
+keywords:
+- enumerating installed devices WDK
+- installed devices WDK , enumerating
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Enumerating Installed Devices
@@ -12,7 +20,7 @@ You should not enumerate devices by using registry keys directly. Registry keys 
 
 To enumerate installed devices safely, follow these steps:
 
-1.  Use [**SetupDiGetClassDevs**](https://msdn.microsoft.com/library/windows/hardware/ff551069) or [**SetupDiGetClassDevsEx**](https://msdn.microsoft.com/library/windows/hardware/ff551072) to retrieve information for a set of devices that belong to a specified device setup class. To retrieve information only for devices that are present in the system, set DIGCF\_PRESENT in the *Flags* parameter.
+1.  Use [**SetupDiGetClassDevs**](https://msdn.microsoft.com/library/windows/hardware/ff551069) or [**SetupDiGetClassDevsEx**](https://msdn.microsoft.com/library/windows/hardware/ff551072) to retrieve information for a set of devices that belong to a specified device setup class. To retrieve information only for devices that are present in the system, set DIGCF_PRESENT in the *Flags* parameter.
 
 2.  Use [**SetupDiEnumDeviceInfo**](https://msdn.microsoft.com/library/windows/hardware/ff551010) to enumerate the devices in the set.
 

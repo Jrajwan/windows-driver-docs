@@ -1,12 +1,13 @@
 ---
-Description: 'This topic provides a brief overview about USB bulk transfers. It also provides step-by-step instructions about how a client driver can send and receive bulk data from the device.'
-MS-HAID:
-- 'usb-io\_9baaf14b-6b8e-484d-85ea-1e5bb2bbc7bf.xml'
-- 'buses.usb\_bulk\_and\_interrupt\_transfer'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+Description: This topic provides a brief overview about USB bulk transfers. 
 title: How to send USB bulk transfer requests
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # How to send USB bulk transfer requests
@@ -23,7 +24,7 @@ This topic provides a brief overview about USB bulk transfers. It also provides 
     -   [Step 2: Format and send a framework request object to the USB driver stack.](#step-2--format-and-send-a-framework-request-object-to-the-usb-driver-stack-)
     -   [Step 3: Implement a completion routine for the request.](#step-3--implement-a-completion-routine-for-the-request-)
 
-## <a href="" id="ddk-usb-bulk-and-interrupt-transfer-kg"></a>About bulk endpoints
+## About bulk endpoints
 
 
 A USB bulk endpoint can transfer large amounts of data. Bulk transfers are reliable that allow hardware error detection, and involves limited number of retries in the hardware. For transfers to bulk endpoints, bandwidth is not reserved on the bus. When there are multiple transfer requests that target different types of endpoints, the controller first schedules transfers for time critical data, such as isochronous and interrupt packets. Only if there is unused bandwidth available on the bus, the controller schedules bulk transfers. Where there is no other significant traffic on the bus, bulk transfer can be fast. However, when the bus is busy with other transfers, bulk data can wait indefinitely.
@@ -85,7 +86,7 @@ An application or a driver on the host always initiates a bulk transfer to send 
 
 Let's see how the client driver submits the request for a bulk transfer as a result of an application's or another driver's request. Alternatively, the driver can initiate the transfer on its own. Irrespective of the approach, a driver must have the transfer buffer and the request in order to initiate the bulk transfer.
 
-For a KMDF driver, the request is described in a framework request object (see [Framework Request Object Reference](BUGBUG)). The client driver calls methods of the request object by specifying the WDFREQUEST handle to send the request to the USB driver stack. If the client driver is sending a bulk transfer in response to a request from an application or another driver, the framework creates a request object and delivers the request to the client driver by using a framework queue object. In that case, the client driver may use that request for the purposes of sending the bulk transfer. If the client driver initiated the request, the driver may choose to allocate its own request object.
+For a KMDF driver, the request is described in a framework request object (see [WDF Request Object Reference](https://msdn.microsoft.com/library/windows/hardware/dn265664)). The client driver calls methods of the request object by specifying the WDFREQUEST handle to send the request to the USB driver stack. If the client driver is sending a bulk transfer in response to a request from an application or another driver, the framework creates a request object and delivers the request to the client driver by using a framework queue object. In that case, the client driver may use that request for the purposes of sending the bulk transfer. If the client driver initiated the request, the driver may choose to allocate its own request object.
 
 If the application or another driver sent or requested data, the transfer buffer is passed to the driver by the framework. Alternatively, the client driver can allocate the transfer buffer and create the request object if the driver initiates the transfer on its own.
 
@@ -136,14 +137,14 @@ Before you begin, make sure that you have this information:
 
 ### <a href="" id="step-1--get-the-transfer-buffer--"></a>Step 1: Get the transfer buffer.
 
-The transfer buffer or the transfer buffer MDL contains the data to send or receive. This topic assumes that you are sending or receiving data in a transfer buffer. The transfer buffer is described in a WDF memory object (see [Framework Memory Object Reference](BUGBUG)). To get the memory object associated with the transfer buffer, call one of these methods:
+The transfer buffer or the transfer buffer MDL contains the data to send or receive. This topic assumes that you are sending or receiving data in a transfer buffer. The transfer buffer is described in a WDF memory object (see [WDF Memory Object Reference](https://msdn.microsoft.com/library/windows/hardware/dn265645)). To get the memory object associated with the transfer buffer, call one of these methods:
 
 -   For a bulk IN transfer request, call the [**WdfRequestRetrieveOutputMemory**](https://msdn.microsoft.com/library/windows/hardware/ff550019) method.
 -   For a bulk OUT transfer request, call the [**WdfRequestRetrieveInputMemory**](https://msdn.microsoft.com/library/windows/hardware/ff550015) method.
 
 The client driver does not need to release this memory. The memory is associated with the parent request object and is released when the parent is released.
 
-### Step 2: Format and send a framework request object to the USB driver stack.
+### <a href="" id="step-2--format-and-send-a-framework-request-object-to-the-usb-driver-stack-"></a>Step 2: Format and send a framework request object to the USB driver stack.
 
 You can send the transfer request asynchronously or synchronously.
 
@@ -160,7 +161,7 @@ If you send the request synchronously, call these methods:
 -   [**WdfUsbTargetPipeWriteSynchronously**](https://msdn.microsoft.com/library/windows/hardware/ff551163)
 
 For code examples, see the Examples section of the reference topics for those methods.
-### Step 3: Implement a completion routine for the request.
+### <a href="" id="step-3--implement-a-completion-routine-for-the-request-"></a>Step 3: Implement a completion routine for the request.
 
 If the request is sent asynchronously, you must implement a completion routine to get notified when the USB driver stack completes the request. Upon completion, the framework invokes the driver's completion routine. The framework passes these parameters:
 
@@ -225,7 +226,7 @@ VOID Fx3EvtIoWrite(
 
     status = WdfRequestRetrieveInputMemory(
                                            Request,
-                                           &amp;reqMemory
+                                           &reqMemory
                                            );
     if (!NT_SUCCESS(status))
     {
@@ -363,18 +364,8 @@ Exit:
 ```
 
 ## Related topics
-
-
-[USB I/O Transfers](usb-device-i-o.md)
-
-[How to open and close static streams in a USB bulk endpoint](how-to-open-streams-in-a-usb-endpoint.md)
-
- 
-
- 
-
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20How%20to%20send%20USB%20bulk%20transfer%20requests%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
-
+[USB I/O Transfers](usb-device-i-o.md)  
+[How to open and close static streams in a USB bulk endpoint](how-to-open-streams-in-a-usb-endpoint.md)  
 
 
 

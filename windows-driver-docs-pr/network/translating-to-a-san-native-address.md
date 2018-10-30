@@ -2,13 +2,24 @@
 title: Translating to a SAN Native Address
 description: Translating to a SAN Native Address
 ms.assetid: 959c66f2-4801-47d5-9e80-f18f17057e23
-keywords: ["proxy drivers WDK SANs , native address translations", "SAN proxy drivers WDK , native address translations", "native address translations WDK SANs", "translating native addresss WDK SANs", "AF_INET addresses WDK SANs"]
+keywords:
+- proxy drivers WDK SANs , native address translations
+- SAN proxy drivers WDK , native address translations
+- native address translations WDK SANs
+- translating native addresss WDK SANs
+- AF_INET addresses WDK SANs
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Translating to a SAN Native Address
 
 
-## <a href="" id="ddk-translating-to-a-san-native-address-ng"></a>
+
 
 
 The Windows Sockets switch always uses the [WSK address families](https://msdn.microsoft.com/library/windows/hardware/ff571151) to interact with a SAN service provider, not the SAN's native address family. Therefore, a proxy driver for a SAN service provider must translate between WSK address families and native addresses accordingly.

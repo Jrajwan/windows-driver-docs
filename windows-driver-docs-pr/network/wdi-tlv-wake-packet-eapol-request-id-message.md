@@ -1,0 +1,70 @@
+---
+title: WDI_TLV_WAKE_PACKET_EAPOL_REQUEST_ID_MESSAGE
+author: windows-driver-content
+description: WDI_TLV_WAKE_PACKET_EAPOL_REQUEST_ID_MESSAGE is a TLV that contains the wake-on-LAN pattern ID of a EAPOL request ID message.
+ms.assetid: CB898EF0-3ACF-4026-8650-91EF18E93766
+ms.author: windowsdriverdev 
+ms.date: 07/18/2017 
+ms.topic: article 
+ms.prod: windows-hardware 
+ms.technology: windows-devices 
+keywords:
+ - WDI_TLV_WAKE_PACKET_EAPOL_REQUEST_ID_MESSAGE Network Drivers Starting with Windows Vista
+ms.localizationpriority: medium
+---
+
+# WDI\_TLV\_WAKE\_PACKET\_EAPOL\_REQUEST\_ID\_MESSAGE
+
+
+WDI\_TLV\_WAKE\_PACKET\_EAPOL\_REQUEST\_ID\_MESSAGE is a TLV that contains the wake-on-LAN pattern ID of a EAPOL request ID message.
+
+## TLV Type
+
+
+0x5F
+
+## Length
+
+
+The size (in bytes) of a UINT32.
+
+## Values
+
+
+| Type   | Description                           |
+|--------|---------------------------------------|
+| UINT32 | Specifies the wake-on-LAN pattern ID. |
+
+ 
+
+Requirements
+------------
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>Minimum supported client</p></td>
+<td><p>Windows 10</p></td>
+</tr>
+<tr class="even">
+<td><p>Minimum supported server</p></td>
+<td><p>Windows Server 2016</p></td>
+</tr>
+<tr class="odd">
+<td><p>Header</p></td>
+<td>Wditypes.hpp</td>
+</tr>
+</tbody>
+</table>
+
+ 
+
+ 
+
+
+
+

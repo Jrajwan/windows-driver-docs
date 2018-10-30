@@ -2,6 +2,12 @@
 title: Calling SetupWriteTextLogError
 description: Calling SetupWriteTextLogError
 ms.assetid: 55edc72a-2d53-4084-a1e4-e7e6515a4990
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Calling SetupWriteTextLogError
@@ -13,15 +19,15 @@ To call **SetupWriteTextLogError**, an application supplies the same information
 
 **SetupWriteTextLogError** writes the first log entry in the following format:
 
-*entry\_prefix time\_stamp category* *****indentation formatted-message*
+*entry_prefix time_stamp category* *****indentation formatted-message*
 
 **SetupWriteTextLogError** writes the second log entry in the following format:
 
-*entry\_prefix time\_stamp category* *****indentation* **Error:***error-number error-description*
+*entry_prefix time_stamp category* *****indentation* **Error:***error-number error-description*
 
 Where:
 
--   The *entry\_prefix*, *time-stamp*, *category*, *indentation*, and *formatted-message* fields are the same as those that are described in [Format of a Text Log Section Body](format-of-a-text-log-section-body.md).
+-   The *entry_prefix*, *time-stamp*, *category*, *indentation*, and *formatted-message* fields are the same as those that are described in [Format of a Text Log Section Body](format-of-a-text-log-section-body.md).
 
 -   The *error-number* field contains the error number.
 
@@ -31,11 +37,11 @@ The following example shows how an application might typically call [**SetupWrit
 
 -   *LogToken* is set to a log token value that either was obtained by calling [**SetupGetThreadLogToken**](https://msdn.microsoft.com/library/windows/hardware/ff552211) or is one of the system-defined log token values that are described in [Log Tokens](log-tokens.md).
 
--   *Category* is set to TXTLOG\_VENDOR, which indicates that the log entry is made by a vendor-supplied application. Event categories are described in [Enabling Event Categories for a Text Log](enabling-event-categories-for-a-text-log.md).
+-   *Category* is set to TXTLOG_VENDOR, which indicates that the log entry is made by a vendor-supplied application. Event categories are described in [Enabling Event Categories for a Text Log](enabling-event-categories-for-a-text-log.md).
 
--   *LogFlags* is set to TXTLOG\_ERROR. This example does not include a time stamp or change the indentation depth. The current indentation depth was previously set to five monospace text spaces. For information about how to change the indentation depth, see [Writing Indented Log Entries](writing-indented-log-entries.md). Event levels are described in [Setting the Event Level for a Text Log](setting-the-event-level-for-a-text-log.md).
+-   *LogFlags* is set to TXTLOG_ERROR. This example does not include a time stamp or change the indentation depth. The current indentation depth was previously set to five monospace text spaces. For information about how to change the indentation depth, see [Writing Indented Log Entries](writing-indented-log-entries.md). Event levels are described in [Setting the Event Level for a Text Log](setting-the-event-level-for-a-text-log.md).
 
--   *Error* is set to the value of the Win32 error code, ERROR\_SERVICE\_ALREADY\_RUNNING. The decimal value of this error code is 1056.
+-   *Error* is set to the value of the Win32 error code, ERROR_SERVICE_ALREADY_RUNNING. The decimal value of this error code is 1056.
 
 -   *MessageStr is* set to TEXT("Start Service: Failed to start service 'SomeService'").
 
@@ -55,7 +61,7 @@ DWORD ErrorCode = 1056; // The corresponding Win32 error code
 SetupWriteTextLog(LogToken, Category, Flags, ErrorCode, TEXT("Start Service: Failed to start service &#39;SomeService&#39;"),);
 ```
 
-If the TXTLOG\_VENDOR event category is enabled and the TXTLOG\_ERROR event level is set for the text log, this code would create an entry in the text log that would be formatted as follows:
+If the TXTLOG_VENDOR event category is enabled and the TXTLOG_ERROR event level is set for the text log, this code would create an entry in the text log that would be formatted as follows:
 
 ```
 !!!     :  Start Service: Failed to start service &#39;SomeService&#39; 

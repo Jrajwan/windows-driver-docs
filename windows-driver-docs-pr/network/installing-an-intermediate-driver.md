@@ -2,13 +2,22 @@
 title: Installing an Intermediate Driver
 description: Installing an Intermediate Driver
 ms.assetid: 75e299d0-b708-411d-9d37-609c8bf621f8
-keywords: ["intermediate drivers WDK networking , installation", "NDIS intermediate drivers WDK , installation", "installing NDIS intermediate drivers WDK networking"]
+keywords:
+- intermediate drivers WDK networking , installation
+- NDIS intermediate drivers WDK , installation
+- installing NDIS intermediate drivers WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Installing an Intermediate Driver
 
 
-## <a href="" id="ddk-installing-intermediate-drivers-ng"></a>
+
 
 
 Intermediate drivers require two INF files. One of the INF files defines the installation parameters for the protocol lower edge. The other INF file defines the installation parameters for the virtual miniport upper edge.

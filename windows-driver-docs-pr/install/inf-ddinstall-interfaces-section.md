@@ -1,14 +1,21 @@
 ---
 title: INF DDInstall.Interfaces Section
-description: Each per-Models DDInstall.Interfaces section can have one or more AddInterface directives, depending on how many device interfaces a particular device/driver supports.
+description: A per-Models DDInstall.Interfaces section can have one or more AddInterface directives, depending on how many device interfaces a particular device/driver supports.
 ms.assetid: 16904119-00a4-45d7-a32e-24ba4c8a3416
-keywords: ["INF DDInstall.Interfaces Section Device and Driver Installation"]
+keywords:
+- INF DDInstall.Interfaces Section Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF DDInstall.Interfaces Section
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF DDInstall.Interfaces Section
@@ -16,7 +23,7 @@ api_type:
 
 Each per-Models *DDInstall***.Interfaces** section can have one or more [**AddInterface**](inf-addinterface-directive.md) directives, depending on how many device interfaces a particular device/driver supports.
 
-``` syntax
+```
 [install-section-name.Interfaces] |
 [install-section-name.nt.Interfaces] | 
 [install-section-name.ntx86.Interfaces] |

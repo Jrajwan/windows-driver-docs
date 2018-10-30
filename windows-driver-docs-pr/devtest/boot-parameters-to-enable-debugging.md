@@ -2,7 +2,23 @@
 title: Boot Parameters to Enable Debugging
 description: Boot Parameters to Enable Debugging
 ms.assetid: acbe2fcd-6f8f-49c8-9de6-1617a1723cf5
-keywords: ["boot parameters WDK", "boot entry parameters WDK", "kernel debugging support WDK boot options", "local debugging WDK boot parameters", "single-computer debugging WDK boot parameters", "cable debugging WDK boot parameters", "IEEE 1394 cable WDK boot parameters", "1394 connection WDK boot parameters", "USB 2.0 debugging connection WDK boot parameters", "null-modem cable WDK boot parameters"]
+keywords:
+- boot parameters WDK
+- boot entry parameters WDK
+- kernel debugging support WDK boot options
+- local debugging WDK boot parameters
+- single-computer debugging WDK boot parameters
+- cable debugging WDK boot parameters
+- IEEE 1394 cable WDK boot parameters
+- 1394 connection WDK boot parameters
+- USB 2.0 debugging connection WDK boot parameters
+- null-modem cable WDK boot parameters
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Boot Parameters to Enable Debugging
@@ -59,7 +75,7 @@ If BCDEdit has not been used, the default global debug settings are for serial c
 
 To display the current settings, use the following command:
 
-``` syntax
+```
 bcdedit /dbgsettings
 
 debugtype               Serial
@@ -75,7 +91,7 @@ To set the global debug settings to serial communications, use the following syn
 
 The following example shows how to specify serial communications as the global debug setting.
 
-``` syntax
+```
 bcdedit /dbgsettings serial debugport:1 baudrate:115200
 ```
 
@@ -91,19 +107,19 @@ If no **{***ID***}** is specified, the settings apply to the currently active bo
 
 The following example shows how to specify the serial debug settings for a specific boot entry. To enable the debug settings, you must reboot your computer and select that boot entry you have configured for debugging.
 
-``` syntax
+```
 bcdedit /set {18b123cd-2bf6-11db-bfae-00e018e2b8db} debugtype serial
 ```
 
-``` syntax
+```
 bcdedit /set {18b123cd-2bf6-11db-bfae-00e018e2b8db} debugport 1
 ```
 
-``` syntax
+```
 bcdedit /set {18b123cd-2bf6-11db-bfae-00e018e2b8db} baudrate 115200
 ```
 
-``` syntax
+```
 bcdedit /debug {18b123cd-2bf6-11db-bfae-00e018e2b8db} on
 ```
 
@@ -123,7 +139,7 @@ To set the debug settings for 1394 globally, use the following syntax:
 
 The following example shows how to specify 1394 as the global debug setting.
 
-``` syntax
+```
 bcdedit /dbgsettings 1394 channel:32 
 ```
 
@@ -137,15 +153,15 @@ If an **{***ID***}** is not specified, the settings apply to the current boot en
 
 The following example shows how to specify the 1394 debug settings for a specific boot entry, and how to use the **/debug** option to enable kernel debugging for that boot entry. Note that to enable the debug settings, you must reboot your computer and select the boot entry you have configured for debugging.
 
-``` syntax
+```
 bcdedit /set {18b123cd-2bf6-11db-bfae-00e018e2b8db} debugtype 1394
 ```
 
-``` syntax
+```
 bcdedit /set {18b123cd-2bf6-11db-bfae-00e018e2b8db} channel 32
 ```
 
-``` syntax
+```
 bcdedit /debug {18b123cd-2bf6-11db-bfae-00e018e2b8db} on
 ```
 
@@ -165,7 +181,7 @@ To set the debug settings for USB globally, use the following syntax:
 
 The following example shows how to specify USB as the global debug setting.
 
-``` syntax
+```
 bcdedit /dbgsettings usb targetname:U1
 ```
 
@@ -179,15 +195,15 @@ If no **{***ID***}** is specified, the settings apply to the current boot entry.
 
 The following example shows how to specify the USB debug settings for a specific boot entry, and how to use the **/debug** command to enable kernel debugging for that boot entry. Note that to enable the debug settings, you must reboot your computer and select the boot entry you have configured for debugging.
 
-``` syntax
+```
 bcdedit /set {18b123cd-2bf6-11db-bfae-00e018e2b8db} debugtype usb
 ```
 
-``` syntax
+```
 bcdedit /set {18b123cd-2bf6-11db-bfae-00e018e2b8db} targetname u2
 ```
 
-``` syntax
+```
 bcdedit /debug {18b123cd-2bf6-11db-bfae-00e018e2b8db} on
 ```
 
@@ -207,7 +223,6 @@ For more details, see [**BCDEdit /bootdebug**](https://msdn.microsoft.com/librar
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20Boot%20Parameters%20to%20Enable%20Debugging%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

@@ -2,16 +2,29 @@
 title: Registry Trees for Devices and Drivers
 description: Registry Trees for Devices and Drivers
 ms.assetid: 74dc1889-26a9-47ba-8c8d-3cd6ed95cb68
-keywords: ["hardware keys WDK device installations", "registry WDK device installations", "software keys WDK device installations", "device installations WDK , registry", "installing devices WDK , registry", "Device setup WDK device installations , registry", "debugging device"]
+keywords:
+- hardware keys WDK device installations
+- registry WDK device installations
+- software keys WDK device installations
+- device installations WDK , registry
+- installing devices WDK , registry
+- Device setup WDK device installations , registry
+- debugging device
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Registry Trees for Devices and Drivers
 
 
-## <a href="" id="ddk-driver-information-in-the-registry-dg"></a>
 
 
-The following trees in the registry are of particular interest to driver writers (where **HKLM** represents **HKEY\_LOCAL\_MACHINE**):
+
+The following trees in the registry are of particular interest to driver writers (where **HKLM** represents **HKEY_LOCAL_MACHINE**):
 
 -   [HKLM\\SYSTEM\\CurrentControlSet\\Services Registry Tree](hklm-system-currentcontrolset-services-registry-tree.md)
 

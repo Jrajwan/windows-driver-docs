@@ -2,7 +2,34 @@
 title: Channel Mask
 description: Channel Mask
 ms.assetid: 875ed000-ac53-4365-8381-3fe08d45cbcc
-keywords: ["data formats WDK audio", "formats WDK audio , data", "audio data formats WDK", "formats WDK audio , multichannel", "multichannel formats WDK audio", "home-theater systems WDK audio", "speakers WDK audio , home-threater systems", "audio drivers WDK , home-theater systems", "WDM audio drivers WDK , home-theater systems", "7.1 home theater speakers WDK audio", "7.1 wide configuration speakers WDK audio", "wide configuration speakers WDK audio", "LFE speakers", "subwoofers WDK audio", "recording formats WDK audio", "playback WDK audio", "channel masks WDK audio", "mask bits WDK audio", "PCM formats WDK audio", "positions WDK audio", "data formats WDK audio , channel masks"]
+keywords:
+- data formats WDK audio
+- formats WDK audio , data
+- audio data formats WDK
+- formats WDK audio , multichannel
+- multichannel formats WDK audio
+- home-theater systems WDK audio
+- speakers WDK audio , home-threater systems
+- audio drivers WDK , home-theater systems
+- WDM audio drivers WDK , home-theater systems
+- 7.1 home theater speakers WDK audio
+- 7.1 wide configuration speakers WDK audio
+- wide configuration speakers WDK audio
+- LFE speakers
+- subwoofers WDK audio
+- recording formats WDK audio
+- playback WDK audio
+- channel masks WDK audio
+- mask bits WDK audio
+- PCM formats WDK audio
+- positions WDK audio
+- data formats WDK audio , channel masks
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Channel Mask
@@ -107,7 +134,5 @@ The right side of the preceding figure shows the same 7.1-channel stream being p
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[audio\audio]:%20Channel%20Mask%20%20RELEASE:%20%287/18/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

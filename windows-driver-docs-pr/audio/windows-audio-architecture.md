@@ -2,6 +2,12 @@
 title: Windows Audio Architecture
 description: This topic provided a high level summary of the Windows 10 audio architecture.
 ms.assetid: 1FC95504-18AA-4F3B-8E96-005276699694
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Windows Audio Architecture
@@ -61,7 +67,7 @@ The audio engine consists of two related components, the Audio Device Graph (aud
 The audio engine:
 
 -   Mixes and processes audio streams. For more information about how the audio engine uses buffers to transfer audio, see [Understanding the WaveRT Port Driver](understanding-the-wavert-port-driver.md).
--   Loads “Audio Processing Objects” (APOs), which are H/W-specific plugins that process the audio signal. For more information about APOs, see [Windows Audio Processing Objects](windows-audio-processing-objects.md).
+-   Loads Audio Processing Objects (APOs), which are H/W-specific plugins that process the audio signal. For more information about APOs, see [Windows Audio Processing Objects](windows-audio-processing-objects.md).
 
 ## <span id="audio_service__audiosrv.dll_"></span><span id="AUDIO_SERVICE__AUDIOSRV.DLL_"></span>Audio Service (audiosrv.dll)
 
@@ -85,7 +91,7 @@ Audio drivers:
 
 -   Follow the port-miniport model. For more information, see [WDM Audio Terminology](wdm-audio-terminology.md) and [Developing a WaveRT Miniport Driver](developing-a-wavert-miniport-driver.md).
 -   Allow the audio stack to render and capture audio from several audio devices, including: integrated speakers and microphones, headsets/headphones, USB devices, Bluetooth devices, HDMI, etc.
--   The port-minport model corresponds to the Advanced Linux Sound Architecture – ALSA
+-   The port-minport model corresponds to the Advanced Linux Sound Architecture  ALSA
 -   For information on sample driver code, see [Sample Audio Drivers](sample-audio-drivers.md).
 
 ## <span id="Hardware"></span><span id="hardware"></span><span id="HARDWARE"></span>Hardware
@@ -99,12 +105,10 @@ The audio hardware that is present on any give device varies but can include:
 -   External devices: USB audio devices, Bluetooth audio devices, HDMI audio, etc.
 -   Signal processing can also be implemented in the H/W (e.g. the codec or the DSP), instead of or in addition to the APOs.
 
- 
-
- 
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[audio\audio]:%20Windows%20Audio%20Architecture%20%20RELEASE:%20%287/18/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
+
+
+
 
 

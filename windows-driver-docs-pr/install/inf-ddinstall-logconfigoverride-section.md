@@ -1,26 +1,33 @@
 ---
 title: INF DDInstall.LogConfigOverride Section
-description: DDInstall.LogConfigOverride sections are used to create an override configuration, which overrides the hardware resource requirements that a Plug and Play device's bus driver reports.
+description: DDInstall.LogConfigOverride sections are used to create an override configuration to override hardware resource requirements.
 ms.assetid: 7ee8d221-7cdb-4373-aa8b-2d5164f6a636
-keywords: ["INF DDInstall.LogConfigOverride Section Device and Driver Installation"]
+keywords:
+- INF DDInstall.LogConfigOverride Section Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF DDInstall.LogConfigOverride Section
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF DDInstall.LogConfigOverride Section
 
 
-**Note**  If you are building a universal or mobile driver package, this section is not valid. See [Using a Universal INF File](using-a-configurable-inf-file.md).
+**Note**  If you are building a universal or mobile driver package, this section is not valid. See [Using a Universal INF File](using-a-universal-inf-file.md).
 
  
 
 *DDInstall***.LogConfigOverride** sections are used to create an [override configuration](https://msdn.microsoft.com/library/windows/hardware/ff547012#logical-configuration-types-for-resource-requirements-lists), which overrides the hardware resource requirements that a Plug and Play device's bus driver reports.
 
-``` syntax
+```
 [install-section-name.LogConfigOverride] |
 [install-section-name.nt.LogConfigOverride] |
 [install-section-name.ntx86.LogConfigOverride] |

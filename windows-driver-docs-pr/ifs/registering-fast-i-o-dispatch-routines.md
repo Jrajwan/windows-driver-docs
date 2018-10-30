@@ -3,7 +3,16 @@ title: Registering Fast I/O Dispatch Routines
 author: windows-driver-content
 description: Registering Fast I/O Dispatch Routines
 ms.assetid: e559d3f2-be33-4a35-8931-4716e6082fc9
-keywords: ["registering fast I/O dispatch routines", "dispatch routines WDK file system", "fast I/O dispatch routines WDK file system"]
+keywords:
+- registering fast I/O dispatch routines
+- dispatch routines WDK file system
+- fast I/O dispatch routines WDK file system
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Registering Fast I/O Dispatch Routines
@@ -51,6 +60,5 @@ DriverObject->FastIoDispatch = fastIoDispatch;
  
 
 
---------------------
 
 

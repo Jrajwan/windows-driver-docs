@@ -2,7 +2,22 @@
 title: Direct Cache Access (DCA)
 description: Direct Cache Access (DCA)
 ms.assetid: d2f46f5f-e9be-4ed8-9107-39cf178ead6a
-keywords: ["direct cache access WDK NetDMA", "DCA WDK NetDMA", "memory-to-memory data transfers WDK NetDMA , direct cache access", "data transfers WDK NetDMA , direct cache access", "transferring data WDK NetDMA , direct cache access", "DMA transfers WDK NetDMA , direct cache access", "NetDMA WDK networking , direct cache access", "CPU affinities WDK NetDMA", "NetDMA 2.0 WDK networking , direct cache access"]
+keywords:
+- direct cache access WDK NetDMA
+- DCA WDK NetDMA
+- memory-to-memory data transfers WDK NetDMA , direct cache access
+- data transfers WDK NetDMA , direct cache access
+- transferring data WDK NetDMA , direct cache access
+- DMA transfers WDK NetDMA , direct cache access
+- NetDMA WDK networking , direct cache access
+- CPU affinities WDK NetDMA
+- NetDMA 2.0 WDK networking , direct cache access
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Direct Cache Access (DCA)
@@ -12,7 +27,7 @@ keywords: ["direct cache access WDK NetDMA", "DCA WDK NetDMA", "memory-to-memory
 
  
 
-## <a href="" id="ddk-direct-cache-access--dca--ng"></a>
+
 
 
 *Direct cache access (DCA)* provides a mechanism for NetDMA clients to indicate that destination data is targeted for a CPU cache. DCA support is not present for NetDMA providers before version 2.0 and it is optional for NetDMA 2.0 and later providers. A NetDMA provider that supports DCA sets the NET\_DMA\_PROVIDER\_CHARACTERISTICS\_DCA\_SUPPORTED bit in the **Flags** member of the [**NET\_DMA\_PROVIDER\_CHARACTERISTICS**](https://msdn.microsoft.com/library/windows/hardware/ff568738) structure at the *ProviderCharacteristics* parameter of the [**NetDmaRegisterProvider**](https://msdn.microsoft.com/library/windows/hardware/ff568336) function.

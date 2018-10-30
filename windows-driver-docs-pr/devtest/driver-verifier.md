@@ -2,7 +2,19 @@
 title: Driver Verifier
 description: Driver Verifier monitors Windows kernel-mode drivers and graphics drivers to detect illegal function calls or actions that might corrupt the system.
 ms.assetid: a8a78dde-930f-4d0b-be46-f7d07b0bf21b
-keywords: ["verifying drivers WDK , Driver Verifier", "driver verification WDK , Driver Verifier", "Driver Verifier WDK", "Driver Verifier WDK , about Driver Verifier", "illegal function calls WDK Driver Verifier", "stress testing WDK Driver Verifier"]
+keywords:
+- verifying drivers WDK , Driver Verifier
+- driver verification WDK , Driver Verifier
+- Driver Verifier WDK
+- Driver Verifier WDK , about Driver Verifier
+- illegal function calls WDK Driver Verifier
+- stress testing WDK Driver Verifier
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Driver Verifier
@@ -12,16 +24,16 @@ Driver Verifier monitors Windows kernel-mode drivers and graphics drivers to det
 
 You can run Driver Verifier on multiple drivers simultaneously, or on one driver at a time. You can configure which tests to run, which allows you to put a driver through heavy stress loads or through more streamlined testing.
 
--   [Where can I download Driver Verifier?](#where-can-i-download-driver-verifier-)
--   [When to use Driver Verifier](#when-to-use-dv)
--   [How to start Driver Verifier](#how-to-start-dv)
--   [How to control Driver Verifier (stop, reset, and view settings and status)](#how-to-control-dv)
--   [How to debug Driver Verifier violations](#how-to-debug-dv)
+-   [Where can I download Driver Verifier?](#where-can-i-download-driver-verifier)
+-   [When to use Driver Verifier](#when-to-use-driver-verifier)
+-   [How to start Driver Verifier](#how-to-start-driver-verifier)
+-   [How to control Driver Verifier](#how-to-control-driver-verifier)
+-   [How to debug Driver Verifier violations](#how-to-debug-driver-verifier-violations)
 -   [Related topics](#related-topics)
 
  
 
-## <span id="Where_can_I_download_Driver_Verifier_"></span><span id="where_can_i_download_driver_verifier_"></span><span id="WHERE_CAN_I_DOWNLOAD_DRIVER_VERIFIER_"></span>Where can I download Driver Verifier?
+## Where can I download Driver Verifier?
 
 
 <table>
@@ -30,7 +42,7 @@ You can run Driver Verifier on multiple drivers simultaneously, or on one driver
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p>You don't need to. Driver Verifier (Verifier.exe) is included in every version of Windows, starting with Windows 2000 (in the %windir%\system32 directory). There isn't a separate Driver Verifier download package.</p>
+<td align="left"><p>You don't need to download Driver Verifier (Verifier.exe) as it is included in every version of Windows after Windows 2000, except for Windows 10 S. There isn't a separate Driver Verifier download package, it is located in the %windir%\system32 directory. </p>
 <ul>
 <li>Open a <strong>Command Prompt</strong> window (<strong>Run as administrator</strong>).</li>
 <li>Type <strong>verifier</strong> to open the Driver Verifier Manager, or type <strong>verifier /?</strong> to view command line options. See [<strong>Driver Verifier Command Syntax</strong>](verifier-command-line.md) for more information.</li>
@@ -42,6 +54,7 @@ You can run Driver Verifier on multiple drivers simultaneously, or on one driver
 <li>Running Driver Verifier could cause the computer to crash.</li>
 <li>You should only run Driver Verifier on computers you are using for testing and debugging.</li>
 <li>You must be in the Administrators group on the computer to use Driver Verifier.</li>
+<li>Driver verifier is not included in Windows 10 S. We recommend testing driver behavior in Windows 10 instead.</li>
 </ul>
 </div>
 <div>
@@ -56,7 +69,7 @@ You can run Driver Verifier on multiple drivers simultaneously, or on one driver
 
  
 
-## <span id="when_to_use_dv"></span><span id="WHEN_TO_USE_DV"></span>When to use Driver Verifier
+## When to use Driver Verifier
 
 
 Run Driver Verifier throughout the driver development and test process.
@@ -69,7 +82,7 @@ Run Driver Verifier throughout the driver development and test process.
 
  
 
-## <span id="how_to_start_dv"></span><span id="HOW_TO_START_DV"></span>How to start Driver Verifier
+## How to start Driver Verifier
 
 
 You should only run Driver Verifier on test computers, or computers you are testing and debugging. To get the most benefit from Driver Verifier, you should use a kernel debugger and connect to the test computer. See [Windows Debugging](https://msdn.microsoft.com/library/windows/hardware/ff551063).
@@ -123,7 +136,7 @@ You should only run Driver Verifier on test computers, or computers you are test
 
  
 
-``` syntax
+```
 verifier  /standard /driver myDriver.sys
 ```
 
@@ -131,7 +144,7 @@ See [**Driver Verifier Command Syntax**](verifier-command-line.md) for more info
 
  
 
-## <span id="how_to_control_dv"></span><span id="HOW_TO_CONTROL_DV"></span>How to control Driver Verifier (stop, reset, and view settings and status)
+## How to control Driver Verifier
 
 
 **To stop or reset Driver Verifier**
@@ -142,7 +155,7 @@ See [**Driver Verifier Command Syntax**](verifier-command-line.md) for more info
 
 Or type the following command in a Command Prompt window and reboot the computer.
 
-``` syntax
+```
 verifier  /reset
 ```
 
@@ -153,7 +166,7 @@ verifier  /reset
 
 Or type the following command in a Command Prompt window.
 
-``` syntax
+```
 verifier  /querysettings
 ```
 
@@ -164,13 +177,13 @@ verifier  /querysettings
 
 Or type the following command in a Command Prompt window.
 
-``` syntax
+```
 verifier  /query
 ```
 
  
 
-## <span id="how_to_debug_dv"></span><span id="HOW_TO_DEBUG_DV"></span>How to debug Driver Verifier violations
+## How to debug Driver Verifier violations
 
 
 To get the most benefit from Driver Verifier, you should use a kernel debugger and connect to the test computer. See [Windows Debugging](https://msdn.microsoft.com/library/windows/hardware/ff551063) for more information.
@@ -190,7 +203,7 @@ For more information see [Handling a Bug Check When Driver Verifier is Enabled](
 
 When you start a new debug session, use the debugger extension command [**!analyze**](https://msdn.microsoft.com/library/windows/hardware/ff562112). In kernel mode, the **!analyze** command displays information about the most recent bug check. The **!analyze -v** command displays additional information and attempts to pinpoint the faulting driver.
 
-``` syntax
+```
 kd> !analyze -v
 ```
 
@@ -198,32 +211,31 @@ In addition [**!analyze**](https://msdn.microsoft.com/library/windows/hardware/f
 
 -   [**!verifier**](https://msdn.microsoft.com/library/windows/hardware/ff565591) dumps captured Driver Verifier statistics. Use **!verifier -?** to display all of the available options.
 
-    ``` syntax
+    ```
     kd> !verifier
     ```
 
 -   [**!deadlock**](https://msdn.microsoft.com/library/windows/hardware/ff562326) displays information related to locks or objects tracked by Driver Verifier's deadlock detection feature. Use **!deadlock -?** to display all of the available options.
 
-    ``` syntax
+    ```
     kd> !deadlock
     ```
 
 -   [**!iovirp**](https://msdn.microsoft.com/library/windows/hardware/ff563252) \[*address*\] displays information related to an IRP tracked by I/O Verifier. For example:
 
-    ``` syntax
+    ```
     kd> !iovirp 947cef68
     ```
 
 -   [**!ruleinfo**](https://msdn.microsoft.com/library/windows/hardware/dn265374) \[*RuleID*\] displays information related to the [DDI compliance checking](ddi-compliance-checking.md) rule that was violated (*RuleID* is always the first argument to the bug check. All DDI Compliance Checking *RuleID* are in the form 0x200nn). For example:
 
-    ``` syntax
+    ```
     kd> !ruleinfo 0x20005
     ```
 
-## <span id="ddk_driver_verifier_tools"></span><span id="DDK_DRIVER_VERIFIER_TOOLS"></span>
 
 
-## <span id="related_topics"></span>Related topics
+## Related topics
 
 
 [Driver Verifier: What's New](driver-verifier--what-s-new.md)
@@ -240,7 +252,6 @@ In addition [**!analyze**](https://msdn.microsoft.com/library/windows/hardware/f
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20Driver%20Verifier%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

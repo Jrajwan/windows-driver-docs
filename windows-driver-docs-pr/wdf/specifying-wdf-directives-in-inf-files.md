@@ -3,7 +3,28 @@ title: Specifying WDF Directives in INF Files
 author: windows-driver-content
 description: Specifying WDF Directives in INF Files
 ms.assetid: aefc678e-dc81-47dc-a84b-f1a79c16cad9
-keywords: ["WDF directives WDK UMDF", "DDInstall section WDK UMDF", "UmdfService INF directive WDK UMDF", "UmdfServiceOrder INF directive WDK UMDF", "UmdfImpersonationLevel INF directive WDK UMDF", "UmdfMethodNeitherAction INF directive WDK UMDF", "UmdfKernelModeClientPolicy INF directive WDK UMDF", "UmdfLibraryVersion INF directive WDK UMDF", "ServiceBinary INF directive WDK UMDF", "DriverCLSID INF directive WDK UMDF", "directives WDK UMDF", "UMDF-specific directives WDK", "UMDF-service-install section WDK", "INF files WDK UMDF , directives", "UmdfDispatcher INF directive WDK UMDF , syntax"]
+keywords:
+- WDF directives WDK UMDF
+- DDInstall section WDK UMDF
+- UmdfService INF directive WDK UMDF
+- UmdfServiceOrder INF directive WDK UMDF
+- UmdfImpersonationLevel INF directive WDK UMDF
+- UmdfMethodNeitherAction INF directive WDK UMDF
+- UmdfKernelModeClientPolicy INF directive WDK UMDF
+- UmdfLibraryVersion INF directive WDK UMDF
+- ServiceBinary INF directive WDK UMDF
+- DriverCLSID INF directive WDK UMDF
+- directives WDK UMDF
+- UMDF-specific directives WDK
+- UMDF-service-install section WDK
+- INF files WDK UMDF , directives
+- UmdfDispatcher INF directive WDK UMDF , syntax
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Specifying WDF Directives in INF Files
@@ -30,7 +51,7 @@ UmdfServiceOrder=UMDFSkeleton
 Each UMDF-specific directive in the WDF-specific *DDInstall* section is described in the following list:
 
 <a href="" id="umdfservice----servicename----sectionname-"></a>**UmdfService** = &lt;*serviceName*&gt;, &lt;*sectionName*&gt;  
-Associates a UMDF driver with a *UMDF-service-install* section that contains information that is required to install the UMDF driver. The *serviceName* parameter specifies the UMDF driver. The *sectionName* parameter references the *UMDF-service-install* section. A valid INF file typically requires at least one **UmdfService** directive. However, if a UMDF driver is part of the operating system, a **UmdfService** directive for the UMDF driver is not required. Therefore, a valid INF file might not have any **UmdfService** directives, although most INF files have one **UmdfService** directive for each UMDF driver.
+Associates a UMDF driver with a *UMDF-service-install* section that contains information that is required to install the UMDF driver. The *serviceName* parameter specifies the UMDF driver, and is limited to a maximum of 31 characters in length. The *sectionName* parameter references the *UMDF-service-install* section. A valid INF file typically requires at least one **UmdfService** directive. However, if a UMDF driver is part of the operating system, a **UmdfService** directive for the UMDF driver is not required. Therefore, a valid INF file might not have any **UmdfService** directives, although most INF files have one **UmdfService** directive for each UMDF driver.
 
 <a href="" id="umdfhostprocesssharing-------------processsharingdisabled---processsharingenabled-"></a>**UmdfHostProcessSharing** = &lt;**ProcessSharingDisabled** | **ProcessSharingEnabled**&gt;  
 Determines whether a device stack is placed into a shared process pool (**ProcessSharingEnabled**) or its own individual process (**ProcessSharingDisabled**). The default is **ProcessSharingEnabled**. This directive is device-specific rather than driver-specific.
@@ -150,7 +171,7 @@ The default value is **CanUseFsContext**.
 
 UMDF versions 1.11 and later support the **UmdfFsContextUsePolicy** directive.
 
-## <a href="" id="umdf-service-install"></a>
+
 
 
 The following code example shows the required directives in a *UMDF-service-install* section.

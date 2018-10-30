@@ -2,7 +2,14 @@
 title: Sample UPS Minidriver
 description: Sample UPS Minidriver
 ms.assetid: 56ab63ec-26d2-4ae7-bae3-8a33d66f6152
-keywords: ["UPS minidrivers WDK , samples"]
+keywords:
+- UPS minidrivers WDK , samples
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Sample UPS Minidriver
@@ -18,6 +25,5 @@ A sample UPS minidriver is provided in the \\src\\general\\ups subdirectory of v
  
 
 
---------------------
 
 

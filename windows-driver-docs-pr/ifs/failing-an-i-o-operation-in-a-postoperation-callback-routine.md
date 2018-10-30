@@ -3,7 +3,15 @@ title: Failing an I/O Operation in a Postoperation Callback Routine
 author: windows-driver-content
 description: Failing an I/O Operation in a Postoperation Callback Routine
 ms.assetid: 45897bca-1573-42c5-ad00-3198b7362d9e
-keywords: ["postoperation callback routines WDK file system minifilter , failing operations", "failing I/O operations WDK file system minifilter"]
+keywords:
+- postoperation callback routines WDK file system minifilter , failing operations
+- failing I/O operations WDK file system minifilter
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Failing an I/O Operation in a Postoperation Callback Routine
@@ -33,6 +41,5 @@ Callers of [**FltCancelFileOpen**](https://msdn.microsoft.com/library/windows/ha
  
 
 
---------------------
 
 

@@ -2,20 +2,25 @@
 title: Modifying a Driver-Supplied Property Sheet Page
 author: windows-driver-content
 description: Modifying a Driver-Supplied Property Sheet Page
-MS-HAID:
-- 'custdrvr\_8d123caf-f6c5-4ec9-9e80-8eef2fc9c8a2.xml'
-- 'print.modifying\_a\_driver\_supplied\_property\_sheet\_page'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 98338017-96a0-414c-9b80-bcb98eff61e5
-keywords: ["user interface plug-ins WDK print , property sheet pages", "UI plug-ins WDK print , property sheet pages", "property sheet pages WDK print", "option items WDK UI plug-in", "customized option items WDK UI plug-in"]
+keywords:
+- user interface plug-ins WDK print , property sheet pages
+- UI plug-ins WDK print , property sheet pages
+- property sheet pages WDK print
+- option items WDK UI plug-in
+- customized option items WDK UI plug-in
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Modifying a Driver-Supplied Property Sheet Page
 
 
-## <a href="" id="ddk-modifying-a-driver-supplied-property-sheet-page-gg"></a>
+
 
 
 A UI plug-in can modify Unidrv-supplied or Pscript5-supplied property sheet pages by implementing the [**IPrintOemUI::CommonUIProp**](https://msdn.microsoft.com/library/windows/hardware/ff554159) method and a callback function.
@@ -49,7 +54,5 @@ When a user opens the printer property sheet or document property sheet and modi
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20Modifying%20a%20Driver-Supplied%20Property%20Sheet%20Page%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

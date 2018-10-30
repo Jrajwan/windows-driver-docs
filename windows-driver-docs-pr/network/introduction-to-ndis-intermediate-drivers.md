@@ -2,13 +2,24 @@
 title: Introduction to NDIS Intermediate Drivers
 description: Introduction to NDIS Intermediate Drivers
 ms.assetid: 63e1b34b-c59e-4aa9-9551-ac9ccb8bcc82
-keywords: ["intermediate drivers WDK networking , about intermediate drivers", "NDIS intermediate drivers WDK , about intermediate drivers", "stacks WDK networking", "internal bindings WDK NDIS intermediate", "bindings WDK NDIS intermediate"]
+keywords:
+- intermediate drivers WDK networking , about intermediate drivers
+- NDIS intermediate drivers WDK , about intermediate drivers
+- stacks WDK networking
+- internal bindings WDK NDIS intermediate
+- bindings WDK NDIS intermediate
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Introduction to NDIS Intermediate Drivers
 
 
-## <a href="" id="ddk-introduction-to-intermediate-drivers-ng"></a>
+
 
 
 NDIS driver stacks must include miniport drivers and protocol drivers and can also include intermediate drivers. Because intermediate drivers are optional, you must understand the relationships between miniport drivers, protocol drivers, and NDIS before addressing intermediate drivers.

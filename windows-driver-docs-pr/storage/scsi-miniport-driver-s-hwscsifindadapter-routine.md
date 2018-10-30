@@ -3,7 +3,15 @@ title: SCSI Miniport Driver's HwScsiFindAdapter Routine
 author: windows-driver-content
 description: SCSI Miniport Driver's HwScsiFindAdapter Routine
 ms.assetid: c89ad751-ff29-4aa7-b907-cb490d060906
-keywords: ["HwScsiFindAdapter", "SCSI miniport drivers WDK storage , HwScsiFindAdapter"]
+keywords:
+- HwScsiFindAdapter
+- SCSI miniport drivers WDK storage , HwScsiFindAdapter
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # SCSI Miniport Driver's HwScsiFindAdapter Routine
@@ -23,6 +31,5 @@ See [**PORT\_CONFIGURATION\_INFORMATION**](https://msdn.microsoft.com/library/wi
  
 
 
---------------------
 
 

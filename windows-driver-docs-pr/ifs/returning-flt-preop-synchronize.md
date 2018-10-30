@@ -1,9 +1,17 @@
 ---
-title: Returning FLT\_PREOP\_SYNCHRONIZE
+title: Returning FLT_PREOP_SYNCHRONIZE
 author: windows-driver-content
-description: Returning FLT\_PREOP\_SYNCHRONIZE
+description: Returning FLT_PREOP_SYNCHRONIZE
 ms.assetid: b1331f8d-e230-45b2-be1b-f85d85557350
-keywords: ["FLT_PREOP_SYNCHRONIZE", "synchronization WDK file system minifilter"]
+keywords:
+- FLT_PREOP_SYNCHRONIZE
+- synchronization WDK file system minifilter
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Returning FLT\_PREOP\_SYNCHRONIZE
@@ -43,6 +51,5 @@ FLT\_PREOP\_SYNCHRONIZE cannot be returned for any of these operations.
  
 
 
---------------------
 
 

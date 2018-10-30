@@ -2,13 +2,28 @@
 title: Receiving and Translating NIC Addresses
 description: Receiving and Translating NIC Addresses
 ms.assetid: c7171a4d-cc77-427e-8d23-8811f650e543
-keywords: ["Windows Sockets Direct WDK , initializing SAN usage", "initializing SAN usage", "NIC address translations WDK SANs", "translating NIC address WDK SANs", "receiving NIC addresses for SANs", "addresses WDK SANs", "delete-address notifications WDK SANs", "add-address notifications WDK SANs", "notifications WDK SANs"]
+keywords:
+- Windows Sockets Direct WDK , initializing SAN usage
+- initializing SAN usage
+- NIC address translations WDK SANs
+- translating NIC address WDK SANs
+- receiving NIC addresses for SANs
+- addresses WDK SANs
+- delete-address notifications WDK SANs
+- add-address notifications WDK SANs
+- notifications WDK SANs
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Receiving and Translating NIC Addresses
 
 
-## <a href="" id="ddk-receiving-and-translating-nic-addresses-ng"></a>
+
 
 
 The Windows Sockets switch always uses the [WSK address families](https://msdn.microsoft.com/library/windows/hardware/ff571151), which contain IP addresses, when it interacts with SAN service providers and SAN NICs. The switch does not use a SAN's native address family. Therefore, a SAN service provider must use its associated proxy driver to retrieve the list of IP addresses assigned to its NICs. The SAN service provider uses these IP addresses when interacting with its proxy driver. The proxy driver must translate between IP addresses and native addresses.

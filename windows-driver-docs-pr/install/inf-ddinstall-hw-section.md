@@ -2,13 +2,20 @@
 title: INF DDInstall.HW Section
 description: DDInstall.HW sections are typically used for installing multifunction devices, for installing PnP filter drivers, and for setting up any user-accessible device-specific but driver-independent information in the registry, whether with explicit AddReg directives or with Include and Needs entries.
 ms.assetid: 417a4ab0-9723-4b3b-aa8c-342598874d61
-keywords: ["INF DDInstall.HW Section Device and Driver Installation"]
+keywords:
+- INF DDInstall.HW Section Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF DDInstall.HW Section
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF DDInstall.HW Section
@@ -16,7 +23,7 @@ api_type:
 
 *DDInstall***.HW** sections are typically used for installing multifunction devices, for installing PnP filter drivers, and for setting up any user-accessible device-specific but driver-independent information in the registry, whether with explicit [**AddReg**](inf-addreg-directive.md) directives or with **Include** and **Needs** entries.
 
-``` syntax
+```
 [install-section-name.HW] |
 [install-section-name.nt.HW] |
 [install-section-name.ntx86.HW] |
@@ -34,7 +41,7 @@ api_type:
 
 
 <a href="" id="addreg-add-registry-section--add-registry-section----"></a>**AddReg=***add-registry-section*\[**,***add-registry-section*\]...  
-References one or more INF-writer-defined *add-registry-sections* elsewhere in the INF file for the devices covered by this *DDInstall***.HW** section. The *add-registry-section* typically installs filters and/or stores per-device information in the registry. An **HKR** specification in such an *add-registry-section* specifies the device's [*hardware key*](https://msdn.microsoft.com/library/windows/hardware/ff556288#wdkgloss-hardware-key).
+References one or more INF-writer-defined *add-registry-sections* elsewhere in the INF file for the devices covered by this *DDInstall***.HW** section. The *add-registry-section* typically installs filters and/or stores per-device information in the registry. An **HKR** specification in such an *add-registry-section* specifies the device's *hardware key*, a device-specific registry subkey that contains information about the device. A hardware key is also called a device key. For more info, see [Registry Trees and Keys for Devices and Drivers](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/registry-trees-and-keys). A driver package can add settings via an INF by using an **HKR** specification in an add-registry-section referenced by a **DDInstall.HW section**. 
 
 For more information, see [**INF AddReg Directive**](inf-addreg-directive.md).
 

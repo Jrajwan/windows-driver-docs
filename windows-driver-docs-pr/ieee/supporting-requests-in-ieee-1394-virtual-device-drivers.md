@@ -2,20 +2,29 @@
 title: Supporting Requests in IEEE 1394 Virtual Device Drivers
 author: windows-driver-content
 description: Supporting Requests in IEEE 1394 Virtual Device Drivers
-MS-HAID:
-- '1394-configrom\_f6f4ff3f-80cc-4a84-a316-4aad16717c1f.xml'
-- 'IEEE.supporting\_requests\_in\_ieee\_1394\_virtual\_device\_drivers'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 17e0c84b-29d9-461f-a5f6-7677ecb7fb6e
-keywords: ["emulation drivers WDK IEEE 1394 bus", "hardware emulation drivers WDK IEEE 1394 bus", "virtual devices WDK IEEE 1394 bus", "REQUEST_ASYNC_READ", "REQUEST_ASYNC_WRITE", "REQUEST_ASYNC_LOCK", "REQUEST_ALLOCATE_ADDRESS_RANGE", "REQUEST_GET_ADDR_FROM_DEVICE_OBJECT", "REQUEST_SET_DEVICE_XMIT_PROPERTIES"]
+keywords:
+- emulation drivers WDK IEEE 1394 bus
+- hardware emulation drivers WDK IEEE 1394 bus
+- virtual devices WDK IEEE 1394 bus
+- REQUEST_ASYNC_READ
+- REQUEST_ASYNC_WRITE
+- REQUEST_ASYNC_LOCK
+- REQUEST_ALLOCATE_ADDRESS_RANGE
+- REQUEST_GET_ADDR_FROM_DEVICE_OBJECT
+- REQUEST_SET_DEVICE_XMIT_PROPERTIES
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Supporting Requests in IEEE 1394 Virtual Device Drivers
 
 
-## <a href="" id="ddk-supporting-requests-in-ieee-1394-virtual-device-drivers-kg"></a>
+
 
 
 Virtual PDOs and the drivers that are loaded above them have the same level of access to the 1394 bus DDI that a functional driver loaded on a PDO has to actual hardware. However, because there is no actual hardware in the case of a virtual driver, the 1394 bus driver must treat certain requests as special cases. This topic describes requests that exhibit different behavior if addressed to a virtual PDO:
@@ -49,6 +58,5 @@ For all other requests, the behavior between virtual and physical devices is ide
  
 
 
---------------------
 
 

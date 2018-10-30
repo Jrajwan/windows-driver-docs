@@ -1,14 +1,25 @@
-﻿---
+---
 title: WPP Software Tracing
-description: WPP Software Tracing
+description: This section describes how to use the Windows software trace preprocessor (WPP) to trace the operation of a software component trace provider.
 ms.assetid: dab776b3-bac9-4157-a530-6e48868ba900
-keywords: ["Windows software trace preprocessor WDK", "WPP software tracing WDK", "software tracing WDK , WPP", "kernel-mode WPP WDK software tracing", "Windows software trace preprocessor WDK , about WPP", "WPP software tracing WDK , about WPP", "default WPP software tracing", "tracing WDK , WPP"]
+keywords:
+- Windows software trace preprocessor WDK
+- WPP software tracing WDK
+- software tracing WDK , WPP
+- kernel-mode WPP WDK software tracing
+- Windows software trace preprocessor WDK , about WPP
+- WPP software tracing WDK , about WPP
+- default WPP software tracing
+- tracing WDK , WPP
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # WPP Software Tracing
-
-
-## <span id="ddk_wpp_software_tracing_tools"></span><span id="DDK_WPP_SOFTWARE_TRACING_TOOLS"></span>
 
 
 This section describes how to use the *Windows software trace preprocessor* (WPP) to trace the operation of a software component ([trace provider](trace-provider.md)). A trace provider can be one of the following:
@@ -35,7 +46,7 @@ WPP software tracing supplements and enhances [WMI event tracing](https://msdn.m
 <li>For kernel-mode drivers, use the [Event Tracing for Windows (ETW)](event-tracing-for-windows--etw-.md) API.</li>
 <li>For user-mode drivers or applications, use the [Event Tracing](https://msdn.microsoft.com/library/windows/desktop/bb968803) (Windows Desktop) API.</li>
 </ul>
-For more information, see [When should I use WPP Software Tracing or the Event Tracing for Windows (ETW) API?](tools-for-software-tracing.md#when_to_use_event_tracing)</td>
+For more information, see [When should I use WPP Software Tracing or the Event Tracing for Windows (ETW) API?](tools-for-software-tracing.md)</td>
 </tr>
 </tbody>
 </table>
@@ -46,7 +57,7 @@ Logging messages with WPP software tracing is similar to using Windows event log
 
 WPP software tracing is supported on Microsoft Windows 2000 and later versions of Windows.
 
-### <span id="ddk_using_wpp_software_tracing_in_a_driver_tools"></span><span id="DDK_USING_WPP_SOFTWARE_TRACING_IN_A_DRIVER_TOOLS"></span>An overview of the WPP software tracing process
+### An overview of the WPP software tracing process
 
 The basic process for adding WPP software tracing to a driver or application, includes the following steps. If you use one of the Visual Studio templates provided in the WDK for creating a WDF driver, much of the work is done for you.
 
@@ -54,11 +65,11 @@ The basic process for adding WPP software tracing to a driver or application, in
 
 -   Add the required WPP-related C preprocessor directives and WPP macro calls to the provider's source files, as described in [Adding WPP Software Tracing to a Windows Driver](adding-wpp-software-tracing-to-a-windows-driver.md) and in [WPP Software Tracing Reference](https://msdn.microsoft.com/library/windows/hardware/ff556205).
 
--   Modify the Visual Studio project to run the WPP preprocessor and build the driver, as described in [Step 6](adding-wpp-software-tracing-to-a-windows-driver.md#step_run_wpp) of Adding WPP Software Tracing to a Windows Driver. You can refer to the [WPP Preprocessor](wpp-preprocessor.md) for more build time options.
+-   Modify the Visual Studio project to run the WPP preprocessor and build the driver, as described in [Step 6](adding-wpp-software-tracing-to-a-windows-driver.md#step-6-modify-the-visual-studio-project-to-run-the-wpp-preprocessor-and-build-the-solution) of Adding WPP Software Tracing to a Windows Driver. You can refer to the [WPP Preprocessor](wpp-preprocessor.md) for more build time options.
 
 -   Install the driver or component. Start a trace session and record the trace messages. Use the tools for software tracing, such as [TraceView](traceview.md), [Tracelog](tracelog.md), [Tracefmt](tracefmt.md), and [Tracepdb](tracepdb.md) to configure, start, and stop tracing sessions and to display and filter trace messages. These tools are included in the Windows Driver Kit (WDK).
 
-## <span id="in_this_section"></span>In this section
+## In this section
 
 
 -   [Adding WPP Software Tracing to a Windows Driver](adding-wpp-software-tracing-to-a-windows-driver.md)
@@ -71,7 +82,7 @@ The basic process for adding WPP software tracing to a driver or application, in
 **Note**   Event Tracing for Windows (ETW) and WPP support most types of kernel-mode and user-mode drivers. However, ETW and WPP use types that are not available for certain types of drivers, such as miniport drivers. To determine whether a particular driver type is supported, add basic WPP macros to the driver, such as [WPP\_INIT\_TRACING](https://msdn.microsoft.com/library/windows/hardware/ff556191) and [WPP\_CLEANUP](https://msdn.microsoft.com/library/windows/hardware/ff556179). If the code does not compile because the types that are used are not defined, ETW and WPP cannot support the driver type.
 For more information about ETW, see [Event Tracing](http://go.microsoft.com/fwlink/p/?linkid=179202) in the Windows SDK documentation.
 
- 
+**Note** WPP trace providers can only be enabled by one trace session at a time. See [WPP Providers](https://msdn.microsoft.com/library/windows/desktop/aa363668#providers) for more information.
 
 For information about the [WMI library support routines](https://msdn.microsoft.com/library/windows/hardware/ff566359) that support WPP software tracing, see:
 
@@ -85,7 +96,6 @@ For information about the [WMI library support routines](https://msdn.microsoft.
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20WPP%20Software%20Tracing%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

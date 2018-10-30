@@ -2,6 +2,12 @@
 title: Mobile Broadband (MB) Design Guide
 description: Mobile Broadband (MB) Design Guide
 ms.assetid: d5db6b69-c5a9-41d5-88c9-7c4d1e7c9c03
+ms.author: windowsdriverdev
+ms.date: 08/09/2018
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Mobile Broadband (MB) Design Guide
@@ -48,6 +54,32 @@ This section includes the following topics:
 [MB Device Services](mb-device-services.md)
 
 [MB Multimode Multicarrier](mb-multimode-multicarrier.md)
+
+[MB Multi-SIM Operations](mb-multi-sim-operations.md)
+
+[MB Provisioned Context Operations](mb-provisioned-context-operations.md)
+
+[MB Network Blacklist Operations](mb-network-blacklist-operations.md)
+
+[MB LTE Attach Operations](mb-lte-attach-operations.md)
+
+[MB Protocol Configuration Operations (PCO)](mb-protocol-configuration-operations--pco-.md)
+
+[MB low level UICC access](mb-low-level-uicc-access.md)
+
+[MB device-based reset and recovery](mb-device-based-reset-and-recovery.md)
+
+[MB hang detection](mb-hang-detection.md)
+
+[MB modem reset operations](mb-modem-reset-operations.md)
+
+[MB SAR Platform Support](mb-sar-platform-support.md)
+
+[MB base stations information query support](mb-base-stations-information-query-support.md)
+
+[MB eSIM MBIM ready state guidance](mb-esim-mbim-ready-state-guidance.md)
+
+[MB NDIS Status Notifications](mb-ndis-status-notifications.md)
 
 [Supplemental MB Documentation](supplemental-mb-documentation.md)
 

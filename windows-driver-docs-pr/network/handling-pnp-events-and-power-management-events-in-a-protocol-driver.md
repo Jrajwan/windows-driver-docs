@@ -1,14 +1,28 @@
 ---
-title: Handling PnP Events and Power Management Events in a Protocol Driver
+title: Handling PnP and power management events in a protocol driver
 description: Handling PnP Events and Power Management Events in a Protocol Driver
 ms.assetid: 97cc51f1-7d83-4bf1-87e3-7d986f54e7a1
-keywords: ["protocol drivers WDK networking , power management", "NDIS protocol drivers WDK , power management", "protocol drivers WDK networking , Plug and Play", "NDIS protocol drivers WDK , Plug and Play", "power management WDK NDIS protocol", "Plug and Play WDK NDIS protocol", "notifications WDK PnP , NDIS protocol drivers", "event notifications WDK networking"]
+keywords:
+- protocol drivers WDK networking , power management
+- NDIS protocol drivers WDK , power management
+- protocol drivers WDK networking , Plug and Play
+- NDIS protocol drivers WDK , Plug and Play
+- power management WDK NDIS protocol
+- Plug and Play WDK NDIS protocol
+- notifications WDK PnP , NDIS protocol drivers
+- event notifications WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Handling PnP Events and Power Management Events in a Protocol Driver
 
 
-## <a href="" id="ddk-handling-pnp-events-and-pm-events-in-a-protocol-driver-ng"></a>
+
 
 
 When the operating system issues a Plug and Play (PnP) I/O request packet (IRP) or a power management IRP to a target device object that represents a network interface card (NIC), NDIS intercepts the IRP. NDIS indicates the event to each bound protocol driver and each bound intermediate driver by calling the driver's [*ProtocolNetPnPEvent*](https://msdn.microsoft.com/library/windows/hardware/ff570263) function. In the call to *ProtocolNetPnPEvent*, NDIS passes a pointer to a [**NET\_PNP\_EVENT\_NOTIFICATION**](https://msdn.microsoft.com/library/windows/hardware/ff568752) that contains a NET\_PNP\_EVENT structure. The NET\_PNP\_EVENT structure describes the PnP event or power management event being indicated. For more information about the protocol driver PnP interface, see [Handling PnP Event Notifications in a Protocol Driver](handling-pnp-event-notifications-in-a-protocol-driver.md).

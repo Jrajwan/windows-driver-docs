@@ -3,7 +3,16 @@ title: Storport Driver
 author: windows-driver-content
 description: Storport Driver
 ms.assetid: d5bda2f6-c4bb-4b90-a149-131785295687
-keywords: ["storage port drivers WDK , Storport driver", "Storport drivers WDK", "Storport drivers WDK , about Storport drivers"]
+keywords:
+- storage port drivers WDK , Storport driver
+- Storport drivers WDK
+- Storport drivers WDK , about Storport drivers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Storport Driver
@@ -53,6 +62,5 @@ This section includes the following topics:
  
 
 
---------------------
 
 

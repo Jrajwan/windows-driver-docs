@@ -2,13 +2,22 @@
 title: Windows Sockets Direct Architecture
 description: Windows Sockets Direct Architecture
 ms.assetid: 2f6ac4a7-76fe-45b4-8b5b-3a5f1d5c0553
-keywords: ["Windows Sockets Direct WDK , architecture", "TCP/IP WDK SANs", "NIC components WDK SANs"]
+keywords:
+- Windows Sockets Direct WDK , architecture
+- TCP/IP WDK SANs
+- NIC components WDK SANs
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Windows Sockets Direct Architecture
 
 
-## <a href="" id="ddk-windows-sockets-direct-architecture-ng"></a>
+
 
 
 Windows Sockets Direct provides a high-speed, high-performance connection between two network nodes on the same system area network (SAN) by mapping a SAN transport interface directly into an application process. This SAN connection enables user-mode processes to perform direct input and output (I/O) without copying across the user-kernel boundary.

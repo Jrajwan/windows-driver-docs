@@ -2,7 +2,18 @@
 title: Allocating a NetDMA Channel
 description: Allocating a NetDMA Channel
 ms.assetid: f65c63a3-baf3-453e-a9f9-846a09afd10c
-keywords: ["memory-to-memory data transfers WDK NetDMA , allocating channels", "data transfers WDK NetDMA , allocating channels", "transferring data WDK NetDMA , allocating channels", "DMA transfers WDK NetDMA , allocating channels", "NetDMA WDK networking , allocating c"]
+keywords:
+- memory-to-memory data transfers WDK NetDMA , allocating channels
+- data transfers WDK NetDMA , allocating channels
+- transferring data WDK NetDMA , allocating channels
+- DMA transfers WDK NetDMA , allocating channels
+- NetDMA WDK networking , allocating c
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Allocating a NetDMA Channel
@@ -12,7 +23,7 @@ keywords: ["memory-to-memory data transfers WDK NetDMA , allocating channels", "
 
  
 
-## <a href="" id="ddk-allocating-a-netdma-channel-ng"></a>
+
 
 
 Before using a dynamic memory access (DMA) channel, the NetDMA interface calls the [**ProviderAllocateDmaChannel**](https://msdn.microsoft.com/library/windows/hardware/ff570393) function of the NetDMA provider driver to allocate and initialize the DMA channel.

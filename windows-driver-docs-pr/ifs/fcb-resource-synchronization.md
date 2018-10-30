@@ -3,7 +3,19 @@ title: FCB Resource Synchronization
 author: windows-driver-content
 description: FCB Resource Synchronization
 ms.assetid: 8355907e-e313-4e54-a63f-a82d9ce0d31b
-keywords: ["RDBSS WDK file systems , FCB resource synchronization", "Redirected Drive Buffering Subsystem WDK file systems , FCB resource synchronization", "FCB resource synchronization WDK RDBSS", "paging I/O WDK RDBSS", "synchronization WDK RDBSS", "file control block structure WDK RDBSS"]
+keywords:
+- RDBSS WDK file systems , FCB resource synchronization
+- Redirected Drive Buffering Subsystem WDK file systems , FCB resource synchronization
+- FCB resource synchronization WDK RDBSS
+- paging I/O WDK RDBSS
+- synchronization WDK RDBSS
+- file control block structure WDK RDBSS
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # FCB Resource Synchronization
@@ -93,6 +105,5 @@ The following macros are defined in the rxprocs.h header file to determine wheth
  
 
 
---------------------
 
 

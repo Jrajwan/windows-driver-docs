@@ -2,13 +2,26 @@
 title: CoNDIS WAN Operations that Support Telephonic Services
 description: CoNDIS WAN Operations that Support Telephonic Services
 ms.assetid: 698d7667-8620-4f98-aa57-e48195f612e3
-keywords: ["CoNDIS WAN drivers WDK networking , telephonic services", "telephonic services WDK WAN", "NDPROXY WDK networking", "CoNDIS TAPI WDK networking", "telephonic services WDK WAN , about telephonic services", "WAN miniport drivers WDK networking , telephonic services", "TAPI WDK networking"]
+keywords:
+- CoNDIS WAN drivers WDK networking , telephonic services
+- telephonic services WDK WAN
+- NDPROXY WDK networking
+- CoNDIS TAPI WDK networking
+- telephonic services WDK WAN , about telephonic services
+- WAN miniport drivers WDK networking , telephonic services
+- TAPI WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # CoNDIS WAN Operations that Support Telephonic Services
 
 
-## <a href="" id="ddk-condis-wan-operations-that-support-telephonic-services-ng"></a>
+
 
 
 This section describes how CoNDIS WAN miniport drivers implement telephonic services using NDIS functions in a connection-oriented environment. CoNDIS WAN miniport drivers communicate through NDIS with the NDPROXY and NDISWAN drivers. The NDPROXY driver communicates with telephony applications through a telephony service provider. For more information, see the Telephony Application Programming Interface (TAPI) in the Microsoft Windows SDK documentation.

@@ -2,6 +2,12 @@
 title: Capture and view TraceLogging data
 description: Capture and view TraceLogging data
 ms.assetid: E5C18352-B05B-42BF-B5B8-12ABA0E6131C
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Capture and view TraceLogging data
@@ -112,7 +118,7 @@ The WPR and WPA tools must be compatible with the version of the TraceLogging th
 
 2.  For kernel mode providers, you need to add the NonPagedMemory="true" attribute to the EventProvider Id element.
 
-    ``` syntax
+    ```
     <EventProvider Id="EventProvider_myTraceLoggingProviderKM" 
       Name="263dd596-513b-4fd9-969c-022b691bb130" NonPagedMemory="true"/>
     ```
@@ -120,7 +126,7 @@ The WPR and WPA tools must be compatible with the version of the TraceLogging th
 3.  Save the file with the file name extension (.WPRP).
 4.  Start the capture using WPR from a Command Prompt window.
 
-    ``` syntax
+    ```
     <path to wpr>\wpr.exe -start GeneralProfile -start  yourTraceLoggingProvider.wprp
     ```
 
@@ -129,13 +135,13 @@ The WPR and WPA tools must be compatible with the version of the TraceLogging th
 5.  Run your test scenario (load and unload the driver or component to trigger events).
 6.  Stop trace capture and merge all recordings.
 
-    ``` syntax
+    ```
     <path to wpr>\wpr.exe -stop GeneralProfile -stop  yourTraceCaptureFile.etl description
     ```
 
 You can also use Windows Performance Recorder user interface (Wprui.exe) to collect trace data.
 
-``` syntax
+```
 <path to wpr>\wprui.exe
 ```
 
@@ -149,26 +155,26 @@ You can also use Windows Performance Recorder user interface (Wprui.exe) to coll
 
 1.  Start trace capture of your provider.
 
-    ``` syntax
+    ```
     cmdd tracelog '-start test -f c:\test.etl -guid #providerguid'
     ```
 
 2.  Run your test scenarios to log events.
 3.  Stop trace capture.
 
-    ``` syntax
+    ```
     cmdd tracelog '-stop test'
     ```
 
 4.  Merge trace results.
 
-    ``` syntax
+    ```
     cmdd xperf -merge c:\test.etl c:\testmerged.etl
     ```
 
 5.  Retrieve the merged log file.
 
-    ``` syntax
+    ```
     getd c:\testmerged.etl
     ```
 
@@ -178,7 +184,7 @@ Currently, WPA is the only viewer you can use to view the etl files that TraceLo
 
 1.  Start WPA.
 
-    ``` syntax
+    ```
     <path to wpr>\wpa.exe
     ```
 
@@ -195,7 +201,6 @@ Currently, WPA is the only viewer you can use to view the etl files that TraceLo
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20Capture%20and%20view%20TraceLogging%20data%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

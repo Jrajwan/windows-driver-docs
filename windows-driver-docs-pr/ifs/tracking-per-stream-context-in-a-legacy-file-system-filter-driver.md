@@ -3,7 +3,14 @@ title: Tracking Per-Stream Context in a Legacy File System Filter Driver
 author: windows-driver-content
 description: Tracking Per-Stream Context in a Legacy File System Filter Driver
 ms.assetid: d908ee30-a433-460c-8c14-883702b4f810
-keywords: ["context tracking WDK file system"]
+keywords:
+- context tracking WDK file system
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Tracking Per-Stream Context in a Legacy File System Filter Driver
@@ -28,6 +35,5 @@ This section covers per-stream context tracking in Microsoft Windows XP and late
  
 
 
---------------------
 
 

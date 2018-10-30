@@ -1,9 +1,21 @@
 ---
-title: Propagating the FILE\_DEVICE\_SECURE\_OPEN Flag
+title: Propagating the FILE_DEVICE_SECURE_OPEN Flag
 author: windows-driver-content
-description: Propagating the FILE\_DEVICE\_SECURE\_OPEN Flag
+description: Propagating the FILE_DEVICE_SECURE_OPEN Flag
 ms.assetid: cbc254ab-3ac6-44aa-bb16-16d701d5ada7
-keywords: ["filter drivers WDK file system , attaching filters", "file system filter drivers WDK , attaching filters", "attaching filters to file system or volume", "volumes WDK file system , attaching filters", "FILE_DEVICE_SECURE_OPEN", "propagating FILE_DEVICE_SECURE_OPEN flag"]
+keywords:
+- filter drivers WDK file system , attaching filters
+- file system filter drivers WDK , attaching filters
+- attaching filters to file system or volume
+- volumes WDK file system , attaching filters
+- FILE_DEVICE_SECURE_OPEN
+- propagating FILE_DEVICE_SECURE_OPEN flag
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Propagating the FILE\_DEVICE\_SECURE\_OPEN Flag
@@ -27,6 +39,5 @@ In the above code snippet, *DeviceObject* is a pointer to the device object to w
  
 
 
---------------------
 
 

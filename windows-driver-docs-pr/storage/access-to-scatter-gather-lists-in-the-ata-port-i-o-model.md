@@ -3,13 +3,24 @@ title: Access to Scatter/Gather Lists in the ATA Port I/O Model
 author: windows-driver-content
 description: Access to Scatter/Gather Lists in the ATA Port I/O Model
 ms.assetid: 56221602-9588-47f2-acd9-a11bd5ce02d9
-keywords: ["ATA Port drivers WDK , scatter/gather list", "scatter/gather list WDK ATA Port driver"]
+keywords:
+- ATA Port drivers WDK , scatter/gather list
+- scatter/gather list WDK ATA Port driver
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Access to Scatter/Gather Lists in the ATA Port I/O Model
 
 
 ## <span id="ddk_access_to_scatter_gather_lists_in_the_ata_port_i_o_model_kg"></span><span id="DDK_ACCESS_TO_SCATTER_GATHER_LISTS_IN_THE_ATA_PORT_I_O_MODEL_KG"></span>
+
+**NOTE** The ATA port driver and ATA miniport driver models may be altered or unavailable in the future. Instead, we recommend using the [Storport driver](https://msdn.microsoft.com/en-us/windows/hardware/drivers/storage/storport-driver) and [Storport miniport](https://msdn.microsoft.com/en-us/windows/hardware/drivers/storage/storport-miniport-drivers) driver models.
+
 
 
 The [ATA Port I/O Model](ata-port-i-o-model.md), such as the [Storport I/O Model](storport-i-o-model.md), provides its miniport drivers that have direct access to the system's scatter/gather list structure. This direct access reduces the number of calls that the miniport driver must make to port driver support routines to build its private scatter/gather list.
@@ -25,8 +36,5 @@ The miniport driver's [**IdeHwBuildIo**](https://msdn.microsoft.com/library/wind
  
 
  
-
-
---------------------
 
 

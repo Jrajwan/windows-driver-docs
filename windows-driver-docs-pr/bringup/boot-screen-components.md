@@ -2,10 +2,13 @@
 title: Boot screen components
 author: windows-driver-content
 description: There are two components to the firmware update boot screen the OEM logo and the update text.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 7ACD6BFC-AB92-4BCC-A9E1-9574D959B577
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Boot screen components
@@ -140,6 +143,5 @@ The firmware update display capsule is modeled off of the Boot Graphics Resource
 ## Related topics
 [User experience for UEFI firmware updates](user-experience-for-uefi-firmware-updates.md)  
 
---------------------
 
 

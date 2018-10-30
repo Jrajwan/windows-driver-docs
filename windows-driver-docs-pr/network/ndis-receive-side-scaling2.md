@@ -2,18 +2,30 @@
 title: Receive Side Scaling
 description: Receive Side Scaling
 ms.assetid: 380feb24-1f5e-4faa-9c98-1b3c8fdc27cb
-keywords: ["network drivers WDK , receive-side scaling", "receive-side scaling WDK networking , NDIS 6.0", "RSS WDK networking , NDIS 6.0", "network receive processing WDK RSS"]
+keywords:
+- network drivers WDK , receive-side scaling
+- receive-side scaling WDK networking , NDIS 6.0
+- RSS WDK networking , NDIS 6.0
+- network receive processing WDK RSS
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Receive Side Scaling
 
 
-## <a href="" id="ddk-ndis-receive-side-scaling-ng"></a>
+
 
 
 Receive side scaling (RSS) improves the system performance related to handling of network data on multiprocessor systems.
 
 For introductory information about RSS, see [Introduction to Receive Side Scaling](introduction-to-receive-side-scaling.md).
+
+Starting with Windows 10, version 1709, RSS Version 2 (RSSv2) is available for miniport drivers. RSSv2 improves on the base RSS model by offering per-VPort spreading. For more info, see [Receive Side Scaling Version 2 (RSSv2)](receive-side-scaling-version-2-rssv2-.md). RSSv2 is preview only in Windows 10, version 1709.
 
 The following topics describe the RSS implementations that are possible with different levels of hardware and software support:
 

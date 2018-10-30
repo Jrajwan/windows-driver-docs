@@ -2,13 +2,26 @@
 title: Listening for Connections on a SAN
 description: Listening for Connections on a SAN
 ms.assetid: 7e430bda-74f5-4a1a-90f0-3b2e44fb25a3
-keywords: ["SAN connection setup WDK , listening for connections", "listen operations WDK SANs", "refusing SAN connection requests", "remote peer connection refusals WDK SANs", "nonblocking mode WDK SANs", "WSPListen", "SAN sockets WDK , listening for connections"]
+keywords:
+- SAN connection setup WDK , listening for connections
+- listen operations WDK SANs
+- refusing SAN connection requests
+- remote peer connection refusals WDK SANs
+- nonblocking mode WDK SANs
+- WSPListen
+- SAN sockets WDK , listening for connections
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Listening for Connections on a SAN
 
 
-## <a href="" id="ddk-listening-for-connections-on-a-san-ng"></a>
+
 
 
 The following figure shows an overview of how the Windows Sockets switch sets a SAN socket to acknowledge and queue--that is, listen for--incoming connection requests from a remote peer. The topics that follow describe the listening process in more detail.

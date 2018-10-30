@@ -3,6 +3,12 @@ title: Controlling Device Access
 author: windows-driver-content
 description: Controlling Device Access
 ms.assetid: E4FF73B3-87D0-458E-A042-E5A8F3DB1677
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Controlling Device Access
@@ -14,7 +20,7 @@ Starting in Windows 8, the operating system includes a security identifier (SID
 
 The SID for UMDF drivers is SDDL\_USER\_MODE\_DRIVERS, and the definition is in sddl.h. The full representation of this SID is:
 
-``` syntax
+```
 S-1-5-84-0-0-0-0-0
 ```
 
@@ -29,13 +35,13 @@ In the INF file, you can use either the abbreviated form or the fully specified 
 
 The abbreviated form is available starting in Windows 8:
 
-``` syntax
+```
 HKR,,Security,,"D:P(A;;GA;;;BA)(A;;GA;;;SY)(A;;GA;;;UD)"   
 ```
 
 On operating systems earlier than Windows 8, you must use the fully specified form:
 
-``` syntax
+```
 HKR,,Security,,"D:P(A;;GA;;;BA)(A;;GA;;;SY)(A;;GA;;;S-1-5-84-0-0-0-0-0)"       
 ```
 

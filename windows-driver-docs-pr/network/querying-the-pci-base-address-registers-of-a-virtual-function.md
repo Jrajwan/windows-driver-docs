@@ -2,10 +2,17 @@
 title: Querying the PCI Base Address Registers of a Virtual Function
 description: Querying the PCI Base Address Registers of a Virtual Function
 ms.assetid: 99C2BF61-E87E-4C3B-BE7E-C16B5318EC1A
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Querying the PCI Base Address Registers of a Virtual Function
 
+**Note** This method can only be used by overlying drivers that run in the management operating system of the Hyper-V parent partition.
 
 The PCI bus driver, which runs in the management operating system of the Hyper-V parent partition, queries the memory or I/O address space requirements of each PCI Base Address Register (BAR) of the network adapter. The PCI bus driver performs this query when it first detects the adapter on the bus.
 

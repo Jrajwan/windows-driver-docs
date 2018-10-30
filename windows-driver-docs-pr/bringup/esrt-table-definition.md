@@ -1,11 +1,14 @@
 ---
 title: ESRT table definition
 author: windows-driver-content
-description: The pointer to the ESRT table is identified via its corresponding GUID in the EFI\_CONFIGURATION\_TABLE.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: The pointer to the ESRT table is identified via its corresponding GUID in the EFI_CONFIGURATION_TABLE.
 ms.assetid: F332CCF3-AE6D-4B02-A63E-DB05910C8E6E
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # ESRT table definition
@@ -183,6 +186,5 @@ The above ESRT example is used elsewhere in this documentation to walk through t
 [Seamless crisis prevention and recovery](seamless-crisis-prevention-and-recovery.md)  
 [Firmware update status](firmware-update-status.md)  
 
---------------------
 
 

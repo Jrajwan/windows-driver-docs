@@ -3,7 +3,16 @@ title: Supporting Plug and Play in a SCSI Miniport Driver
 author: windows-driver-content
 description: Supporting Plug and Play in a SCSI Miniport Driver
 ms.assetid: c8b148ac-b1ab-4870-8818-5ef1c2d68599
-keywords: ["SCSI miniport drivers WDK storage , PnP", "PnP WDK SCSI", "Plug and Play WDK SCSI"]
+keywords:
+- SCSI miniport drivers WDK storage , PnP
+- PnP WDK SCSI
+- Plug and Play WDK SCSI
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Supporting Plug and Play in a SCSI Miniport Driver
@@ -23,6 +32,5 @@ The SCSI port driver creates PDOs for target devices and the FDO for the minipor
  
 
 
---------------------
 
 

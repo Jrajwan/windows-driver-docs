@@ -2,13 +2,22 @@
 title: DDInstall.Services Section in a Network INF File
 description: DDInstall.Services Section in a Network INF File
 ms.assetid: 5d5cc0ac-fbe2-4791-9c74-fdf9906faff6
-keywords: ["INF files WDK network , DDInstall.Services section", "network INF files WDK , DDInstall.Services section", "DDInstall.Services section WDK networking"]
+keywords:
+- INF files WDK network , DDInstall.Services section
+- network INF files WDK , DDInstall.Services section
+- DDInstall.Services section WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # DDInstall.Services Section in a Network INF File
 
 
-## <a href="" id="ddk-ddinstall-services-section-ng"></a>
+
 
 
 A *DDInstall*.**Services** section in a network INF file is based on the generic [**INF DDInstall.Services section**](https://msdn.microsoft.com/library/windows/hardware/ff547349).

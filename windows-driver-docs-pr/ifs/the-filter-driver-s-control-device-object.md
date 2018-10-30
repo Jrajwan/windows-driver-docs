@@ -3,7 +3,15 @@ title: The Filter Driver's Control Device Object
 author: windows-driver-content
 description: The Filter Driver's Control Device Object
 ms.assetid: ac49b5d0-110d-4e47-814b-05f59791de41
-keywords: ["control device objects WDK file system", "CDOs WDK file system"]
+keywords:
+- control device objects WDK file system
+- CDOs WDK file system
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # The Filter Driver's Control Device Object
@@ -49,6 +57,5 @@ Note that, unlike all other device objects that a file system filter driver crea
  
 
 
---------------------
 
 

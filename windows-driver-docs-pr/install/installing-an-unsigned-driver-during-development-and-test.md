@@ -2,7 +2,22 @@
 title: Installing an Unsigned Driver during Development and Test
 description: Installing an Unsigned Driver during Development and Test
 ms.assetid: b7b08d5a-40cf-498f-8645-6b02d803f62f
-keywords: ["driver signing WDK , unsigned drivers", "signing drivers WDK , unsigned drivers", "digital signatures WDK , unsigned drivers", "signatures WDK , unsigned drivers", "test signing drivers WDK , unsigned drivers", "unsigned driver installations WDK driver signing", "kernel debuggers WDK driver signing", "kernel-mode driver signing WDK", "F8 key WDK drvier signing"]
+keywords:
+- driver signing WDK , unsigned drivers
+- signing drivers WDK , unsigned drivers
+- digital signatures WDK , unsigned drivers
+- signatures WDK , unsigned drivers
+- test signing drivers WDK , unsigned drivers
+- unsigned driver installations WDK driver signing
+- kernel debuggers WDK driver signing
+- kernel-mode driver signing WDK
+- F8 key WDK drvier signing
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Installing an Unsigned Driver during Development and Test
@@ -34,7 +49,7 @@ In order to facilitate debugging such issues, the [kernel-mode code signing poli
 HKLM\SYSTEM\CurrentControlSet\Control\CI\DebugFlags
 ```
 
-This registry value is of type REG\_DWORD, and can be assigned a value based on a bitwise OR of one or more of the following flags:
+This registry value is of type REG_DWORD, and can be assigned a value based on a bitwise OR of one or more of the following flags:
 
 <a href="" id="0x00000001"></a>**0x00000001**  
 This flag value configures the kernel to break into the debugger if a driver is unsigned. The developer or tester can then choose to load the unsigned driver by entering **g** at the debugger prompt.

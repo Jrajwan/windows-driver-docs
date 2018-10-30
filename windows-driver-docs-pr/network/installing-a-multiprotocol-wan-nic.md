@@ -2,13 +2,23 @@
 title: Installing a Multiprotocol WAN NIC
 description: Installing a Multiprotocol WAN NIC
 ms.assetid: 7000040c-8a26-496d-ae26-580aace68160
-keywords: ["add-registry-sections WDK networking , multiprotocol WAN NIC", "multiprotocol WAN NIC WDK networking", "WAN NIC WDK networking", "NIC multiprotocol WAN WDK networking"]
+keywords:
+- add-registry-sections WDK networking , multiprotocol WAN NIC
+- multiprotocol WAN NIC WDK networking
+- WAN NIC WDK networking
+- NIC multiprotocol WAN WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Installing a Multiprotocol WAN NIC
 
 
-## <a href="" id="ddk-installing-a-multiprotocol-wan-nic-ng"></a>
+
 
 
 A multiprotocol WAN NIC provides more than one WAN protocol. For example, such a NIC might allow the user to select ISDN, Frame Relay, or channelized T1. The user selects the WAN protocol during installation of the NIC or when configuring the NIC.

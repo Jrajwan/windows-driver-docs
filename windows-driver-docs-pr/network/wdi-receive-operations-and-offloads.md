@@ -2,6 +2,12 @@
 title: WDI receive operations and offloads
 description: These main categories of operation offloads are configurable.MSDU-level receive operationsFrame forwarding (forwarding decision and actuation)Protocol/Task offloads.
 ms.assetid: 7D2648BC-05F2-4F75-BA01-E0385C83E0E8
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # WDI receive operations and offloads
@@ -57,9 +63,9 @@ The following is a list of RX operations and offloads.
 </tr>
 <tr class="odd">
 <td align="left"><p>Rx decap</p></td>
-<td align="left"><p>Replace the 802.3 header with a generic 802.11 header.</p></td>
+<td align="left"><p>Replace non-initial A-MSDU subframe headers with 802.11 headers, using the 802.11 header fields from the initial A-MSDU subframe as appropriate.</p></td>
 <td align="left"><p>Target/TAL</p></td>
-<td align="left"><p>During A-MSDU deaggregation, the non-initial MSDUs of the A-MSDU need their 802.3 header replaced by a generic 802.11 header.</p></td>
+<td align="left"><p>During A-MSDU deaggregation, the non-initial MSDUs of the A-MSDU need their 802.3 header replaced by a generic 802.11 header. WDI always expects 802.11 headers.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Rx reordering logic</p></td>
@@ -121,10 +127,9 @@ The following is a list of RX operations and offloads.
 </tr>
 <tr class="odd">
 <td align="left"><p>Higher-level protocol (task) offloads</p></td>
-<td align="left"><p>Checksum, LRO.</p></td>
+<td align="left"><p>Checksum</p></td>
 <td align="left"><p>Checksum: Configurable offload at boot-up if required.</p></td>
-<td align="left"><p>Checksum: The target passes its checksum offload capabilities as part of device caps to WFCD during bring-up. For information about capabilities, see [<strong>NDIS_TCP_IP_ CHECKSUM_OFFLOAD</strong>](https://msdn.microsoft.com/library/windows/hardware/ff567878).</p>
-<p>LRO: WFCD handles LRO transparently from the TAL/Target if applicable.</p></td>
+<td align="left"><p>Checksum: The target passes its checksum offload capabilities as part of device caps to WDI during bring-up. For information about capabilities, see [<strong>NDIS_TCP_IP_ CHECKSUM_OFFLOAD</strong>](https://msdn.microsoft.com/library/windows/hardware/ff567878).</p></td>
 </tr>
 </tbody>
 </table>

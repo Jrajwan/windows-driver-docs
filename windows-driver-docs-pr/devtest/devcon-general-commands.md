@@ -2,13 +2,20 @@
 title: Device Console (DevCon.exe) Commands
 description: DevCon (DevCon.exe) is a command line tool that can display detailed information about devices on computers running Windows. You can also use DevCon to enable, disable, install, configure, and remove devices. DevCon uses the following syntax.
 ms.assetid: b397c407-db1f-4e2a-8beb-4fe989bd06e0
-keywords: ["Device Console (DevCon.exe) Commands Driver Development Tools"]
+keywords:
+- Device Console (DevCon.exe) Commands Driver Development Tools
 topic_type:
 - apiref
 api_name:
 - Device Console (DevCon.exe) Commands
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Device Console (DevCon.exe) Commands
@@ -16,7 +23,7 @@ api_type:
 
 DevCon (DevCon.exe) is a command line tool that can display detailed information about devices on computers running Windows. You can also use DevCon to enable, disable, install, configure, and remove devices. DevCon uses the following syntax.
 
-``` syntax
+```
 devcon [/m:\\computer] [/r] command [arguments] 
 ```
 
@@ -129,7 +136,7 @@ For example, **devcon hwids =media \*pnp\* \*microsoft\*** returns devices in th
 
  
 
-### <span id="ddk_rebooting_and_restarting_tools"></span><span id="DDK_REBOOTING_AND_RESTARTING_TOOLS"></span>Rebooting and restarting
+### <span id="ddk_rebooting_and_restarting_tools"></span><span id="DDK_REBOOTING_AND_RESTARTING_TOOLS"></span><a name="ddk-rebooting-and-restarting-tools"></a>Rebooting and restarting
 
 DevCon provides two methods to reboot the operating system and one method to restart devices.
 
@@ -182,7 +189,6 @@ The following table lists and describes the return codes.
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20Device%20Console%20%28DevCon.exe%29%20Commands%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

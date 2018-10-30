@@ -2,13 +2,20 @@
 title: INF CopyINF Directive
 description: A CopyINF directive causes specified INF files to be copied to the target system. The CopyINF directive is supported in Windows XP and later versions of Windows.
 ms.assetid: 289822a8-69c3-43a3-ab07-ee02a7473db8
-keywords: ["INF CopyINF Directive Device and Driver Installation"]
+keywords:
+- INF CopyINF Directive Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF CopyINF Directive
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF CopyINF Directive
@@ -16,7 +23,7 @@ api_type:
 
 A **CopyINF** directive causes specified INF files to be copied to the target system. The **CopyINF** directive is supported in Windows XP and later versions of Windows.
 
-``` syntax
+```
 [DDInstall]
   
 CopyINF=filename1.inf[,filename2.inf]...
@@ -37,7 +44,7 @@ If you follow these rules, Windows can install drivers for each function without
 
 The following points apply to the **CopyINF** directive:
 
--   Before Windows Vista, Windows copies the specified INF files as part of the default processing for [**DIF\_INSTALLDEVICE**](https://msdn.microsoft.com/library/windows/hardware/ff543692) (see [**SetupDiInstallDevice**](https://msdn.microsoft.com/library/windows/hardware/ff552039)) after the device is installed successfully.
+-   Before Windows Vista, Windows copies the specified INF files as part of the default processing for [**DIF_INSTALLDEVICE**](https://msdn.microsoft.com/library/windows/hardware/ff543692) (see [**SetupDiInstallDevice**](https://msdn.microsoft.com/library/windows/hardware/ff552039)) after the device is installed successfully.
 
     Windows copies the specified INF files into a system directory path that it will search during device installations.
 

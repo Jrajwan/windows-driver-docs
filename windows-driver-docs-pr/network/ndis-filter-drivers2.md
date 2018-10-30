@@ -2,13 +2,23 @@
 title: NDIS Filter Drivers
 description: NDIS Filter Drivers
 ms.assetid: 055737d1-8e0e-46e9-a92e-2ab99e7d3595
-keywords: ["filter drivers WDK networking", "network drivers WDK , filter drivers", "NDIS WDK , filter drivers", "NDIS filter drivers WDK"]
+keywords:
+- filter drivers WDK networking
+- network drivers WDK , filter drivers
+- NDIS WDK , filter drivers
+- NDIS filter drivers WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NDIS Filter Drivers
 
 
-## <a href="" id="ddk-ndis-6-0-filter-drivers-ng"></a>
+
 
 
 NDIS filter drivers are supported in NDIS 6.0 and later. The following sections introduce filter drivers and describe how to write and install NDIS filter drivers:

@@ -1,11 +1,14 @@
 ---
 title: Authoring an update driver package
 author: windows-driver-content
-description: It is required that the update payload for each firmware resource described in the ESRT be bundled and distributed in its own driver package so as to allow it to maintain its own versioning scheme without being tied to other firmware resource updates that may not be updated at the same cadence.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: This topic provides information about authoring an update driver package and provides example INF file settings and configurations.
 ms.assetid: 9018900A-3670-4C78-9094-1DDAB82847DD
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Authoring an update driver package
@@ -370,6 +373,5 @@ After the next reboot, the OS Loader will call into UpdateCapsule() with the pay
 [Seamless crisis prevention and recovery](seamless-crisis-prevention-and-recovery.md)  
 [Firmware update status](firmware-update-status.md)  
 
---------------------
 
 

@@ -2,7 +2,17 @@
 title: Unload Routine of a Battery Miniclass Driver
 description: Unload Routine of a Battery Miniclass Driver
 ms.assetid: f0acbf94-95d1-4a9d-aafd-1f868c5560cc
-keywords: ["battery miniclass drivers WDK , routines", "Unload routine", "verifying device unloads", "unloading devices"]
+keywords:
+- battery miniclass drivers WDK , routines
+- Unload routine
+- verifying device unloads
+- unloading devices
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Unload Routine of a Battery Miniclass Driver
@@ -34,6 +44,5 @@ The miniclass driver's *Unload* routine can be called at any time after all the 
  
 
 
---------------------
 
 

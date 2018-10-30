@@ -1,14 +1,23 @@
 ---
-title: NDIS Protocol Drivers
-description: NDIS Protocol Drivers
+title: Protocol drivers
+description: Protocol drivers
 ms.assetid: e144f9a6-97fc-46ac-82f8-4a1745d280c7
-keywords: ["protocol drivers WDK networking , architecture", "NDIS protocol drivers WDK , architecture", "transport protocol drivers WDK networking"]
+keywords:
+- protocol drivers WDK networking , architecture
+- NDIS protocol drivers WDK , architecture
+- transport protocol drivers WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
-# NDIS Protocol Drivers
+# Protocol drivers
 
 
-## <a href="" id="ddk-ndis-protocol-drivers-ng"></a>
+
 
 
 A network protocol, which is the highest driver in the NDIS hierarchy of drivers, is often used as the lowest-level driver in a transport driver that implements a transport protocol stack, such as a TCP/IP stack. A *transport protocol driver* allocates packets, copies data from the sending application into the packet, and sends the packets to the lower-level driver by calling NDIS functions. A protocol driver also provides a protocol interface to receive incoming packets from the next lower-level driver. A transport protocol driver transfers received data to the appropriate client application.

@@ -2,13 +2,21 @@
 title: MUX Intermediate Driver Installation
 description: MUX Intermediate Driver Installation
 ms.assetid: 9d0c6d6f-c12f-4921-b08a-b23b7d96ccd9
-keywords: ["MUX intermediate drivers WDK", "NDIS MUX intermediate drivers WDK"]
+keywords:
+- MUX intermediate drivers WDK
+- NDIS MUX intermediate drivers WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # MUX Intermediate Driver Installation
 
 
-## <a href="" id="ddk-mux-intermediate-driver-installation-ng"></a>
+
 
 
 This topic provides an overview of MUX intermediate driver installation issues. For additional information about the structure of intermediate driver INF files, see [Installation Requirements for Network MUX Intermediate Drivers](installation-requirements-for-network-mux-intermediate-drivers.md).

@@ -2,6 +2,12 @@
 ms.assetid: 31CE7AE9-6444-4706-9C43-2B35038FA955
 title: How to test a driver at runtime from a Command Prompt
 description: The WDK provides device testing components that enable you to test a driver on a test computer on your network.
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # How to test a driver at runtime from a Command Prompt
@@ -27,7 +33,7 @@ Instructions
 
 The TAEF command to run the tests uses the following syntax:
 
-``` syntax
+```
 Te.exe [/name:<Test Method>] [<Test Name>.dll | <Test Name.wsc> ]  [/rebootStateFile=<file> ] [/enablewttlogging]  [/P:"DQ= <>" ]  
 ```
 
@@ -38,13 +44,13 @@ You must specify the test binary (.dll) or script (.wsc) file. The test method (
 
 For example, to run all PnP tests in the Devfund\_PnPDTest.dll on a device with a specific device ID.
 
-``` syntax
+```
 Te.exe  Devfund_PnPDTest.dll /P:"DQ=DeviceID='USB\ROOT_HUB\4&1CD5D022&0'"
 ```
 
 For example, to run PnP Surprise Remove test on a device with a specific device ID.
 
-``` syntax
+```
 Te.exe /name:"*PNPSurpriseRemoveAndRestartDevice" Devfund_PnPDTest.dll /P:"DQ=DeviceID='USB\ROOT_HUB\4&1CD5D022&0'"
 ```
 

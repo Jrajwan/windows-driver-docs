@@ -2,13 +2,21 @@
 title: Running the Upgrade Test and Examining the Results
 description: Running the Upgrade Test and Examining the Results
 ms.assetid: 82a2427e-94ed-4f7e-93e7-7952ca0d98e8
-keywords: ["testing network component upgrades WDK", "upgrade tests WDK networking"]
+keywords:
+- testing network component upgrades WDK
+- upgrade tests WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Running the Upgrade Test and Examining the Results
 
 
-## <a href="" id="ddk-running-the-upgrade-test-and-examining-the-results-ng"></a>
+
 
 
 **Note**  Vendor-supplied network upgrades are not supported in Microsoft Windows XP (SP1 and later), Microsoft Windows Server 2003, and later operating systems.

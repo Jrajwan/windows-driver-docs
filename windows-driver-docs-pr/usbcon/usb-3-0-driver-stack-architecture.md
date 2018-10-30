@@ -1,10 +1,13 @@
 ---
-Description: 'This topic provides an overview of the Universal Serial Bus (USB) driver stack architecture.'
-MS-HAID: 'buses.usb\_3\_0\_driver\_stack\_architecture'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
-title: 'USB host-side drivers in Windows'
+Description: This topic provides an overview of the Universal Serial Bus (USB) driver stack architecture.
+title: USB host-side drivers in Windows
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # USB host-side drivers in Windows
@@ -19,12 +22,12 @@ Windows loads the USB 2.0 driver stack for devices that are attached to eHCI, oH
 ![architectural block diagram for usb 2.0 and 3.0 driver stacks](images/usb-driver-stack-3.png)
 
 -   [USB 3.0 driver stack](#usb-3-0-driver-stack)
-    -   [USB 3.0 host controller driver (Usbxhci.sys)](#usb-3-0-host-controller-driver--usbxhci-sys-)
-    -   [USB host controller extension (Ucx01000.sys)](#-usb-host-controller-extension--ucx01000-sys--)
-    -   [USB hub driver (Usbhub3.sys)](#usb-hub-driver--usbhub3-sys-)
+    -   [USB 3.0 host controller driver (Usbxhci.sys)](#usb-3-0-host-controller-driver--usbxhci-sys)
+    -   [USB host controller extension (Ucx01000.sys)](#usb-host-controller-extension--ucx01000-sys)
+    -   [USB hub driver (Usbhub3.sys)](#usb-hub-driver-usbhub3-sys)
 -   [USB 2.0 driver stack](#usb-2-0-driver-stack)
 -   [USB common class generic parent driver (Usbccgp.sys)](#usb-common-class-generic-parent-driver--usbccgp-sys--)
--   [WinUSB (Winusb.sys)](#winusb--winusb-sys-)
+-   [WinUSB (Winusb.sys)](#winusb-winusb-sys)
 -   [USB client driver](#usb-client-driver)
 -   [Helper libraries for client drivers](#helper-libraries-for-client-drivers)
 -   [Related topics](#related-topics)
@@ -34,7 +37,7 @@ Windows loads the USB 2.0 driver stack for devices that are attached to eHCI, oH
 
 The USB 3.0 stack is new in Windows 8. Microsoft created the new drivers by using Kernel Mode Driver Framework (KMDF) interfaces. The KMDF driver model reduces complexity and improves stability.
 
-### USB 3.0 host controller driver (Usbxhci.sys)
+### <a href="" id="usb-3-0-host-controller-driver--usbxhci-sys"></a>USB 3.0 host controller driver (Usbxhci.sys)
 
 The xHCI driver is the USB 3.0 host controller driver. The responsibilities of the xHCI driver include initializing MMIO registers and host memory-based data structures for xHCI controller hardware, mapping transfer requests from upper layer drivers to Transfer Request Blocks, and submitting the requests to the hardware. After completing a transfer, the driver handles transfer completion events from the hardware and propagates the events up the driver stack. It also controls the xHCI controller device slots and endpoint contexts.
 
@@ -49,7 +52,7 @@ The USB host controller extension driver (an extension to KMDF) is the new exten
 -   Manages and control the operations of the root hub associated with the host controller.
 -   Implements features that are configurable by the client driver, like chained MDLs, streams, and so on.
 
-### USB hub driver (Usbhub3.sys)
+### <a href="" id="usb-hub-driver-usbhub3-sys"></a>USB hub driver (Usbhub3.sys)
 
 The new hub driver, in the USB driver stack for 3.0 devices, uses the KMDF driver model. The hub driver primarily performs these tasks:
 
@@ -72,7 +75,7 @@ In all versions of Windows that support USB 2.0, the operating system is capable
 
 Above the port driver is the USB bus driver, Usbhub.sys, also known as the hub driver. This is the device driver for each hub on the system.
 
-## <a href="" id="usb-common-class-generic-parent-driver--usbccgp-sys--"></a>USB common class generic parent driver (Usbccgp.sys)
+## USB common class generic parent driver (Usbccgp.sys)
 
 
 The USB common class generic parent driver is the Microsoft-provided parent driver for composite devices. The hub driver enumerates and loads the parent composite driver if **deviceClass** is 0 or 0xef and **numInterfaces** is greater than 1 in the device descriptor. The hub driver generates the compatible ID for the parent composite driver as "USB\\COMPOSITE". Usbccgp.sys uses Windows Driver Model (WDM) routines.
@@ -121,18 +124,8 @@ Microsoft provides the following helper libraries to help kernel-mode drivers an
     Winusb.dll is a user-mode DLL that exposes [WinUSB functions](https://msdn.microsoft.com/library/windows/hardware/ff540046#winusb) for communicating with Winusb.sys, which is loaded as a device's function driver in kernel mode. Applications use these functions to configure the device, retrieve information about the device, and perform I/O operations. For information about using these functions, see [How to Access a USB Device by Using WinUSB Functions](using-winusb-api-to-communicate-with-a-usb-device.md).
 
 ## Related topics
-
-
-[Universal Serial Bus (USB) Drivers](https://msdn.microsoft.com/library/windows/hardware/ff538930)
-
-[USB Driver Development Guide](usb-driver-development-guide.md)
-
- 
-
- 
-
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20USB%20host-side%20drivers%20in%20Windows%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
-
+[Universal Serial Bus (USB) Drivers](https://msdn.microsoft.com/library/windows/hardware/ff538930)  
+[USB Driver Development Guide](usb-driver-development-guide.md)  
 
 
 

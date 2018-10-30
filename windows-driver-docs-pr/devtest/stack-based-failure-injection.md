@@ -2,6 +2,12 @@
 title: Stack Based Failure Injection
 description: The Stack Based Failure Injection option injects resource failures in kernel mode drivers.
 ms.assetid: B5C06413-81FB-46DA-B053-80ED347DA3EB
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Stack Based Failure Injection
@@ -61,13 +67,13 @@ Most of the issues found with Stack Based Failure Injection result in bug checks
 
 -   From the debugger command prompt, type the following command: **!***&lt;path&gt;\\***kmautofaildbg.dll.autofail**. For example, assuming debugger extensions are installed at c:\\dbgext and that kmautofail.pdb is in the symbol path, you would enter the following command:
 
-    ``` syntax
+    ```
     !c:\dbgext\kmautofaildbg.dll.autofail
     ```
 
 This will dump information to your debugger showing the call stacks from the most recent failures injected. Each entry looks something like the following, taken from a real test run. In the following example, Stack Based Failure Injection is enabled on Mydriver.sys
 
-``` syntax
+```
 Sequence: 2, Test Number: 0, Process ID: 0, Thread ID: 0
                  IRQ Level: 2, HASH: 0xea98a56083aae93c
  0xfffff8800129ed83 kmautofail!ShimHookExAllocatePoolWithTag+0x37
@@ -94,7 +100,7 @@ Note that if a driver has returned failure from its [*DriverEntry*](https://msdn
 
 This next entry shows a call to the driver by means of an IOCTL from user mode. Note the process ID and the IRQ level. Since Mydriver.sys is an NDIS filter driver, the IOCTL came through Ndis.sys. Note that nt!NtDeviceIoControlFile is on the stack. Any test that you run on your driver that uses IOCTLs will go through this function.
 
-``` syntax
+```
 Sequence: 5, Test Number: 0, Process ID: 2052, Thread ID: 4588
                  IRQ Level: 0, HASH: 0xecd4650e9c25ee4
  0xfffff8800129ed83 kmautofail!ShimHookExAllocatePoolWithTag+0x37
@@ -126,7 +132,6 @@ Errors that cause the computer to become unresponsive are more difficult to diag
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20Stack%20Based%20Failure%20Injection%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

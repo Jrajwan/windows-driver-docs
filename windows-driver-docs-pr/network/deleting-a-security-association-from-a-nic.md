@@ -2,14 +2,24 @@
 title: Deleting a Security Association from a NIC
 description: Deleting a Security Association from a NIC
 ms.assetid: 739a3fef-f0b4-4d7c-9d92-df52fd27915d
-keywords: ["security associations WDK IPsec offload", "SAs WDK IPsec offload", "ESP-protected packets WDK IPsec offload , security associations", "AH-protected packets WDK IPsec offload , security associations"]
+keywords:
+- security associations WDK IPsec offload
+- SAs WDK IPsec offload
+- ESP-protected packets WDK IPsec offload , security associations
+- AH-protected packets WDK IPsec offload , security associations
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Deleting a Security Association from a NIC
 
 \[The IPsec Task Offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-deleting-a-security-association-from-a-nic-ng"></a>
+
 
 
 If necessary, the TCP/IP transport can set [OID\_TCP\_TASK\_IPSEC\_DELETE\_SA](https://msdn.microsoft.com/library/windows/hardware/ff569810) to request that the miniport driver delete a security association (SA) from the NIC.

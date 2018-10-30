@@ -1,9 +1,19 @@
 ---
-title: Assigning Security to a New File on IRP\_MJ\_CREATE
+title: Assigning Security to a New File on IRP_MJ_CREATE
 author: windows-driver-content
-description: Assigning Security to a New File on IRP\_MJ\_CREATE
+description: Assigning Security to a New File on IRP_MJ_CREATE
 ms.assetid: f01a09c4-f71f-4b9e-99c8-9bc7ca5ca316
-keywords: ["IRP_MJ_CREATE", "new file security WDK file systems", "security checks WDK file systems , IRP_MJ_CREATE", "security descriptors WDK file systems , new files"]
+keywords:
+- IRP_MJ_CREATE
+- new file security WDK file systems
+- security checks WDK file systems , IRP_MJ_CREATE
+- security descriptors WDK file systems , new files
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Assigning Security to a New File on IRP\_MJ\_CREATE
@@ -106,6 +116,5 @@ Note that the logic of constructing the initial security descriptor (understandi
  
 
 
---------------------
 
 

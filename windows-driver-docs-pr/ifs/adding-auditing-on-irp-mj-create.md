@@ -1,9 +1,18 @@
 ---
-title: Adding Auditing on IRP\_MJ\_CREATE
+title: Adding Auditing on IRP_MJ_CREATE
 author: windows-driver-content
-description: Adding Auditing on IRP\_MJ\_CREATE
+description: Adding Auditing on IRP_MJ_CREATE
 ms.assetid: cb71fe83-44f4-48dd-8fff-250f1d27c123
-keywords: ["IRP_MJ_CREATE", "auditing WDK file systems", "security checks WDK file systems , IRP_MJ_CREATE"]
+keywords:
+- IRP_MJ_CREATE
+- auditing WDK file systems
+- security checks WDK file systems , IRP_MJ_CREATE
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Adding Auditing on IRP\_MJ\_CREATE
@@ -70,6 +79,5 @@ if ( SeAuditingFileOrGlobalEvents (AccessGranted,
  
 
 
---------------------
 
 

@@ -3,7 +3,15 @@ title: Installing IDE Controller Minidrivers
 author: windows-driver-content
 description: Installing IDE Controller Minidrivers
 ms.assetid: c1b41f89-150d-47e9-9bed-04f5796f69bd
-keywords: ["IDE controller minidrivers WDK storage , installing", "storage IDE controller minidrivers WDK , installing"]
+keywords:
+- IDE controller minidrivers WDK storage , installing
+- storage IDE controller minidrivers WDK , installing
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Installing IDE Controller Minidrivers
@@ -34,6 +42,5 @@ For general information about device installation in Windows 2000 and later oper
  
 
 
---------------------
 
 

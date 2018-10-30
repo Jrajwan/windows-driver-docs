@@ -1,9 +1,25 @@
 ---
-title: The SRV\_CALL Structure
+title: The SRV_CALL Structure
 author: windows-driver-content
-description: The SRV\_CALL Structure
+description: The SRV_CALL Structure
 ms.assetid: 9a3bb194-0289-47f4-a5c8-848d8d82cdd7
-keywords: ["SRV_CALL structure", "server call context structure WDK RDBSS", "network server connection data WDK RDBSS", "data structures WDK file systems", "RDBSS WDK file systems , connection and file structures", "Redirected Drive Buffering Subsystem WDK file systems , connection and file structures", "connection structures WDK RDBSS", "file structures WDK RDBSS", "structures WDK RDBSS", "connection information WDK RDBSS"]
+keywords:
+- SRV_CALL structure
+- server call context structure WDK RDBSS
+- network server connection data WDK RDBSS
+- data structures WDK file systems
+- RDBSS WDK file systems , connection and file structures
+- Redirected Drive Buffering Subsystem WDK file systems , connection and file structures
+- connection structures WDK RDBSS
+- file structures WDK RDBSS
+- structures WDK RDBSS
+- connection information WDK RDBSS
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # The SRV\_CALL Structure
@@ -43,6 +59,5 @@ There can be a delay between these two actions, and a field in the SRV\_CALL str
  
 
 
---------------------
 
 

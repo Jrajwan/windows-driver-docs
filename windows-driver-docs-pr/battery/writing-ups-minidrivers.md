@@ -2,7 +2,20 @@
 title: Writing UPS Minidrivers
 description: Writing UPS Minidrivers
 ms.assetid: 85142cbf-cb3b-4ccf-a005-8fcb7a7ad12b
-keywords: ["UPS minidrivers WDK", "simple signaling WDK", "smart signaling WDK", "UPS service WDK", "system-supplied UPS service WDK", "UPS minidrivers WDK , about writing UPS minidrivers", "uninterruptible power supply WDK"]
+keywords:
+- UPS minidrivers WDK
+- simple signaling WDK
+- smart signaling WDK
+- UPS service WDK
+- system-supplied UPS service WDK
+- UPS minidrivers WDK , about writing UPS minidrivers
+- uninterruptible power supply WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Writing UPS Minidrivers
@@ -42,6 +55,5 @@ For more information about UPS minidrivers, see the following topics:
  
 
 
---------------------
 
 

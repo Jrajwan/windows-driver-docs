@@ -3,6 +3,12 @@ title: Accessing UMDF Metadata in WER Reports
 author: windows-driver-content
 description: This topic describes the location and contents of the Windows Error Reporting (WER) reports that the operating system creates when a User-Mode Driver Framework (UMDF) crashes.The system generates WER reports for three different UMDF event types WUDFHostProblem, WUDFUnhandledException, and WUDFVerifierFailure.When the reflector terminates the driver host process, sometimes due to the host timeout threshold being exceeded, the system generates a file called Report.wer, which contains the WER information. Specifically, Report.wer contains UMDF metadata that may be helpful if you are trying to debug a UMDF driver with no access to a live debugging target.
 ms.assetid: ca5fe108-b4fb-4c90-87bc-9901854780d3
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Accessing UMDF Metadata in WER Reports
@@ -27,7 +33,7 @@ get-winevent -providername "Windows Error Reporting" | where-object {$_.Message 
 
 The following is a sample UMDF WER report of type **WUDFHostProblem**. It was obtained from the ReportQueue directory described above. If you use PowerShell to retrieve the reports, the fields may be labeled P0, P1, P2 instead of Sig\[0\], Sig\[1\], Sig\[2\]. Otherwise, the fields are the same and contain the same possible values. This sample was generated from one of the WDK samples that use the OSR USB-FX2 hardware reference board.
 
-``` syntax
+```
 Sig[0].Name=EventClass
 Sig[0].Value=HostProblem
 Sig[1].Name=Problem

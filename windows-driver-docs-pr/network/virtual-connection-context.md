@@ -2,13 +2,22 @@
 title: Virtual Connection Context
 description: Virtual Connection Context
 ms.assetid: 9b318f9d-70f4-41b5-acab-5a193f7d2ab4
-keywords: ["virtual connections WDK networking , context", "VCs WDK networking , context", "context WDK virtual connection"]
+keywords:
+- virtual connections WDK networking , context
+- VCs WDK networking , context
+- context WDK virtual connection
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Virtual Connection Context
 
 
-## <a href="" id="ddk-virtual-connection-context-ng"></a>
+
 
 
 Before making a call, a connection-oriented client requests a connection-oriented miniport driver to set up a virtual connection (VC) over which packets can be transmitted or received. Similarly, before indicating an incoming call to a connection-oriented client, a call manager or integrated miniport call manager (MCM) driver requests the miniport driver to set up a VC for the incoming call.

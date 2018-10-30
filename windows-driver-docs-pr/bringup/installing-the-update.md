@@ -2,10 +2,13 @@
 title: Installing the update
 author: windows-driver-content
 description: Firmware update packages can be installed using any tool that installs Windows drivers.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 51C50910-8AA3-4ED9-B469-2325BBD2FB31
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Installing the update
@@ -32,4 +35,3 @@ The EFI System Resource Table provides the current firmware version and the stat
 [Authoring a firmware update package](authoring-a-firmware-update-package.md)  
 [Certifying and signing the update package](certifying-and-signing-the-update-package.md)  
 
---------------------

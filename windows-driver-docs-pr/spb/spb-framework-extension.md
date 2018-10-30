@@ -2,10 +2,13 @@
 title: SPB Framework Extension (SpbCx)
 author: windows-driver-content
 description: Starting with Windows 8, the SPB framework extension (SpbCx) is a system-supplied extension to the Kernel-Mode Driver Framework (KMDF).
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 84015f3c-ff55-4c1a-bb52-63b6f29b99d7
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # SPB Framework Extension (SpbCx)
@@ -34,6 +37,5 @@ Although a hardware vendor has the option of writing a monolithic SPB controller
  
 
 
---------------------
 
 

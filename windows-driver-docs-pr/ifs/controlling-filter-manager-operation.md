@@ -3,7 +3,14 @@ title: Controlling Filter Manager Operation
 author: windows-driver-content
 description: Controlling Filter Manager Operation
 ms.assetid: 884e6a15-5bfa-41bf-b759-af6e43078fad
-keywords: ["filter manager WDK file system minifilter , controlling operation"]
+keywords:
+- filter manager WDK file system minifilter , controlling operation
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Controlling Filter Manager Operation
@@ -30,6 +37,5 @@ When a minifilter driver is installed on Windows prior to Windows Vista, the so
  
 
 
---------------------
 
 

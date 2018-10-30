@@ -3,7 +3,16 @@ title: Enabling DMA Transactions
 author: windows-driver-content
 description: Enabling DMA Transactions
 ms.assetid: 87735776-c371-425b-bc53-0c68375c9562
-keywords: ["DMA transactions WDK KMDF , enabling", "DMA operations WDK KMDF , transactions", "bus-master DMA WDK KMDF , transactions"]
+keywords:
+- DMA transactions WDK KMDF , enabling
+- DMA operations WDK KMDF , transactions
+- bus-master DMA WDK KMDF , transactions
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Enabling DMA Transactions
@@ -11,7 +20,7 @@ keywords: ["DMA transactions WDK KMDF , enabling", "DMA operations WDK KMDF , tr
 
 \[Applies to KMDF only\]
 
-## <a href="" id="ddk-enabling-dma-transactions-df"></a>
+
 
 
 If your framework-based driver handles I/O operations for DMA devices, your driver must enable the framework's DMA features for each DMA device. To enable these features, your driver's [*EvtDriverDeviceAdd*](https://msdn.microsoft.com/library/windows/hardware/ff541693) or [*EvtDevicePrepareHardware*](https://msdn.microsoft.com/library/windows/hardware/ff540880) callback function must:

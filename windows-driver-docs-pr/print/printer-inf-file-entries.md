@@ -2,25 +2,28 @@
 title: Printer INF File Entries
 author: windows-driver-content
 description: Printer INF File Entries
-MS-HAID:
-- 'prtinst\_90f747b5-4c87-4d93-84af-fc2940561beb.xml'
-- 'print.printer\_inf\_file\_entries'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 897072bb-e481-4c8d-a2bf-57b19c69ac0e
-keywords: ["INF files WDK print , entries", "dependent files WDK printer"]
+keywords:
+- INF files WDK print , entries
+- dependent files WDK printer
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Printer INF File Entries
 
 
-## <a href="" id="ddk-printer-inf-file-entries-gg"></a>
+
 
 
 For an installation application to install a printer on a print server, it must call the spooler's **AddPrinterDriverEx** function to load driver files and then call the spooler's **AddPrinter** function to make the printer available on the server.
 
 The **AddPrinterDriverEx** function requires a DRIVER\_INFO\_3 structure as input, and the **AddPrinter** function requires a PRINTER\_INFO\_2 structure as input. The default Windows 2000 or later printer class installer, Ntprint.dll, reads printer INF files to obtain string values that must be placed in these structures before the functions are called.
+
 
 The **AddPrinterDriverEx** and **AddPrinter** functions, along with the DRIVER\_INFO\_3 and PRINTER\_INFO\_2 structures, are described in the Microsoft Windows SDK documentation.
 
@@ -38,98 +41,25 @@ The following table lists INF file entries that should be included in printer IN
 
 -   The structure member into which Ntprint.dll places a pointer to the entry value.
 
-INF File Entry
-Value
-Default Value
-Structure Member
-(if entry not specified)
-ConfigFile
+| INF File Entry       |Value|Default Value (if entry not specified)|Structure Member |
+|----------------------|-----|-------------|-----------------------------------------|
+| ConfigFile           | The name of the driver's [printer interface DLL](printer-interface-dll.md). | Value specified for DriverFile. | **pConfigFile** member of the DRIVER\_INFO\_3 structure (described in the Windows SDK documentation) |
+| DataFile             | The name of a driver's associated data file, such as a PPD file. | Driver's section name within the INF file. | **pDataFile** member of the DRIVER\_INFO\_3 structure |
+| DefaultDataType      | Not used with NT-based-operating systems. |||
+| DriverCategory       | See **Note 1**, following this table. | If the INF file doesn’t specify a driver category (like most v3 drivers), then the assumption is that the driver’s category is **PrintFax.Printer**. | None |
+| DriverFile           | The name of the driver's [printer graphics DLL](printer-graphics-dll.md). | Driver's section name within the INF file. | **pDriverPath** member of the DRIVER\_INFO\_3 structure |
+| ExcludeFromSelect    | See **Note 2**, following this table. | None | None |
+| HelpFile             | The name of the interface DLL's help file. | None. A help file is not specified. | **pHelpFile** member of the DRIVER\_INFO\_3 structure |
+| LanguageMonitor      | The name of a language monitor to be associated with the printer driver. See the **LanguageMonitor Value Format** section. | None. A language monitor is not specified. | **pMonitorName** member of the DRIVER\_INFO\_3 structure |
+| PrintProcessor       | The name of a print processor to be associated with the printer queue. See the **PrintProcessor Value Format** section. | The default print processor (WinPrint) is used. | **pPrintProcessor** member of the DRIVER\_INFO\_2 structure (described in the Windows SDK documentation) |
+| VendorSetup          | The name of a function within a vendor-supplied DLL, that handles [customized printer setup operations](customized-printer-setup-operations.md). | None. See **Note 3**, following this table. | None |
+| InboxVersionRequired | The minimum acceptable version for all core drivers that the INF references. For more information about InboxVersionRequired, see [INF InboxVersionRequired Directive](inf-inboxversionrequired-directive.md). | None | None |
 
-The name of the driver's [printer interface DLL](printer-interface-dll.md).
+ 
 
-Value specified for DriverFile.
-
-**pConfigFile** member of the DRIVER\_INFO\_3 structure (described in the Windows SDK documentation)
-
-DataFile
-
-The name of a driver's associated data file, such as a PPD file.
-
-Driver's section name within the INF file.
-
-**pDataFile** member of the DRIVER\_INFO\_3 structure
-
-DefaultDataType
-
-Not used with NT-based-operating systems.
-
-DriverCategory
-
-See Note 1, following this table.
-
-If the INF file doesn’t specify a driver category (like most v3 drivers), then the assumption is that the driver’s category is **PrintFax.Printer**.
-
-None
-
-DriverFile
-
-The name of the driver's [printer graphics DLL](printer-graphics-dll.md).
-
-Driver's section name within the INF file.
-
-**pDriverPath** member of the DRIVER\_INFO\_3 structure
-
-ExcludeFromSelect
-
-See Note 2, following this table.
-
-None
-
-None
-
-HelpFile
-
-The name of the interface DLL's help file.
-
-None. A help file is not specified.
-
-**pHelpFile** member of the DRIVER\_INFO\_3 structure
-
-LanguageMonitor
-
-The name of a language monitor to be associated with the printer driver. See the **LanguageMonitor Value Format** section.
-
-None. A language monitor is not specified.
-
-**pMonitorName** member of the DRIVER\_INFO\_3 structure
-
-PrintProcessor
-
-The name of a print processor to be associated with the printer queue. See the **PrintProcessor Value Format** section.
-
-The default print processor (WinPrint) is used.
-
-**pPrintProcessor** member of the DRIVER\_INFO\_2 structure (described in the Windows SDK documentation)
-
-VendorSetup
-
-The name of a function within a vendor-supplied DLL, that handles [customized printer setup operations](customized-printer-setup-operations.md).
-
-None. See Note 3, following this table.
-
-None
-
-InboxVersionRequired
-
-The minimum acceptable version for all core drivers that the INF references. For more information about InboxVersionRequired, see [INF InboxVersionRequired Directive](inf-inboxversionrequired-directive.md).
-
-None
-
-None
-
- 
-
-**Note**  **1 (DriverCategory)**: If the INF file specifies a category, these are the allowed values (0 to 5 respectively) for specifying categories:
+ **Note**  **1 (DriverCategory)**: If the INF file specifies a category, these are the allowed values (0 to 5 respectively) for specifying categories:
+ 
+ 
 | Driver Category          | Value | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |--------------------------|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | PrintFax.Printer         | 0     | A print queue that represents either a printer connected to the computer (through a local or network protocol), or a proxy to a physical printer on another computer. When the user prints to a physical printer, the result is paper with the document printed on it.                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -209,7 +139,5 @@ A maximum of 64 dependent files can be specified for each printer model.
 [Printer INF file Install section](printer-inf-file-install-sections.md)  
 [V4 Driver Manifest](v4-driver-manifest.md)  
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20Printer%20INF%20File%20Entries%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

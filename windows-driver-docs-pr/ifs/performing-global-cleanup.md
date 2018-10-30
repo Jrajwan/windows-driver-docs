@@ -3,7 +3,15 @@ title: Performing Global Cleanup
 author: windows-driver-content
 description: Performing Global Cleanup
 ms.assetid: 18e0fca0-16ec-4ca9-8b71-47f58f41c46d
-keywords: ["global cleanup WDK file system minifilter", "cleanup globally WDK file system minifilter"]
+keywords:
+- global cleanup WDK file system minifilter
+- cleanup globally WDK file system minifilter
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Performing Global Cleanup
@@ -27,6 +35,5 @@ A minifilter driver's [**FilterUnloadCallback**](https://msdn.microsoft.com/libr
  
 
 
---------------------
 
 

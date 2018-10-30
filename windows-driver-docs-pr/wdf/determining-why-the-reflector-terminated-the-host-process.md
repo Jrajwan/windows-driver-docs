@@ -3,7 +3,16 @@ title: Determining Why the Reflector Terminated the Host Process
 author: windows-driver-content
 description: This topic describes how you can analyze why the reflector terminated the driver host process (WUDFHost.exe).
 ms.assetid: c80b117b-597a-494a-bc28-5a918d2a9279
-keywords: ["debugging scenarios WDK UMDF , reflector terminates the host process", "UMDF WDK , debugging scenarios, reflector terminates the host process", "UMDF WDK , reflector terminates the host process"]
+keywords:
+- debugging scenarios WDK UMDF , reflector terminates the host process
+- UMDF WDK , debugging scenarios, reflector terminates the host process
+- UMDF WDK , reflector terminates the host process
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Determining Why the Reflector Terminated the Host Process
@@ -13,7 +22,7 @@ This topic describes how you can analyze why the reflector terminated the driver
 
 The most common reason for the reflector to terminate the host process is the expiration of UMDF [host process timeouts](how-umdf-enforces-time-outs.md).
 
-## <a href="" id="post-mortem-analysis-using-dump-files"></a>Using Dump Files
+## Using Dump Files
 
 
 For many crashes, dump file details are sufficient to determine why the termination occurred. To review dump file information, follow these steps:
@@ -31,7 +40,7 @@ For many crashes, dump file details are sufficient to determine why the terminat
 
 3.  Look at the state of the threads at the time of termination.
 
-## <a href="" id="live-debugging"></a>Using the Debugger
+## Using the Debugger
 
 
 In other cases, you might need to attach to a live kernel-mode target to determine why the reflector terminated the host process. To set up your debugging session, follow the steps described in [How to Enable Debugging of a UMDF Driver](enabling-a-debugger.md#kd).

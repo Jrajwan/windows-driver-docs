@@ -2,13 +2,24 @@
 title: Reset
 description: Reset
 ms.assetid: 5f37eca3-08b6-4bac-9d02-8a8ebd8c1904
-keywords: ["connection-oriented NDIS WDK , resetting NICs", "CoNDIS WDK networking , resetting NICs", "resetting NIC WDK networking", "NICs WDK networking , resetting", "network interface cards WDK networking , resetting"]
+keywords:
+- connection-oriented NDIS WDK , resetting NICs
+- CoNDIS WDK networking , resetting NICs
+- resetting NIC WDK networking
+- NICs WDK networking , resetting
+- network interface cards WDK networking , resetting
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Reset
 
 
-## <a href="" id="ddk-reset-ng"></a>
+
 
 
 NDIS might call a miniport driver's or MCM driver's [*MiniportResetEx*](https://msdn.microsoft.com/library/windows/hardware/ff559432) function to reset a NIC.

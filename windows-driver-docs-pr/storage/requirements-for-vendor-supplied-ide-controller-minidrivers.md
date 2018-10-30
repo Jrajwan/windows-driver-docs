@@ -3,7 +3,16 @@ title: Requirements for Vendor-Supplied IDE Controller Minidrivers
 author: windows-driver-content
 description: Requirements for Vendor-Supplied IDE Controller Minidrivers
 ms.assetid: a1584665-8788-49a4-b86f-50c265e7ce7a
-keywords: ["IDE controller minidrivers WDK storage , vendor-supplied", "storage IDE controller minidrivers WDK , vendor-supplied", "vendor-supplied IDE controller minidrivers WDK storage"]
+keywords:
+- IDE controller minidrivers WDK storage , vendor-supplied
+- storage IDE controller minidrivers WDK , vendor-supplied
+- vendor-supplied IDE controller minidrivers WDK storage
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Requirements for Vendor-Supplied IDE Controller Minidrivers
@@ -33,6 +42,5 @@ For more information about the PciIdeX library and a description of the minidriv
  
 
 
---------------------
 
 

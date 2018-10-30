@@ -2,13 +2,26 @@
 title: Updating Driver Files
 description: Updating Driver Files
 ms.assetid: e232abd9-4e51-4fa7-a00c-f5e184706222
-keywords: ["Hardware Update Wizard WDK", "updating driver files", "driver file updates WDK", "Device setup WDK device installations , updating existing drivers", "device installations WDK , updating existing drivers", "installing devices WDK , updating existing drivers", "existing driver updates WDK"]
+keywords:
+- Hardware Update Wizard WDK
+- updating driver files
+- driver file updates WDK
+- Device setup WDK device installations , updating existing drivers
+- device installations WDK , updating existing drivers
+- installing devices WDK , updating existing drivers
+- existing driver updates WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Updating Driver Files
 
 
-## <a href="" id="ddk-updating-driver-files-dg"></a>
+
 
 
 Drivers are updated whenever one of the following occurs:
@@ -36,13 +49,13 @@ Use the following guidelines when you write installation software and INF files 
 
     For more information, see [Writing a Device Installation Application](writing-a-device-installation-application.md).
 
--   When upgrading a driver, class installers and co-installers should not supply finish-install pages in response to [**DIF\_NEWDEVICEWIZARD\_FINISHINSTALL**](https://msdn.microsoft.com/library/windows/hardware/ff543702) unless absolutely necessary. If possible, obtain finish-install information from the settings of the previous installation.
+-   When upgrading a driver, class installers and co-installers should not supply finish-install pages in response to [**DIF_NEWDEVICEWIZARD_FINISHINSTALL**](https://msdn.microsoft.com/library/windows/hardware/ff543702) unless absolutely necessary. If possible, obtain finish-install information from the settings of the previous installation.
 
 -   To the extent possible, class installers and co-installers should avoid basing behavior on whether they are providing an initial installation or are updating drivers for an already-installed device.
 
--   Starting with Windows XP, the registry values **CoInstallers32** and **EnumPropPages32** are deleted before the delivery of [**DIF\_REGISTER\_COINSTALLERS**](https://msdn.microsoft.com/library/windows/hardware/ff543715). INF files for earlier operating system versions must explicitly either delete these values or perform a nonappending modify operation on them.
+-   Starting with Windows XP, the registry values **CoInstallers32** and **EnumPropPages32** are deleted before the delivery of [**DIF_REGISTER_COINSTALLERS**](https://msdn.microsoft.com/library/windows/hardware/ff543715). INF files for earlier operating system versions must explicitly either delete these values or perform a nonappending modify operation on them.
 
--   Starting with Windows XP, the registry values **UpperFilters** and **LowerFilters** are deleted before the delivery of [**DIF\_INSTALLDEVICE**](https://msdn.microsoft.com/library/windows/hardware/ff543692). INF files for earlier operating system versions must explicitly either delete these values or perform a nonappending modify operation on them.
+-   Starting with Windows XP, the registry values **UpperFilters** and **LowerFilters** are deleted before the delivery of [**DIF_INSTALLDEVICE**](https://msdn.microsoft.com/library/windows/hardware/ff543692). INF files for earlier operating system versions must explicitly either delete these values or perform a nonappending modify operation on them.
 
 -   Do *not* use [**INF DelFiles directives**](inf-delfiles-directive.md) or [**INF RenFiles directives**](inf-renfiles-directive.md) when updating drivers. Windows cannot guarantee that a particular file is not being used by another device. (Class installers and co-installers can delete or rename files, *if* they can reliably determine that no devices are using the files.)
 

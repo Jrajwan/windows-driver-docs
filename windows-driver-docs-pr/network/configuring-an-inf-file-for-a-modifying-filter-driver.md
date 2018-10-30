@@ -2,13 +2,21 @@
 title: Configuring an INF File for a Modifying Filter Driver
 description: Configuring an INF File for a Modifying Filter Driver
 ms.assetid: d9eac8f6-a560-41e5-ae71-3bd9d6714c3a
-keywords: ["INF files WDK network , filter drivers", "modifying filter drivers WDK networking"]
+keywords:
+- INF files WDK network , filter drivers
+- modifying filter drivers WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Configuring an INF File for a Modifying Filter Driver
 
 
-## <a href="" id="ddk-modifying-filter-driver-installation-ng"></a>
+
 
 
 The following NDIS filter driver installation issues are associated with modifying filter drivers. To create your own modifying filter driver INF file, you can also adapt the [sample NDIS 6.0 filter driver](http://go.microsoft.com/fwlink/p/?LinkId=618052).

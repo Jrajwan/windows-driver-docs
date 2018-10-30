@@ -3,13 +3,22 @@ title: Framework Object Events
 author: windows-driver-content
 description: Framework Object Events
 ms.assetid: 1bccdd47-8ad6-4607-947f-18c5d2e03038
-keywords: ["framework objects WDK KMDF , events", "events WDK KMDF", "events WDK KMDF , framework objects"]
+keywords:
+- framework objects WDK KMDF , events
+- events WDK KMDF
+- events WDK KMDF , framework objects
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Framework Object Events
 
 
-## <a href="" id="ddk-framework-object-events-df"></a>
+
 
 
 Some framework objects can generate events. Framework-based drivers can register to receive notification of all, some, or none of an object's events. To register for an event, the driver provides an event callback function. The framework calls the callback function when the event occurs.

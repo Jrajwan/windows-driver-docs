@@ -1,7 +1,13 @@
 ---
-title: Debugging deadlocks - DRIVER\_VERIFIER\_DETECTED\_VIOLATION (C4) 0x1001
-description: When Driver Verifier detects a spin lock hierarchy violation, Driver Verifiergenerates Bug Check 0xC4 DRIVER\_VERIFIER\_DETECTED\_VIOLATION with a parameter 1 value of 0x1001.
+title: Debugging deadlocks - DRIVER_VERIFIER_DETECTED_VIOLATION (C4) 0x1001
+description: When Driver Verifier detects a spin lock hierarchy violation, Driver Verifiergenerates Bug Check 0xC4 DRIVER_VERIFIER_DETECTED_VIOLATION with a parameter 1 value of 0x1001.
 ms.assetid: 4C3ED1DB-5EDC-4386-B91C-CF86973EE1F6
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # <span id="devtest.debugging_deadlocks_-_driver_verifier_detected_violation__c4___0x1001"></span>Debugging deadlocks - DRIVER\_VERIFIER\_DETECTED\_VIOLATION (C4): 0x1001
@@ -17,7 +23,7 @@ When the Deadlock Detection option is active (Deadlock Detection is part of the 
 
 **New in Windows 8.1** When [Driver Verifier](driver-verifier.md) encounters this violation, if the debugger is attached, the debugger will ask you for input about the error. In Windows 8 and previous versions of Windows, this violation result in an immediate bug check.
 
-``` syntax
+```
 ************ Verifier Detected a Potential Deadlock *************
 **
 ** Type !deadlock in the debugger for more information.
@@ -30,7 +36,7 @@ When the Deadlock Detection option is active (Deadlock Detection is part of the 
 
 To debug this violation on a computer running Windows 8.1, choose **B** (Break), and enter the suggested debugger command ([**!deadlock**](https://msdn.microsoft.com/library/windows/hardware/ff562326)):
 
-``` syntax
+```
 kd> !deadlock
 issue: 00001001 97dd800c 86858ce0 00000000 
 
@@ -50,7 +56,7 @@ Lock B =   97dd8008 (MyTestDriver!BravoLock+0x00000000) - Type 'Spinlock'.
 
 The [**!deadlock**](https://msdn.microsoft.com/library/windows/hardware/ff562326) **3** command can also be used to show more information, including the stack at the time of last acquire:
 
-``` syntax
+```
 kd> !deadlock 3
 issue: 00001001 97dd800c 86858ce0 00000000 
 
@@ -109,7 +115,7 @@ Lock A =     97dd800c (MyTestDriver!AlphaLock+0x00000000) - Type 'Spinlock'.
 
 The debugger suggests using the [**kb (Display Stack Backtrace)**](https://msdn.microsoft.com/library/windows/hardware/ff551943) command to display the current stack trace.
 
-``` syntax
+```
 kd> kb
 ChildEBP RetAddr  Args to Child              
 89b2cac4 820da328 97dd800c 86858ce0 00000000 nt!VfReportIssueWithOptions+0x86
@@ -131,7 +137,7 @@ At this point, a review of the source code of each function should reveal that a
 
 Both *MyTestDriver!AlphaLock* and *MyTestDriver!BravoLock* are objects globally available in the driver:
 
-``` syntax
+```
 include "MyTestDriverHeader.h"
 
 // Locks used to control access to various objects
@@ -235,7 +241,6 @@ For more information about spin locks and other synchronization techniques, see 
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20Debugging%20deadlocks%20-%20DRIVER_VERIFIER_DETECTED_VIOLATION%20%28C4%29:%200x1001%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

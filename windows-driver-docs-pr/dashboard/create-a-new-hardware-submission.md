@@ -1,10 +1,13 @@
 ---
 title: Create a new hardware submission
 description: Create a new hardware submission
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 3F433F0A-422C-46E5-B59E-8DB4AC537F01
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Create a new hardware submission
@@ -15,7 +18,7 @@ To prepare your hardware for the Windows Hardware Compatibility Program for Wind
 ## <span id="To_create_a_submission_file"></span><span id="to_create_a_submission_file"></span><span id="TO_CREATE_A_SUBMISSION_FILE"></span>To create a submission file
 
 
-For information about creating and digitally signing an **.hlkx** file, see the [Windows HLK Getting Started Guide](https://msdn.microsoft.com/library/windows/hardware/dn915002.aspx).
+For information about creating and digitally signing an **.hlkx** file, see the [Windows HLK Getting Started Guide](https://docs.microsoft.com/en-us/previous-versions/windows/hardware/hck/jj123537(v=vs.85)).
 
 For information about creating and digitally signing an **.hckx** file, see the [Windows HCK Getting Started Guide](http://go.microsoft.com/fwlink/p/?LinkId=248436).
 
@@ -27,12 +30,11 @@ For information about creating and digitally signing an **.hckx** file, see the 
 2.  In the **Packages and signing properties** section, choose a name for your driver submission. This name can be used to search for and organize your driver submissions. Note: If you share your driver with another company, they will see this name.
 
 3.  Either drag and drop, or browse to the **.hlkx/.hckx** file that you want to submit. The file will begin to upload.
-
-4.  Select the "This is a beta driver" checkbox if applicable. This option states that your driver should be signed for pre-production and will not be broadly released.
-
     ![screenshot that shows the driver name field](images/drivers-name.png)
 
-5.  Select any applicable additional certifications if available. This option allows you to specify which down-level operating system signatures should be included with your driver. Available certifications vary depending on your driver submission package, so there may not be any certifications listed.
+4. If you wish to test a driver prior to release, you can select the checkbox labled "perform test-signing only". Test-signed drivers are similar to drivers signed for public release, but do not require HLK testing. They are also not distributed through Windows Update, but can be downloaded from the hardware submission site. For more information about test-signing driver packages, see [WHQL Test Signature Program](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/whql-test-signature-program) and [How to test-sign a driver package](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/how-to-test-sign-a-driver-package).  
+
+5.  Select any applicable additional certifications if available. This option allows you to specify which downlevel operating system signatures should be included with your driver. Available certifications vary depending on your driver submission package, so there may not be any certifications listed. **Note** If you are signing a driver package for a single architecture, only include logs for the intended architecture. For example, to sign for x64 only, submit only the x64 logs.
 
 6.  Select **Finalize**. You will not be able to select the **Finalize** button until your file upload is complete. Note: Your signature properties and name cannot be changed after you click **Finalize**.
 
@@ -52,10 +54,6 @@ For information about creating and digitally signing an **.hckx** file, see the 
     </tr>
     </thead>
     <tbody>
-    <tr class="odd">
-    <td><p>Is your driver Universal?</p></td>
-    <td><p>Indicate whether or not your driver meets the Universal Windows Platform requirements. For more information, see [Getting Started with Universal Windows drivers](https://msdn.microsoft.com/windows/hardware/drivers/develop/getting-started-with-universal-drivers).</p></td>
-    </tr>
     <tr class="even">
     <td><p>Device type</p></td>
     <td><p>Indicate if your device is:</p>
@@ -97,13 +95,13 @@ For information about creating and digitally signing an **.hckx** file, see the 
 
 11. Review the results. If your submission failed, make any necessary changes and resubmit.
 
-## <span id="related_topics"></span>Related topics
+## Related topics
 
-
-[Manage hardware submissions](manage-your-hardware-submissions.md)
+   *  [Managing hardware submissions in the Windows Hardware Dev Center dashboard](manage-your-hardware-submissions.md)
+   *  [Get drivers signed by Microsoft for multiple Windows versions](get-drivers-signed-by-microsoft-for-multiple-windows-versions.md)
+   *  [Driver flighting](driver-flighting.md)
 
  
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bhw_dashboard\hw_dashboard%5D:%20Create%20a%20new%20hardware%20submission%20%20RELEASE:%20%281/3/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")

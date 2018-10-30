@@ -1,11 +1,14 @@
 ---
 title: Install the sensor driver
 author: windows-driver-content
-description: This topic shows you how to install the sensor driver on a development board, after you update the secondary system description table (SSDT) for the development board.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: This topic shows you how to install the sensor driver on a development board.
 ms.assetid: 01CC1903-A36B-4ECC-856D-6196EC606973
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Install the sensor driver
@@ -13,13 +16,13 @@ ms.assetid: 01CC1903-A36B-4ECC-856D-6196EC606973
 
 This topic shows you how to install the sensor driver on a development board, after you update the secondary system description table (SSDT) for the development board.
 
-This topic uses the Sharks Cove development board and an ADXL345 accelerometer as a case study, to help explain the process of installing a sensor driver on a development board. So if you want to perform the tasks presented in this topic, you must first install an operating system on the Sharks Cove. For more information about how to do that, see [Download kits and tools for Windows 10](https://msdn.microsoft.com/windows/hardware/dn913721.aspx), and follow the instructions in **Step 1** (Install Windows 10).
+This topic uses the Sharks Cove development board and an ADXL345 accelerometer as a case study, to help explain the process of installing a sensor driver on a development board. So if you want to perform the tasks presented in this topic, you must first install an operating system on the Sharks Cove. For more information about how to do that, see [Download kits and tools for Windows 10](https://msdn.microsoft.com/windows/hardware/dn913721.aspx), and follow the instructions in **Step 1** (Install Windows 10).
 
 After you finish installing the operating system on the Sharks Cove, See [Build the sensor driver](build-the-sensor-driver.md) to learn how to build a driver in Microsoft Visual Studio. Then return here to continue.
 
 The accelerometer is attached to the Sharks Cove via the I2C bus. Peripherals that are connected to the I2C bus are enumerated via the Advanced Configuration and Power Interface (ACPI). So the sample driver for the accelerometer was developed to support ACPI instead of Plug and Play.
 
-To make the Sharks Cove’s ACPI driver aware of the new device (the accelerometer) on the I2C bus, you must add information about the accelerometer to the SSDT on the Sharks Cove. This table describes the hardware resources and interrupt requirements for a hardware platform’s devices, including attached peripherals like the accelerometer.
+To make the Sharks Cove's ACPI driver aware of the new device (the accelerometer) on the I2C bus, you must add information about the accelerometer to the SSDT on the Sharks Cove. This table describes the hardware resources and interrupt requirements for a hardware platform's devices, including attached peripherals like the accelerometer.
 
 ## Before you begin
 
@@ -175,12 +178,13 @@ Before you install the sample sensor driver, you must turn on testsigning. Perfo
 
 1. In the Command prompt window, enter the following command to see whether testsigning is already turned on.
 **bcdedit /enum**
-2. If you see a listing similar to the following, showing an entry for testsigning, with its value set to “yes” then skip to **Step 5**.
+2. If you see a listing similar to the following, showing an entry for testsigning, with its value set to `yes` then skip to **Step 5**.
 ![command prompt window showing testsigning set to yes.](images/testsigning.png)
 
 3. If you need to turn on test signing, then enter the following command:
 **bcdedit /set testsigning on**
-4. Repeat **Step 1** (in this exercise) to verify that the value of the testsigning system variable is now set to “yes” in the Windows Boot Loader list.
+
+4. Repeat **Step 1** (in this exercise) to verify that the value of the testsigning system variable is now set to 'yes' in the Windows Boot Loader list.
 
 5. Restart the Sharks Cove. As the board restarts, hold the Volume-up button for about 2 seconds, to enter system setup (UEFI) window.
 
@@ -222,12 +226,10 @@ For information about how to use Visual Studio to deploy a driver to a client co
 
 After successfully installing the sample sensor driver, see [Test your universal sensor driver](test-your-universal-sensor-driver.md) for information about how to test a sensor.
 
- 
+ 
 
- 
+ 
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bsensors\sensors%5D:%20Install%20the%20sensor%20driver%20%20RELEASE:%20%281/12/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

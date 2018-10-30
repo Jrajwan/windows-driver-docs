@@ -1,21 +1,26 @@
 ---
-title: Locking and Unlocking a Parallel Port for Use by a Parallel Device
+title: Locking and Unlocking a Parallel Port
 author: windows-driver-content
 description: Locking and Unlocking a Parallel Port for Use by a Parallel Device
-MS-HAID:
-- 'vspd\_c2ac401b-e825-4a52-81dc-35638efe8296.xml'
-- 'parports.locking\_and\_unlocking\_a\_parallel\_port\_for\_use\_by\_a\_parallel\_device'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: dbfa962e-9de8-4a9c-b962-24b53c41f35d
-keywords: ["parallel devices WDK , port locking/unlocking", "locking WDK parallel devices", "unlocking parallel ports", "uninterrupted operations WDK parallel devices", "freeing parallel ports"]
+keywords:
+- parallel devices WDK , port locking/unlocking
+- locking WDK parallel devices
+- unlocking parallel ports
+- uninterrupted operations WDK parallel devices
+- freeing parallel ports
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Locking and Unlocking a Parallel Port for Use by a Parallel Device
 
 
-## <a href="" id="ddk-locking-and-unlocking-a-parallel-port-for-use-by-a-parallel-device"></a>
+
 
 
 To execute an uninterrupted sequence of operations on a parallel device, a client must allocate the parallel port and select the IEEE 1284.3 device on the port. A sequence of operations can include completing I/O requests and executing the callback routines provided by the parallel port bus driver. After completing a sequence of operations, a client must deselect the IEEE 1284.3 device and then free the parent parallel port.
@@ -41,6 +46,5 @@ If the parallel port bus driver can allocate the port to the parallel device wit
  
 
 
---------------------
 
 

@@ -2,18 +2,28 @@
 title: Basic Installation Operations
 description: Basic Installation Operations
 ms.assetid: 9bf1a3e1-6c2a-4f8c-8694-6e859a73d9a6
-keywords: ["SetupAPI functions WDK , basic installation operations", "device installation functions WDK SetupAPI", "general Setup functions WDK SetupAPI", "SP_DEVINFO_DATA"]
+keywords:
+- SetupAPI functions WDK , basic installation operations
+- device installation functions WDK SetupAPI
+- general Setup functions WDK SetupAPI
+- SP_DEVINFO_DATA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Basic Installation Operations
 
 
-## <a href="" id="ddk-basic-installation-operations-dg"></a>
+
 
 
 Installers can use the [general Setup functions](https://msdn.microsoft.com/library/windows/hardware/ff544985) and [device installation functions](https://msdn.microsoft.com/library/windows/hardware/ff541299) that are provided by SetupAPI to perform installation operations. These functions allow installers to search INF files for compatible drivers, to display driver choices to the user through selection dialog boxes, and to perform the actual driver installation.
 
-Most of the device installation functions rely on information in the [**SP\_DEVINFO\_DATA**](https://msdn.microsoft.com/library/windows/hardware/ff552344) structure to perform installation tasks. Each device is associated with an SP\_DEVINFO\_DATA structure. You can retrieve a handle (HDEVINFO) to a [device information set](device-information-sets.md) that contains all installed devices in a particular class by using the [**SetupDiGetClassDevs**](https://msdn.microsoft.com/library/windows/hardware/ff551069) function. You can use the [**SetupDiCreateDeviceInfo**](https://msdn.microsoft.com/library/windows/hardware/ff550952) function to add a new device to a device information set. You can free all SP\_DEVINFO\_DATA structures in a device information set by using the [**SetupDiDestroyDeviceInfoList**](https://msdn.microsoft.com/library/windows/hardware/ff550996) function. This function also frees any compatible device and class device lists that might have been added to the structure.
+Most of the device installation functions rely on information in the [**SP_DEVINFO_DATA**](https://msdn.microsoft.com/library/windows/hardware/ff552344) structure to perform installation tasks. Each device is associated with an SP_DEVINFO_DATA structure. You can retrieve a handle (HDEVINFO) to a [device information set](device-information-sets.md) that contains all installed devices in a particular class by using the [**SetupDiGetClassDevs**](https://msdn.microsoft.com/library/windows/hardware/ff551069) function. You can use the [**SetupDiCreateDeviceInfo**](https://msdn.microsoft.com/library/windows/hardware/ff550952) function to add a new device to a device information set. You can free all SP_DEVINFO_DATA structures in a device information set by using the [**SetupDiDestroyDeviceInfoList**](https://msdn.microsoft.com/library/windows/hardware/ff550996) function. This function also frees any compatible device and class device lists that might have been added to the structure.
 
 By using the [**SetupDiBuildDriverInfoList**](https://msdn.microsoft.com/library/windows/hardware/ff550917) function, you can generate a list from which the installer or the user can choose the driver or device to install. **SetupDiBuildDriverInfoList** creates a list of compatible drivers or a list of all devices of a particular class.
 

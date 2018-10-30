@@ -1,9 +1,19 @@
 ---
-title: Handling SRB\_FUNCTION\_WMI
+title: Handling SRB_FUNCTION_WMI
 author: windows-driver-content
-description: Handling SRB\_FUNCTION\_WMI
+description: Handling SRB_FUNCTION_WMI
 ms.assetid: df20b9dc-1b67-4044-8abe-3cf5714076b3
-keywords: ["SCSI miniport drivers WDK storage , HwScsiStartIo", "HwScsiStartIo", "SRB_FUNCTION_WMI", "WMI WDK SCSI"]
+keywords:
+- SCSI miniport drivers WDK storage , HwScsiStartIo
+- HwScsiStartIo
+- SRB_FUNCTION_WMI
+- WMI WDK SCSI
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Handling SRB\_FUNCTION\_WMI
@@ -63,6 +73,5 @@ For more information about WMI, see [Windows Management Instrumentation](https:/
  
 
 
---------------------
 
 

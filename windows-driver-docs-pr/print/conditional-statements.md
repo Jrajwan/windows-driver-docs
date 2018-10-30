@@ -2,20 +2,25 @@
 title: Conditional Statements
 author: windows-driver-content
 description: Conditional Statements
-MS-HAID:
-- 'nt5gpd\_246a551a-c087-468e-8bbb-9939f600f546.xml'
-- 'print.conditional\_statements'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: eea2f9c1-a73b-46ed-a778-ece6bed615ac
-keywords: ["Unidrv, conditional statements", "GPD files WDK Unidrv , conditional statements", "conditional statements WDK Unidrv", "multiple dependencies WDK Unidrv", "Unidrv WDK print"]
+keywords:
+- Unidrv, conditional statements
+- GPD files WDK Unidrv , conditional statements
+- conditional statements WDK Unidrv
+- multiple dependencies WDK Unidrv
+- Unidrv WDK print
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Conditional Statements
 
 
-## <a href="" id="ddk-conditional-statements-gg"></a>
+
 
 
 The GPD language provides C-like conditional statements that allow you to describe dependencies that some printer attributes can have on a printer's configuration. For example, the margins and cursor origin for a page might depend on the page's orientation. The **\*Switch** and **\*Case** statements allow you to express such dependencies. The format of these statements is as follows:
@@ -226,7 +231,5 @@ For example, an incorrectly derived GPD file may look like the following:
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20Conditional%20Statements%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

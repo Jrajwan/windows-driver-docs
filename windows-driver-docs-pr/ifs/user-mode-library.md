@@ -3,7 +3,16 @@ title: User-Mode Library
 author: windows-driver-content
 description: User-Mode Library
 ms.assetid: a471ae15-bbdd-47c8-ad77-9b82281dd430
-keywords: ["filter manager WDK file system minifilter , user-mode library", "user-mode library WDK file system minifilter", "Fltlib.dll"]
+keywords:
+- filter manager WDK file system minifilter , user-mode library
+- user-mode library WDK file system minifilter
+- Fltlib.dll
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # User-Mode Library
@@ -84,6 +93,5 @@ The following support routines are provided for responding to communication init
  
 
 
---------------------
 
 

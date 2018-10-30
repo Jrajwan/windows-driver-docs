@@ -2,24 +2,23 @@
 title: HID drivers
 author: windows-driver-content
 description: This section introduces Human Interface Devices (or HID). Typically, these are devices that humans use to directly control the operation of computer systems.
-MS-HAID:
-- 'iidguide\_ce3797c6-83fd-4f05-8841-0457eb77b811.xml'
-- 'hid.human\_input\_devices\_design\_guide'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 19aefe5f-d82a-411f-86ab-5d1d53191524
-keywords: ["pointing devices WDK", "input devices WDK", "Human Interface Devices WDK", "HID WDK"]
+keywords:
+- pointing devices WDK
+- input devices WDK
+- Human Interface Devices WDK
+- HID WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
 ---
 
 # HID drivers
 
 
-This section introduces Human Interface Devices (or HID). Typically, these are devices that humans use to directly control the operation of computer systems.
-
-The definition of HID started as a device class over USB. The goal at that time was to define a replacement to PS/2 and create an interface over USB, allowing the creation of a generic driver for HID devices like keyboards, mice, and game controllers. Prior to HID, devices had to conform to strictly defined protocols for mice and keyboards. All hardware innovations necessitated overloading the use of data in an existing protocol, or the creation of non-standard hardware that needed its own drivers. The vision of HID started with finding a way for providing basic support for these “boot mode” devices in the operating system, but still allowing hardware vendors to provide differentiation with extensible, standardized and easily programmable interfaces.
-
-Today, HID devices include: alphanumeric displays, barcode readers, volume controls on speakers/headsets, auxiliary displays, sensors, and MRI’s (yes, in hospitals). In addition, many hardware vendors use HID for their proprietary devices.
+This section introduces Human Interface Devices (or HID). For more information about HID concepts, see the official [HID specification](http://www.usb.org/developers/hidpage/HID1_11.pdf). 
 
 ## In this section
 
@@ -62,7 +61,7 @@ Today, HID devices include: alphanumeric displays, barcode readers, volume contr
 </tr>
 <tr class="odd">
 <td><p>[HID Transports](hid-transports.md)</p></td>
-<td></td>
+<td><p>Descriptions of HID transports supported in current and previous versions of Windows.</p></td>
 </tr>
 <tr class="even">
 <td><p>[Non-HID legacy devices](non-hid-legacy-devices.md)</p></td>
@@ -78,7 +77,5 @@ Today, HID devices include: alphanumeric displays, barcode readers, volume contr
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bhid\hid%5D:%20HID%20drivers%20%20RELEASE:%20%287/18/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

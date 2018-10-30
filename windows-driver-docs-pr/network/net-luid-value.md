@@ -1,14 +1,25 @@
 ---
-title: NET\_LUID Value
-description: NET\_LUID Value
+title: NET_LUID Value
+description: NET_LUID Value
 ms.assetid: 9b9c63c1-f8b4-4e26-afc1-a3e4910609e2
-keywords: ["NDIS network interfaces WDK , NET_LUID", "network interfaces WDK , NET_LUID", "NET_LUID", "index operations WDK network interface", "locally unique identifier WDK network interface"]
+keywords:
+- NDIS network interfaces WDK , NET_LUID
+- network interfaces WDK , NET_LUID
+- NET_LUID
+- index operations WDK network interface
+- locally unique identifier WDK network interface
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NET\_LUID Value
 
 
-## <a href="" id="ddk-format-of-a-net-luid-value-ng"></a>
+
 
 
 A [**NET\_LUID**](https://msdn.microsoft.com/library/windows/hardware/ff568747) value is a 64-bit value that identifies an NDIS network interface. The NET\_LUID data type is a union that can provide access to the NET\_LUID value as a single 64-bit value or as a structure that contains a NET\_LUID index and an interface type.

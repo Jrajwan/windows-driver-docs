@@ -1,7 +1,13 @@
 ---
-title: Appendix 1 Enforcing Kernel-Mode Signature Verification in Kernel Debugging Mode
-description: .
+title: Enforce Kernel-Mode Signature Verification in Kernel Debugging
+description: Describes how to enable load-time signature enforcement when a kernel debugger is attached.
 ms.assetid: D7CB436F-4B89-49E7-BB53-101BDA7046F3
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Appendix 1: Enforcing Kernel-Mode Signature Verification in Kernel Debugging Mode
@@ -20,7 +26,7 @@ In order to facilitate debugging these situations, the kernel-mode code signing 
 HKLM\SYSTEM\CurrentControlSet\Control\CI\DebugFlags
 ```
 
-This registry value is of type REG\_DWORD, and can be assigned a value based on a bitwise OR of one or more of the following flags.
+This registry value is of type REG_DWORD, and can be assigned a value based on a bitwise OR of one or more of the following flags.
 
 ```
 0x00000001

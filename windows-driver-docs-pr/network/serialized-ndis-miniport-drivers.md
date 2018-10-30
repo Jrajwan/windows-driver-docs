@@ -2,13 +2,22 @@
 title: Serialized NDIS Miniport Drivers
 description: Serialized NDIS Miniport Drivers
 ms.assetid: 6b9b94ad-5d5d-465a-90bc-47095f6e2b9c
-keywords: ["miniport drivers WDK networking , types", "NDIS miniport drivers WDK , types", "serialized NDIS miniport drivers WDK networking"]
+keywords:
+- miniport drivers WDK networking , types
+- NDIS miniport drivers WDK , types
+- serialized NDIS miniport drivers WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Serialized NDIS Miniport Drivers
 
 
-## <a href="" id="ddk-serialized-ndis-miniport-drivers-ng"></a>
+
 
 
 Serialized NDIS miniport drivers are obsolete for Windows Vista and later versions. Serialized miniport drivers are not supported for NDIS 6.0 drivers. Windows Vista supports serialized miniport drivers only for NDIS 5.1 and earlier drivers. Unlike deserialized miniport drivers, a serialized miniport driver relies on NDIS to serialize the operation of its own *MiniportXxx* functions and to manage the queue for sending network data packets.

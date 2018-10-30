@@ -2,13 +2,23 @@
 title: Creating a Netupg.inf File
 description: Creating a Netupg.inf File
 ms.assetid: 8ee000e0-abd1-4a06-9f38-2a7971bc2c97
-keywords: ["netupg.inf files WDK", "network component upgrades WDK , customizing", "upgrading network components WDK , customizing", "customizing network upgrade process WDK networking"]
+keywords:
+- netupg.inf files WDK
+- network component upgrades WDK , customizing
+- upgrading network components WDK , customizing
+- customizing network upgrade process WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Creating a Netupg.inf File
 
 
-## <a href="" id="ddk-creating-a-netupg-inf-file-ng"></a>
+
 
 
 **Note**  Vendor-supplied network upgrades are not supported in Microsoft Windows XP (SP1 and later), Microsoft Windows Server 2003, and later operating systems.

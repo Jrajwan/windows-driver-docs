@@ -2,20 +2,26 @@
 title: IEEE 1394 Hardware Emulation Drivers
 author: windows-driver-content
 description: IEEE 1394 Hardware Emulation Drivers
-MS-HAID:
-- '1394-configrom\_23f4d7e1-00cb-45e5-8118-7233bd3894aa.xml'
-- 'IEEE.ieee\_1394\_hardware\_emulation\_drivers'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 44141072-e425-4983-9234-3ad79daa2017
-keywords: ["IEEE 1394 WDK buses , emulation drivers", "1394 WDK buses , emulation drivers", "emulation drivers WDK IEEE 1394 bus", "hardware emulation drivers WDK IEEE 1394 bus", "PDOs WDK IEEE 1394 bus", "virtual PDOs WDK IEEE 1394 bus"]
+keywords:
+- IEEE 1394 WDK buses , emulation drivers
+- 1394 WDK buses , emulation drivers
+- emulation drivers WDK IEEE 1394 bus
+- hardware emulation drivers WDK IEEE 1394 bus
+- PDOs WDK IEEE 1394 bus
+- virtual PDOs WDK IEEE 1394 bus
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # IEEE 1394 Hardware Emulation Drivers
 
 
-## <a href="" id="ddk-ieee-1394-hardware-emulation-drivers-kg"></a>
+
 
 
 An emulation driver can emulate actual IEEE hardware by adding a unit directory to the system's Configuration ROM. The emulation driver then intercepts requests coming from external nodes and emulates the 1394 registers that are exposed by an actual hardware device.
@@ -33,6 +39,5 @@ With just a few exceptions, the emulation driver can use the complete 1394 DDI i
  
 
 
---------------------
 
 

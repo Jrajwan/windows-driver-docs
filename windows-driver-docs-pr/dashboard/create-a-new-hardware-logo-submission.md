@@ -1,13 +1,12 @@
 ---
 title: Create a new WLK device certification submission
 description: Create a new WLK device certification submission
-MS-HAID:
-- 'p\_dashboard.create\_a\_new\_hardware\_logo\_submission'
-- 'hw\_dashboard.create\_a\_new\_hardware\_logo\_submission'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: e812eee1-768d-42d6-918e-c716b5c29ea2
+ms.author: 
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Create a new WLK device certification submission
@@ -15,14 +14,9 @@ ms.assetid: e812eee1-768d-42d6-918e-c716b5c29ea2
 
 To prepare your hardware for certification, you must create and submit a **WQReady.xml** file. Submitting this file allows the dashboard to test your device and return a report on its performance. The report includes a detailed list of how the device compares to Windows standards.
 
-**To create your file**
+# Creating a WQReady.xml file
 
-1.  Test your driver or drivers with the appropriate certification kit on each operating system that you want certification for.
-
-    **Note**  
-    To download the WLK, see [Windows Logo Kit (WLK) for Hardware Download](http://go.microsoft.com/fwlink/p/?LinkId=219237).
-
-     
+1.  Download the [Windows Logo Kit (WLK)](http://go.microsoft.com/fwlink/p/?LinkId=219237). Be sure to test your driver or drivers with the appropriate certification kit on each operating system that you want certification for.
 
 2.  Open the Winqual Submission Tool (WST) and click **Add**.
 
@@ -45,7 +39,7 @@ To prepare your hardware for certification, you must create and submit a **WQRea
 
      
 
-**To submit your file**
+## Submitting your file
 
 1.  Sign in to the Hardware Dev Center dashboard with your Microsoft account, and then click **Hardware compatibility**.
 
@@ -104,8 +98,8 @@ To prepare your hardware for certification, you must create and submit a **WQRea
 
      
 
-    **Note**  
-    The company, category, and subcategory are prepopulated based on information in the **WQReady.xml** file.
+> [!NOTE]  
+> The company, category, and subcategory are prepopulated based on information in the **WQReady.xml** file.
 
      
 
@@ -117,18 +111,10 @@ To prepare your hardware for certification, you must create and submit a **WQRea
 
     Review the results, and, if you choose, make changes to your product and resubmit.
 
-## <span id="related_topics"></span>Related topics
-
-
-[Manage Hardware Submissions](https://msdn.microsoft.com/library/windows/hardware/br230784.aspx)
-
-[Test-Sign Your Driver (Legacy)](https://msdn.microsoft.com/library/windows/hardware/br230772.aspx)
-
  
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bhw_dashboard\hw_dashboard%5D:%20Create%20a%20new%20WLK%20device%20certification%20submission%20%20RELEASE:%20%281/3/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

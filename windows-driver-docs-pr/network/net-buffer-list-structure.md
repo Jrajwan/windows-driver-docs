@@ -1,14 +1,24 @@
 ---
-title: NET\_BUFFER\_LIST Structure
-description: NET\_BUFFER\_LIST Structure
+title: NET_BUFFER_LIST Structure
+description: NET_BUFFER_LIST Structure
 ms.assetid: f7f19e48-cb63-458d-b175-6f99080e4cdf
-keywords: ["NET_BUFFER_LIST", "network data WDK , structures", "data WDK networking , structures", "packets WDK networking , data structures"]
+keywords:
+- NET_BUFFER_LIST
+- network data WDK , structures
+- data WDK networking , structures
+- packets WDK networking , data structures
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NET\_BUFFER\_LIST Structure
 
 
-## <a href="" id="ddk-net-buffer-list-structure-ng"></a>
+
 
 
 A [**NET\_BUFFER\_LIST**](https://msdn.microsoft.com/library/windows/hardware/ff568388) structure packages a linked list of NET\_BUFFER structures.

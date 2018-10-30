@@ -2,6 +2,12 @@
 title: How to run Code Analysis for drivers
 description: Code Analysis for Drivers provides information about possible defects in the source code. You can run code analysis manually, and you can also run code analysis automatically with each build.
 ms.assetid: BDD4EC2C-FB23-44BE-9A52-F98774AC7268
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # How to run Code Analysis for drivers
@@ -17,7 +23,7 @@ In this topic:
 -   [Changing stack usage limits for warning C6262 for kernel-mode drivers](#changing-stack-usage-limits-for-warning-c6262-for-kernel-mode-drivers)
 -   [Related topics](#related-topics)
 
-## <span id="Running_code_analysis"></span><span id="running_code_analysis"></span><span id="RUNNING_CODE_ANALYSIS"></span>Running code analysis
+## Running code analysis
 
 
 **To run code analysis on driver source code manually**
@@ -34,7 +40,7 @@ In this topic:
 5.  Under Rule set, select **Microsoft Driver Recommended Rules**. This is the default rule set for drivers.
 6.  In the **Build** menu, click **Build Solution**.
 
-## <span id="Viewing_the_code_analysis_results"></span><span id="viewing_the_code_analysis_results"></span><span id="VIEWING_THE_CODE_ANALYSIS_RESULTS"></span>Viewing the code analysis results
+## Viewing the code analysis results
 
 
 If possible defects are found in the source code, the **Code Analysis Results** window displays the code analysis warning number and the line number in the source file where the defect occurs.
@@ -52,7 +58,7 @@ If possible defects are found in the source code, the **Code Analysis Results** 
 1.  Navigate to the directory for your build configuration and platform (for example, \\Windows7Release\\x64).
 2.  If you use the recommended rules, the log file is called vc.\*codeanalysis.xml. If you are creating a driver for Windows Server 2012, this file is used to create the Driver Verification log.
 
-## <span id="Suppressing_the_report_of_defects"></span><span id="suppressing_the_report_of_defects"></span><span id="SUPPRESSING_THE_REPORT_OF_DEFECTS"></span>Suppressing the report of defects
+## Suppressing the report of defects
 
 
 In some cases, you might want to suppress the report of a particular warning messages; for example, if the warning is primarily informational and you know the cause of the error.
@@ -68,7 +74,7 @@ In some cases, you might want to suppress the report of a particular warning mes
     #pragma warning(suppress: 6014)
     ```
 
-## <span id="Changing_stack_usage_limits_for_warning_C6262_for_kernel-mode_drivers"></span><span id="changing_stack_usage_limits_for_warning_c6262_for_kernel-mode_drivers"></span><span id="CHANGING_STACK_USAGE_LIMITS_FOR_WARNING_C6262_FOR_KERNEL-MODE_DRIVERS"></span>Changing stack usage limits for warning C6262 for kernel-mode drivers
+## Changing stack usage limits for warning C6262 for kernel-mode drivers
 
 
 In user-mode and kernel-mode code, stack space is limited, and failure to commit a page of stack causes a stack overflow exception. High stack usage is particularly a concern in kernel mode because the total stack space available is only 12 KB. Kernel-mode code should aggressively limit stack use.
@@ -98,7 +104,7 @@ The Code Analysis tool issues warning [C6262](http://go.microsoft.com/fwlink/p/?
 
     To revert to the default of 1 KB, undo the changes you made to the project file, or change the stack size value to **stacksize1024**.
 
-## <span id="related_topics"></span>Related topics
+## Related topics
 
 
 [Code Analysis for Drivers Warnings](prefast-for-drivers-warnings.md)
@@ -107,7 +113,6 @@ The Code Analysis tool issues warning [C6262](http://go.microsoft.com/fwlink/p/?
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20How%20to%20run%20Code%20Analysis%20for%20drivers%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

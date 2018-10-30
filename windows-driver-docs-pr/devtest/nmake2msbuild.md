@@ -2,6 +2,12 @@
 title: Nmake2MsBuild
 description: The Nmake2MsBuild utility generates a Visual Studio project for a driver that was built using a previous version of the WDK from your driver's source code files, and from the sources, dirs, and makefile.inc files.
 ms.assetid: D6E1C124-9A5F-486B-865E-45A0BC58A5A3
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Nmake2MsBuild
@@ -20,7 +26,7 @@ For information about using the utility, see [Converting a WDK sources file to a
 
 The Nmake2MsBuild.exe utility has the following syntax:
 
-``` syntax
+```
 NMake2MSBuild.exe  < sources [<sources>...] | dirs >
                           [-Name:<Name of output project>]
                           [-Package:<Path to package project file to generate>]
@@ -97,7 +103,7 @@ To build a driver project that was built with a previous version of the WDK (usi
 
 For example, to convert a driver that was previously built with the Windows 7 WDK, called MyDriver, you first open a **Visual Studio Command Prompt** window. Browse to the directory or supply the path to the directory that contains the *sources* or *dirs* build configuration file. For example, the following command generates the MyDriver.Vcxproj file in the same folder as the *sources* file.
 
-``` syntax
+```
 nmake2msbuild.exe  .\myDriver\sources
 ```
 
@@ -112,7 +118,6 @@ nmake2msbuild.exe  .\myDriver\sources
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20Nmake2MsBuild%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

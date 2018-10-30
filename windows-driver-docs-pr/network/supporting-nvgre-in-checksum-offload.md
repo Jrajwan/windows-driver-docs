@@ -1,7 +1,13 @@
 ---
 title: Supporting NVGRE in Checksum Offload
-description: NDIS 6.30 (Windows Server 2012) introduces Network Virtualization using Generic Routing Encapsulation (NVGRE). NDIS miniport, protocol, and filter drivers and NICs that offload checksum tasks should do so in a way that supports NVGRE.
+description: This section describes supporting NVGRE in checksum offload
 ms.assetid: 933EE18B-917A-40BC-87AA-0F463615A082
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Supporting NVGRE in Checksum Offload
@@ -30,7 +36,7 @@ Checksum validation for NVGRE is largely the same as it would be otherwise.
 
 If a miniport receives an [OID\_TCP\_OFFLOAD\_PARAMETERS](https://msdn.microsoft.com/library/windows/hardware/ff569807) OID request and succeeds it for **NDIS\_ENCAPSULATION\_TYPE\_GRE\_MAC** (see [**NDIS\_OFFLOAD\_PARAMETERS**](https://msdn.microsoft.com/library/windows/hardware/ff566706)), the NIC must perform checksum validation on the tunnel (outer) IP header, transport (inner) IP header, and TCP or UDP header.
 
-For encapsulated packets that have an IPv4 tunnel (outer) header and an IPv4 transport (inner) header, a miniport driver should set the **IpChecksumSucceeded** flag in the [**NDIS\_TCP\_IP\_CHECKSUM\_NET\_BUFFER\_LIST\_INFO**](https://msdn.microsoft.com/library/windows/hardware/ff567877) structure only if both IP header checksum validations succeeded. For encapsulated packets that have both a tunnel (outer) IPv4 header and a transport (inner) IPv4 header, the miniport driver should set the **IpChecksumSucceeded** flag if either of the IP header checksum validations failed.
+For encapsulated packets that have an IPv4 tunnel (outer) header and an IPv4 transport (inner) header, a miniport driver should set the **IpChecksumSucceeded** flag in the [**NDIS\_TCP\_IP\_CHECKSUM\_NET\_BUFFER\_LIST\_INFO**](https://msdn.microsoft.com/library/windows/hardware/ff567877) structure only if both IP header checksum validations succeeded. For encapsulated packets that have both a tunnel (outer) IPv4 header and a transport (inner) IPv4 header, the miniport driver should set the **IpChecksumFailed** flag if either of the IP header checksum validations failed.
 
  
 

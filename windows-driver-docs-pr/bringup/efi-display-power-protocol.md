@@ -1,11 +1,14 @@
 ---
-title: EFI\_DISPLAY\_POWER\_PROTOCOL
+title: EFI_DISPLAY_POWER_PROTOCOL
 author: windows-driver-content
-description: EFI\_DISPLAY\_POWER\_PROTOCOL
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: EFI_DISPLAY_POWER_PROTOCOL
 ms.assetid: 61ccf856-7e0b-4f1b-9be9-7b8a31339a6b
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # EFI\_DISPLAY\_POWER\_PROTOCOL
@@ -51,6 +54,5 @@ Returns the current power state of the display and backlight. For more informati
  
 
 
---------------------
 
 

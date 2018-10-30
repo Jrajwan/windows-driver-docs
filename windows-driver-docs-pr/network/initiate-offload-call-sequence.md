@@ -2,7 +2,15 @@
 title: Initiate Offload Call Sequence
 description: Initiate Offload Call Sequence
 ms.assetid: 81e2ace5-c430-4c70-8596-41bdbf931804
-keywords: ["offloading state process WDK TCP chimney offload , sequence", "state offloading process WDK TCP chimney offload , sequence"]
+keywords:
+- offloading state process WDK TCP chimney offload , sequence
+- state offloading process WDK TCP chimney offload , sequence
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Initiate Offload Call Sequence
@@ -10,7 +18,7 @@ keywords: ["offloading state process WDK TCP chimney offload , sequence", "state
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-initiate-offload-call-sequence-ng"></a>
+
 
 
 From the perspective of an offload target, an offload of TCP chimney state is initiated when NDIS calls the offload target's [*MiniportInitiateOffload*](https://msdn.microsoft.com/library/windows/hardware/ff559393) function. The *MiniportInitiateOffload* function inputs the following parameters:

@@ -1,13 +1,18 @@
 ---
 title: Developer guide for creating service metadata
 description: Developer guide for creating service metadata
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 2d250bce-2dd2-4bd8-aa0f-432dde7783e1
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Developer guide for creating service metadata
+
+[!include[MBAE deprecation warning](mbae-deprecation-warning.md)]
 
 
 This guide walks you through the process of creating a service metadata package on the Windows Dev Center hardware dashboard, previously known as Sysdev (<http://sysdev.microsoft.com>). Service metadata is required to connect a mobile broadband app to your hardware device. When a user plugs a mobile broadband device into their computer, the associated service metadata is downloaded and then the mobile broadband app is automatically downloaded.
@@ -60,23 +65,23 @@ You should receive an acknowledgement emails with 24 hours that your request was
 
 ### <span id="Mobile_broadband_app"></span><span id="mobile_broadband_app"></span><span id="MOBILE_BROADBAND_APP"></span>Mobile broadband app
 
-Before you create your service metadata package, ensure that your mobile broadband app has been developed and associated with the Windows Store. This app should provide key experiences, such as plan purchase, data usage, help and support, as well as highlighting value-added services from the operator. For more info about creating the mobile broadband app, see the following links:
+Before you create your service metadata package, ensure that your mobile broadband app has been developed and associated with the Microsoft Store. This app should provide key experiences, such as plan purchase, data usage, help and support, as well as highlighting value-added services from the operator. For more info about creating the mobile broadband app, see the following links:
 
 -   [Mobile broadband WinRT API overview](mobile-broadband-winrt-api-overview.md)
 
 -   [Mobile operator hardware overview](mobile-operator-hardware-overview.md)
 
--   [Windows Store mobile broadband apps](windows-store-mobile-broadband-apps.md)
+-   [UWP mobile broadband apps](uwp-mobile-broadband-apps.md)
 
 **Note**  
-The mobile broadband app doesn’t have to be published to the Windows Store until the service metadata has been tested and is ready to be published externally. We recommend that the app is published to the Windows Store only after the service metadata package passes preview mode testing.
+The mobile broadband app doesn’t have to be published to the Microsoft Store until the service metadata has been tested and is ready to be published externally. We recommend that the app is published to the Microsoft Store only after the service metadata package passes preview mode testing.
 
  
 
 ## <span id="Creating_service_metadata_packages"></span><span id="creating_service_metadata_packages"></span><span id="CREATING_SERVICE_METADATA_PACKAGES"></span>Creating service metadata packages
 
 
-Creating a service metadata package starts with the Service Metadata wizard that is available on the Windows Dev Center hardware dashboard. For more info on the Service Metadata wizard, see [Step 2: Create the service metadata package](#bkmk-step2). You can use the Service Metadata wizard to create a new or edit an existing service metadata package. As you go through the wizard and fill out the values, the wizard will validate and notify you of any errors or warnings. This validation includes checking for missing or incorrect fields, service identifier ownership, mobile broadband app existence in the Windows Store, and so on.
+Creating a service metadata package starts with the Service Metadata wizard that is available on the Windows Dev Center hardware dashboard. For more info on the Service Metadata wizard, see [Step 2- Create the service metadata package](#2-create-the-service-metadata-package). You can use the Service Metadata wizard to create a new or edit an existing service metadata package. As you go through the wizard and fill out the values, the wizard will validate and notify you of any errors or warnings. This validation includes checking for missing or incorrect fields, service identifier ownership, mobile broadband app existence in the Microsoft Store, and so on.
 
 When you are on the final confirmation page and ready to submit, you have the option of submitting your package either in **Developer** mode or **Preview** mode.
 
@@ -90,35 +95,35 @@ The following diagram discusses the workflow:
 
 ![creating a service metadata package](images/mbae-sxs81-createpackageworkflow.png)
 
-To create a new service metadata package, see [Steps for creating a service metadata package](#bkmk-createnewpackage).
+To create a new service metadata package, see [Steps for creating a service metadata package](#steps-for-creating-a-service-metadata-package).
 
-To edit an existing service metadata package, see [Steps for editing a service metadata package](#bkmk-editpackage).
+To edit an existing service metadata package, see [Steps for editing a service metadata package](#steps-for-editing-a-service-metadata-package).
 
-## <span id="BKMK_CreateNewPackage"></span><span id="bkmk_createnewpackage"></span><span id="BKMK_CREATENEWPACKAGE"></span>Steps for creating a service metadata package
+## Steps for creating a service metadata package
 
 
 Use the following steps to create a service metadata package on the Windows Dev Center hardware dashboard:
 
--   [Step 1: Gather the required information for the service metadata package](#bkmk-step1)
+-   [1-Gather the required information for the service metadata package](#1-gather-the-required-information-for-the-service-metadata-package)
 
--   [Step 2: Create the service metadata package](#bkmk-step2)
+-   [2-Create the service metadata package](#2-create-the-service-metadata-package)
 
--   [Step 3: Insert the store manifest file into the Windows Store device app](#bkmk-step3)
+-   [3-Insert the store manifest file into the Microsoft Store device app](#3-insert-the-store-manifest-file-into-the-uwp-device-app)
 
--   [Step 4: Test the service metadata package](#bkmk-step4)
+-   [4-Test the service metadata package](#4-test-the-service-metadata-package)
 
--   [Step 5: Publish the service metadata package](#bkmk-step5)
+-   [5-Publish the service metadata package](#5-publish-the-service-metadata-package)
 
-### <span id="BKMK_Step1"></span><span id="bkmk_step1"></span><span id="BKMK_STEP1"></span>Step 1: Gather the required information for the service metadata package
+### 1-Gather the required information for the service metadata package
 
 As you go through the steps in the Service Metadata Wizard in Step 2 of this topic, several pieces of information stored in the package.appxmanifest file from the mobile broadband app project that you want to associated with the device is required. Use the following steps to gather the information so that it’s ready for Step 2 of this topic.
 
 **Caution**  
-The mobile broadband app must be associated with the Windows Store before you gather the values in this step. When you associate a mobile broadband app, the values in the package manifest file are updated to use the information from your Windows Store developer account. However, the mobile broadband app does not have to be published to the Windows Store. It can stay in your local development environment until you are ready to publish the service metadata package.
+The mobile broadband app must be associated with the Microsoft Store before you gather the values in this step. When you associate a mobile broadband app, the values in the package manifest file are updated to use the information from your Microsoft Store developer account. However, the mobile broadband app does not have to be published to the Microsoft Store. It can stay in your local development environment until you are ready to publish the service metadata package.
 
  
 
-**To gather Windows Store device app information**
+**To gather UWP device app information**
 
 1.  Open the mobile broadband app project by using Visual Studio 2013.
 
@@ -156,7 +161,7 @@ You can also complete this without using Visual Studio 2013 by doing the followi
 
 5.  Save and close the package.appxmanifest file.
 
-### <span id="BKMK_Step2"></span><span id="bkmk_step2"></span><span id="BKMK_STEP2"></span>Step 2: Create the service metadata package
+### 2-Create the service metadata package
 
 Service metadata is created by using the Service Metadata Wizard in the Windows Dev Center hardware dashboard.
 
@@ -184,7 +189,7 @@ Service metadata is created by using the Service Metadata Wizard in the Windows 
 
     ![the service info step of the wizard](images/mbae-sxs81-serviceinfostep.png)
 
-4.  On the **Hardware info** page, select the information that should be used to identify your experience. Once a check box is selected, you can add the appropriate network ranges. The ID generated should exist in the Windows APN database so the right subscriber is identified. For more information about the APN database, see [APN database submission](apn-database-submission.md).
+4.  On the **Hardware info** page, select the information that should be used to identify your experience. Once a check box is selected, you can add the appropriate network ranges. The ID generated should exist in the Windows APN database so the right subscriber is identified. For more information about the APN database, see [COSA/APN database submission](cosa-apn-database-submission.md).
 
     -   If you are a GSM Provider that uses the International Mobile Subscriber Identity (IMSI), select the **IMSI** check box under the **GSM** heading. In the **Provider ID** box, enter the GSM service provider ID. Under the **IMSI/ICCID Ranges** heading, enter the range, and then click **Add**.
 
@@ -208,13 +213,13 @@ Service metadata is created by using the Service Metadata Wizard in the Windows 
 
     -   **Developer Mode** – The package is not signed and it must be manually downloaded and installed on every computer. Use this option if you want to save the package for offline development.
 
-    -   **Preview Mode** – The package is signed and automatically downloaded from Microsoft to test computers with the appropriate registry settings configured. Preview Mode does not check to ensure that the mobile broadband app is published to the Windows Store.
+    -   **Preview Mode** – The package is signed and automatically downloaded from Microsoft to test computers with the appropriate registry settings configured. Preview Mode does not check to ensure that the mobile broadband app is published to the Microsoft Store.
 
     ![this is the confirm step of the wizard](images/mbae-sxs81-confirm.png)
 
-### <span id="BKMK_Step3"></span><span id="bkmk_step3"></span><span id="BKMK_STEP3"></span>Step 3: Insert the store manifest file into the Windows Store device app
+### 3-Insert the store manifest file into the Microsoft Store device app
 
-A store manifest file must be included with a Windows Store device app. Use the following steps to download the store manifest file from your service metadata package and insert it into the mobile broadband app project.
+A store manifest file must be included with a UWP device app. Use the following steps to download the store manifest file from your service metadata package and insert it into the mobile broadband app project.
 
 **Insert the store manifest file**
 
@@ -228,9 +233,9 @@ A store manifest file must be included with a Windows Store device app. Use the 
 
 4.  Browse to the store manifest file that you downloaded, and then click **Add**.
 
-5.  Recompile the mobile broadband app and publish it again to the Windows Store.
+5.  Recompile the mobile broadband app and publish it again to the Microsoft Store.
 
-### <span id="BKMK_Step4"></span><span id="bkmk_step4"></span><span id="BKMK_STEP4"></span>Step 4: Test the service metadata package
+### 4-Test the service metadata package
 
 To test the service metadata package, you must have the mobile broadband device and the service metadata package files. The instructions to configure your test system and install the service metadata package depend on the mode of the package.
 
@@ -259,7 +264,7 @@ You do not have to enable test signing to test a service metadata package that i
 
  
 
-After the PreviewKey registry entry is created, plug in your mobile broadband device and ensure that it shows in the Networks list. If it does not, see the [Troubleshooting](#bkmk-troubleshooting) section for more info.
+After the PreviewKey registry entry is created, plug in your mobile broadband device and ensure that it shows in the Networks list. If it does not, see the [Troubleshooting](#troubleshooting) section for more info.
 
 ### <span id="Clear_the_existing_service_metadata"></span><span id="clear_the_existing_service_metadata"></span><span id="CLEAR_THE_EXISTING_SERVICE_METADATA"></span>Clear the existing service metadata
 
@@ -286,7 +291,7 @@ This will not work on a Windows RT device. Use the steps in the procedure named 
      
 
     ``` syntax
-# DEVICE SHOULD BE CONNECTED TO MACHINE
+    # DEVICE SHOULD BE CONNECTED TO MACHINE
 
     Write-Host "Launching devcon to remove MBAE software device nodes devcon.exe remove @SWD\MBAE\*"
     $DevconParameters = ' remove @SWD\MBAE\* '
@@ -333,7 +338,7 @@ This will not work on a Windows RT device. Use the steps in the procedure named 
     Stop-Service DsmSvc
 
     Write-Host "Removing MBAE metadata packages in store"
-#Find Package Ids
+    #Find Package Ids
     $MBAEPackageRegKeyHive = "HKLM:\SOFTWARE\Microsoft\WwanSvc\MobileBroadbandAccounts\Accounts\"
     if(Test-Path $MBAEPackageRegKeyHive)
     {
@@ -382,7 +387,7 @@ This will not work on a Windows RT device. Use the steps in the procedure named 
 
     Write-Host "END of Script"
 
-# DEVICE SHOULD BE CONNECTED TO MACHINE
+    # DEVICE SHOULD BE CONNECTED TO MACHINE
 
     Write-Host "Launching devcon to remove MBAE software device nodes devcon.exe remove @SWD\MBAE\*"
     $DevconParameters = ' remove @SWD\MBAE\* '
@@ -421,7 +426,7 @@ This will not work on a Windows RT device. Use the steps in the procedure named 
 
 
     Write-Host "Removing MBAE metadata packages in cache and store"
-#Find Package Ids
+    #Find Package Ids
     $MBAEPackageRegKeyHive = "HKLM:\SOFTWARE\Microsoft\WwanSvc\MobileBroadbandAccounts\Accounts\"
     if(Test-Path $MBAEPackageRegKeyHive)
     {
@@ -517,20 +522,20 @@ After the environment is set up, run the following steps each time that you want
 
     2.  Right-click each mobile broadband device, and then click **Enable**.
 
-### <span id="BKMK_Step5"></span><span id="bkmk_step5"></span><span id="BKMK_STEP5"></span>Step 5: Publish the service metadata package
+### 5-Publish the service metadata package
 
 Once you have confirmed that the service metadata package works correctly, the final step is to release the package. You can release the package by selecting the package attached to the specific experience by clicking the **Release** button, as shown below.
 
 ![release your service metadata package](images/mbae-sxs81-releasetolive.jpg)
 
-## <span id="BKMK_EditPackage"></span><span id="bkmk_editpackage"></span><span id="BKMK_EDITPACKAGE"></span>Steps for editing a service metadata package
+## Steps for editing a service metadata package
 
 
 You can edit a service metadata package by using the Manage Experiences page of the Windows Dev Center hardware dashboard.
 
 ![the manage experiences page](images/mbae-sxs81-manageexperience.png)
 
-## <span id="BKMK_Troubleshooting"></span><span id="bkmk_troubleshooting"></span><span id="BKMK_TROUBLESHOOTING"></span>Troubleshooting
+##Troubleshooting
 
 
 Open the networks list and look for your mobile broadband network. If the network is listed by using the name and icon that you used in the service metadata package **ServiceInfo.xml** file, the package is correctly parsed. If you are updating a service metadata package that has the same name and icon, or if the name or icon has not appeared in the list after about approximately one minute, you should perform additional steps, as discussed here:
@@ -707,7 +712,7 @@ Use the following links to learn more about mobile broadband in Windows 8.1 and
 
 -   [Overview of mobile broadband](overview-of-mobile-broadband.md)
 
--   [APN database](apn-database.md)
+-   [APN database overview](apn-database-overview.md)
 
 -   [Service metadata](service-metadata.md)
 
@@ -715,7 +720,6 @@ Use the following links to learn more about mobile broadband in Windows 8.1 and
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bp_mb\p_mb%5D:%20Developer%20guide%20for%20creating%20service%20metadata%20%20RELEASE:%20%281/18/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

@@ -2,13 +2,20 @@
 title: Support for More than 64 Processors in NDIS 6.20
 description: Support for More than 64 Processors in NDIS 6.20
 ms.assetid: 3fb2a09c-e2dd-48b8-a631-3793bd023ef0
-keywords: ["NDIS 6.20 WDK , support for more than 64 processors"]
+keywords:
+- NDIS 6.20 WDK , support for more than 64 processors
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Support for More than 64 Processors in NDIS 6.20
 
 
-## <a href="" id="ddk-support-for-more-than-64-processors-in-ndis-6-20-ng"></a>
+
 
 
 The NDIS 6.20 interface introduces support for more than 64 processors. Previous NDIS versions are limited to no more than 64 processors (32 in x86 versions of the operating system).

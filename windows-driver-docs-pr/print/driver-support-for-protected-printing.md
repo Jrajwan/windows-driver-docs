@@ -2,10 +2,13 @@
 title: Driver Support for Protected Printing
 author: windows-driver-content
 description: Windows 8.1 includes support for protected printing, which allows users to specify a personal identification number (PIN) that is then used at the printer, prior to the job being printed out.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 43569030-224F-46C6-963F-FC3BE24A0FB3
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Driver Support for Protected Printing
@@ -34,7 +37,7 @@ If you're working with a v4 driver, you have to make changes to the generic prin
 -   Driver configuration file (GPD or PPD)
 -   XPS rendering filters
 -   Printer extensions
--   Windows Store device apps
+-   UWP device apps
 
 **Note**  You can use a v3 driver with the Print Schema keywords for protected printing, as long as you make the required changes in your PTProvider code. But the steps for making those changes are outside the scope of this topic.
 
@@ -276,16 +279,14 @@ The Microsoft recommendation is that, to minimize the rendering requirements on 
 
 Printer extensions should be able to display a control for protected printing in their print preferences UI. This ensures that users of desktop apps can configure the protected printing feature when using the printer extension. Microsoft is making changes that will allow the [**IPrintSchemaTicket**](https://msdn.microsoft.com/library/windows/hardware/hh451398) family of APIs to support protected printing from printer extensions.
 
-**Windows Store device apps**
+**UWP device apps**
 
-Microsoft is also making changes to allow the [**IPrintSchemaTicket**](https://msdn.microsoft.com/library/windows/hardware/hh451398) family of APIs to work with Windows Store device apps to display a control for protected printing in their print preferences UI.
-
- 
+Microsoft is also making changes to allow the [**IPrintSchemaTicket**](https://msdn.microsoft.com/library/windows/hardware/hh451398) family of APIs to work with UWP device apps to display a control for protected printing in their print preferences UI.
 
  
 
+ 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20Driver%20Support%20for%20Protected%20Printing%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
+
 
 

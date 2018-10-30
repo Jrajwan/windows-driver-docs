@@ -1,10 +1,13 @@
 ---
 title: Test distribution guidance to self-host desktop drivers
 description: Test distribution guidance to self-host desktop drivers
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 67E31BC1-6209-4264-B9F4-8CDFE8CE2E65
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Test distribution guidance to self-host desktop drivers
@@ -39,16 +42,9 @@ Once you have published your driver for test distribution, the expiration time i
 
 ## <span id="Client_PC_configuration"></span><span id="client_pc_configuration"></span><span id="CLIENT_PC_CONFIGURATION"></span>Client PC configuration
 
-
-### <span id="Test_distribution_client_configuration_for_previous_versions_of_Windows"></span><span id="test_distribution_client_configuration_for_previous_versions_of_windows"></span><span id="TEST_DISTRIBUTION_CLIENT_CONFIGURATION_FOR_PREVIOUS_VERSIONS_OF_WINDOWS"></span>Test distribution client configuration for previous versions of Windows
-
-Prior to Windows 10, a legacy registry key was used to indicate that a client machine is interested in receiving test distribution drivers. Starting with Windows 10, this legacy registry key will be retired and no longer function.
-
-To configure a client machine (Windows 7, Windows 8, or Windows 8.1) for test distribution, you must configure the client machine using the steps outlined in the following section.
-
 ### <span id="How_do_I_configure_my_machine_to_receive_test_distribution_drivers_"></span><span id="how_do_i_configure_my_machine_to_receive_test_distribution_drivers_"></span><span id="HOW_DO_I_CONFIGURE_MY_MACHINE_TO_RECEIVE_TEST_DISTRIBUTION_DRIVERS_"></span>How do I configure my machine to receive test distribution drivers?
 
-Configuring a system to receive test distribution updates is easier than ever. Follow these steps on the test machine running Windows 10, or on the source OS (Windows 8.1 or earlier) if you are testing upgrade scenarios to Windows 10.
+Configuring a system to receive test distribution updates can be performed with the following steps:
 
 1.  Open the Windows Registry Editor (regedit.exe)
 2.  Go to HKLM\\Software\\Microsoft\\
@@ -92,7 +88,6 @@ To stop receiving test distribution drivers, remove the **TargetRing** registry 
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bhw_dashboard\hw_dashboard%5D:%20Test%20distribution%20guidance%20to%20self-host%20desktop%20drivers%20%20RELEASE:%20%281/3/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

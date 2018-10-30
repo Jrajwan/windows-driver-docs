@@ -2,13 +2,24 @@
 title: Connection Offload
 description: Connection Offload
 ms.assetid: 4c1b1a98-6ad3-4817-9e3d-d6112c887352
-keywords: ["connection offload WDK TCP/IP transport", "TCP/IP offload WDK networking , connection offload", "offload WDK TCP/IP transport , connection offload", "connection offload WDK TCP/IP transport , about connection offload", "capabilities WDK TCP/IP offload"]
+keywords:
+- connection offload WDK TCP/IP transport
+- TCP/IP offload WDK networking , connection offload
+- offload WDK TCP/IP transport , connection offload
+- connection offload WDK TCP/IP transport , about connection offload
+- capabilities WDK TCP/IP offload
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Connection Offload
 
 
-## <a href="" id="ddk-connection-offload-ng"></a>
+
 
 
 To increase its performance, the Microsoft TCP/IP transport can offload connections to a NIC that has the appropriate TCP/IP-connection offload capabilities.

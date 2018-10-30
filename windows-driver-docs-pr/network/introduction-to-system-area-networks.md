@@ -2,13 +2,24 @@
 title: Introduction to System Area Networks
 description: Introduction to System Area Networks
 ms.assetid: 28d92bb5-8c3c-4f46-b908-63e3a3efff37
-keywords: ["system area networks WDK , about system area networks", "SAN WDK , about system area networks", "hubs WDK SANs", "nodes WDK SANs", "SAN NIC WDK SANs"]
+keywords:
+- system area networks WDK , about system area networks
+- SAN WDK , about system area networks
+- hubs WDK SANs
+- nodes WDK SANs
+- SAN NIC WDK SANs
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Introduction to System Area Networks
 
 
-## <a href="" id="ddk-introduction-to-system-area-networks-ng"></a>
+
 
 
 A *system area network (SAN)* is a high-performance, connection-oriented network that can link a cluster of computers. A SAN delivers high bandwidth (1 Gbps or greater) with low latency. A SAN is typically switched by hubs that support eight or more nodes. The cable lengths between nodes on a SAN range from a few meters to a few kilometers.

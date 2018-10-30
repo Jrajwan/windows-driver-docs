@@ -1,14 +1,27 @@
 ---
-title: NET\_BUFFER Architecture
-description: NET\_BUFFER Architecture
+title: NET_BUFFER Architecture
+description: NET_BUFFER Architecture
 ms.assetid: 97cddcd1-7242-4cc5-9af9-fe82a2ef995f
-keywords: ["NET_BUFFER", "network data WDK , managing", "data WDK networking , managing", "packets WDK networking , managing", "network drivers WDK , packets", "data structures WDK networking", "structures WDK networking"]
+keywords:
+- NET_BUFFER
+- network data WDK , managing
+- data WDK networking , managing
+- packets WDK networking , managing
+- network drivers WDK , packets
+- data structures WDK networking
+- structures WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NET\_BUFFER Architecture
 
 
-## <a href="" id="ddk-net-buffer-architecture-ng"></a>
+
 
 
 This section provides high level information about [**NET\_BUFFER**](https://msdn.microsoft.com/library/windows/hardware/ff568376) structures and related data structures and functions. NET\_BUFFER structures provide an efficient means to package and manage network data.

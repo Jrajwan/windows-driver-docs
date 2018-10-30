@@ -2,13 +2,22 @@
 title: IP Helper
 description: IP Helper
 ms.assetid: c7cf1f47-ee0d-4c89-883b-717b719fcc2a
-keywords: ["IP Helper WDK networking", "IP Helper WDK networking , about", "network drivers WDK , IP Helper"]
+keywords:
+- IP Helper WDK networking
+- IP Helper WDK networking , about
+- network drivers WDK , IP Helper
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # IP Helper
 
 
-## <a href="" id="ddk-ndis-register-access-interface-nr"></a>
+
 
 
 Internet Protocol Helper (IP Helper) enables drivers to retrieve information about the network configuration of the local computer and to modify that configuration. IP Helper also provides notification mechanisms to make sure that a driver is notified when certain aspects of the local computer network configuration change. IP Helper is available in Windows Vista and later versions of the Microsoft Windows operating systems.

@@ -1,14 +1,21 @@
 ---
 title: INF SourceDisksFiles Section
-description: The SourceDisksFiles section names the source files that are used during installation, identifies the installation disks that contain those files, and provides the directory paths, if any, on the distribution disks that contain individual files.
+description: The SourceDisksFiles section names source files, installation disks, and directory paths used during installation.
 ms.assetid: 4a20b2e7-3371-47c1-8f51-bcc7af044382
-keywords: ["INF SourceDisksFiles Section Device and Driver Installation"]
+keywords:
+- INF SourceDisksFiles Section Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF SourceDisksFiles Section
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF SourceDisksFiles Section
@@ -18,7 +25,7 @@ The **SourceDisksFiles** section names the source files that are used during ins
 
 In order for a driver file or an application file to be included as part of a signed [driver package](driver-packages.md), the file must have a corresponding INF **SourceDisksFiles** section entry and a corresponding [**INF CopyFiles directive**](inf-copyfiles-directive.md).
 
-``` syntax
+```
 [SourceDisksFiles] | 
 [SourceDisksFiles.x86] | 
 [SourceDisksFiles.ia64] | (Windows XP and later versions of Windows)

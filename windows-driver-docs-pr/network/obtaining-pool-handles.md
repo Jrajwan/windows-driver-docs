@@ -2,13 +2,25 @@
 title: Obtaining Pool Handles
 description: Obtaining Pool Handles
 ms.assetid: 752b0d64-2ca3-4dc0-a6cd-642e96af1f8f
-keywords: ["pool handles WDK networking", "protocol drivers WDK networking , pool handles", "NDIS protocol drivers WDK , pool handles", "miniport drivers WDK networking , pool handles", "NDIS miniport drivers WDK , pool handles", "intermediate drivers WDK networking , po"]
+keywords:
+- pool handles WDK networking
+- protocol drivers WDK networking , pool handles
+- NDIS protocol drivers WDK , pool handles
+- miniport drivers WDK networking , pool handles
+- NDIS miniport drivers WDK , pool handles
+- intermediate drivers WDK networking , po
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Obtaining Pool Handles
 
 
-## <a href="" id="ddk-obtaining-pool-handles-ng"></a>
+
 
 
 The following NDIS pool allocation functions require a handle to allocate resources:

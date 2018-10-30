@@ -2,13 +2,26 @@
 title: Registering Memory for Operations on a SAN
 description: Registering Memory for Operations on a SAN
 ms.assetid: 5492466e-4765-4d43-b6bc-1d5bc74996ba
-keywords: ["SAN connection setup WDK , registering memory", "registering memory for SANs", "data buffers WDK SANs", "buffers WDK SANs", "registering data buffers", "memory WDK SANs", "registered memory WDK SANs"]
+keywords:
+- SAN connection setup WDK , registering memory
+- registering memory for SANs
+- data buffers WDK SANs
+- buffers WDK SANs
+- registering data buffers
+- memory WDK SANs
+- registered memory WDK SANs
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Registering Memory for Operations on a SAN
 
 
-## <a href="" id="ddk-registering-memory-for-operations-on-a-san-ng"></a>
+
 
 
 The Windows Sockets switch calls a SAN service provider's extension functions to register all data buffers for sending and receiving messages and for RDMA operations on a system area network. These extension functions register a buffer to a region of physical memory for use on a particular SAN socket that is connected to a remote peer. For a description of these extension functions, see the [Windows Sockets SPI Extensions for SANs](windows-sockets-spi-extensions-for-sans.md).

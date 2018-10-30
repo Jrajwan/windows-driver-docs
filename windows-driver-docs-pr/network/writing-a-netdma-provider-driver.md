@@ -2,7 +2,18 @@
 title: Writing a NetDMA Provider Driver
 description: Writing a NetDMA Provider Driver
 ms.assetid: a4fcecdf-284d-4cae-b930-4a02492e4eec
-keywords: ["memory-to-memory data transfers WDK NetDMA , writing provider drivers", "data transfers WDK NetDMA , writing provider drivers", "transferring data WDK NetDMA , writing provider drivers", "NetDMA WDK networking , writing provider drivers", "DMA transfers WDK N"]
+keywords:
+- memory-to-memory data transfers WDK NetDMA , writing provider drivers
+- data transfers WDK NetDMA , writing provider drivers
+- transferring data WDK NetDMA , writing provider drivers
+- NetDMA WDK networking , writing provider drivers
+- DMA transfers WDK N
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Writing a NetDMA Provider Driver
@@ -12,7 +23,7 @@ keywords: ["memory-to-memory data transfers WDK NetDMA , writing provider driver
 
  
 
-## <a href="" id="ddk-writing-a-netdma-provider-driver-ng"></a>
+
 
 
 The NetDMA interface provides a standard interface for NetDMA provider drivers. NetDMA provider drivers enable higher-level applications to use direct memory access (DMA) to move blocks of memory. By using a DMA engine to move memory, you free the CPU to perform other tasks.

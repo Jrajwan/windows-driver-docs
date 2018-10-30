@@ -3,7 +3,17 @@ title: Storage Filter Drivers
 author: windows-driver-content
 description: Storage Filter Drivers
 ms.assetid: 615e8ff1-d5b2-49da-b024-83bbaff70ded
-keywords: ["storage filter drivers WDK", "filter drivers WDK storage", "storage drivers WDK , filter drivers", "SFD WDK storage"]
+keywords:
+- storage filter drivers WDK
+- filter drivers WDK storage
+- storage drivers WDK , filter drivers
+- SFD WDK storage
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Storage Filter Drivers
@@ -41,6 +51,5 @@ Unless a new device requires that every request be handled in a device-specific 
  
 
 
---------------------
 
 

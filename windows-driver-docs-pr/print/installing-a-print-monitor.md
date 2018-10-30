@@ -2,20 +2,25 @@
 title: Installing a Print Monitor
 author: windows-driver-content
 description: Installing a Print Monitor
-MS-HAID:
-- 'provider\_59183c6d-e903-4803-b0c2-f27467eac18b.xml'
-- 'print.installing\_a\_print\_monitor'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 2ab993fd-647b-40aa-981c-1bc270ec79a4
-keywords: ["print monitors WDK , installing", "installing print monitors WDK", "INF files WDK print , print monitors", "language monitors WDK print , installing", "port monitors WDK print , installing"]
+keywords:
+- print monitors WDK , installing
+- installing print monitors WDK
+- INF files WDK print , print monitors
+- language monitors WDK print , installing
+- port monitors WDK print , installing
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Installing a Print Monitor
 
 
-## <a href="" id="ddk-installing-a-print-monitor-gg"></a>
+
 
 
 This section describes the methods that can be used to install print monitors. (You can install a print monitor with the same INF file that you use to install your printer. For more information about INF files, see [Plug and Play](https://msdn.microsoft.com/library/windows/hardware/ff547125) and [Power Management](https://msdn.microsoft.com/library/windows/hardware/ff547131).)
@@ -76,7 +81,5 @@ Alternatively, a custom installation application can install the port monitor DL
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20Installing%20a%20Print%20Monitor%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

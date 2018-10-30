@@ -1,17 +1,20 @@
 ---
 title: V4 Printer Driver Localization
 author: windows-driver-content
-description: Windows 8 has provided standard, localized display strings to support the development of printer extensions and Windows Store device apps.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: Windows 8 has provided standard, localized display strings to support the development of printer extensions and UWP device apps.
 ms.assetid: 5C587AF2-C51E-4728-A214-7FC1F8A6E445
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # V4 Printer Driver Localization
 
 
-Windows 8 has provided standard, localized display strings to support the development of printer extensions and Windows Store device apps.
+Windows 8 has provided standard, localized display strings to support the development of printer extensions and UWP device apps.
 
 These standard, localized display strings are provided through the new [**IPrintSchemaCapabilities**](https://msdn.microsoft.com/library/windows/hardware/hh451256) objects to support some features and their associated standard options. The following table shows the features that Windows 8 can localize with its standard display strings:
 
@@ -93,7 +96,7 @@ In addition, these strings are available in the XML forms of PrintCapabilities, 
 
 Across the different user interfaces and APIs, the display names vary. Use the following three flowcharts to see an overview of the expected localization behavior for a given scenario.
 
-The following flowchart shows the expected localization behavior in Windows Store apps, as well as in the [**IPrintSchemaFeature**](https://msdn.microsoft.com/library/windows/hardware/hh451284) and [**IPrintSchemaOption**](https://msdn.microsoft.com/library/windows/hardware/hh451335) families of objects.
+The following flowchart shows the expected localization behavior in UWP apps, as well as in the [**IPrintSchemaFeature**](https://msdn.microsoft.com/library/windows/hardware/hh451284) and [**IPrintSchemaOption**](https://msdn.microsoft.com/library/windows/hardware/hh451335) families of objects.
 
 ![localization behavior flowchart for windows store apps, iprintschemafeature or iprintschemaoption](images/locstringmodern.png)
 
@@ -156,7 +159,5 @@ PPD based drivers do not support resource DLLs. As a result, it may be necessary
 [GPD/PPD-Based Feature Description Changes](gpd-ppd-based-feature-description-changes.md)  
 [Standard Features](standard-features.md)  
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20V4%20Printer%20Driver%20Localization%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

@@ -1,9 +1,19 @@
 ---
-title: Management of Access Control Lists on IRP\_MJ\_CREATE
+title: Management of Access Control Lists on IRP_MJ_CREATE
 author: windows-driver-content
-description: Management of Access Control Lists on IRP\_MJ\_CREATE
+description: Management of Access Control Lists on IRP_MJ_CREATE
 ms.assetid: 07b35931-8e20-4789-b2ef-14c6195b817f
-keywords: ["IRP_MJ_CREATE", "access control list WDK file systems", "security checks WDK file systems , IRP_MJ_CREATE", "ACL WDK file systems"]
+keywords:
+- IRP_MJ_CREATE
+- access control list WDK file systems
+- security checks WDK file systems , IRP_MJ_CREATE
+- ACL WDK file systems
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Management of Access Control Lists on IRP\_MJ\_CREATE
@@ -21,6 +31,5 @@ An additional option would be for the file system to cache results. While not st
  
 
 
---------------------
 
 

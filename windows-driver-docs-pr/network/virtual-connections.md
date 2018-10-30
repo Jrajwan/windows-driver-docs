@@ -2,13 +2,23 @@
 title: Virtual Connections
 description: Virtual Connections
 ms.assetid: becb3acf-2a23-408a-8d1f-ff8a1e7ffe61
-keywords: ["connection-oriented NDIS WDK , virtual connections", "CoNDIS WDK networking , virtual connections", "virtual connections WDK CoNDIS", "virtual connections WDK CoNDIS , about virtual connections"]
+keywords:
+- connection-oriented NDIS WDK , virtual connections
+- CoNDIS WDK networking , virtual connections
+- virtual connections WDK CoNDIS
+- virtual connections WDK CoNDIS , about virtual connections
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Virtual Connections
 
 
-## <a href="" id="ddk-virtual-connections-ng"></a>
+
 
 
 On a local computer, a *virtual connection (VC)* is an endpoint (or association) that can host a single call between a client, call manager or MCM driver, and a miniport driver. On the network, a VC refers to a connection between two communicating endpoints, such as two connection-oriented clients.

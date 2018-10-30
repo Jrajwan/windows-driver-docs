@@ -3,7 +3,15 @@ title: SCSI Miniport Driver's HwScsiAdapterControl Routine
 author: windows-driver-content
 description: SCSI Miniport Driver's HwScsiAdapterControl Routine
 ms.assetid: ccc5aa02-415d-40d1-a1ed-c7d4d881f4ca
-keywords: ["SCSI miniport drivers WDK storage , HwScsiAdapterControl", "HwScsiAdapterControl"]
+keywords:
+- SCSI miniport drivers WDK storage , HwScsiAdapterControl
+- HwScsiAdapterControl
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # SCSI Miniport Driver's HwScsiAdapterControl Routine
@@ -47,6 +55,5 @@ See [**HwScsiAdapterControl**](https://msdn.microsoft.com/library/windows/hardwa
  
 
 
---------------------
 
 

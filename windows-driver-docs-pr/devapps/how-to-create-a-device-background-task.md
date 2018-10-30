@@ -1,13 +1,19 @@
 ---
-title: Creating a device background task in Windows 8.1 (Windows Store device apps)
+title: Creating a device background task in Windows 8.1
 description: This topic describes how to create a device background task that uses the DeviceUseTrigger or DeviceServicingTrigger.
 ms.assetid: 34263DB8-BB42-480B-AF7F-CC45772E6E84
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
-# Creating a device background task in Windows 8.1 (Windows Store device apps)
+# Creating a device background task in Windows 8.1 (UWP device apps)
 
 
-In Windows 8.1, your Windows Store app can synchronize data on your peripheral device. If your app is associated with device metadata, that Windows Store device app can also perform device updates, such as firmware updates. This topic describes how to create a device background task that uses the [DeviceUseTrigger](http://go.microsoft.com/fwlink/p/?LinkID=308967) or [DeviceServicingTrigger](http://go.microsoft.com/fwlink/p/?LinkID=308965). Device background agents that use these triggers are subject to policies that ensure user consent and help preserve battery life while devices are being synced and updated. For more info about device background tasks, see [Device sync and update for Windows Store device apps](device-sync-and-update-for-windows-store-device-apps.md).
+In Windows 8.1, your UWP app can synchronize data on your peripheral device. If your app is associated with device metadata, that UWP device app can also perform device updates, such as firmware updates. This topic describes how to create a device background task that uses the [DeviceUseTrigger](http://go.microsoft.com/fwlink/p/?LinkID=308967) or [DeviceServicingTrigger](http://go.microsoft.com/fwlink/p/?LinkID=308965). Device background agents that use these triggers are subject to policies that ensure user consent and help preserve battery life while devices are being synced and updated. For more info about device background tasks, see [Device sync and update for UWP device apps](device-sync-and-update-for-uwp-device-apps.md).
 
 **Note**  This topic corresponds to the [Custom USB device sample](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). The Custom USB device sample demonstrates a background task that performs device sync with the DeviceUseTrigger. To see an example of a background task that performs a firmware update with the DeviceServicingTrigger, download the [Firmware update USB device sample](http://go.microsoft.com/fwlink/p/?LinkId=309186).
 
@@ -18,7 +24,7 @@ Although the device background task in the [Custom USB device sample](http://go.
 ## <span id="The_app_manifest"></span><span id="the_app_manifest"></span><span id="THE_APP_MANIFEST"></span>The app manifest
 
 
-To use a device background task, your app must declare it in the app manifest file of your foreground app, like is done for system-triggered background tasks. For more info, see [Device sync and update for Windows Store device apps](device-sync-and-update-for-windows-store-device-apps.md).
+To use a device background task, your app must declare it in the app manifest file of your foreground app, like is done for system-triggered background tasks. For more info, see [Device sync and update for UWP device apps](device-sync-and-update-for-uwp-device-apps.md).
 
 In this example from an app package manifest file, **DeviceLibrary.SyncContent** is an entry points from the foreground app. **DeviceLibrary.SyncContent** is the entry point for the background task that uses the [DeviceUseTrigger](http://go.microsoft.com/fwlink/p/?LinkID=308967).
 
@@ -43,7 +49,7 @@ Key portions of the device background task in [Custom USB device sample](http://
 
 1.  The `IoSyncBackgroundTask` class implements the `IBackgroundTask` interface required by the Windows background task infrastructure.
 
-2.  The `IoSyncBackgroundTask` class obtains the `DeviceUseDetails` instance passed to the class in the `IoSyncBackgroundTask` class’s Run method and uses this instance to report progress back to the Windows Store app and to register for cancelation events.
+2.  The `IoSyncBackgroundTask` class obtains the `DeviceUseDetails` instance passed to the class in the `IoSyncBackgroundTask` class’s Run method and uses this instance to report progress back to the Microsoft Store app and to register for cancelation events.
 
 3.  The `IoSyncBackgroundTask` class’s Run method also calls the private `OpenDevice` and `WriteToDeviceAsync` methods that implement the background device sync code.
 
@@ -102,7 +108,7 @@ The foreground app in the [Custom USB device sample](http://go.microsoft.com/fwl
 
 [Firmware update USB device sample](http://go.microsoft.com/fwlink/p/?LinkId=309186)
 
-[Device sync and update for Windows Store device apps](device-sync-and-update-for-windows-store-device-apps.md)
+[Device sync and update for UWP device apps](device-sync-and-update-for-uwp-device-apps.md)
 
 [Launching, resuming, and multitasking](http://go.microsoft.com/fwlink/p/?LinkId=309316)
 
@@ -112,7 +118,6 @@ The foreground app in the [Custom USB device sample](http://go.microsoft.com/fwl
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devapps\devapps]:%20Creating%20a%20device%20background%20task%20in%20Windows%208.1%20%28Windows%20Store%20device%20apps%29%20%20RELEASE:%20%281/20/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

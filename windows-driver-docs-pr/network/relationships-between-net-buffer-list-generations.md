@@ -1,14 +1,24 @@
 ---
-title: Relationships Between NET\_BUFFER\_LIST Generations
-description: Relationships Between NET\_BUFFER\_LIST Generations
+title: Relationships Between NET_BUFFER_LIST Generations
+description: Relationships Between NET_BUFFER_LIST Generations
 ms.assetid: 37b3b08d-4656-47bc-b656-a03f208e4311
-keywords: ["NET_BUFFER_LIST", "parent/child NET_BUFFER_LIST relationships WDK networking", "child/parent NET_BUFFER_LIST relationships WDK networking", "relationships WDK NET_BUFFER_LIST"]
+keywords:
+- NET_BUFFER_LIST
+- parent/child NET_BUFFER_LIST relationships WDK networking
+- child/parent NET_BUFFER_LIST relationships WDK networking
+- relationships WDK NET_BUFFER_LIST
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Relationships Between NET\_BUFFER\_LIST Generations
 
 
-## <a href="" id="ddk-relationships-between-net-buffer-list-generations-ng"></a>
+
 
 
 Driver writers should understand and maintain the relationship between the parent (original) [**NET\_BUFFER\_LIST**](https://msdn.microsoft.com/library/windows/hardware/ff568388) structures and the child (derived) structures that result from clone, fragment, and reassemble operations.

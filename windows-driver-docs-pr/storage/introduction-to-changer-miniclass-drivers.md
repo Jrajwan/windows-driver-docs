@@ -3,7 +3,16 @@ title: Introduction to Changer Miniclass Drivers
 author: windows-driver-content
 description: Introduction to Changer Miniclass Drivers
 ms.assetid: ce0f78a3-69ae-4ca7-b2e1-f4892e35a230
-keywords: ["changer drivers WDK storage , miniclass drivers", "storage changer drivers WDK , miniclass drivers", "miniclass drivers WDK changer"]
+keywords:
+- changer drivers WDK storage , miniclass drivers
+- storage changer drivers WDK , miniclass drivers
+- miniclass drivers WDK changer
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Introduction to Changer Miniclass Drivers
@@ -29,6 +38,5 @@ Microsoft operating systems do not support write-once optical drives or changers
  
 
 
---------------------
 
 

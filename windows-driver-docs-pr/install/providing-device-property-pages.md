@@ -2,16 +2,30 @@
 title: Providing Device Property Pages
 description: Providing Device Property Pages
 ms.assetid: 185b3db6-edd5-4760-a64d-6b51d52d35aa
-keywords: ["device property pages WDK device installations", "property pages WDK device installations", "class installers WDK device installations , device property pages", "co-installers WDK device installations , device property pages", "custom property pages WDK device installations", "device property pages WDK device installations , about device property pages", "property pages WDK device installations , about device property pages", "custom property pages WDK device installations , about custom property pages"]
+keywords:
+- device property pages WDK device installations
+- property pages WDK device installations
+- class installers WDK device installations , device property pages
+- co-installers WDK device installations , device property pages
+- custom property pages WDK device installations
+- device property pages WDK device installations , about device property pages
+- property pages WDK device installations , about device property pages
+- custom property pages WDK device installations , about custom property pages
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Providing Device Property Pages
 
 
-## <a href="" id="ddk-providing-device-property-pages-dg"></a>
 
 
-**Note**  Features described in this section are not supported in universal or mobile driver packages. See [Using a Universal INF File](using-a-configurable-inf-file.md).
+
+**Note**  Features described in this section are not supported in universal or mobile driver packages. See [Using a Universal INF File](using-a-universal-inf-file.md).
 
  
 

@@ -2,13 +2,22 @@
 title: Mandatory Filter Drivers
 description: Mandatory Filter Drivers
 ms.assetid: 7be7cb9d-d0a6-4d4b-9dc1-2fef73b1f10e
-keywords: ["filter drivers WDK networking , mandatory", "NDIS filter drivers WDK , mandatory", "mandatory filter drivers WDK networking"]
+keywords:
+- filter drivers WDK networking , mandatory
+- NDIS filter drivers WDK , mandatory
+- mandatory filter drivers WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Mandatory Filter Drivers
 
 
-## <a href="" id="ddk-mandatory-filter-drivers-ng"></a>
+
 
 
 Mandatory filter drivers are filter drivers that must be present for a driver stack to function properly. If the mandatory filter module does not attach, the rest of the driver stack will be torn down. [Modifying or monitoring filter drivers](types-of-filter-drivers.md) can be mandatory. All filter intermediate drivers are optional.

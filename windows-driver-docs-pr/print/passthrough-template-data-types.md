@@ -2,14 +2,19 @@
 title: Passthrough Template Data Types
 author: windows-driver-content
 description: Passthrough Template Data Types
-MS-HAID:
-- 'gplfiles\_1536cb85-1de9-4539-adb8-64abaef9fa6f.xml'
-- 'print.passthrough\_template\_data\_types'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 9e5e6a12-5847-45fe-bee5-68944cd546d7
-keywords: ["templates WDK GDL , data types", "data types WDK GDL , primitive", "PASSTHROUGH data type WDK GDL", "schemas WDK GDL , validating PASSTHROUGH data types", "ArrayLabel directive WDK GDL"]
+keywords:
+- templates WDK GDL , data types
+- data types WDK GDL , primitive
+- PASSTHROUGH data type WDK GDL
+- schemas WDK GDL , validating PASSTHROUGH data types
+- ArrayLabel directive WDK GDL
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Passthrough Template Data Types
@@ -68,7 +73,5 @@ If you want to validate the PASSTHROUGH instances by using an XML schema, you sh
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20Passthrough%20Template%20Data%20Types%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

@@ -2,13 +2,22 @@
 title: Including a NetworkProvider Section
 description: Including a NetworkProvider Section
 ms.assetid: 8972f926-c4f5-4a2f-8f2d-f9353fdbd83f
-keywords: ["INF files WDK network , NetworkProvider section", "network INF files WDK , NetworkProvider section", "NetworkProvider section WDK networking"]
+keywords:
+- INF files WDK network , NetworkProvider section
+- network INF files WDK , NetworkProvider section
+- NetworkProvider section WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Including a NetworkProvider Section
 
 
-## <a href="" id="ddk-including-a-networkprovider-section-ng"></a>
+
 
 
 A **NetworkProvider** section specifies either a substitute device name for a **NetClient** component or a short name for use with the NetWare **net view** command, or both.

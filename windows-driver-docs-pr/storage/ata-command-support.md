@@ -3,6 +3,12 @@ title: ATA Command Support
 author: windows-driver-content
 description: ATA Command Support
 ms.assetid: 98149A59-3435-4166-8250-EEFBA44DFD4C
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # ATA Command Support
@@ -19,6 +25,5 @@ This section contains information about special requirements for issuing certain
  
 
 
---------------------
 
 

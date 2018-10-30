@@ -2,13 +2,26 @@
 title: Identifiers for PCMCIA Devices
 description: Identifiers for PCMCIA Devices
 ms.assetid: 7eaf6372-a9cc-4714-8955-52653ec57141
-keywords: ["device identification strings WDK , PCMCIA devices", "identification strings WDK device , PCMCIA devices", "identifiers WDK device , PCMCIA devices", "PCMCIA device identifiers WDK device installations", "device IDs WDK device installations", "hardware IDs WDK device installations", "compatible IDs WDK device installations"]
+keywords:
+- device identification strings WDK , PCMCIA devices
+- identification strings WDK device , PCMCIA devices
+- identifiers WDK device , PCMCIA devices
+- PCMCIA device identifiers WDK device installations
+- device IDs WDK device installations
+- hardware IDs WDK device installations
+- compatible IDs WDK device installations
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Identifiers for PCMCIA Devices
 
 
-## <a href="" id="ddk-identifiers-for-pcmcia-devices-dg"></a>
+
 
 
 For Personal Computer Memory Card International Association (PCMCIA) devices, the device ID can take several different forms. For devices that are not multifunctional, the device identifier is formatted as follows:
@@ -33,9 +46,9 @@ The child function number (*d(4)* in this example) is a decimal number without l
 
 If the card does not have a name of the manufacturer, the identifier has one of these three forms:
 
-PCMCIA\\UNKNOWN\_MANUFACTURER-Crc(4)
+PCMCIA\\UNKNOWN_MANUFACTURER-Crc(4)
 
-PCMCIA\\UNKNOWN\_MANUFACTURER-DEVd(4)-Crc(4)
+PCMCIA\\UNKNOWN_MANUFACTURER-DEVd(4)-Crc(4)
 
 PCMCIA\\MTD-MemoryType(4)
 

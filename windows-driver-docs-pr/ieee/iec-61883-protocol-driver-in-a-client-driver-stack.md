@@ -2,20 +2,22 @@
 title: IEC-61883 Protocol Driver in a Client Driver Stack
 author: windows-driver-content
 description: IEC-61883 Protocol Driver in a Client Driver Stack
-MS-HAID:
-- '61883\_dg\_69d368d7-7090-4001-8108-f09f00805c44.xml'
-- 'IEEE.iec\_61883\_protocol\_driver\_in\_a\_client\_driver\_stack'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: cee0c0ee-7326-421c-af5a-b483c878b289
-keywords: ["IEC-61883 client drivers WDK IEEE 1394 bus", "61883 WDK IEEE 1394 bus"]
+keywords:
+- IEC-61883 client drivers WDK IEEE 1394 bus
+- 61883 WDK IEEE 1394 bus
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # IEC-61883 Protocol Driver in a Client Driver Stack
 
 
-## <a href="" id="ddk-iec-61883-protocol-driver-in-a-client-driver-stack-kg"></a>
+
 
 
 IEC-61883 client drivers rely on *61883.sys* to communicate with their devices using the IEC-61883 protocol.
@@ -49,6 +51,5 @@ AV/C subunit drivers are just one of the possible types of IEC-61883 client driv
  
 
 
---------------------
 
 

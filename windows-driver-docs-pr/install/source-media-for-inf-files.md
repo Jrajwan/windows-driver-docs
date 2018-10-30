@@ -2,13 +2,27 @@
 title: Source Media for INF Files
 description: Source Media for INF Files
 ms.assetid: b8bb7115-acac-4364-a205-16816c52fdb0
-keywords: ["INF files WDK device installations , source media", "media WDK INF files", "source media WDK INF files", "multifunction devices WDK INF files", "decorated INF WDK", "INF files WDK device installations , shipping separately", "shipping INF files WDK", "separately shipping INF files WDK"]
+keywords:
+- INF files WDK device installations , source media
+- media WDK INF files
+- source media WDK INF files
+- multifunction devices WDK INF files
+- decorated INF WDK
+- INF files WDK device installations , shipping separately
+- shipping INF files WDK
+- separately shipping INF files WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Source Media for INF Files
 
 
-## <a href="" id="ddk-source-media-for-infs-dg"></a>
+
 
 
 The methods that you should use to specify source media for device files depend on whether your INF files ship separately from the operating system or are included with the operating system.

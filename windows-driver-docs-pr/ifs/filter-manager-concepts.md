@@ -3,7 +3,16 @@ title: Filter Manager Concepts
 author: windows-driver-content
 description: Filter Manager Concepts
 ms.assetid: 5b11671f-02fd-4d0e-8199-c345bbf2591c
-keywords: ["filter manager WDK file system minifilter , about filter manager", "altitudes WDK file system minifilter", "filter manager WDK file system minifilter , architecture"]
+keywords:
+- filter manager WDK file system minifilter , about filter manager
+- altitudes WDK file system minifilter
+- filter manager WDK file system minifilter , architecture
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Filter Manager Concepts
@@ -49,6 +58,5 @@ The following figure shows a simplified I/O stack with a two filter manager fram
  
 
 
---------------------
 
 

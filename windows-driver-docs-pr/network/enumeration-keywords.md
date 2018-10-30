@@ -2,13 +2,21 @@
 title: Enumeration Keywords
 description: Enumeration Keywords
 ms.assetid: ac1fb871-7720-4497-b9f7-8f592fe19bd0
-keywords: ["installation keywords WDK networking , enumeration keywords", "enumeration keywords WDK NDIS miniport"]
+keywords:
+- installation keywords WDK networking , enumeration keywords
+- enumeration keywords WDK NDIS miniport
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Enumeration Keywords
 
 
-## <a href="" id="ddk-enumeration-keywords-ng"></a>
+
 
 
 NDIS 6.0 and later versions of NDIS provide standardized enumeration keywords for miniport drivers of network devices. Enumeration keywords are associated with values that appear as a list in a menu.
@@ -16,14 +24,14 @@ NDIS 6.0 and later versions of NDIS provide standardized enumeration keywords fo
 The following example shows an INF file definition for an enumeration keyword.
 
 ```
-HKR, Ndi\params\\<SubkeyName>, ParamDesc, 0, "%<SubkeyName>%"
-HKR, Ndi\params\\<SubkeyName>, Type, 0, "enum"
-HKR, Ndi\params\\<SubkeyName>, Default, 0, "3"
-HKR, Ndi\params\\<SubkeyName>, Optional, 0, "0"
-HKR, Ndi\params\\<SubkeyName>\enum, "0", 0, "%Disabled%"
-HKR, Ndi\params\\<SubkeyName>\enum, "1", 0, "%Tx Enabled%"
-HKR, Ndi\params\\<SubkeyName>\enum, "2", 0, "%Rx Enabled%"
-HKR, Ndi\params\\<SubkeyName>\enum, "3", 0, "%Rx & Tx Enabled%"
+HKR, Ndi\params\<SubkeyName>, ParamDesc, 0, "%<SubkeyName>%"
+HKR, Ndi\params\<SubkeyName>, Type, 0, "enum"
+HKR, Ndi\params\<SubkeyName>, Default, 0, "3"
+HKR, Ndi\params\<SubkeyName>, Optional, 0, "0"
+HKR, Ndi\params\<SubkeyName>\enum, "0", 0, "%Disabled%"
+HKR, Ndi\params\<SubkeyName>\enum, "1", 0, "%Tx Enabled%"
+HKR, Ndi\params\<SubkeyName>\enum, "2", 0, "%Rx Enabled%"
+HKR, Ndi\params\<SubkeyName>\enum, "3", 0, "%Rx & Tx Enabled%"
 ```
 
 The general enumeration keywords are:

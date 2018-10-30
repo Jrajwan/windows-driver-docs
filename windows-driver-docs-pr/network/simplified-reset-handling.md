@@ -2,13 +2,22 @@
 title: Simplified Reset Handling
 description: Simplified Reset Handling
 ms.assetid: ac07bfe3-9144-422a-96ca-d2ca2cc6861d
-keywords: ["NDIS miniport drivers WDK , resetting miniport adapters", "resetting miniport adapters", "adapters WDK networking , reset operations"]
+keywords:
+- NDIS miniport drivers WDK , resetting miniport adapters
+- resetting miniport adapters
+- adapters WDK networking , reset operations
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Simplified Reset Handling
 
 
-## <a href="" id="ddk-simplified-reset-handling-ng"></a>
+
 
 
 NDIS 6.0 and later drivers do not reset miniport adapters to cancel send or OID requests. Instead, NDIS provides send cancellation and OID request cancellation functions.

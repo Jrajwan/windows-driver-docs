@@ -2,10 +2,13 @@
 title: Minimum UEFI requirements for Windows on SoC platforms
 author: windows-driver-content
 description: Minimum UEFI requirements for Windows on SoC platforms
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 32743d69-83a2-4658-8652-6d624e75e3db
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Minimum UEFI requirements for Windows on SoC platforms
@@ -58,6 +61,5 @@ Windows supports firmware revisions based on the Unified Extensible Firmware Int
  
 
 
---------------------
 
 

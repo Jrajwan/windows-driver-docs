@@ -1,8 +1,14 @@
 ---
-title: Attaching ECPs to IRP\_MJ\_CREATE Operations that a Kernel-Mode Driver Originated
+title: Attach ECPs to IRP_MJ_CREATE Operations that a Kernel-Mode Driver Originated
 author: windows-driver-content
-description: Attaching ECPs to IRP\_MJ\_CREATE Operations that a Kernel-Mode Driver Originated
+description: Attaching ECPs to IRP_MJ_CREATE Operations that a Kernel-Mode Driver Originated
 ms.assetid: 87daa861-b0d5-4877-bf16-fad120108de6
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Attaching ECPs to IRP\_MJ\_CREATE Operations that a Kernel-Mode Driver Originated
@@ -29,6 +35,5 @@ You must follow these steps to set up ECPs and attach the ECPs to an [**IRP\_MJ\
  
 
 
---------------------
 
 

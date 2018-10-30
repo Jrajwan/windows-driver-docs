@@ -3,7 +3,19 @@ title: Servicing an Interrupt
 author: windows-driver-content
 description: Servicing an Interrupt
 ms.assetid: b6306d2c-a7be-4fc3-8123-4d2b5c60c988
-keywords: ["hardware interrupts WDK KMDF , servicing", "interrupts WDK KMDF , servicing", "servicing interrupts WDK KMDF", "interrupt service routines WDK KMDF", "ISRs WDK KMDF", "deferred procedure calls WDK KMDF"]
+keywords:
+- hardware interrupts WDK KMDF , servicing
+- interrupts WDK KMDF , servicing
+- servicing interrupts WDK KMDF
+- interrupt service routines WDK KMDF
+- ISRs WDK KMDF
+- deferred procedure calls WDK KMDF
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Servicing an Interrupt
@@ -21,7 +33,7 @@ Servicing an interrupt consists of two, and sometimes three, steps:
 
 When a device generates a hardware interrupt, the framework calls the driver's interrupt service routine (ISR), which framework-based drivers implement as an [*EvtInterruptIsr*](https://msdn.microsoft.com/library/windows/hardware/ff541735) callback function.
 
-The DIRQL, must quickly save interrupt information, such as register contents, that will be lost if another interrupt occurs.
+The [*EvtInterruptIsr*](https://msdn.microsoft.com/library/windows/hardware/ff541735) callback function, which runs at the device's DIRQL, must quickly save interrupt information, such as register contents, that will be lost if another interrupt occurs.
 
 Typically, the [*EvtInterruptIsr*](https://msdn.microsoft.com/library/windows/hardware/ff541735) callback function schedules a deferred procedure call (DPC) to process the saved information later at a lower IRQL (DISPATCH\_LEVEL). Framework-based drivers implement DPC routines as [*EvtInterruptDpc*](https://msdn.microsoft.com/library/windows/hardware/ff541721) or [*EvtDpcFunc*](https://msdn.microsoft.com/library/windows/hardware/ff541683) callback functions.
 

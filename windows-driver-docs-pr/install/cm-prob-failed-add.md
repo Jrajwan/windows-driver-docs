@@ -2,13 +2,22 @@
 title: CM_PROB_FAILED_ADD
 description: CM_PROB_FAILED_ADD
 ms.assetid: 3004f9fa-4afb-47a9-8aa1-95086eb4f38d
-keywords: ["CM_PROB_FAILED_ADD"]
+keywords:
+- CM_PROB_FAILED_ADD
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # CM_PROB_FAILED_ADD
 
+This function is reserved for system use.
 
-## <a href="" id="ddk-cm-prob-failed-add-dg"></a>
+
+
 
 
 A driver's attempt to add a device failed.

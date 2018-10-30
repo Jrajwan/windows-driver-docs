@@ -3,13 +3,25 @@ title: Enabling and Disabling Interrupts
 author: windows-driver-content
 description: Enabling and Disabling Interrupts
 ms.assetid: 432907e7-05a3-4a99-a291-33bd1eefa94c
-keywords: ["hardware interrupts WDK KMDF , enabling", "interrupts WDK KMDF , enabling", "hardware interrupts WDK KMDF , disabling", "interrupts WDK KMDF , disabling", "status information WDK KMDF , enabling interrupts", "status information WDK KMDF , disabling interrupts"]
+keywords:
+- hardware interrupts WDK KMDF , enabling
+- interrupts WDK KMDF , enabling
+- hardware interrupts WDK KMDF , disabling
+- interrupts WDK KMDF , disabling
+- status information WDK KMDF , enabling interrupts
+- status information WDK KMDF , disabling interrupts
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Enabling and Disabling Interrupts
 
 
-If your driver handles device interrupts, it must provide DIRQL and must do whatever is necessary to enable and disable a device's interrupt mechanism. For [passive-level interrupts](supporting-passive-level-interrupts.md), these callback functions run at IRQL = PASSIVE\_LEVEL while holding the passive-level interrupt lock.
+If your driver handles device interrupts, it must provide [*EvtInterruptEnable*](https://msdn.microsoft.com/library/windows/hardware/ff541730) and [*EvtInterruptDisable*](https://msdn.microsoft.com/library/windows/hardware/ff541714) callback functions that enable and disable the interrupts. Typically, these callback functions run at the device's DIRQL and must do whatever is necessary to enable and disable a device's interrupt mechanism. For [passive-level interrupts](supporting-passive-level-interrupts.md), these callback functions run at IRQL = PASSIVE_LEVEL while holding the passive-level interrupt lock.
 
 If your driver must perform additional operations that are related to enabling or disabling interrupts, and if these additional operations cannot be performed at IRQL = DIRQL, the driver can also provide [*EvtDeviceD0EntryPostInterruptsEnabled*](https://msdn.microsoft.com/library/windows/hardware/ff540853) and [*EvtDeviceD0ExitPreInterruptsDisabled*](https://msdn.microsoft.com/library/windows/hardware/ff540856) callback functions. These two callback functions run at IRQL = PASSIVE\_LEVEL with no interrupt lock held, and can call framework object methods that are unavailable at IRQL = DIRQL.
 

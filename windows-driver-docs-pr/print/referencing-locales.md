@@ -2,20 +2,25 @@
 title: Referencing Locales
 author: windows-driver-content
 description: Referencing Locales
-MS-HAID:
-- 'nt5gpd\_4705df88-4186-4d82-a442-01093afbea60.xml'
-- 'print.referencing\_locales'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 63ea5534-b2e1-43aa-b45b-e4fe8bb69f49
-keywords: ["Unidrv, referencing locales", "GPD files WDK Unidrv , referencing locales", "referencing locales", "locale referencing WDK Unidrv", "Unidrv WDK print"]
+keywords:
+- Unidrv, referencing locales
+- GPD files WDK Unidrv , referencing locales
+- referencing locales
+- locale referencing WDK Unidrv
+- Unidrv WDK print
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Referencing Locales
 
 
-## <a href="" id="ddk-referencing-locales-gg"></a>
+
 
 
 ### Using GPD Files
@@ -99,7 +104,5 @@ The following algorithm retrieves the default system locale and then uses countr
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20Referencing%20Locales%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

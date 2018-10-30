@@ -2,10 +2,13 @@
 title: GPIO Driver Support Overview
 author: windows-driver-content
 description: Starting with Windows 8, the GPIO framework extension (GpioClx) simplifies the task of writing a driver for a GPIO controller device.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 450E7F80-D9AC-4F52-8062-2DA5343C8D0F
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # GPIO Driver Support Overview
@@ -25,7 +28,7 @@ Hardware vendors supply drivers to control their GPIO controllers. A GPIO contro
 
 A GPIO controller device has some number of GPIO pins. These pins can be physically connected to peripheral devices. GPIO pins can be configured as data inputs, data outputs, or interrupt request inputs. Typically, a GPIO pin is dedicated to a peripheral device, and not shared by two or more devices. Connections between GPIO pins and peripheral devices are fixed and cannot be changed by the user (for example, by removing a peripheral device and replacing it with another device). Thus, the assignment of GPIO pins to peripheral devices can be described in the platform firmware.
 
-## <a href="" id="gpio-block-diagram"></a>
+
 
 
 The following diagram shows the GPIO controller driver and GpioClx.
@@ -68,6 +71,5 @@ To receive interrupts from the GPIO pin in an interrupt resource, a peripheral d
  
 
 
---------------------
 
 

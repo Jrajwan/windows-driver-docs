@@ -2,13 +2,24 @@
 title: Loading the Notify Object DLL and Class Object
 description: Loading the Notify Object DLL and Class Object
 ms.assetid: 846c0ed8-5299-4803-983a-9347e912d96b
-keywords: ["notify objects WDK networking , loading objects", "network notify objects WDK , loading objects", "loading objects WDK notify objects", "DLLs WDK notify objects", "class objects WDK notify objects"]
+keywords:
+- notify objects WDK networking , loading objects
+- network notify objects WDK , loading objects
+- loading objects WDK notify objects
+- DLLs WDK notify objects
+- class objects WDK notify objects
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Loading the Notify Object DLL and Class Object
 
 
-## <a href="" id="ddk-loading-the-notify-object-dll-and-class-object-ng"></a>
+
 
 
 Notify objects for network components should be implemented as Component Object Model (COM) objects. These COM objects reside in DLLs that are COM component servers. For more information about developing DLL COM servers, see the Microsoft Windows SDK.

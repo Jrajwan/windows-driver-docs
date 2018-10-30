@@ -1,9 +1,18 @@
 ---
-title: Handling Quotas on IRP\_MJ\_CREATE
+title: Handling Quotas on IRP_MJ_CREATE
 author: windows-driver-content
-description: Handling Quotas on IRP\_MJ\_CREATE
+description: Handling Quotas on IRP_MJ_CREATE
 ms.assetid: 71cf5e78-c87a-48fe-ba0b-f5efe8166525
-keywords: ["IRP_MJ_CREATE", "quotas WDK file systems", "security checks WDK file systems , IRP_MJ_CREATE"]
+keywords:
+- IRP_MJ_CREATE
+- quotas WDK file systems
+- security checks WDK file systems , IRP_MJ_CREATE
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Handling Quotas on IRP\_MJ\_CREATE
@@ -19,6 +28,5 @@ Some logic could also be included to acquire quota information if the file syste
  
 
 
---------------------
 
 

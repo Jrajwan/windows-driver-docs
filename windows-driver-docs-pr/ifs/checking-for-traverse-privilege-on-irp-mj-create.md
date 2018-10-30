@@ -1,9 +1,22 @@
 ---
-title: Checking for Traverse Privilege on IRP\_MJ\_CREATE
+title: Checking for Traverse Privilege on IRP_MJ_CREATE
 author: windows-driver-content
-description: Checking for Traverse Privilege on IRP\_MJ\_CREATE
+description: Checking for Traverse Privilege on IRP_MJ_CREATE
 ms.assetid: 9ba743d6-8e78-4f9a-9cb8-cb98f734c290
-keywords: ["IRP_MJ_CREATE", "traverse privileges WDK file systems", "security checks WDK file systems , IRP_MJ_CREATE", "privileges WDK file systems", "paths WDK file systems", "generic security checks WDK file systems", "SeChangeNotifyPrivilege"]
+keywords:
+- IRP_MJ_CREATE
+- traverse privileges WDK file systems
+- security checks WDK file systems , IRP_MJ_CREATE
+- privileges WDK file systems
+- paths WDK file systems
+- generic security checks WDK file systems
+- SeChangeNotifyPrivilege
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Checking for Traverse Privilege on IRP\_MJ\_CREATE
@@ -100,6 +113,5 @@ Note that for a simple traverse check, the requested access would be FILE\_TRAVE
  
 
 
---------------------
 
 

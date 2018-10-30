@@ -3,7 +3,17 @@ title: File System Object Creation and Deletion
 author: windows-driver-content
 description: File System Object Creation and Deletion
 ms.assetid: 71e342cf-455f-4b01-af55-12568bf06728
-keywords: ["mini-redirectors WDK , object creation", "mini-redirectors WDK , object deletion", "file objects WDK mini-redirectors", "objects WDK mini-redirectors"]
+keywords:
+- mini-redirectors WDK , object creation
+- mini-redirectors WDK , object deletion
+- file objects WDK mini-redirectors
+- objects WDK mini-redirectors
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # File System Object Creation and Deletion
@@ -101,6 +111,5 @@ The following table lists the routines that can be implemented by a network mini
  
 
 
---------------------
 
 

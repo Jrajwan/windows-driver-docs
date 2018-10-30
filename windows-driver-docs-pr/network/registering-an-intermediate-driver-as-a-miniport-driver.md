@@ -2,13 +2,22 @@
 title: Registering an Intermediate Driver as a Miniport Driver
 description: Registering an Intermediate Driver as a Miniport Driver
 ms.assetid: a01bc0f4-4a03-4d44-88c0-7029042d6953
-keywords: ["registering intermediate drivers", "intermediate drivers WDK networking , registering", "NDIS intermediate drivers WDK , registering"]
+keywords:
+- registering intermediate drivers
+- intermediate drivers WDK networking , registering
+- NDIS intermediate drivers WDK , registering
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Registering an Intermediate Driver as a Miniport Driver
 
 
-## <a href="" id="ddk-registering-an-intermediate-driver-as-a-miniport-ng"></a>
+
 
 
 An intermediate driver calls [**NdisMRegisterMiniportDriver**](https://msdn.microsoft.com/library/windows/hardware/ff563654) to export its *MiniportXxx* functions. The *NdisMiniportDriverHandle* that is returned by **NdisMRegisterMiniportDriver** must be retained by the intermediate driver and input to NDIS when the driver calls [**NdisIMInitializeDeviceInstanceEx**](https://msdn.microsoft.com/library/windows/hardware/ff562727).

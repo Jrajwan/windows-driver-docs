@@ -3,7 +3,15 @@ title: SCSI Miniport Driver's HwScsiInitialize Routine
 author: windows-driver-content
 description: SCSI Miniport Driver's HwScsiInitialize Routine
 ms.assetid: 2a776c0a-1bac-4f8c-beab-fd53300f68c8
-keywords: ["SCSI miniport drivers WDK storage , HwScsiInitialize", "HwScsiInitialize"]
+keywords:
+- SCSI miniport drivers WDK storage , HwScsiInitialize
+- HwScsiInitialize
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # SCSI Miniport Driver's HwScsiInitialize Routine
@@ -23,6 +31,5 @@ If initializing the HBA causes a bus reset, the *HwScsiInitialize* routine must 
  
 
 
---------------------
 
 

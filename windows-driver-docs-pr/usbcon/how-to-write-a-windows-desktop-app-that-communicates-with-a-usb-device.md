@@ -1,10 +1,13 @@
 ---
-Description: 'The easiest way to write a Windows desktop app that communicates with a USB device, is by using the C/C++ WinUSB template.'
-MS-HAID: 'buses.how\_to\_write\_a\_windows\_desktop\_app\_that\_communicates\_with\_a\_usb\_device'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+Description: The easiest way to write a Windows desktop app that communicates with a USB device, is by using the C/C++ WinUSB template.
 title: Write a Windows desktop app based on the WinUSB template
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Write a Windows desktop app based on the WinUSB template
@@ -227,7 +230,7 @@ Return value:
     //
     // Enumerate all devices exposing the interface
     //
-    deviceInfo = SetupDiGetClassDevs(&amp;GUID_DEVINTERFACE_USBApplication1,
+    deviceInfo = SetupDiGetClassDevs(&GUID_DEVINTERFACE_USBApplication1,
                                      NULL,
                                      NULL,
                                      DIGCF_PRESENT | DIGCF_DEVICEINTERFACE);
@@ -245,16 +248,16 @@ Return value:
     //
     bResult = SetupDiEnumDeviceInterfaces(deviceInfo,
                                           NULL,
-                                          &amp;GUID_DEVINTERFACE_USBApplication1,
+                                          &GUID_DEVINTERFACE_USBApplication1,
                                           0,
-                                          &amp;interfaceData);
+                                          &interfaceData);
 
     if (FALSE == bResult) {
 
         //
         // We would see this error if no devices were found
         //
-        if (ERROR_NO_MORE_ITEMS == GetLastError() &amp;&amp;
+        if (ERROR_NO_MORE_ITEMS == GetLastError() &&
             NULL != FailureDeviceNotFound) {
 
             *FailureDeviceNotFound = TRUE;
@@ -270,13 +273,13 @@ Return value:
     // We expect to get a failure with insufficient buffer
     //
     bResult = SetupDiGetDeviceInterfaceDetail(deviceInfo,
-                                              &amp;interfaceData,
+                                              &interfaceData,
                                               NULL,
                                               0,
-                                              &amp;requiredLength,
+                                              &requiredLength,
                                               NULL);
 
-    if (FALSE == bResult &amp;&amp; ERROR_INSUFFICIENT_BUFFER != GetLastError()) {
+    if (FALSE == bResult && ERROR_INSUFFICIENT_BUFFER != GetLastError()) {
 
         hr = HRESULT_FROM_WIN32(GetLastError());
         SetupDiDestroyDeviceInfoList(deviceInfo);
@@ -303,10 +306,10 @@ Return value:
     // Get the interface&#39;s path string
     //
     bResult = SetupDiGetDeviceInterfaceDetail(deviceInfo,
-                                              &amp;interfaceData,
+                                              &interfaceData,
                                               detailData,
                                               length,
-                                              &amp;requiredLength,
+                                              &requiredLength,
                                               NULL);
 
     if(FALSE == bResult)
@@ -422,7 +425,7 @@ Return value:
     }
 
     bResult = WinUsb_Initialize(DeviceData->DeviceHandle,
-                                &amp;DeviceData->WinusbHandle);
+                                &DeviceData->WinusbHandle);
 
     if (FALSE == bResult) {
 
@@ -499,18 +502,8 @@ Next, read these topics to send get device information and send data transfers t
     Transfer data to and from isochronous endpoints of a USB device.
 
 ## Related topics
-
-
-[Windows desktop app for a USB device](windows-desktop-app-for-a-usb-device.md)
-
-[Provision a computer for driver deployment and testing](https://msdn.microsoft.com/library/windows/hardware/dn745909)
-
- 
-
- 
-
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20Write%20a%20Windows%20desktop%20app%20based%20on%20the%20WinUSB%20template%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
-
+[Windows desktop app for a USB device](windows-desktop-app-for-a-usb-device.md)  
+[Provision a computer for driver deployment and testing](https://msdn.microsoft.com/library/windows/hardware/dn745909)  
 
 
 

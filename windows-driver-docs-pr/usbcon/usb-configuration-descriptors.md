@@ -1,12 +1,13 @@
 ---
-Description: 'A USB device exposes its capabilities in the form of a series of interfaces called a USB configuration.'
-MS-HAID:
-- 'usb-config\_1cb61921-cac1-4c24-82fd-2c0d42c441a8.xml'
-- 'buses.usb\_configuration\_descriptors'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+Description: A USB device exposes its capabilities in the form of a series of interfaces called a USB configuration.
 title: USB configuration descriptors
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # USB configuration descriptors
@@ -108,7 +109,7 @@ Within a USB configuration, the number of interfaces and their alternate setting
     ntStatus = WdfUsbTargetDeviceRetrieveConfigDescriptor (
         UsbDevice, 
         NULL,
-        &amp;sizeConfigDesc);
+        &sizeConfigDesc);
 
     if (sizeConfigDesc == 0)
     {
@@ -136,7 +137,7 @@ Within a USB configuration, the number of interfaces and their alternate setting
     ntStatus = WdfUsbTargetDeviceRetrieveConfigDescriptor (
         UsbDevice, 
         fullConfigDesc,
-        &amp;sizeConfigDesc);
+        &sizeConfigDesc);
 
     if (!NT_SUCCESS(ntStatus))
     {           
@@ -184,7 +185,7 @@ NTSTATUS FX3_RetrieveConfigurationDescriptor (
 
     PAGED_CODE();
 
-    RtlZeroMemory (&amp;configDesc, sizeof(USB_CONFIGURATION_DESCRIPTOR));
+    RtlZeroMemory (&configDesc, sizeof(USB_CONFIGURATION_DESCRIPTOR));
     *ConfigDescriptor = NULL;
 
     // Allocate an URB for the get-descriptor request. 
@@ -195,8 +196,8 @@ NTSTATUS FX3_RetrieveConfigurationDescriptor (
     ntStatus = WdfUsbTargetDeviceCreateUrb (
         UsbDevice,
         NULL,
-        &amp;urbMemory,
-        &amp;urb);
+        &urbMemory,
+        &urb);
 
     if (!NT_SUCCESS (ntStatus))
     {
@@ -213,7 +214,7 @@ NTSTATUS FX3_RetrieveConfigurationDescriptor (
         USB_CONFIGURATION_DESCRIPTOR_TYPE,                          // Type of descriptor
         *ConfigurationIndex,                                        // Index of the configuration
         0,                                                          // Not used for configuration descriptors
-        &amp;configDesc,                                                // Points to a USB_CONFIGURATION_DESCRIPTOR structure
+        &configDesc,                                                // Points to a USB_CONFIGURATION_DESCRIPTOR structure
         NULL,                                                       // Not required because we are providing a buffer not MDL
         sizeof(USB_CONFIGURATION_DESCRIPTOR),                       // Size of the USB_CONFIGURATION_DESCRIPTOR structure.
         NULL                                                        // Reserved.
@@ -307,18 +308,8 @@ To search for a given interface descriptor within the configuration, the client 
 To examine a configuration descriptor for an endpoint or string descriptor, use the [**USBD\_ParseDescriptors**](https://msdn.microsoft.com/library/windows/hardware/ff539109) routine. The caller provides a starting position within the configuration and a descriptor type, such as USB\_STRING\_DESCRIPTOR\_TYPE or USB\_ENDPOINT\_DESCRIPTOR\_TYPE. The routine returns a pointer to the next matching descriptor.
 
 ## Related topics
-
-
-[How to Select a Configuration for a USB Device](how-to-select-a-configuration-for-a-usb-device.md)
-
-[USB Descriptors](usb-descriptors.md)
-
- 
-
- 
-
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20USB%20configuration%20descriptors%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
-
+[How to Select a Configuration for a USB Device](how-to-select-a-configuration-for-a-usb-device.md)  
+[USB Descriptors](usb-descriptors.md)  
 
 
 

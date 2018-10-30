@@ -2,6 +2,12 @@
 title: Determining Which Properties Are Set for a Device Class
 description: Determining Which Properties Are Set for a Device Class
 ms.assetid: a8016b04-ae52-47d9-b3ef-74e0896aa825
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Determining Which Properties Are Set for a Device Class
@@ -23,9 +29,9 @@ To determine which properties are set for a device class on a local computer, fo
     -   Set *PropertyKeyArray* to **NULL**.
     -   Set *PropertyKeyCount* to zero.
     -   Set *RequiredPropertyKeyCount* to a pointer to a DWORD-typed variable.
-    -   If the device class is a device setup class, set *Flags* to DICLASSPROP\_INSTALLER; otherwise, if the device class is a device interface class, set *Flags* to DICLASSPROP\_INTERFACE.
+    -   If the device class is a device setup class, set *Flags* to DICLASSPROP_INSTALLER; otherwise, if the device class is a device interface class, set *Flags* to DICLASSPROP_INTERFACE.
 
-    In response to this first call to [**SetupDiGetClassPropertyKeys**](https://msdn.microsoft.com/library/windows/hardware/ff551091), **SetupDiGetClassPropertyKeys** sets \**RequiredPropertyKeyCount* to the number of properties that are set for the device setup class, logs the error code ERROR\_INSUFFICIENT\_BUFFER, and returns **FALSE**. A subsequent call to [GetLastError](http://go.microsoft.com/fwlink/p/?linkid=169416) will return the most recently logged error code.
+    In response to this first call to [**SetupDiGetClassPropertyKeys**](https://msdn.microsoft.com/library/windows/hardware/ff551091), **SetupDiGetClassPropertyKeys** sets \**RequiredPropertyKeyCount* to the number of properties that are set for the device setup class, logs the error code ERROR_INSUFFICIENT_BUFFER, and returns **FALSE**. A subsequent call to [GetLastError](http://go.microsoft.com/fwlink/p/?linkid=169416) will return the most recently logged error code.
 
 2.  Call **SetupDiGetDevicePropertyKeys** again and supply the same parameters that were supplied in the first call, except for the following changes:
     -   Set *PropertyKeyArray* to a [**DEVPROPKEY**](https://msdn.microsoft.com/library/windows/hardware/ff543544)-typed pointer to the buffer that receives the requested property key array.

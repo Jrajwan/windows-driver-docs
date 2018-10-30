@@ -2,7 +2,15 @@
 title: Returning the Completion Status of a Terminate Offload Operation
 description: Returning the Completion Status of a Terminate Offload Operation
 ms.assetid: 2c900a72-47ec-4e26-aeb3-2a67511690c0
-keywords: ["terminating offload state WDK TCP chimney offload , completion status", "completion status of termination WDK TCP chimney offload"]
+keywords:
+- terminating offload state WDK TCP chimney offload , completion status
+- completion status of termination WDK TCP chimney offload
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Returning the Completion Status of a Terminate Offload Operation
@@ -10,7 +18,7 @@ keywords: ["terminating offload state WDK TCP chimney offload , completion statu
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-returning-the-completion-status-of-a-terminate-offload-operation-n"></a>
+
 
 
 Before calling the [**NdisMTerminateOffloadComplete**](https://msdn.microsoft.com/library/windows/hardware/ff563685) function, the offload target must write either of the following NDIS\_STATUS values to the **Status** member of each NDIS\_MINIPORT\_OFFLOAD\_BLOCK\_LIST structure in the state tree:

@@ -2,13 +2,23 @@
 title: NDISWAN Overview
 description: NDISWAN Overview
 ms.assetid: bc092222-5418-4a57-9811-5d97c1c10a73
-keywords: ["NDISWAN WDK networking", "NDIS intermediate drivers WDK , NDISWAN driver", "intermediate drivers WDK networking , NDISWAN driver", "architecture WDK WAN , NDISWAN"]
+keywords:
+- NDISWAN WDK networking
+- NDIS intermediate drivers WDK , NDISWAN driver
+- intermediate drivers WDK networking , NDISWAN driver
+- architecture WDK WAN , NDISWAN
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NDISWAN Overview
 
 
-## <a href="" id="ddk-ndiswan-overview-ng"></a>
+
 
 
 NDISWAN is a system-supplied NDIS intermediate driver that provides functionality such as data compression, encryption, loopback, and simple PPP framing that is used by WAN miniport drivers. WAN miniport drivers are therefore required to implement only those features that are specific to the medium (for example, Q931 signaling is required for ISDN).

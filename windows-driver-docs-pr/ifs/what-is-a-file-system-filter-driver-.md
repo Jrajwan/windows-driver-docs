@@ -3,7 +3,15 @@ title: What Is a File System Filter Driver
 author: windows-driver-content
 description: What Is a File System Filter Driver
 ms.assetid: 4bff8ad6-624a-429d-b9ec-3f96c3c7c99d
-keywords: ["filter drivers WDK file system , about file system filter drivers", "file system filter drivers WDK , about file system filter drivers"]
+keywords:
+- filter drivers WDK file system , about file system filter drivers
+- file system filter drivers WDK , about file system filter drivers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # What Is a File System Filter Driver?
@@ -21,6 +29,5 @@ A file system filter driver can filter I/O operations for one or more file syste
  
 
 
---------------------
 
 

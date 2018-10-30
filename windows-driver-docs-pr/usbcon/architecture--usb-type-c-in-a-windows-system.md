@@ -1,10 +1,13 @@
 ---
-Description: 'Describes a typical hardware design of a USB Type-C system and the Microsoft-provided drivers that support the hardware components.'
-MS-HAID: 'buses.architecture\_\_usb\_type-c\_in\_a\_windows\_system'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
-title: 'Architecture: USB Type-C design for a Windows system'
+Description: Describes a typical hardware design of a USB Type-C system and the Microsoft-provided drivers that support the hardware components.
+title: Architecture of USB Type-C design for a Windows system
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Architecture: USB Type-C design for a Windows system
@@ -64,6 +67,12 @@ In the preceding image,
 
     If you are writing a driver, the USB connector manager class extension follows the WDF class extension-client driver model. Your client driver communicates with the hardware and the class extension to handle tasks such as CC detection, PD messaging, Muxing, and VBus/VConn control, and select policy for power delivery and alternate mode. The class extension communicates the information reported by the client driver to the operating system. For example, the CC detection result is used to configure the role-switch drivers; USB Type-C/PD power information is used to determine the level at which the system should charge. The client driver manages USB Type-C and PD state machines. The client driver can delegate some tasks to other drivers, for example, Mux may be controlled by another driver. To write the client driver, use the [USB Type-C connector driver programming interfaces.](https://msdn.microsoft.com/library/windows/hardware/mt188011).
 
+    **USB Type-C port controller**
+
+    The Type-C Port Controller Interface Class Extension (UcmTcpciCx.sys) is an extension to the USB Connector Manager provided by Microsoft that allows the OS to behave as a Type-C Port Manager (TCPM) for a connector that does not implement the PD state machines. A UcmTcpciCx client driver allows the software TCPM to control the hardware and get its status in real time.
+
+    For information about writing the client driver, see [Write a USB Type-C port controller driver](write-a-usb-type-c-port-controller-driver.md).
+
 -   **Charging arbitration driver**
 
     This driver is provided by Microsoft for Windows 10 Mobile. The driver acts as the arbiter for multiple charging sources. The USB connector manager reports USB Type-C and PD charging source information to CAD, which makes a selection from that information and BC1.2 charger detection performed by the USB device-side drivers (if applicable). CAD then reports the most appropriate charging source to use to the battery subsystem.
@@ -76,7 +85,6 @@ In the preceding image,
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20Architecture:%20USB%20Type-C%20design%20for%20a%20Windows%20system%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

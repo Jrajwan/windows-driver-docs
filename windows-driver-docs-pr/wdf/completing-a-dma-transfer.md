@@ -3,7 +3,17 @@ title: Completing a DMA Transfer
 author: windows-driver-content
 description: Completing a DMA Transfer
 ms.assetid: 86383b9f-9b82-4afa-81ac-2ab09bd8778b
-keywords: ["DMA operations WDK KMDF , transfers", "bus-master DMA WDK KMDF , transfers", "DMA transfers WDK KMDF , completing", "completing DMA transfers WDK KMDF"]
+keywords:
+- DMA operations WDK KMDF , transfers
+- bus-master DMA WDK KMDF , transfers
+- DMA transfers WDK KMDF , completing
+- completing DMA transfers WDK KMDF
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Completing a DMA Transfer
@@ -11,7 +21,7 @@ keywords: ["DMA operations WDK KMDF , transfers", "bus-master DMA WDK KMDF , tra
 
 \[Applies to KMDF only\]
 
-## <a href="" id="ddk-completing-a-dma-transfer-df"></a>
+
 
 
 Typically, your driver's [*EvtInterruptDpc*](https://msdn.microsoft.com/library/windows/hardware/ff541721) callback function completes the processing of each DMA transfer.

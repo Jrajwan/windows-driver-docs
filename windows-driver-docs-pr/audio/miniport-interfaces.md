@@ -2,7 +2,21 @@
 title: Miniport Interfaces
 description: Miniport Interfaces
 ms.assetid: 50b92adc-a63c-4242-9ec9-4d97151f0f91
-keywords: ["audio miniport drivers WDK , interfaces", "miniport drivers WDK audio , interfaces", "miniport interfaces WDK audio", "port class drivers WDK audio", "PortCls WDK audio , interfaces", "interfaces WDK audio", "built-in port drivers WDK audio", "stream interfaces WDK audio"]
+keywords:
+- audio miniport drivers WDK , interfaces
+- miniport drivers WDK audio , interfaces
+- miniport interfaces WDK audio
+- port class drivers WDK audio
+- PortCls WDK audio , interfaces
+- interfaces WDK audio
+- built-in port drivers WDK audio
+- stream interfaces WDK audio
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Miniport Interfaces
@@ -11,22 +25,26 @@ keywords: ["audio miniport drivers WDK , interfaces", "miniport drivers WDK audi
 ## <span id="miniport_interfaces"></span><span id="MINIPORT_INTERFACES"></span>
 
 
-As described in [Supporting a Device](supporting-a-device.md), the PortCls system driver provides a set of five built-in port drivers for managing wave and MIDI devices. To use one of these port drivers to manage a particular type of audio device, the adapter driver must provide a corresponding miniport driver that complements the port driver by managing all the device's hardware-dependent functions.
+As described in [Supporting a Device](supporting-a-device.md), the PortCls system driver provides a set of built-in port drivers for managing wave and MIDI devices. To use one of these port drivers to manage a particular type of audio device, the adapter driver must provide a corresponding miniport driver that complements the port driver by managing all the device's hardware-dependent functions.
 
-This section discusses the following five miniport driver types:
+This section discusses the following miniport driver types:
 
 [WaveRT Miniport Driver](wavert-miniport-driver.md)
 
 Complements the WaveRT port driver by managing the hardware-dependent functions of a wave rendering or capture device that uses a cyclic buffer for audio data.
+
 [Topology Miniport Driver](topology-miniport-driver.md)
 
 Complements the Topology port driver by managing the various hardware controls (for example, volume level) in the audio adapter's mixer circuitry.
+
 [MIDI Miniport Driver](midi-miniport-driver.md)
 
 Complements the MIDI port driver by managing the hardware-dependent functions of a simple MIDI device.
+
 [DMus Miniport Driver](dmus-miniport-driver.md)
 
 Complements the DMus port driver by managing the hardware-dependent functions of an advanced MIDI device.
+
 Each port driver implements an **IPortXxx** interface, which it presents to the miniport driver. In turn, the miniport driver must implement an **IMiniportXxx** interface, which the port driver uses to communicate with the miniport driver. The following table shows the **IPortXxx** interface and the corresponding **IMiniportXxx** interface for each device type.
 
 <table>
@@ -85,7 +103,5 @@ In the preceding table, all **IPortXxx** interfaces are derived from base interf
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[audio\audio]:%20Miniport%20Interfaces%20%20RELEASE:%20%287/18/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

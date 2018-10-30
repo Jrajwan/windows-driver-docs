@@ -2,20 +2,32 @@
 title: Sending Asynchronous I/O Request Packets on the IEEE 1394 Bus
 author: windows-driver-content
 description: Sending Asynchronous I/O Request Packets on the IEEE 1394 Bus
-MS-HAID:
-- '1394-async\_dbd03af5-af75-4ea4-b4f5-d7ea50cbbe27.xml'
-- 'IEEE.sending\_asynchronous\_i\_o\_request\_packets\_on\_the\_ieee\_1394\_bus'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 93ad0cdf-5ac2-4916-b90e-1e64ca4494b6
-keywords: ["sending asynchronous I/O requests", "raw-mode addressing WDK IEEE 1394 bus", "virtual-mode addressing WDK IEEE 1394 bus", "normal-mode addressing WDK IEEE 1394 bus", "addresses WDK IEEE 1394 bus", "data blocks WDK IEEE 1394 bus", "contiguous data blocks WDK IEEE 1394 bus", "non-incrementing data blocks WDK IEEE 1394 bus", "buffers WDK IEEE 1394 bus", "bus reset generation WDK IEEE 1394 bus", "reset generation WDK IEEE 1394 bus", "locking WDK IEEE 1394 bus"]
+keywords:
+- sending asynchronous I/O requests
+- raw-mode addressing WDK IEEE 1394 bus
+- virtual-mode addressing WDK IEEE 1394 bus
+- normal-mode addressing WDK IEEE 1394 bus
+- addresses WDK IEEE 1394 bus
+- data blocks WDK IEEE 1394 bus
+- contiguous data blocks WDK IEEE 1394 bus
+- non-incrementing data blocks WDK IEEE 1394 bus
+- buffers WDK IEEE 1394 bus
+- bus reset generation WDK IEEE 1394 bus
+- reset generation WDK IEEE 1394 bus
+- locking WDK IEEE 1394 bus
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Sending Asynchronous I/O Request Packets on the IEEE 1394 Bus
 
 
-## <a href="" id="ddk-sending-asynchronous-i-o-request-packets-on-the-ieee-1394-bus-kg"></a>
+
 
 
 Drivers use REQUEST\_ASYNC\_READ, REQUEST\_ASYNC\_WRITE, and REQUEST\_ASYNC\_LOCK to send asynchronous read, write, and lock operations to a device on the IEEE 1394 bus. For REQUEST\_ASYNC\_READ and REQUEST\_ASYNC\_WRITE, the operation-specific parameters of the IRB are stored in either **u.AsyncRead** or **u.AsyncWrite** members of the IRB.
@@ -67,6 +79,5 @@ A device driver that uses asynchronous I/O keeps track of the bus reset generati
  
 
 
---------------------
 
 

@@ -1,14 +1,25 @@
 ---
-title: Filling in an NDIS\_GUID Structure
-description: Filling in an NDIS\_GUID Structure
+title: Filling in an NDIS_GUID Structure
+description: Filling in an NDIS_GUID Structure
 ms.assetid: 971f6f25-fd2b-4a1e-9378-6270a094f4ff
-keywords: ["NDIS_GUID", "WMI WDK networking , GUIDs", "OIDs WDK networking , WMI", "GUIDs WDK networking", "Windows Management Instrumentation WDK networking , GUIDs"]
+keywords:
+- NDIS_GUID
+- WMI WDK networking , GUIDs
+- OIDs WDK networking , WMI
+- GUIDs WDK networking
+- Windows Management Instrumentation WDK networking , GUIDs
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Filling in an NDIS\_GUID Structure
 
 
-## <a href="" id="ddk-filling-in-an-ndis-guid-structure-ng"></a>
+
 
 
 An NDIS\_GUID structure is defined as follows:

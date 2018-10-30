@@ -2,13 +2,20 @@
 title: Setting SetupAPI Logging Levels
 description: Setting SetupAPI Logging Levels
 ms.assetid: e6fa4c9c-e210-42c7-8bc7-d36463073c28
-keywords: ["logging levels WDK SetupAPI"]
+keywords:
+- logging levels WDK SetupAPI
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Setting SetupAPI Logging Levels
 
 
-## <a href="" id="ddk-setting-setupapi-logging-levels-dg"></a>
+
 
 
 You can control the amount of information that is written to the SetupAPI log, either for all [*device installation applications*](https://msdn.microsoft.com/library/windows/hardware/ff556277#wdkgloss-device-installation-application) or for individual device installation applications.
@@ -200,16 +207,16 @@ To modify the default SetupAPI logging levels during a clean installation, edit 
 
 4.  Find the registry hives (files) in *D:\\Winnt\\System32\\config*. In this case, you need to modify the registry hive in *Software.sav*.
 
-5.  On Windows 2000, run *Regedt32*, select the "HKEY\_LOCAL\_MACHINE on Local Machine" window, and select the HKEY\_LOCAL\_MACHINE key. Then click the **Registry** menu and select **Load Hive**.
+5.  On Windows 2000, run *Regedt32*, select the "HKEY_LOCAL_MACHINE on Local Machine" window, and select the HKEY_LOCAL_MACHINE key. Then click the **Registry** menu and select **Load Hive**.
 
-    On Windows XP and later, run *RegEdit*. Highlight HKEY\_LOCAL\_MACHINE, click the **File** menu and select **Load Hive**.
+    On Windows XP and later, run *RegEdit*. Highlight HKEY_LOCAL_MACHINE, click the **File** menu and select **Load Hive**.
 
-6.  Browse the files and select *D:\\Winnt\\System32\\config\\software.sav*. When prompted for key name, enter "\_sw.sav "
+6.  Browse the files and select *D:\\Winnt\\System32\\config\\software.sav*. When prompted for key name, enter "_sw.sav "
 
-7.  Open the \_sw.sav key under HKEY\_LOCAL\_MACHINE and highlight the following key:
+7.  Open the _sw.sav key under HKEY_LOCAL_MACHINE and highlight the following key:
 
     ```
-    HKEY_LOCAL_MACHINE\_sw.sav\Microsoft\Windows\CurrentVersion\Setup
+    HKEY_LOCAL_MACHINE_sw.sav\Microsoft\Windows\CurrentVersion\Setup
     ```
 
     On Windows 2000, click the **Security** menu, select **Permissions**, and grant full control to Administrator.
@@ -222,7 +229,7 @@ To modify the default SetupAPI logging levels during a clean installation, edit 
 
     Enter the value. For example, add "0xFFFF" to enable full verbose logging.
 
-9.  Select HKEY\_LOCAL\_MACHINE\\\_sw.sav, and unload the hive (using the **Registry** menu on Windows 2000, or the **File** menu on Windows XP and later)The \_sw.sav key should disappear.
+9.  Select HKEY_LOCAL_MACHINE\\_sw.sav, and unload the hive (using the **Registry** menu on Windows 2000, or the **File** menu on Windows XP and later)The _sw.sav key should disappear.
 
 10. Copy *D:\\Winnt\\System32\\config\\software.sav* to *D:\\Winnt\\System32\\config\\software*.
 

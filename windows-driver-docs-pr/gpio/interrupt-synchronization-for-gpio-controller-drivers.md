@@ -1,11 +1,14 @@
 ---
 title: Interrupt Synchronization for GPIO Controller Drivers
 author: windows-driver-content
-description: GPIO controller drivers can call the GPIO\_CLX\_AcquireInterruptLock and GPIO\_CLX\_ReleaseInterruptLock methods to acquire and release interrupt locks that are implemented internally by the GPIO framework extension (GpioClx).
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: GPIO controller drivers can call the GPIO_CLX_AcquireInterruptLock and GPIO_CLX_ReleaseInterruptLock methods to acquire and release interrupt locks that are implemented internally by the GPIO framework extension (GpioClx).
 ms.assetid: D9698A50-7CC2-463C-9E46-7FE428F3193E
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Interrupt Synchronization for GPIO Controller Drivers
@@ -34,7 +37,7 @@ For more information about interrupt locks and wait locks, see [Using Framework 
 The following tables provide more detailed information about which callback functions are called at DIRQL instead of at PASSIVE\_LEVEL if the registers are memory-mapped. The notes that follow the tables explain when passive-level callback functions should use interrupt locks.
 
 -   [Interrupt-related callback functions](#interrupt-related-callback-functions)
--   [I/O-related callback functions](#i-o-related-callback-functions)
+-   [I/O-related callback functions](#io-related-callback-functions)
 -   [GPIO initialization and setup-related callback functions](#gpio-initialization-and-setup-related-callback-functions)
 -   [GPIO power management-related callback functions](#gpio-power-management-related-callback-functions)
 -   [Other callback functions](#other-callback-functions)
@@ -281,6 +284,5 @@ To enable a GPIO controller to support controller-specific operations, a GPIO co
  
 
 
---------------------
 
 

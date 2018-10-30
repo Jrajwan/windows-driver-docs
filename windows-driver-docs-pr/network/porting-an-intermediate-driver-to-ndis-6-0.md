@@ -2,13 +2,25 @@
 title: Porting an Intermediate Driver to NDIS 6.0
 description: Porting an Intermediate Driver to NDIS 6.0
 ms.assetid: 1d8da745-1097-4e6c-a5d5-cc9b7dd3b417
-keywords: ["intermediate drivers WDK networking , porting", "NDIS intermediate drivers WDK , porting", "NDIS porting drivers WDK , intermediate drivers", "porting drivers WDK networking , intermediate drivers", "network driver porting WDK , intermediate drivers", "porting"]
+keywords:
+- intermediate drivers WDK networking , porting
+- NDIS intermediate drivers WDK , porting
+- NDIS porting drivers WDK , intermediate drivers
+- porting drivers WDK networking , intermediate drivers
+- network driver porting WDK , intermediate drivers
+- porting
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Porting an Intermediate Driver to NDIS 6.0
 
 
-## <a href="" id="ddk-porting-intermediate-drivers-to-ndis-6-0-nd"></a>
+
 
 
 This section describes what is required to port an NDIS 5.*x* intermediate driver to NDIS 6.0.

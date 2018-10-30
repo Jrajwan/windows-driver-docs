@@ -2,13 +2,22 @@
 title: Installation Requirements for Network MUX Intermediate Drivers
 description: Installation Requirements for Network MUX Intermediate Drivers
 ms.assetid: 2c51c40a-2015-4131-9ffa-6956313183f5
-keywords: ["MUX intermediate driver installation requirements WDK", "protocol INF files WDK networking", "device INF files WDK networking"]
+keywords:
+- MUX intermediate driver installation requirements WDK
+- protocol INF files WDK networking
+- device INF files WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Installation Requirements for Network MUX Intermediate Drivers
 
 
-## <a href="" id="ddk-installation-requirements-for-network-mux-intermediate-drivers-ng"></a>
+
 
 
 This topic summarizes the installation requirements for network MUX intermediate drivers. For more information about installation requirements for MUX intermediate drivers, see [Installing an Intermediate Driver](installing-an-intermediate-driver.md).

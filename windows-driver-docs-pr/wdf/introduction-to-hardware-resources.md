@@ -3,7 +3,16 @@ title: Introduction to Hardware Resources
 author: windows-driver-content
 description: Introduction to Hardware Resources
 ms.assetid: 34350031-daae-4213-b157-086a7a55e05b
-keywords: ["boot configurations WDK KMDF", "logical configurations WDK KMDF", "hardware resources WDK KMDF , about hardware resources"]
+keywords:
+- boot configurations WDK KMDF
+- logical configurations WDK KMDF
+- hardware resources WDK KMDF , about hardware resources
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Introduction to Hardware Resources

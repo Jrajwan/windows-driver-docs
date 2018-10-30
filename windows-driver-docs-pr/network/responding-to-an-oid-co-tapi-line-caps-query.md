@@ -1,14 +1,26 @@
 ---
-title: Responding to an OID\_CO\_TAPI\_LINE\_CAPS Query
-description: Responding to an OID\_CO\_TAPI\_LINE\_CAPS Query
+title: Responding to an OID_CO_TAPI_LINE_CAPS Query
+description: Responding to an OID_CO_TAPI_LINE_CAPS Query
 ms.assetid: b1ca65c6-ecce-4d2c-b7ca-03b6a334f97b
-keywords: ["voice streaming WDK networking , support specification", "OID_CO_TAPI_LINE_CAPS", "ulMediaModes", "ulAddressTypes", "UlGenerateDigitModes", "UlMonitorDigitModes"]
+keywords:
+- voice streaming WDK networking , support specification
+- OID_CO_TAPI_LINE_CAPS
+- ulMediaModes
+- ulAddressTypes
+- UlGenerateDigitModes
+- UlMonitorDigitModes
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Responding to an OID\_CO\_TAPI\_LINE\_CAPS Query
 
 
-## <a href="" id="ddk-responding-to-an-oid-co-tapi-line-caps-query-ng"></a>
+
 
 
 In response to an [OID\_CO\_TAPI\_LINE\_CAPS](https://msdn.microsoft.com/library/windows/hardware/ff569098) query, a call manager or MCM returns a CO\_TAPI\_LINE\_CAPS structure that contains a LINE\_DEV\_CAPS structure. To support voice streaming, a call manager or MCM must specify the following values in the LINE\_DEV\_CAPS structure:

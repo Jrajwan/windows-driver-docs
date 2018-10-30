@@ -2,6 +2,12 @@
 title: Mobile Broadband Device Firmware Update
 description: This topic provides guidance to Mobile Broadband (MB) module manufacturers intending to support firmware upgrade devices via Windows Update (WU).
 ms.assetid: EBB95A11-14EF-4BF5-BE90-DB99624554CD
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Mobile Broadband Device Firmware Update
@@ -47,7 +53,7 @@ This section provides a sample INF that is part of the WU package. The key point
 
 -   The firmware binaries are independent of the UMDF driver.
 -   The firmware binaries are located a well-known, pre-defined location as shown below to filename collisions. The binaries cannot be not be executable files containing PE/COFF headers.
--   `%windir%\Firmware\\<IHVCompanyName>\\<UniqueBinaryName>.bin`
+-   `%windir%\Firmware\<IHVCompanyName>\<UniqueBinaryName>.bin`
 -   The UMDF driver is aware of this predefined well-known location.
 -   The sample INF template below has highlighted items that need to be filled by the IHV.
 

@@ -2,13 +2,22 @@
 title: CoNDIS Miniport Driver Registration
 description: CoNDIS Miniport Driver Registration
 ms.assetid: 2dfd3bdc-b7b1-4491-b05e-2e8e1f5895b8
-keywords: ["miniport drivers WDK networking , CoNDIS", "NDIS miniport drivers WDK , CoNDIS", "registering miniport drivers"]
+keywords:
+- miniport drivers WDK networking , CoNDIS
+- NDIS miniport drivers WDK , CoNDIS
+- registering miniport drivers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # CoNDIS Miniport Driver Registration
 
 
-## <a href="" id="ddk-condis-miniport-driver-registration-ng"></a>
+
 
 
 CoNDIS miniport drivers initialize like other miniport drivers and also must register additional CoNDIS entry points. For general information about miniport driver initialization, see [Initializing a Miniport Driver](initializing-a-miniport-driver.md).

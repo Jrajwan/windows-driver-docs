@@ -2,13 +2,26 @@
 title: NDIS Support for WMI
 description: NDIS Support for WMI
 ms.assetid: ce35ddb4-bf18-4ba1-bc6f-dbe659f5d781
-keywords: ["Windows Management Instrumentation WDK networking", "miniport drivers WDK networking , WMI support", "NDIS miniport drivers WDK , WMI support", "WMI WDK networking", "protocol drivers WDK networking , WMI support", "NDIS protocol drivers WDK , WMI support", "i"]
+keywords:
+- Windows Management Instrumentation WDK networking
+- miniport drivers WDK networking , WMI support
+- NDIS miniport drivers WDK , WMI support
+- WMI WDK networking
+- protocol drivers WDK networking , WMI support
+- NDIS protocol drivers WDK , WMI support
+- i
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NDIS Support for WMI
 
 
-## <a href="" id="ddk-ndis-support-for-wmi-ng"></a>
+
 
 
 Through NDIS, clients of Windows Management Instrumentation (WMI) can obtain and set information that NDIS and NDIS drivers service. WMI clients can also register to receive status updates.
@@ -32,6 +45,8 @@ This section includes:
 [Standard WMI OIDs and Status Indications](standard-wmi-oids-and-status-indications.md)
 
 [Customized OIDs and Status Indications](customized-oids-and-status-indications.md)
+
+[NDIS WMI GUIDs](ndis-wmi-guids.md)
 
  
 

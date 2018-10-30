@@ -2,14 +2,18 @@
 title: Enumerating Child Devices and Control Methods
 author: windows-driver-content
 description: Enumerating Child Devices and Control Methods
-MS-HAID:
-- 'acpi-meth-eval-dg\_e13b8233-7222-4800-bae3-3bb9ae9b0231.xml'
-- 'acpi.enumerating\_child\_devices\_and\_control\_methods'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: fe0553df-a5b9-46c4-8e1d-8b89a7d4ad67
-keywords: ["ACPI devices WDK , enumerating child devices", "ACPI devices WDK , enumerating control methods", "ACPI namespaces WDK", "ACPI control methods WDK , enumerating"]
+keywords:
+- ACPI devices WDK , enumerating child devices
+- ACPI devices WDK , enumerating control methods
+- ACPI namespaces WDK
+- ACPI control methods WDK , enumerating
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Enumerating Child Devices and Control Methods
@@ -80,6 +84,5 @@ For more information about how to enumerate child devices, see [Sending an IOCTL
  
 
 
---------------------
 
 

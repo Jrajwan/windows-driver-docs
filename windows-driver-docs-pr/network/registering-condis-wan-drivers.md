@@ -2,13 +2,22 @@
 title: Registering CoNDIS WAN Drivers
 description: Registering CoNDIS WAN Drivers
 ms.assetid: e699d1b0-9dbd-4845-b8e3-e83da20e997c
-keywords: ["CoNDIS WAN drivers WDK networking , registering", "NdisMRegisterMiniportDriver", "registering CoNDIS WAN drivers"]
+keywords:
+- CoNDIS WAN drivers WDK networking , registering
+- NdisMRegisterMiniportDriver
+- registering CoNDIS WAN drivers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Registering CoNDIS WAN Drivers
 
 
-## <a href="" id="ddk-registering-condis-wan-drivers-ng"></a>
+
 
 
 A CoNDIS WAN miniport driver or MCM calls [**NdisMRegisterMiniportDriver**](https://msdn.microsoft.com/library/windows/hardware/ff563654) from its [**DriverEntry**](https://msdn.microsoft.com/library/windows/hardware/ff544113) function to register its standard *MiniportXxx* functions with NDIS. For more information about registering *MiniportXxx* functions, see [Initializing a Miniport Driver](initializing-a-miniport-driver.md).

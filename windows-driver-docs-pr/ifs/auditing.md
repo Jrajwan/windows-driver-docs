@@ -3,7 +3,19 @@ title: Auditing
 author: windows-driver-content
 description: Auditing
 ms.assetid: 0a703a27-91d6-41fc-bd46-a9486842a150
-keywords: ["security WDK file systems , auditing", "auditing WDK file systems", "events WDK file systems", "SeAuditingFileEvents", "SeOpenObjectAuditAlarm", "event WDK See also events"]
+keywords:
+- security WDK file systems , auditing
+- auditing WDK file systems
+- events WDK file systems
+- SeAuditingFileEvents
+- SeOpenObjectAuditAlarm
+- event WDK See also events
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Auditing
@@ -29,6 +41,5 @@ There is no requirement for auditing. None of the sample file systems (FAT or CD
  
 
 
---------------------
 
 

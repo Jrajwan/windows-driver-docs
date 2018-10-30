@@ -2,7 +2,17 @@
 title: Querying Offloaded State
 description: Querying Offloaded State
 ms.assetid: abc580e6-672f-4364-8d67-daec956caafe
-keywords: ["TCP chimney offload WDK networking , querying offloaded state", "chimney offload WDK networking , querying offloaded state", "offload state WDK TCP chimney offload , querying offloaded state", "querying offloaded TCP chimney state"]
+keywords:
+- TCP chimney offload WDK networking , querying offloaded state
+- chimney offload WDK networking , querying offloaded state
+- offload state WDK TCP chimney offload , querying offloaded state
+- querying offloaded TCP chimney state
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Querying Offloaded State
@@ -10,7 +20,7 @@ keywords: ["TCP chimney offload WDK networking , querying offloaded state", "chi
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-querying-offloaded-state-ng"></a>
+
 
 
 The Querying Offloaded State section describes the process of querying offloaded TCP chimney state. The host stack can query constant, cached, and delegated state.

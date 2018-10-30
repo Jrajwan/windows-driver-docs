@@ -3,7 +3,22 @@ title: The Redirected Drive Buffering SubSystem
 author: windows-driver-content
 description: The Redirected Drive Buffering SubSystem
 ms.assetid: 901a8b3e-222a-44be-8279-765d8ec4ffe1
-keywords: ["network redirectors WDK , RDBSS", "redirector drivers WDK , RDBSS", "Redirected Drive Buffering SubSystem WDK file systems", "RDBSS WDK file systems", "mini-redirectors WDK , RDBSS", "non-monolithic drivers WDK", "buffering code WDK network redirectors", "I/O WDK network redirectors", "kernel network redirectors WDK , RDBSS"]
+keywords:
+- network redirectors WDK , RDBSS
+- redirector drivers WDK , RDBSS
+- Redirected Drive Buffering SubSystem WDK file systems
+- RDBSS WDK file systems
+- mini-redirectors WDK , RDBSS
+- non-monolithic drivers WDK
+- buffering code WDK network redirectors
+- I/O WDK network redirectors
+- kernel network redirectors WDK , RDBSS
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # The Redirected Drive Buffering SubSystem
@@ -99,6 +114,5 @@ RDBSS will try to use access history to reduce the need for unnecessary network 
  
 
 
---------------------
 
 

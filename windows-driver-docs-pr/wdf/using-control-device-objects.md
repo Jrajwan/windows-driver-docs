@@ -3,7 +3,23 @@ title: Using Control Device Objects
 author: windows-driver-content
 description: Using Control Device Objects
 ms.assetid: 6367954f-6916-46df-a5a0-e80f045b69e5
-keywords: ["control device objects WDK KMDF", "device objects WDK KMDF", "framework objects WDK KMDF , control device objects", "legacy hardware devices WDK KMDF", "software-only virtual devices WDK KMDF", "system shutdown notifications WDK KMDF", "shutdown notifications WDK KMDF", "notifications WDK KMDF", "names WDK KMDF", "names WDK KMDF , device objects"]
+keywords:
+- control device objects WDK KMDF
+- device objects WDK KMDF
+- framework objects WDK KMDF , control device objects
+- legacy hardware devices WDK KMDF
+- software-only virtual devices WDK KMDF
+- system shutdown notifications WDK KMDF
+- shutdown notifications WDK KMDF
+- notifications WDK KMDF
+- names WDK KMDF
+- names WDK KMDF , device objects
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Using Control Device Objects
@@ -23,7 +39,7 @@ Two typical uses for control devices are:
 
     If an application attempted to send the custom I/O control codes to the top of the driver stack (by using, for example, the symbolic link name of a [device interface](using-device-interfaces.md)), a driver above the filter driver might fail the I/O request if the driver did not recognize the custom I/O control codes. To avoid this problem, the filter driver can create a control device object. Applications can use the control device object's symbolic link name to send I/O control codes directly to the filter driver.
 
-    (Note that a better way for the filter driver to avoid the problem is to act as a bus driver and raw mode. In other words, for each device that the filter driver supports, the driver can create a physical device object (PDO) that does not require a function driver. The driver calls [**WdfPdoInitAssignRawDevice**](https://msdn.microsoft.com/library/windows/hardware/ff548802) and [**WdfDeviceInitAssignName**](https://msdn.microsoft.com/library/windows/hardware/ff546029) for each of these devices, and the application can identify a device by name when it sends a custom I/O control code.)
+    (Note that a better way for the filter driver to avoid the problem is to act as a bus driver and [enumerate](enumerating-the-devices-on-a-bus.md) child devices that operate in raw mode. In other words, for each device that the filter driver supports, the driver can create a physical device object (PDO) that does not require a function driver. The driver calls [**WdfPdoInitAssignRawDevice**](https://msdn.microsoft.com/library/windows/hardware/ff548802) and [**WdfDeviceInitAssignName**](https://msdn.microsoft.com/library/windows/hardware/ff546029) for each of these devices, and the application can identify a device by name when it sends a custom I/O control code.)
 
 2.  A driver for a device that does not support PnP.
 

@@ -3,7 +3,23 @@ title: Creating an INF File for a File System Driver
 author: windows-driver-content
 description: Creating an INF File for a File System Driver
 ms.assetid: 4b67159f-a5a5-46da-9500-a9c6b6995da4
-keywords: ["INF files WDK file system , creating", "SetupAPI WDK file system", "Strings section WDK file system", "DefaultUninstall section WDK file system", "ServiceInstall section WDK file system", "DefaultInstall section WDK file system", "SourceDisksNames section WDK file system", "DestinationDirs section WDK file system", "Version section WDK file system", "creating INF files WDK file system"]
+keywords:
+- INF files WDK file system , creating
+- SetupAPI WDK file system
+- Strings section WDK file system
+- DefaultUninstall section WDK file system
+- ServiceInstall section WDK file system
+- DefaultInstall section WDK file system
+- SourceDisksNames section WDK file system
+- DestinationDirs section WDK file system
+- Version section WDK file system
+- creating INF files WDK file system
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Creating an INF File for a File System Driver
@@ -384,6 +400,5 @@ You can create a single international INF file by creating additional locale-spe
  
 
 
---------------------
 
 

@@ -1,8 +1,14 @@
 ---
 title: Supporting Passive-Level Interrupts
 author: windows-driver-content
-description: Starting with framework version 1.11, Kernel-Mode Driver Framework (KMDF) and User-Mode Driver Framework (UMDF) drivers running on Windows 8 or later versions of the operating system can create interrupt objects that require passive-level handling.
+description: Starting with framework version 1.11, WDF drivers can create interrupt objects that require passive-level handling.
 ms.assetid: E464F885-928C-40BC-A09F-7A7921F8FF37
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Supporting Passive-Level Interrupts
@@ -44,7 +50,7 @@ Drivers typically complete I/O requests in their [*EvtInterruptWorkItem*](https:
 
 The following code example demonstrates how a driver using passive-level interrupts might schedule a [*EvtInterruptWorkItem*](https://msdn.microsoft.com/library/windows/hardware/hh406422) callback from within its [*EvtInterruptIsr*](https://msdn.microsoft.com/library/windows/hardware/ff541735) function.
 
-``` syntax
+```
 BOOLEAN
 
 EvtInterruptIsr(

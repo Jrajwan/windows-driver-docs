@@ -2,13 +2,23 @@
 title: Installing a SAN Service Provider
 description: Installing a SAN Service Provider
 ms.assetid: 3a7fcacf-ef26-4a41-a991-230daf67accf
-keywords: ["Windows Sockets Direct WDK , installing components", "SAN service providers WDK , installing", "SAN service providers WDK , registering", "registering SAN service providers"]
+keywords:
+- Windows Sockets Direct WDK , installing components
+- SAN service providers WDK , installing
+- SAN service providers WDK , registering
+- registering SAN service providers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Installing a SAN Service Provider
 
 
-## <a href="" id="ddk-installing-a-san-service-provider-ng"></a>
+
 
 
 A SAN service provider is typically installed as a base Windows Sockets service provider that interfaces with the Windows Sockets switch. Although a SAN service provider can be installed for direct use by an application instead, the Windows Sockets Direct technology does not support using a SAN service provider in this manner. A SAN service provider that is installed for direct use by an application exports its native address family and protocol characteristics rather than those of TCP/IP protocol.

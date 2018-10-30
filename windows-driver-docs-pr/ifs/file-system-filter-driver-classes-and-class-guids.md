@@ -3,7 +3,18 @@ title: File System Filter Driver Classes and Class GUIDs
 author: windows-driver-content
 description: File System Filter Driver Classes and Class GUIDs
 ms.assetid: dd247b06-4529-4818-9239-b89c25f5c1df
-keywords: ["GUIDs WDK file system", "class GUIDs WDK file system", "classes WDK file system", "filter drivers WDK file system , classes", "file system filter drivers WDK , classes"]
+keywords:
+- GUIDs WDK file system
+- class GUIDs WDK file system
+- classes WDK file system
+- filter drivers WDK file system , classes
+- file system filter drivers WDK , classes
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # File System Filter Driver Classes and Class GUIDs
@@ -98,6 +109,5 @@ ClassGuid = {e55fa6f9-128c-4d04-abab-630c74b1453a}
  
 
 
---------------------
 
 

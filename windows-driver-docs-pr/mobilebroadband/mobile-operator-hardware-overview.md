@@ -1,10 +1,13 @@
 ---
 title: Mobile operator hardware overview
 description: Mobile operator hardware overview
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: b2322972-16be-443f-b46a-7834b4d7ead0
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Mobile operator hardware overview
@@ -39,11 +42,11 @@ An external device is likely to be inserted immediately before the user wants to
 
 2.  The Mobile Broadband Service reads the IMSI and generates a set of hashes.
 
-3.  When the user clicks **Connect**, these hashes are used to match connection settings within the [APN database submission](apn-database-submission.md).
+3.  When the user clicks **Connect**, these hashes are used to match connection settings within the [COSA/APN database submission](cosa-apn-database-submission.md).
 
     -   If the connection is successful and Internet connectivity is available, nothing further happens. The user has already purchased service.
 
-    -   If the connection is successful, but Internet connectivity is not available, the web browser opens to the URL specified in the APN database or your Windows Store mobile broadband app.
+    -   If the connection is successful, but Internet connectivity is not available, the web browser opens to the URL specified in the APN database or your UWP mobile broadband app.
 
     -   If the connection fails, the user is notified of the error.
 
@@ -63,7 +66,7 @@ When an active device is attached that already had an active SIM, the workflow i
 
 2.  The Mobile Broadband Service reads the IMSI and generates a set of hashes.
 
-3.  When the user clicks **Connect**, these hashes are used to match connection settings within the [APN database submission](apn-database-submission.md). For a device with an active SIM, the connection is successful and Internet connectivity is available.
+3.  When the user clicks **Connect**, these hashes are used to match connection settings within the [COSA/APN database submission](cosa-apn-database-submission.md). For a device with an active SIM, the connection is successful and Internet connectivity is available.
 
 ## <span id="Components"></span><span id="components"></span><span id="COMPONENTS"></span>Components
 
@@ -72,7 +75,7 @@ When an active device is attached that already had an active SIM, the workflow i
 
 To take full advantage of the Windows mobile broadband platform, your mobile broadband device must meet the Windows 8, Windows 8.1, or Windows 10 hardware certification requirements. For a comprehensive description of the hardware certification requirements, see [Windows Hardware Certification Requirements](http://msdn.microsoft.com/library/windows/hardware/hh748188).
 
-For the end user, the most simplified connection experience is delivered with a USB-based mobile broadband device. As part of the hardware certification requirements, any mobile broadband device that manifests as a USB device must comply with the [Mobile Broadband Interface Model (MBIM) specification](https://msdn.microsoft.com/library/windows/hardware/dn265427) and the MBIM v1.0 Errata. This includes both external USB dongles and embedded modules that provide USB interfaces. For this class of devices, Windows 8, Windows 8.1, or Windows 10 includes a mobile broadband class driver, which eliminates the need for additional drivers from the IHV and simplifies the user’s connection experience. Other hardware that is not USB and driver models can receive Windows 8, Windows 8.1, and Windows 10 certification and will provide the Windows Store mobile broadband app experience, but these are not supported by the mobile broadband class driver.
+For the end user, the most simplified connection experience is delivered with a USB-based mobile broadband device. As part of the hardware certification requirements, any mobile broadband device that manifests as a USB device must comply with the [Mobile Broadband Interface Model (MBIM) specification](https://msdn.microsoft.com/library/windows/hardware/dn265427) and the MBIM v1.0 Errata. This includes both external USB dongles and embedded modules that provide USB interfaces. For this class of devices, Windows 8, Windows 8.1, or Windows 10 includes a mobile broadband class driver, which eliminates the need for additional drivers from the IHV and simplifies the user’s connection experience. Other hardware that is not USB and driver models can receive Windows 8, Windows 8.1, and Windows 10 certification and will provide the Microsoft Store mobile broadband app experience, but these are not supported by the mobile broadband class driver.
 
 ### <span id="Mobile_broadband_class_driver"></span><span id="mobile_broadband_class_driver"></span><span id="MOBILE_BROADBAND_CLASS_DRIVER"></span>Mobile broadband class driver
 
@@ -100,7 +103,7 @@ The Device Service Extension API provides a direct way for the mobile broadband 
 Each device service has a corresponding GUID. All control messages and non-IP packets exchanged between the mobile broadband class driver and the device will carry the GUID to identify the service associated with the request. Command identifiers (CIDs) and status indication codes are defined under a service’s GUID namespace. For example, Phonebook and STK could both share the same CID code, but will be distinguished by the device service GUID exchanged in the request.
 
 **Note**  
-The COM-based Device Services API is accessible to any desktop application or service. The WinRT projected Device Services API is available only to a privileged Windows Store device app that is authorized by a mobile broadband operator. Developers should carefully consider privacy and security when communicating information this way.
+The COM-based Device Services API is accessible to any desktop application or service. The WinRT projected Device Services API is available only to a privileged UWP device app that is authorized by a mobile broadband operator. Developers should carefully consider privacy and security when communicating information this way.
 
  
 
@@ -192,7 +195,7 @@ Since this is an optional Windows feature for devices to support, there is no HC
 
  
 
-For more info about the APN database, see [APN database](apn-database.md).
+For more info about the APN database, see [APN database overview](apn-database-overview.md).
 
 ### <span id="Network_personalization"></span><span id="network_personalization"></span><span id="NETWORK_PERSONALIZATION"></span>Network personalization
 
@@ -209,7 +212,6 @@ There is no HCK test case to validate that this feature implemented on the devic
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bp_mb\p_mb%5D:%20Mobile%20operator%20hardware%20overview%20%20RELEASE:%20%281/18/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

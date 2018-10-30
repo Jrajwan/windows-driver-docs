@@ -2,13 +2,23 @@
 title: Miniport Drivers with a WDM Lower Interface
 description: Miniport Drivers with a WDM Lower Interface
 ms.assetid: defa955b-c1d2-4c78-a983-584aedc8a1a3
-keywords: ["miniport drivers WDK networking , WDM lower interface", "NDIS miniport drivers WDK , WDM lower interface", "NDIS-WDM miniport drivers WDK networking", "WDM lower interface WDK NDIS"]
+keywords:
+- miniport drivers WDK networking , WDM lower interface
+- NDIS miniport drivers WDK , WDM lower interface
+- NDIS-WDM miniport drivers WDK networking
+- WDM lower interface WDK NDIS
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Miniport Drivers with a WDM Lower Interface
 
 
-## <a href="" id="ddk-miniport-driver-with-a-wdm-lower-interface-ng"></a>
+
 
 
 A miniport driver with a Microsoft [Windows Driver Model](https://msdn.microsoft.com/library/windows/hardware/ff565698) (WDM) lower interface is also known as an *NDIS-WDM miniport driver*. This type of miniport driver:

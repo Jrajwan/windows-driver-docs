@@ -2,13 +2,24 @@
 title: Deregistering a SAP
 description: Deregistering a SAP
 ms.assetid: 2d279348-b58e-4d7e-ac8b-211e9b8a0622
-keywords: ["service access points WDK CoNDIS", "SAPs WDK CoNDIS", "deregistering SAPs", "unregistering SAPs", "removing SAPs"]
+keywords:
+- service access points WDK CoNDIS
+- SAPs WDK CoNDIS
+- deregistering SAPs
+- unregistering SAPs
+- removing SAPs
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Deregistering a SAP
 
 
-## <a href="" id="ddk-deregistering-a-sap-ng"></a>
+
 
 
 A connection-oriented client deregisters a SAP with [**NdisClDeregisterSap**](https://msdn.microsoft.com/library/windows/hardware/ff561628).

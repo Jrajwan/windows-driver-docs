@@ -2,13 +2,21 @@
 title: Summary of INF Sections
 description: Summary of INF Sections
 ms.assetid: a9d4691b-4429-456b-a5d2-482ccd0a2845
-keywords: ["INF files WDK device installations , sections", "sections WDK INF files"]
+keywords:
+- INF files WDK device installations , sections
+- sections WDK INF files
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Summary of INF Sections
 
 
-## <a href="" id="ddk-summary-of-inf-sections-dg"></a>
+
 
 
 The following summarizes the system-defined sections that can be used in INF files. System-defined section names are case-insensitive. For example, **version**, **VERSION**, and **Version** are equally valid section-names within an INF file.
@@ -61,7 +69,7 @@ Starting with Microsoft Windows 2000, this section is required as an expansion o
 This optional section adds device-specific (and typically, driver-independent) information to the registry or removes such information from the registry, possibly for a multifunction device or to install one or more PnP filter drivers.
 
 <a href="" id="ddinstall-coinstallers-section"></a>[***DDInstall*.CoInstallers Section**](inf-ddinstall-coinstallers-section.md)  
-**Note**  If you are building a universal or mobile driver package, this section is not valid. See [Using a Universal INF File](using-a-configurable-inf-file.md).
+**Note**  If you are building a universal or mobile driver package, this section is not valid. See [Using a Universal INF File](using-a-universal-inf-file.md).
 
  
 
@@ -70,14 +78,14 @@ This optional section registers one or more device-specific co-installers suppli
 A co-installer is an IHV/OEM-provided Win32 DLL that typically writes additional configuration information to the registry or performs other installation tasks that require dynamically generated, machine-specific information that is not available when the device's INF file is created. For more information, see [Writing a Co-installer](writing-a-co-installer.md).
 
 <a href="" id="ddinstall-factdef-section"></a>[***DDInstall*.FactDef Section**](inf-ddinstall-factdef-section.md)  
-**Note**  If you are building a universal or mobile driver package, this section is not valid. See [Using a Universal INF File](using-a-configurable-inf-file.md).
+**Note**  If you are building a universal or mobile driver package, this section is not valid. See [Using a Universal INF File](using-a-universal-inf-file.md).
 
  
 
 This section should be included in the INF file of any manually installed non-PnP device. It specifies the factory default hardware configuration settings, such as the bus-relative I/O ports, IRQ (if any), and so forth, for the card.
 
 <a href="" id="ddinstall-logconfigoverride-section"></a>[***DDInstall*.LogConfigOverride Section**](inf-ddinstall-logconfigoverride-section.md)  
-**Note**  If you are building a universal or mobile driver package, this section is not valid. See [Using a Universal INF File](using-a-configurable-inf-file.md).
+**Note**  If you are building a universal or mobile driver package, this section is not valid. See [Using a Universal INF File](using-a-universal-inf-file.md).
 
  
 

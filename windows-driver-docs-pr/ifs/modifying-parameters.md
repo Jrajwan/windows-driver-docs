@@ -3,7 +3,18 @@ title: Modifying Parameters
 author: windows-driver-content
 description: Modifying Parameters
 ms.assetid: 01accd7f-7aa6-4f83-b8b4-81c04cd48dac
-keywords: ["filter manager WDK file system minifilter , modifying parameters", "swap buffers WDK file system minifilter", "buffers WDK file system minifilter", "memory descriptor lists WDK file system minifilter", "MDLs WDK file systems"]
+keywords:
+- filter manager WDK file system minifilter , modifying parameters
+- swap buffers WDK file system minifilter
+- buffers WDK file system minifilter
+- memory descriptor lists WDK file system minifilter
+- MDLs WDK file systems
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Modifying Parameters
@@ -44,6 +55,5 @@ The following routines provide support for swapping buffers:
  
 
 
---------------------
 
 

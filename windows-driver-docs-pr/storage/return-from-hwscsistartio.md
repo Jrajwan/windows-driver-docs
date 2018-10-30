@@ -3,7 +3,17 @@ title: Return from HwScsiStartIo
 author: windows-driver-content
 description: Return from HwScsiStartIo
 ms.assetid: e3d5e21a-4dc2-41bf-97a2-9ac2aa5a1af2
-keywords: ["SCSI miniport drivers WDK storage , HwScsiStartIo", "HwScsiStartIo", "return values WDK SCSI", "status values WDK SCSI"]
+keywords:
+- SCSI miniport drivers WDK storage , HwScsiStartIo
+- HwScsiStartIo
+- return values WDK SCSI
+- status values WDK SCSI
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Return from HwScsiStartIo
@@ -35,6 +45,5 @@ The *HwScsiStartIo* routine of a miniport driver that manages its HBA exclusivel
  
 
 
---------------------
 
 

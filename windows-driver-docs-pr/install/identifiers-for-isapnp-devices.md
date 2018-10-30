@@ -2,13 +2,24 @@
 title: Identifiers for ISAPNP Devices
 description: Identifiers for ISAPNP Devices
 ms.assetid: 67337bd6-3b5f-41a7-b50d-bf3587f243e8
-keywords: ["device identification strings WDK , ISAPNP devices", "identification strings WDK device , ISAPNP devices", "identifiers WDK device , ISAPNP devices", "ISAPNP device identifiers WDK device installations", "hardware IDs WDK device installations"]
+keywords:
+- device identification strings WDK , ISAPNP devices
+- identification strings WDK device , ISAPNP devices
+- identifiers WDK device , ISAPNP devices
+- ISAPNP device identifiers WDK device installations
+- hardware IDs WDK device installations
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Identifiers for ISAPNP Devices
 
 
-## <a href="" id="ddk-identifiers-for-isapnp-devices-dg"></a>
+
 
 
 Every ISAPNP card supports a readable resource data structure that describes the resources supported and those requested by the card. This structure supports the concept of multiple functions (or "logical devices") for ISA card. A separate set of "tags" or "descriptors" are associated with each function of the card. Using this tag information, the ISAPNP enumerator constructs two hardware identifiers, formatted as:
@@ -21,13 +32,13 @@ where *m(3)d(4)* together make up an EISA-style identifier for the device--three
 
 The following pair of hardware IDs might be produced by a specific function on a multifunction card:
 
-ISAPNP\\CSC6835\_DEV0000
+ISAPNP\\CSC6835_DEV0000
 
 \*CSC0000
 
 The first of the two hardware IDs is the device ID. If the device in question is one function of a multifunction card, the device ID takes this form:
 
-ISAPNP\\m(3)d(4)\_DEVn(4)
+ISAPNP\\m(3)d(4)_DEVn(4)
 
 where *n(4)* is the decimal index (with leading zeros) of the function.
 

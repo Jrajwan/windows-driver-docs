@@ -2,13 +2,23 @@
 title: Creating INF Files for Multiple Platforms and Operating Systems
 description: Creating INF Files for Multiple Platforms and Operating Systems
 ms.assetid: 61996c72-c5a7-4ff0-aeb3-6e77b77542c8
-keywords: ["INF files WDK device installations , multiple platforms and operating systems", "multiple operating systems WDK , INF files", "cross-platform INF files WDK", "operating systems WDK , cross-operating system INF files"]
+keywords:
+- INF files WDK device installations , multiple platforms and operating systems
+- multiple operating systems WDK , INF files
+- cross-platform INF files WDK
+- operating systems WDK , cross-operating system INF files
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Creating INF Files for Multiple Platforms and Operating Systems
 
 
-## <a href="" id="ddk-creating-inf-files-for-multiple-platforms-and-operating-systems-dg"></a>
+
 
 
 By using system-defined platform extensions to [INF file sections and directives](inf-file-sections-and-directives.md), you can create a single INF file for cross-platform installations. The extensions enable you to create *decorated* section names, which specify which sections and directives are relevant to each target platform and operating system. For example, you can create an INF file that installs a device only on x64-based systems, only on Itanium-based systems, only on x86-based systems, or on all systems that are supported by Windows 2000 and later versions of Windows.

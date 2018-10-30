@@ -3,7 +3,15 @@ title: Filtering I/O Operations in a Minifilter Driver
 author: windows-driver-content
 description: Filtering I/O Operations in a Minifilter Driver
 ms.assetid: e35944c1-fcc6-44e0-838c-da8d24f95d51
-keywords: ["preoperation callback routines WDK file system minifilter , guidelines", "postoperation callback routines WDK file system minifilter , guidelines"]
+keywords:
+- preoperation callback routines WDK file system minifilter , guidelines
+- postoperation callback routines WDK file system minifilter , guidelines
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Filtering I/O Operations in a Minifilter Driver
@@ -27,6 +35,5 @@ The following list describes several guidelines for filtering specific types of 
  
 
 
---------------------
 
 

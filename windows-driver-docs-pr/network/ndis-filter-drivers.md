@@ -1,14 +1,23 @@
 ---
-title: NDIS Filter Drivers
-description: NDIS Filter Drivers
+title: Filter drivers
+description: Filter drivers
 ms.assetid: 626547ba-4c26-4be7-b209-c5e26daf56ab
-keywords: ["filter drivers WDK networking , architecture", "NDIS filter drivers WDK , architecture", "filter modules WDK networking"]
+keywords:
+- filter drivers WDK networking , architecture
+- NDIS filter drivers WDK , architecture
+- filter modules WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
-# NDIS Filter Drivers
+# Filter drivers
 
 
-## <a href="" id="ddk-ndis-filter-drivers-ng"></a>
+
 
 
 NDIS 6.0 introduced NDIS filter drivers. Filter drivers can monitor and modify the interaction between protocol drivers and miniport drivers. Filter drivers are easier to implement and have less processing overhead than NDIS intermediate drivers.

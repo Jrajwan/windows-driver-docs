@@ -3,7 +3,14 @@ title: How Completion Processing Is Performed
 author: windows-driver-content
 description: How Completion Processing Is Performed
 ms.assetid: 5741c226-9781-4d9a-b6dd-d8ecc17c4c6f
-keywords: ["IRP completion routines WDK file system , processing stages"]
+keywords:
+- IRP completion routines WDK file system , processing stages
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # How Completion Processing Is Performed
@@ -45,6 +52,5 @@ The second stage is performed in the context of the thread that originated the I
  
 
 
---------------------
 
 

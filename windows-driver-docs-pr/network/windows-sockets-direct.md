@@ -2,13 +2,27 @@
 title: Windows Sockets Direct
 description: Windows Sockets Direct
 ms.assetid: 9e153a77-c4d4-4425-8f36-5ab9d6a80386
-keywords: ["system area networks WDK , Windows Sockets Direct", "SAN WDK , Windows Sockets Direct", "Windows Sockets Direct WDK", "Windows Sockets Direct WDK , about Windows Sockets Direct", "Windows Sockets Direct switch WDK", "switch WDK Windows Sockets Direct", "sockets WDK Windows Sockets Direct", "SAN NIC WDK SANs"]
+keywords:
+- system area networks WDK , Windows Sockets Direct
+- SAN WDK , Windows Sockets Direct
+- Windows Sockets Direct WDK
+- Windows Sockets Direct WDK , about Windows Sockets Direct
+- Windows Sockets Direct switch WDK
+- switch WDK Windows Sockets Direct
+- sockets WDK Windows Sockets Direct
+- SAN NIC WDK SANs
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Windows Sockets Direct
 
 
-## <a href="" id="ddk-windows-sockets-direct-ng"></a>
+
 
 
 Microsoft Windows Sockets Direct is a technology that, when possible, routes data at high speed and with high performance to and from Windows Sockets applications through a system area network (SAN) instead of the TCP/IP transport and an NDIS miniport driver.

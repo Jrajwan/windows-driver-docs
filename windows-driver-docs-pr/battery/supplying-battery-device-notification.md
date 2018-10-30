@@ -2,7 +2,20 @@
 title: Supplying Battery Device Notification
 description: Supplying Battery Device Notification
 ms.assetid: 7104c43b-84f1-496d-9552-608101f5b379
-keywords: ["battery notifications WDK", "battery miniclass drivers WDK , notifications", "notifications WDK battery", "battery miniclass drivers WDK , status reporting", "status information WDK battery", "monitoring battery status", "battery class drivers WDK , notifications"]
+keywords:
+- battery notifications WDK
+- battery miniclass drivers WDK , notifications
+- notifications WDK battery
+- battery miniclass drivers WDK , status reporting
+- status information WDK battery
+- monitoring battery status
+- battery class drivers WDK , notifications
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Supplying Battery Device Notification
@@ -20,6 +33,5 @@ In addition to the [*BatteryMiniQueryStatus*](https://msdn.microsoft.com/library
  
 
 
---------------------
 
 

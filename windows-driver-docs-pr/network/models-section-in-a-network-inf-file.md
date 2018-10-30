@@ -2,13 +2,22 @@
 title: Models Section in a Network INF File
 description: Models Section in a Network INF File
 ms.assetid: 0340a875-ae5a-49c8-9498-1f8aba97e029
-keywords: ["INF files WDK network , Models section", "network INF files WDK , Models section", "Models section WDK networking"]
+keywords:
+- INF files WDK network , Models section
+- network INF files WDK , Models section
+- Models section WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Models Section in a Network INF File
 
 
-## <a href="" id="ddk-models-section-ng"></a>
+
 
 
 The **Models** section in a network INF file is based on the generic [**INF Models section**](https://msdn.microsoft.com/library/windows/hardware/ff547456).

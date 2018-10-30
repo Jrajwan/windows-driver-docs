@@ -2,13 +2,23 @@
 title: Handling Socket Options and Control Codes for a SAN
 description: Handling Socket Options and Control Codes for a SAN
 ms.assetid: 5c07d0e3-b6d7-4daf-8b3f-80aafd7c7a37
-keywords: ["Windows Sockets Direct WDK , SAN socket options", "SAN sockets WDK , options", "retrieving SAN socket options", "SAN service providers WDK , status information"]
+keywords:
+- Windows Sockets Direct WDK , SAN socket options
+- SAN sockets WDK , options
+- retrieving SAN socket options
+- SAN service providers WDK , status information
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Handling Socket Options and Control Codes for a SAN
 
 
-## <a href="" id="ddk-handling-socket-options-and-control-codes-for-a-san-ng"></a>
+
 
 
 The Windows Sockets switch, in conjunction with the TCP/IP provider, handles most **WSPGetSockOpt**, **WSPSetSockOpt**, and **WSPIoctl** calls initiated by applications. These requests are generally to set and retrieve options and operating parameters associated with an application's socket. The switch does not generally forward these calls to a SAN service provider except as described in the following sections.

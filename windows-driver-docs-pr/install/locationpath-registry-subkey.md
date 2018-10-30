@@ -2,6 +2,12 @@
 title: LocationPath Registry Subkey
 description: LocationPath Registry Subkey
 ms.assetid: 3b6f3501-5969-453c-a04b-5559761c3222
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # LocationPath Registry Subkey
@@ -82,7 +88,7 @@ The location path string for a given devnode can be displayed through Device Man
 
 3.  In the **Property** drop-down list, find the **LocationPaths** property. This property contains the location path string for this devnode and is the value that should be used for the **LocationPath** registry subkey.
 
-**Note**  It is possible that the devnode does not have a **LocationPaths** value. This is because the driver for this devnode or one of its parents does not implement the [GUID\_PNP\_LOCATION\_INTERFACE](https://msdn.microsoft.com/library/windows/hardware/ff546564) interface. In this case, you must check the parent devnode for a **LocationPaths** property.
+**Note**  It is possible that the devnode does not have a **LocationPaths** value. This is because the driver for this devnode or one of its parents does not implement the [GUID_PNP_LOCATION_INTERFACE](https://msdn.microsoft.com/library/windows/hardware/ff546564) interface. In this case, you must check the parent devnode for a **LocationPaths** property.
 
  
 

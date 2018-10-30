@@ -2,20 +2,24 @@
 title: Synchronization Examples
 author: windows-driver-content
 description: Synchronization Examples
-MS-HAID:
-- 'strmini-design\_fe251cde-15c5-4607-8a49-c050ae9d6bd5.xml'
-- 'stream.synchronization\_examples'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: b9290fab-8213-4083-bda5-0e6c2af737a6
-keywords: ["Stream.sys class driver WDK Windows 2000 Kernel , synchronization", "streaming minidrivers WDK Windows 2000 Kernel , synchronization", "minidrivers WDK Windows 2000 Kernel Streaming , synchronization", "synchronization WDK streaming minidriver"]
+keywords:
+- Stream.sys class driver WDK Windows 2000 Kernel , synchronization
+- streaming minidrivers WDK Windows 2000 Kernel , synchronization
+- minidrivers WDK Windows 2000 Kernel Streaming , synchronization
+- synchronization WDK streaming minidriver
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Synchronization Examples
 
 
-## <a href="" id="ddk-synchronization-examples-ksg"></a>
+
 
 
 The following examples illustrate what a minidriver needs to do regarding synchronization and includes examples of when synchronization should not be used:
@@ -54,7 +58,5 @@ The following examples illustrate what a minidriver needs to do regarding synchr
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bstream\stream%5D:%20Synchronization%20Examples%20%20RELEASE:%20%288/23/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

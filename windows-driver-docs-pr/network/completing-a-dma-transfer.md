@@ -2,7 +2,19 @@
 title: Completing a DMA Transfer
 description: Completing a DMA Transfer
 ms.assetid: 3107c2e5-15a7-4399-b09d-b66a79cb5fab
-keywords: ["memory-to-memory data transfers WDK NetDMA , completing", "data transfers WDK NetDMA , completing", "transferring data WDK NetDMA , completing", "DMA transfers WDK NetDMA , completing", "NetDMA WDK networking , completing transfers", "completing DMA transfers"]
+keywords:
+- memory-to-memory data transfers WDK NetDMA , completing
+- data transfers WDK NetDMA , completing
+- transferring data WDK NetDMA , completing
+- DMA transfers WDK NetDMA , completing
+- NetDMA WDK networking , completing transfers
+- completing DMA transfers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Completing a DMA Transfer
@@ -12,7 +24,7 @@ keywords: ["memory-to-memory data transfers WDK NetDMA , completing", "data tran
 
  
 
-## <a href="" id="ddk-completing-a-dma-transfer-ng"></a>
+
 
 
 The NetDMA interface provides two methods for a NetDMA provider to complete a dynamic memory access (DMA) transfer:

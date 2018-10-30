@@ -2,13 +2,23 @@
 title: Creating a Netmap.inf File
 description: Creating a Netmap.inf File
 ms.assetid: 0f9b4f57-717c-4f11-b0c6-d117a949ab38
-keywords: ["network component upgrades WDK , netmap.inf files", "upgrading network components WDK , netmap.inf files", "netmap.inf files WDK", "vendor-supplied files WDK netmap.inf file"]
+keywords:
+- network component upgrades WDK , netmap.inf files
+- upgrading network components WDK , netmap.inf files
+- netmap.inf files WDK
+- vendor-supplied files WDK netmap.inf file
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Creating a Netmap.inf File
 
 
-## <a href="" id="ddk-creating-a-netmap-inf-file-ng"></a>
+
 
 
 **Note**  Vendor-supplied network upgrades are not supported in Microsoft Windows XP (SP1 and later), Microsoft Windows Server 2003, and later operating systems.

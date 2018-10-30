@@ -2,7 +2,18 @@
 title: Supporting NULL DMA Transfers
 description: Supporting NULL DMA Transfers
 ms.assetid: 74e278ce-d346-4bec-ad07-12f1cd95474a
-keywords: ["memory-to-memory data transfers WDK NetDMA , NULL DMA transfers", "data transfers WDK NetDMA , NULL DMA transfers", "transferring data WDK NetDMA , NULL DMA transfers", "DMA transfers WDK NetDMA , NULL DMA transfers", "NetDMA WDK networking , NULL DMA transfe"]
+keywords:
+- memory-to-memory data transfers WDK NetDMA , NULL DMA transfers
+- data transfers WDK NetDMA , NULL DMA transfers
+- transferring data WDK NetDMA , NULL DMA transfers
+- DMA transfers WDK NetDMA , NULL DMA transfers
+- NetDMA WDK networking , NULL DMA transfe
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Supporting NULL DMA Transfers
@@ -12,7 +23,7 @@ keywords: ["memory-to-memory data transfers WDK NetDMA , NULL DMA transfers", "d
 
  
 
-## <a href="" id="ddk-supporting-null-dma-transfers-ng"></a>
+
 
 
 A *NULL DMA transfer* is a zero-length data transfer that is specified in a dynamic memory access (DMA) descriptor. NetDMA providers must provide the completion status for **NULL** DMA transfers.

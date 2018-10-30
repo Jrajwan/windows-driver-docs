@@ -2,13 +2,22 @@
 title: Installation Requirements for Network Filter Intermediate Drivers
 description: Installation Requirements for Network Filter Intermediate Drivers
 ms.assetid: 17eb9045-1466-4bd2-8805-964d339c4a9f
-keywords: ["network filter intermediate driver installation requirements WDK", "service INF files WDK networking", "device INF files WDK networking"]
+keywords:
+- network filter intermediate driver installation requirements WDK
+- service INF files WDK networking
+- device INF files WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Installation Requirements for Network Filter Intermediate Drivers
 
 
-## <a href="" id="ddk-installation-requirements-for-network-filter-intermediate-drivers-"></a>
+
 
 
 **Note**  Filter intermediate drivers are not supported in NDIS 6.0 and later. You should use the NDIS filter driver interface instead. For more information about NDIS filter drivers, see [NDIS Filter Drivers](ndis-filter-drivers.md).

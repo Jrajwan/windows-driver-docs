@@ -3,7 +3,14 @@ title: Applying Security Descriptors on the Device Object
 author: windows-driver-content
 description: Applying Security Descriptors on the Device Object
 ms.assetid: c0697021-cf78-4b85-b959-342179da5621
-keywords: ["security descriptors WDK file systems , applying on device object"]
+keywords:
+- security descriptors WDK file systems , applying on device object
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Applying Security Descriptors on the Device Object
@@ -69,6 +76,5 @@ An interesting issue in these cases is how to handle security at the boundary be
  
 
 
---------------------
 
 

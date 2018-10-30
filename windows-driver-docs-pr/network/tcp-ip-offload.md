@@ -2,13 +2,27 @@
 title: TCP/IP Offload
 description: TCP/IP Offload
 ms.assetid: 1f074ce5-2614-47a5-9ee0-a5e43f05273d
-keywords: ["network drivers WDK , TCP/IP offload", "TCP/IP offload WDK networking", "offload WDK TCP/IP transport", "TCP/IP offload WDK networking , about TCP/IP offload", "offload WDK TCP/IP transport , about TCP/IP offload", "task offload WDK TCP/IP transport", "connection offload WDK TCP/IP transport", "packets WDK networking , TCP/IP offload"]
+keywords:
+- network drivers WDK , TCP/IP offload
+- TCP/IP offload WDK networking
+- offload WDK TCP/IP transport
+- TCP/IP offload WDK networking , about TCP/IP offload
+- offload WDK TCP/IP transport , about TCP/IP offload
+- task offload WDK TCP/IP transport
+- connection offload WDK TCP/IP transport
+- packets WDK networking , TCP/IP offload
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # TCP/IP Offload
 
 
-## <a href="" id="ddk-tcp-ip-offload-ng"></a>
+
 
 
 To increase its performance, the Microsoft TCP/IP transport can offload tasks or connections to a NIC that has the appropriate TCP/IP-offload capabilities.

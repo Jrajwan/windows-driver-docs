@@ -1,26 +1,33 @@
 ---
 title: INF DelProperty Directive
-description: A DelProperty directive references one or more INF file sections that delete device properties for a device instance, a device setup class, a device interface class, or a device interface.
+description: DelProperty references INF file sections that delete device properties for a device instance, a device setup class, a device interface class, or a device interface.
 ms.assetid: fff227de-1664-4c9b-8709-1a8e1966bd79
-keywords: ["INF DelProperty Directive Device and Driver Installation"]
+keywords:
+- INF DelProperty Directive Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF DelProperty Directive
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF DelProperty Directive
 
 
-**Note**  If you are building a universal or mobile driver package, this directive is not valid. See [Using a Universal INF File](using-a-configurable-inf-file.md).
+**Note**  If you are building a universal or mobile driver package, this directive is not valid. See [Using a Universal INF File](using-a-universal-inf-file.md).
 
  
 
 A **DelProperty** directive references one or more INF file sections that delete [device properties](device-properties.md) for a device instance, a [device setup class](device-setup-classes.md), a [device interface class](device-interface-classes.md), or a device interface.
 
-``` syntax
+```
 [DDInstall] | 
 [DDInstall.CoInstallers] | 
 [ClassInstall32] | 
@@ -41,7 +48,7 @@ A **DelProperty** directive can be specified under any of the sections shown in 
 
 A *del-property-section* that is referenced by a **DelProperty** directive has the following format:
 
-``` syntax
+```
 [del-property-section]
 (property-name [ ,, flags [, value]]) | ({property-category-guid}, property-pid [ , flags [, value]])
 (property-name [ ,, flags [, value]]) | ({property-category-guid}, property-pid [ , flags [, value]])
@@ -65,11 +72,11 @@ A property identifier that indicates the specific property within the property c
 <a href="" id="flags"></a>*flags*  
 An optional hexadecimal flag value that controls the delete operation. The only flag value supported is as follows:
 
-<a href="" id="0x00000001--flg-delproperty-multi-sz-delstring-"></a>**0x00000001** (FLG\_DELPROPERTY\_MULTI\_SZ\_DELSTRING)  
-If the property data type is [**DEVPROP\_TYPE\_STRING\_LIST**](https://msdn.microsoft.com/library/windows/hardware/ff543614), the operation deletes all the strings with the existing string list that match the string that is supplied by the value entry value. The case of a character is not considered in the comparison between the supplied string and an existing string in the string list.
+<a href="" id="0x00000001--flg-delproperty-multi-sz-delstring-"></a>**0x00000001** (FLG_DELPROPERTY_MULTI_SZ_DELSTRING)  
+If the property data type is [**DEVPROP_TYPE_STRING_LIST**](https://msdn.microsoft.com/library/windows/hardware/ff543614), the operation deletes all the strings with the existing string list that match the string that is supplied by the value entry value. The case of a character is not considered in the comparison between the supplied string and an existing string in the string list.
 
 <a href="" id="value"></a>*value*  
-If the property data type is DEVPROP\_TYPE\_STRING\_LIST and the flags entry is **0x00000001**, the *value* entry value supplies the string that the delete operation uses to search for matching strings in the existing string list and, if a matching string is found, the delete operation removes the matching string from the existing string list.
+If the property data type is DEVPROP_TYPE_STRING_LIST and the flags entry is **0x00000001**, the *value* entry value supplies the string that the delete operation uses to search for matching strings in the existing string list and, if a matching string is found, the delete operation removes the matching string from the existing string list.
 
 Remarks
 -------
@@ -83,7 +90,7 @@ For more information about how to use the **DelProperty** directive, see [Using 
 Examples
 --------
 
-The following example of a delete property section includes two line entries: the first line entry includes a *property-name* entry value that deletes the **DeviceModel** property, and the second line entry deletes the string "DeleteThisString" from a custom device property value whose data type is DEVPROP\_TYPE\_STRING\_LIST. In the second line, the *property-category-guid* entry value is "c22189e4-8bf3-4e6d-8467-8dc6d95e2a7e," the *property-identifier* entry value is "2," and the *flags* entry value is "0x00000001,"
+The following example of a delete property section includes two line entries: the first line entry includes a *property-name* entry value that deletes the **DeviceModel** property, and the second line entry deletes the string "DeleteThisString" from a custom device property value whose data type is DEVPROP_TYPE_STRING_LIST. In the second line, the *property-category-guid* entry value is "c22189e4-8bf3-4e6d-8467-8dc6d95e2a7e," the *property-identifier* entry value is "2," and the *flags* entry value is "0x00000001,"
 
 ```
 [SampleDelPropertySection]

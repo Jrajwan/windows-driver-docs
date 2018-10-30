@@ -3,7 +3,14 @@ title: Best Practices
 author: windows-driver-content
 description: Best Practices
 ms.assetid: c01b3fd9-7f4e-4d1a-a726-b31b0eebf094
-keywords: ["contexts WDK file system minifilter , best practices"]
+keywords:
+- contexts WDK file system minifilter , best practices
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Best Practices
@@ -21,6 +28,5 @@ A minifilter driver can also improve performance by storing a pointer to the min
  
 
 
---------------------
 
 

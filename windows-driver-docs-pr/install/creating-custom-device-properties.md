@@ -2,7 +2,14 @@
 title: Creating Custom Device Properties
 description: Creating Custom Device Properties
 ms.assetid: e18fcbe8-6083-451e-b1be-5a543b61c627
-keywords: ["device properties WDK device installations , creating custom"]
+keywords:
+- device properties WDK device installations , creating custom
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Creating Custom Device Properties
@@ -20,7 +27,7 @@ For more information about custom device properties, see the following topics:
 
 ### <a href="" id="creating-custom-device-property-categories"></a> Creating Custom Device Property Categories
 
-A custom device property category is a logically-related collection of custom device properties. To programmatically create a custom device property category, use the [**DEFINE\_DEVPROPKEY**](https://msdn.microsoft.com/library/windows/hardware/ff541072) macro to create the property keys that represent the properties in the property category, as follows:
+A custom device property category is a logically-related collection of custom device properties. To programmatically create a custom device property category, use the [**DEFINE_DEVPROPKEY**](https://msdn.microsoft.com/library/windows/hardware/ff541072) macro to create the property keys that represent the properties in the property category, as follows:
 
 -   Create a unique GUID value that represents the property category and set the GUID value of each property key to this unique GUID value. For information about how to create a new GUID value, see [Defining and Exporting New GUIDs](https://msdn.microsoft.com/library/windows/hardware/ff542998).
 

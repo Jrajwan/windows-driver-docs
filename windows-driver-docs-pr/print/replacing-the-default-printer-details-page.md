@@ -2,20 +2,23 @@
 title: Replacing the Default Printer Details Page
 author: windows-driver-content
 description: Replacing the Default Printer Details Page
-MS-HAID:
-- 'inetpri\_a1c4ee61-2da7-4d9b-a37c-cc973e73176b.xml'
-- 'print.replacing\_the\_default\_printer\_details\_page'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 451f442b-a882-4540-82dd-e96dab5e7619
-keywords: ["customized print Web pages WDK , replacing default page", "replacing default printer details page", "default printer details page"]
+keywords:
+- customized print Web pages WDK , replacing default page
+- replacing default printer details page
+- default printer details page
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Replacing the Default Printer Details Page
 
 
-## <a href="" id="ddk-replacing-the-default-printer-details-page-gg"></a>
+
 
 
 You can replace the default printer details page with a customized page by using the following steps:
@@ -48,7 +51,5 @@ Microsoft reserves the right to modify its print Web pages without notice. There
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20Replacing%20the%20Default%20Printer%20Details%20Page%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

@@ -2,13 +2,22 @@
 title: CM_PROB_FAILED_START
 description: CM_PROB_FAILED_START
 ms.assetid: a7759bcd-1806-4d7a-8ff0-3b03abcae08b
-keywords: ["CM_PROB_FAILED_START"]
+keywords:
+- CM_PROB_FAILED_START
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # CM_PROB_FAILED_START
 
+This function is reserved for system use.
 
-## <a href="" id="ddk-cm-prob-failed-start-dg"></a>
+
+
 
 
 The device failed to start.

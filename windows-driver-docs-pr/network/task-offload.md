@@ -2,13 +2,24 @@
 title: TCP/IP Task Offload
 description: TCP/IP Task Offload
 ms.assetid: e73cc4e8-574b-438b-acd2-f0aaf5c20589
-keywords: ["TCP/IP offload WDK networking , task offload", "offload WDK TCP/IP transport , task offload", "task offload WDK TCP/IP transport", "task offload WDK TCP/IP transport , about task offload", "capabilities WDK TCP/IP offload"]
+keywords:
+- TCP/IP offload WDK networking , task offload
+- offload WDK TCP/IP transport , task offload
+- task offload WDK TCP/IP transport
+- task offload WDK TCP/IP transport , about task offload
+- capabilities WDK TCP/IP offload
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # TCP/IP Task Offload
 
 
-## <a href="" id="ddk-task-offload-ng"></a>
+
 
 
 To increase its performance, the Microsoft TCP/IP transport can offload tasks to a network interface card (NIC) that has the appropriate task offload capabilities.

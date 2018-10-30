@@ -2,13 +2,23 @@
 title: Allocating and Releasing Memory for a SAN Proxy Driver
 description: Allocating and Releasing Memory for a SAN Proxy Driver
 ms.assetid: c196f202-159c-4296-9888-818eaeaada73
-keywords: ["proxy drivers WDK SANs , memory allocations", "SAN proxy drivers WDK , memory allocations", "memory allocations WDK SANs", "releasing memory for SAN proxy drivers"]
+keywords:
+- proxy drivers WDK SANs , memory allocations
+- SAN proxy drivers WDK , memory allocations
+- memory allocations WDK SANs
+- releasing memory for SAN proxy drivers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Allocating and Releasing Memory for a SAN Proxy Driver
 
 
-## <a href="" id="ddk-allocating-and-releasing-memory-for-a-san-proxy-driver-ng"></a>
+
 
 
 The proxy driver must set up access to user buffers so that the Windows Sockets switch can transfer control messages and perform RDMA operations. To request this type of buffer access, the proxy driver sets a bit in the **Flags** member of its device object to DO\_DIRECT\_IO. The proxy driver must also allocate or release memory that is used for message transfer and RDMA whenever requested to do so. When the Windows Sockets switch requests a SAN service provider to register or release memory, the SAN service provider requests its proxy driver to respectively allocate or release physical memory. For more information about setting up buffer access and allocating and releasing memory, see [Memory Management](https://msdn.microsoft.com/library/windows/hardware/ff554389) and [Buffer Management](https://msdn.microsoft.com/library/windows/hardware/ff540667).

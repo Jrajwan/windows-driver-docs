@@ -1,16 +1,24 @@
 ---
 title: Hardware dashboard FAQ
 description: This article provides answers to frequently asked questions about the Windows Hardware Dev Center dashboard.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: AA3D1147-7015-4D21-84A6-D127F57DDC97
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Hardware dashboard FAQ
 
 
 This article provides answers to frequently asked questions about the Windows Hardware Dev Center dashboard.
+
+## <span id="How_do_I_contact_Hardware_Dev_Center_Dashboard_Support_"></span><span id="how_do_i_contact_hardware_dev_center_dashboard_support_"></span><span id="HOW_DO_I_CONTACT_HARDWARE_DEV_CENTER_DASHBOARD_SUPPORT_"></span>How do I contact Hardware Dev Center Dashboard Support?
+
+If you are having problems accessing the Dashboard or need Dashboard Support please open a support ticket here: https://developer.microsoft.com/windows/support.  Select **Contact us**,  **Dashboard issue**, and then **Hardware submissions & signing (all OS version)** from the dropdown.
+
 
 ## <span id="Can_I_associate_multiple_certificates_with_a_dashboard_account_"></span><span id="can_i_associate_multiple_certificates_with_a_dashboard_account_"></span><span id="CAN_I_ASSOCIATE_MULTIPLE_CERTIFICATES_WITH_A_DASHBOARD_ACCOUNT_"></span>Can I associate multiple certificates with a dashboard account?
 
@@ -22,7 +30,10 @@ There is no restriction on the number of certificates (both EV and Standard) ass
 ## <span id="What_agreements_need_to_be_signed_"></span><span id="what_agreements_need_to_be_signed_"></span><span id="WHAT_AGREEMENTS_NEED_TO_BE_SIGNED_"></span>What agreements need to be signed?
 
 
-The following agreements can be signed as part of the registration process:
+The following agreements can be signed as part of the registration process.
+
+> [!NOTE]
+> Signing the Windows Hardware Compatibility Program Test Agreement is a requirement for all registrations. All other agreements are optional unless you are using features or assets in the other associated agreements. 
 
 -   Windows Hardware Compatibility Program Test Agreement (ver 2.0)
 
@@ -44,21 +55,32 @@ See [Managing User Roles](managing-user-roles.md) for more information.
 
 All hardware submissions to the dashboard will be processed within five business days or less, depending on whether the submission requires manual review. Manual review may be required if your submission's tests fail, if it does not have a valid filter applied, or due to internal business policy.
 
-### <span id="How_do_I_get_my_product_listed_on_Windows_Compatible_Products_List_"></span><span id="how_do_i_get_my_product_listed_on_windows_compatible_products_list_"></span><span id="HOW_DO_I_GET_MY_PRODUCT_LISTED_ON_WINDOWS_COMPATIBLE_PRODUCTS_LIST_"></span>How do I get my product listed on Windows Compatible Products List?
-
-Check that the announcement date that has been set. If it is not, set the date for either the current date or your preferred date. The product will be listed the day after the date you set.
-
 ### <span id="Why_do_I_see_a_difference_in_download_signed_files_"></span><span id="why_do_i_see_a_difference_in_download_signed_files_"></span><span id="WHY_DO_I_SEE_A_DIFFERENCE_IN_DOWNLOAD_SIGNED_FILES_"></span>Why do I see a difference in download signed files?
 
 In order to make Windows 10 more secure without affecting performance, all binaries are now receiving embedded signatures. This applies to all submissions for certification, not only Windows 10 submissions.
 
 ### <span id="How_to_get_a_single_cat_file_if_drivers_are_uniform_for_all_operating_systems"></span><span id="how_to_get_a_single_cat_file_if_drivers_are_uniform_for_all_operating_systems"></span><span id="HOW_TO_GET_A_SINGLE_CAT_FILE_IF_DRIVERS_ARE_UNIFORM_FOR_ALL_OPERATING_SYSTEMS"></span>How to get a single cat file if drivers are uniform for all operating systems
 
-Make sure your final package has a single driver folder on the **Package** tab and the driver’s properties include all the operating systems you have tested. For more information, see [Walkthrough: How to get a driver signed by Microsoft for multiple versions of Windows](walkthrough--how-to-get-a-driver-signed-by-microsoft-for-multiple-versions-of-windows.md).
+Make sure your final package has a single driver folder on the **Package** tab and the driver’s properties include all the operating systems you have tested. For more information, see [Walkthrough: How to get a driver signed by Microsoft for multiple versions of Windows](get-drivers-signed-by-microsoft-for-multiple-windows-versions.md).
 
 ### <span id="I_m_unable_to_add_new_marketing_names_to_the_approved_submission"></span><span id="i_m_unable_to_add_new_marketing_names_to_the_approved_submission"></span><span id="I_M_UNABLE_TO_ADD_NEW_MARKETING_NAMES_TO_THE_APPROVED_SUBMISSION"></span>I'm unable to add new marketing names to the approved submission
 
 Check the announcement date that has been set. If the announcement date has passed, you won't be able to add a new name.
+
+### How can I share a link to a Windows Certification Verification Report?
+-   A sharable URL contains three identification numbers separated by slashes as shown below: `https://developer.microsoft.com/dashboard/hardware/driver/DownloadCertificationReport/SellerID/PrivateProductID/SubmissionID`
+
+- The identification numbers used in the URL, and their locations are as follows:
+
+| Component | Description |
+| ---       | ---         |
+|SellerID   | The identification number of your partner account. This can be found on the account management page, under **Account settings**. |
+|PrivateProductID | The identification number generated with each product creation. Located on the driver details page for your product. See [Dashboard ID definitions](https://docs.microsoft.com/en-us/windows-hardware/drivers/dashboard/id-definitions) for more information. |
+|SubmissionID | The idenfication number given to each submission and submission update. Located on the driver details page for your product. See [Dashboard ID definitions](https://docs.microsoft.com/en-us/windows-hardware/drivers/dashboard/id-definitions) for more information. |
+
+- To create a sharable link, replace **SellerID**, **PrivateProductID**, and **SubmissionID** in the example URL above with the appropriate identification numbers.
+- This URL allows the report to be accessed and downloaded without prior authorization or access to the Windows Hardware Dev Center Dashboard.   
+
 
 ## <span id="Troubleshooting_submission_upload_errors"></span><span id="troubleshooting_submission_upload_errors"></span><span id="TROUBLESHOOTING_SUBMISSION_UPLOAD_ERRORS"></span>Troubleshooting submission upload errors
 
@@ -71,7 +93,7 @@ The failure is caused by an incorrect .cab file structure. The .cab structure wa
 
 If you continue to experience issues with your package submission, contact Support in the dashboard header.
 
-### <span id="File_is_using_Zip64_4gb_file_Size_"></span><span id="file_is_using_zip64_4gb_file_size_"></span><span id="FILE_IS_USING_ZIP64_4GB_FILE_SIZE_"></span>File is using Zip64(4gb+file Size)
+### <span id="File_is_using_Zip64_4gb_file_Size_"></span><span id="file_is_using_zip64_4gb_file_size_"></span><span id="FILE_IS_USING_ZIP64_4GB_FILE_SIZE_"></span>"File is using Zip64(4gb+file Size)"
 
 This error is caused when the uploaded archive's filetype is .zip64 instead of .zip. This is caused by a large filesize. To fix this error, repackage the submission using the below steps.
 
@@ -89,9 +111,4 @@ This error is caused when the uploaded archive's filetype is .zip64 instead of .
  
 
  
-
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bhw_dashboard\hw_dashboard%5D:%20Hardware%20dashboard%20FAQ%20%20RELEASE:%20%281/3/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
-
-
-
 

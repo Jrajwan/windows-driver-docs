@@ -2,14 +2,18 @@
 title: Configuration Modules Based on GPD or PPD Files
 author: windows-driver-content
 description: Configuration Modules Based on GPD or PPD Files
-MS-HAID:
-- 'xpsconfig\_fc4db68f-d95a-48c5-b33c-1abbd707e2b9.xml'
-- 'print.configuration\_modules\_based\_on\_gpd\_or\_ppd\_files'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: b0aeea58-1c58-475e-8d4a-597778e42a7c
-keywords: ["Version 3 XPS drivers WDK XPSDrv , GPD files", "Version 3 XPS drivers WDK XPSDrv , PPD files", "GPD files WDK XPSDrv", "PPD files WDK XPSDrv"]
+keywords:
+- Version 3 XPS drivers WDK XPSDrv , GPD files
+- Version 3 XPS drivers WDK XPSDrv , PPD files
+- GPD files WDK XPSDrv
+- PPD files WDK XPSDrv
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Configuration Modules Based on GPD or PPD Files
@@ -105,7 +109,5 @@ The following code example shows a GPD file that illustrates the entries and key
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20Configuration%20Modules%20Based%20on%20GPD%20or%20PPD%20Files%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

@@ -2,16 +2,27 @@
 title: Writing a Co-installer
 description: Writing a Co-installer
 ms.assetid: d5637321-9cff-4b24-8941-d3ca16b0d8c1
-keywords: ["Device setup WDK device installations , co-installers", "device installations WDK , co-installers", "installing devices WDK , co-installers", "co-installers WDK device installations , about co-installers", "coinstallers WDK"]
+keywords:
+- Device setup WDK device installations , co-installers
+- device installations WDK , co-installers
+- installing devices WDK , co-installers
+- co-installers WDK device installations , about co-installers
+- coinstallers WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Writing a Co-installer
 
 
-## <a href="" id="ddk-writing-a-co-installer-dg"></a>
 
 
-**Note**  Features described in this section are not supported in universal or mobile driver packages. See [Using a Universal INF File](using-a-configurable-inf-file.md).
+
+**Note**  Features described in this section are not supported in universal or mobile driver packages. See [Using a Universal INF File](using-a-universal-inf-file.md).
 
  
 

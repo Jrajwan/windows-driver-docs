@@ -2,7 +2,19 @@
 title: TCP Chimney Offload
 description: TCP Chimney Offload
 ms.assetid: 88dafabb-381d-4b12-9faa-8c3031b663c7
-keywords: ["TCP chimney offload WDK networking", "chimney offload WDK networking", "offload WDK networking", "data transfers WDK TCP chimney offload", "transferring data WDK TCP chimney offload", "connections WDK TCP chimney offload"]
+keywords:
+- TCP chimney offload WDK networking
+- chimney offload WDK networking
+- offload WDK networking
+- data transfers WDK TCP chimney offload
+- transferring data WDK TCP chimney offload
+- connections WDK TCP chimney offload
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # TCP Chimney Offload
@@ -45,6 +57,10 @@ This section includes:
 [Power Management for Offload Targets](power-management-for-offload-targets.md)
 
 [TCP Chimney Offload for Intermediate Drivers](tcp-chimney-offload-for-intermediate-drivers.md)
+
+[TCP chimney offload OIDS](tcp-chimney-offload-oids.md)
+
+[TCP chimney offload status indications](tcp-chimney-offload-status-indications.md)
 
  
 

@@ -2,7 +2,15 @@
 title: Writing INF Files
 description: Writing INF Files
 ms.assetid: 0A31484C-3A61-4a6d-B500-E5C69E2130F9
-keywords: ["INF files WDK device installations , writing", "writing INF files WDK device installations"]
+keywords:
+- INF files WDK device installations , writing
+- writing INF files WDK device installations
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Writing INF Files
@@ -12,7 +20,7 @@ When you write an [INF file](inf-files.md) for your [driver package](driver-pack
 
 -   An INF file must use valid structure and syntax to pass driver package validation checks at the beginning of the installation process.
 
-    Use the [ChkINF](https://msdn.microsoft.com/library/windows/hardware/ff543461) tool to validate the structure and syntax of INF files.
+    Use the [INFVerif](../devtest/infverif.md) tool to validate the structure and syntax of INF files.
 
 -   An INF file must contain valid INF [**SourceDisksFiles**](inf-sourcedisksfiles-section.md) and [**SourceDisksNames**](inf-sourcedisksnames-section.md) sections. Starting with Windows Vista, the operating system does not copy the driver package into the [driver store](driver-store.md) unless these sections are present and filled in correctly.
 

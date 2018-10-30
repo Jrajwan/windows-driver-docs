@@ -2,13 +2,25 @@
 title: Device Power States for Network Adapters
 description: Device Power States for Network Adapters
 ms.assetid: 969aadc9-e797-4a07-9714-8c2c5a6357da
-keywords: ["NICs WDK networking , power states", "network interface cards WDK networking , power states", "device power states WDK networking", "power states WDK networking", "power management WDK NDIS miniport , device power states", "transitioning power states WDK networking"]
+keywords:
+- NICs WDK networking , power states
+- network interface cards WDK networking , power states
+- device power states WDK networking
+- power states WDK networking
+- power management WDK NDIS miniport , device power states
+- transitioning power states WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Device Power States for Network Adapters
 
 
-## <a href="" id="ddk-device-power-states-for-nics-ng"></a>
+
 
 
 A device power state for a network adapter describes a network adapter's level of power consumption and computing activity.

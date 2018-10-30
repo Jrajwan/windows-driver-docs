@@ -3,7 +3,18 @@ title: Create Processing
 author: windows-driver-content
 description: Create Processing
 ms.assetid: c15a56d2-47db-4124-8250-f25f69d2d4e3
-keywords: ["security WDK file systems , semantic model checks", "semantic model checks WDK file systems , create processing", "create processing WDK file systems", "Security Reference Monitor WDK", "IRP_MJ_CREATE"]
+keywords:
+- security WDK file systems , semantic model checks
+- semantic model checks WDK file systems , create processing
+- create processing WDK file systems
+- Security Reference Monitor WDK
+- IRP_MJ_CREATE
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Create Processing
@@ -115,6 +126,5 @@ Note that this is not an exhaustive list of semantic issues related to "create" 
  
 
 
---------------------
 
 

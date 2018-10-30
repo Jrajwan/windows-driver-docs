@@ -1,10 +1,16 @@
 ---
-title: Accessing Device Interface Properties
-description: Accessing Device Interface Properties
+title: Accessing Device Interface Properties before Windows Vista
+description: Accessing Device Interface Properties before Windows Vista
 ms.assetid: 48b47d01-ec07-49ca-a03c-c4c387dcfb19
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
-# Accessing Device Interface Properties
+# Accessing Device Interface Properties before Windows Vista
 
 
 In Windows Vista and later versions of Windows, the [unified device property model](unified-device-property-model--windows-vista-and-later-.md) includes device interface properties that characterize a device interface. The unified device property model uses [property keys](property-keys.md) to represent these properties.
@@ -29,13 +35,13 @@ To access device interface properties by using registry entry values on Windows 
 
 -   Set *DeviceInfoSet* to a pointer to a device information set that contains the device interface.
 
--   Set *DeviceInterfaceData* to a pointer to an [**SP\_DEVICE\_INTERFACE\_DATA**](https://msdn.microsoft.com/library/windows/hardware/ff552342) structure that identifies the device interface.
+-   Set *DeviceInterfaceData* to a pointer to an [**SP_DEVICE_INTERFACE_DATA**](https://msdn.microsoft.com/library/windows/hardware/ff552342) structure that identifies the device interface.
 
 -   Set *Reserved* to zero.
 
 -   Set *samDesired* to a REGSAM-typed value that specifies the required access permissions.
 
-If this call to [**SetupDiOpenDeviceInterfaceRegKey**](https://msdn.microsoft.com/library/windows/hardware/ff552075) succeeds, **SetupDiOpenDeviceInterfaceRegKey** returns the requested handle. If the function call fails, **SetupDiOpenDeviceInterfaceRegKey** returns INVALID\_HANDLE\_VALUE and a call to [GetLastError](http://go.microsoft.com/fwlink/p/?linkid=169416) will return the logged error code.
+If this call to [**SetupDiOpenDeviceInterfaceRegKey**](https://msdn.microsoft.com/library/windows/hardware/ff552075) succeeds, **SetupDiOpenDeviceInterfaceRegKey** returns the requested handle. If the function call fails, **SetupDiOpenDeviceInterfaceRegKey** returns INVALID_HANDLE_VALUE and a call to [GetLastError](http://go.microsoft.com/fwlink/p/?linkid=169416) will return the logged error code.
 
 After you retrieve a handle to the device interface registry key, supply the handle in a call to [RegQueryValueEx](http://go.microsoft.com/fwlink/p/?linkid=95398) or [RegSetValueEx](http://go.microsoft.com/fwlink/p/?linkid=95399) to retrieve or set the registry entry value that corresponds to the device interface property.
 
@@ -43,7 +49,7 @@ Call the [RegCloseKey](http://go.microsoft.com/fwlink/p/?linkid=194543) function
 
 ### <a href="" id="using-setupdienumdeviceinterfaces-to-retrieve-information-about-a-devi"></a> Using SetupDiEnumDeviceInterfaces to Retrieve Information About a Device Interface
 
-Another way to retrieve information about a device interface on Windows Server 2003, Windows XP, and Windows 2000 is by calling [**SetupDiEnumDeviceInterfaces**](https://msdn.microsoft.com/library/windows/hardware/ff551015) to retrieve an [**SP\_DEVICE\_INTERFACE\_DATA**](https://msdn.microsoft.com/library/windows/hardware/ff552342) structure for the interface. An SP\_DEVICE\_INTERFACE\_DATA structure contains the following information:
+Another way to retrieve information about a device interface on Windows Server 2003, Windows XP, and Windows 2000 is by calling [**SetupDiEnumDeviceInterfaces**](https://msdn.microsoft.com/library/windows/hardware/ff551015) to retrieve an [**SP_DEVICE_INTERFACE_DATA**](https://msdn.microsoft.com/library/windows/hardware/ff552342) structure for the interface. An SP_DEVICE_INTERFACE_DATA structure contains the following information:
 
 -   The **Flags** member indicates whether a device interface is active or removed, and whether the device is the default interface for the interface class.
 

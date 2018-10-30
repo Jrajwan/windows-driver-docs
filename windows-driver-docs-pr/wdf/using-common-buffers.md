@@ -3,7 +3,17 @@ title: Using Common Buffers
 author: windows-driver-content
 description: Using Common Buffers
 ms.assetid: 81a56f62-917e-4798-b2cc-6469c802fab8
-keywords: ["DMA operations WDK KMDF , common buffers", "bus-master DMA WDK KMDF , common buffers", "common buffers WDK KMDF", "buffers WDK KMDF"]
+keywords:
+- DMA operations WDK KMDF , common buffers
+- bus-master DMA WDK KMDF , common buffers
+- common buffers WDK KMDF
+- buffers WDK KMDF
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Using Common Buffers
@@ -11,7 +21,7 @@ keywords: ["DMA operations WDK KMDF , common buffers", "bus-master DMA WDK KMDF 
 
 \[Applies to KMDF only\]
 
-## <a href="" id="ddk-using-common-buffers-df"></a>
+
 
 
 Drivers for DMA devices sometimes must allocate buffer space that both a device and the driver can access. For example, a device might write transfer information, such as byte counts, into this buffer space and the driver can read it to determine the number of bytes that were transferred. This type of buffer space is called a *common buffer*.

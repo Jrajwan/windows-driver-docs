@@ -1,14 +1,25 @@
 ---
-title: NET\_BUFFER Structure
-description: NET\_BUFFER Structure
+title: NET_BUFFER Structure
+description: NET_BUFFER Structure
 ms.assetid: 6ba44aef-d4e6-4f18-8ae3-aebd8045791f
-keywords: ["NET_BUFFER", "network data WDK , structures", "data WDK networking , structures", "packets WDK networking , data structures", "NDIS_PACKET"]
+keywords:
+- NET_BUFFER
+- network data WDK , structures
+- data WDK networking , structures
+- packets WDK networking , data structures
+- NDIS_PACKET
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NET\_BUFFER Structure
 
 
-## <a href="" id="ddk-net-buffer-structure-ng"></a>
+
 
 
 NDIS 6.0 and later [**NET\_BUFFER**](https://msdn.microsoft.com/library/windows/hardware/ff568376) structures are analogous to the [**NDIS\_PACKET**](https://msdn.microsoft.com/library/windows/hardware/ff557086) structures used by NDIS 5.*x* and earlier drivers. Each NET\_BUFFER structure packages a packet of network data.

@@ -2,13 +2,25 @@
 title: Retreat and Advance Operations
 description: Retreat and Advance Operations
 ms.assetid: 90d4acae-e66c-486b-8b38-59f7fe159047
-keywords: ["network data WDK , advance operations", "network data WDK , retreat operations", "data WDK networking , advance operations", "data WDK networking , retreat operations", "packets WDK networking , advance operations", "packets WDK networking , retreat operations"]
+keywords:
+- network data WDK , advance operations
+- network data WDK , retreat operations
+- data WDK networking , advance operations
+- data WDK networking , retreat operations
+- packets WDK networking , advance operations
+- packets WDK networking , retreat operations
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Retreat and Advance Operations
 
 
-## <a href="" id="ddk-retreat-and-advance-operations-ng"></a>
+
 
 
 NDIS provides retreat and advance functions to manipulate [**NET\_BUFFER**](https://msdn.microsoft.com/library/windows/hardware/ff568376) structures. [Retreat operations](retreat-operations.md) make more *used data space* available to the current driver. [Advance operations](advance-operations.md) release *used data space*.

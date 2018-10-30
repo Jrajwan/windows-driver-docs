@@ -2,20 +2,31 @@
 title: Capturing Still Frames from a USB Camera
 author: windows-driver-content
 description: Capturing Still Frames from a USB Camera
-MS-HAID:
-- 'usbcmdds\_a176ff19-6bdd-4daf-840f-83d07d8ee6fd.xml'
-- 'stream.capturing\_still\_frames\_from\_a\_usb\_camera'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 762021ea-753c-4cd2-9eec-1403ee918d4e
-keywords: ["Windows 2000 Kernel Streaming Model WDK , USBCAMD2 minidriver library", "Streaming Model WDK Windows 2000 Kernel , USBCAMD2 minidriver library", "Kernel Streaming Model WDK , USBCAMD2 minidriver library", "USBCAMD2 minidriver library WDK Windows 2000 Kernel Streaming", "USB-based streaming cameras WDK USBCAMD2", "cameras WDK USBCAMD2", "capturing still frames WDK USBCAMD2", "still frame captures WDK USBCAMD2", "bulk pipe WDK USBCAMD2", "push model WDK USBCAMD2", "pull model WDK USBCAMD2"]
+keywords:
+- Windows 2000 Kernel Streaming Model WDK , USBCAMD2 minidriver library
+- Streaming Model WDK Windows 2000 Kernel , USBCAMD2 minidriver library
+- Kernel Streaming Model WDK , USBCAMD2 minidriver library
+- USBCAMD2 minidriver library WDK Windows 2000 Kernel Streaming
+- USB-based streaming cameras WDK USBCAMD2
+- cameras WDK USBCAMD2
+- capturing still frames WDK USBCAMD2
+- still frame captures WDK USBCAMD2
+- bulk pipe WDK USBCAMD2
+- push model WDK USBCAMD2
+- pull model WDK USBCAMD2
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Capturing Still Frames from a USB Camera
 
 
-## <a href="" id="ddk-using-bulk-pipes-to-retrieve-still-frames-from-the-camera-ksg"></a>
+
 
 
 USBCAMD2 provides the capability for a separate [Still Image driver](https://msdn.microsoft.com/library/windows/hardware/ff548278) to retrieve still frames from the camera through the camera's bulk pipe.
@@ -57,7 +68,5 @@ To cancel a requested bulk read or write, an application should call **CancelIO*
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bstream\stream%5D:%20Capturing%20Still%20Frames%20from%20a%20USB%20Camera%20%20RELEASE:%20%288/23/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

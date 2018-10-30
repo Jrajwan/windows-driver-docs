@@ -1,17 +1,23 @@
 ---
 title: Secure boot and device encryption overview
-author: windows-driver-content
-description: Secure boot and device encryption overview
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: This topic provides an overview of secure boot and device encryption functionality, with emphasis on key OEM requirements and considerations.
 ms.assetid: 4e206bd2-7bb4-48c2-9e01-8da041e798ef
+ms.author: windowsdriverdev
+ms.date: 05/02/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Secure boot and device encryption overview
 
 
 This topic provides an overview of secure boot and device encryption functionality, with emphasis on key OEM requirements and considerations.
+
+**Applies to**
+
+- Windows 10 Mobile
 
 ## Secure boot
 
@@ -82,6 +88,5 @@ You should be aware of the following requirements and considerations related to 
  
 
 
---------------------
 
 

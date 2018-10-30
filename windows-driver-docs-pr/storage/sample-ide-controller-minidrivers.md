@@ -3,7 +3,15 @@ title: Sample IDE Controller Minidrivers
 author: windows-driver-content
 description: Sample IDE Controller Minidrivers
 ms.assetid: 3c8779ae-30d7-4ab8-b6d8-a711f917564c
-keywords: ["IDE controller minidrivers WDK storage , samples", "storage IDE controller minidrivers WDK , samples"]
+keywords:
+- IDE controller minidrivers WDK storage , samples
+- storage IDE controller minidrivers WDK , samples
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Sample IDE Controller Minidrivers
@@ -25,6 +33,5 @@ The *pciide.sys* sample is binary compatible between Windows 95/98/Me and NT-bas
  
 
 
---------------------
 
 

@@ -2,25 +2,32 @@
 title: INF DefaultInstall.Services Section
 description: A DefaultInstall.Services section contains one or more AddService directives referencing additional INF-writer-defined sections in an INF file.
 ms.assetid: 2b066cf9-b6b7-42d0-b147-9b1849ff04db
-keywords: ["INF DefaultInstall.Services Section Device and Driver Installation"]
+keywords:
+- INF DefaultInstall.Services Section Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF DefaultInstall.Services Section
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF DefaultInstall.Services Section
 
 
-**Note**  If you are building a universal or mobile driver package, this section is not valid. See [Using a Universal INF File](using-a-configurable-inf-file.md).
+**Note**  If you are building a universal or mobile driver package, this section is not valid. See [Using a Universal INF File](using-a-universal-inf-file.md).
 
  
 
 A **DefaultInstall.Services** section contains one or more [**AddService**](inf-addservice-directive.md) directives referencing additional INF-writer-defined sections in an INF file. This section is equivalent to the [**INF *DDInstall*.Services**](inf-ddinstall-services-section.md) section, and is used in association with an [**INF DefaultInstall**](inf-defaultinstall-section.md) section.
 
-``` syntax
+```
 [DefaultInstall.Services] |
 [DefaultInstall.nt.Services] |
 [DefaultInstall.ntx86.Services] |

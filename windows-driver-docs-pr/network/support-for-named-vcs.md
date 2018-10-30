@@ -2,13 +2,25 @@
 title: Support for Named VCs
 description: Support for Named VCs
 ms.assetid: 797f737c-91e7-410b-91d5-5575d5b19e86
-keywords: ["WMI WDK networking , virtual connections", "call managers WDK networking , naming virtual connections", "virtual connections WDK NDIS WMI", "VCs WDK NDIS WMI", "miniport call managers WDK networking , naming virtual connections", "MCMs WDK networking , namin"]
+keywords:
+- WMI WDK networking , virtual connections
+- call managers WDK networking , naming virtual connections
+- virtual connections WDK NDIS WMI
+- VCs WDK NDIS WMI
+- miniport call managers WDK networking , naming virtual connections
+- MCMs WDK networking , namin
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Support for Named VCs
 
 
-## <a href="" id="ddk-support-for-named-vcs-ng"></a>
+
 
 
 NDIS allows WMI clients to query and set information on a per-virtual connection (VC) basis for connection-oriented miniport adapters. WMI clients can also enumerate VCs. Before a WMI client can query or set information that is associated with a particular VC, a stand-alone call manager or connection-oriented client must name the VC by calling the [**NdisCoAssignInstanceName**](https://msdn.microsoft.com/library/windows/hardware/ff561692) function.

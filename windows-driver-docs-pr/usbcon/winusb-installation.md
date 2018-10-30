@@ -1,12 +1,13 @@
 ---
-Description: 'For certain Universal Serial Bus (USB) devices, such as devices that are accessed by only a single application, you can install WinUSB (Winusb.sys) in the device's kernel-mode stack as the USB device's function driver instead of implementing a driver.'
-MS-HAID:
-- 'usbsystem\_aa4e426a-3537-45a7-9952-f9e0d661822e.xml'
-- 'buses.winusb\_installation'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
-title: 'WinUSB (Winusb.sys) Installation'
+Description: Install WinUSB (Winusb.sys) in the device's kernel-mode stack as the USB device's function driver instead of implementing a driver.
+title: WinUSB (Winusb.sys) Installation
+author: windows-driver-content
+ms.author: windowsdriverdev
+ms.date: 05/09/2018
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # WinUSB (Winusb.sys) Installation
@@ -44,7 +45,7 @@ When you connect your device, you might notice that Windows loads Winusb.sys aut
 7.  The wizard displays **WinUsb Device**. Select it to load the driver.
 
 If **Universal Serial Bus devices** does not appear in the list of device classes, then you need to install the driver by using a custom INF.
-The preceding procedure does not add a device interface GUID for an app (Windows Store app or Windows desktop app) to access the device. You must add the GUID manually by following this procedure.
+The preceding procedure does not add a device interface GUID for an app (UWP app or Windows desktop app) to access the device. You must add the GUID manually by following this procedure.
 
 1.  Load the driver as described in the preceding procedure.
 2.  Generate a device interface GUID for your device, by using a tool such as guidgen.exe.
@@ -116,6 +117,12 @@ Needs   = WINUSB.NT.Services
 
 [USB_Install.HW]
 AddReg=Dev_AddReg
+
+[USB_Install.Wdf]
+KmdfService=WINUSB, WinUsb_Install
+
+[WinUsb_Install]
+KmdfLibraryVersion=1.11
 
 [Dev_AddReg]
 HKR,,DeviceInterfaceGUIDs,0x10000,"{9f543223-cede-4fa3-b376-a25ce9a30e74}"
@@ -226,6 +233,7 @@ WdfCoInstaller01011.dll=1
 ManufacturerName=""
 ClassName="Universal Serial Bus devices"
 DeviceName="Fx2 Learning Kit Device"
+DiskName="MyDisk"
 REG_MULTI_SZ = 0x00010000
 ```
 
@@ -252,7 +260,7 @@ To use WinUSB as the device's function driver, you create a driver package. The 
 -   WinUSB co-installer (Winusbcoinstaller.dll)
 -   KMDF co-installer (WdfcoinstallerXXX.dll)
 -   An .inf file that installs Winusb.sys as the device's function driver. For more information, see [Writing an .Inf File for WinUSB Installation](#inf).
--   A signed catalog file for the package. This file is required to install WinUSB on x64 versions of Windows Vista.
+-   A signed catalog file for the package. This file is required to install WinUSB on x64 versions of Windows starting with Vista.
 
 ![winusb installation package](images/winusb-package.jpg)
 
@@ -263,7 +271,7 @@ To use WinUSB as the device's function driver, you create a driver package. The 
 
  
 
-1.  Install the [Windows Driver Kit](http://www.microsoft.com/whdc/devtools/wdk/WDKpkg.mspx).
+1.  [Download the Windows Driver Kit (WDK)](https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk) and install it.
 2.  Create a driver package folder on the machine that the USB device is connected to. For example, c:\\UsbDevice.
 3.  Copy the WinUSB co-installer (WinusbcoinstallerX.dll) from the **WinDDK\\***BuildNumber***\\redist\\winusb** folder to the driver package folder.
 
@@ -317,28 +325,13 @@ To use WinUSB as the device's function driver, you create a driver package. The 
 8.  Open **Device Manager** to install the driver. Follow the instructions on the **Update Driver Software** wizard and choose manual installation. You will need to provide the location of the driver package folder to complete the installation.
 
 ## Related topics
-
-
-[WinUSB Architecture and Modules](winusb-architecture.md)
-
-[Choosing a driver model for developing a USB client driver](winusb-considerations.md)
-
-[How to Access a USB Device by Using WinUSB Functions](using-winusb-api-to-communicate-with-a-usb-device.md)
-
-[WinUSB Power Management](winusb-power-management.md)
-
-[WinUSB Functions for Pipe Policy Modification](winusb-functions-for-pipe-policy-modification.md)
-
-[WinUSB Functions](https://msdn.microsoft.com/library/windows/hardware/ff540046#winusb)
-
-[WinUSB](winusb.md)
-
- 
-
- 
-
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Busbcon\buses%5D:%20WinUSB%20%28Winusb.sys%29%20Installation%20%20RELEASE:%20%281/26/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
-
+[WinUSB Architecture and Modules](winusb-architecture.md)  
+[Choosing a driver model for developing a USB client driver](winusb-considerations.md)  
+[How to Access a USB Device by Using WinUSB Functions](using-winusb-api-to-communicate-with-a-usb-device.md)  
+[WinUSB Power Management](winusb-power-management.md)  
+[WinUSB Functions for Pipe Policy Modification](winusb-functions-for-pipe-policy-modification.md)  
+[WinUSB Functions](https://msdn.microsoft.com/library/windows/hardware/ff540046#winusb)  
+[WinUSB](winusb.md)  
 
 
 

@@ -2,13 +2,22 @@
 title: Changing Bindings for a Component
 description: Changing Bindings for a Component
 ms.assetid: 2e59a160-d8d9-4739-a8fa-919760f8eb05
-keywords: ["notify objects WDK networking , binding changes", "network notify objects WDK , binding changes", "binding changes WDK networking"]
+keywords:
+- notify objects WDK networking , binding changes
+- network notify objects WDK , binding changes
+- binding changes WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Changing Bindings for a Component
 
 
-## <a href="" id="ddk-changing-bindings-for-a-component-ng"></a>
+
 
 
 The network configuration subsystem always informs a notify object about changes in binding that affect the notify object's network component. The subsystem calls the notify object's [**INetCfgComponentNotifyBinding::NotifyBindingPath**](https://msdn.microsoft.com/library/windows/hardware/ff547731) method and passes a value that specifies the change along with a pointer to the **INetCfgBindingPath** interface of the binding path involved in the change. If the subsystem passes NCN\_DISABLE to disable the binding path that the notify object's network component shares with a specific network card, the notify object can activate the binding with another network card as shown in the following code.

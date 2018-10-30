@@ -2,13 +2,20 @@
 title: INF DDInstall.WMI Section
 description: An INF DDInstall.WMI section contains one or more WMIInterface directives that specify characteristics for each WMI class that the driver provides.
 ms.assetid: 8c4f6b2b-c2b4-4579-9dce-4436e041ebbc
-keywords: ["INF DDInstall.WMI Section Device and Driver Installation"]
+keywords:
+- INF DDInstall.WMI Section Device and Driver Installation
 topic_type:
 - apiref
 api_name:
 - INF DDInstall.WMI Section
 api_type:
 - NA
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # INF DDInstall.WMI Section
@@ -16,7 +23,7 @@ api_type:
 
 An INF *DDInstall*.**WMI** section contains one or more **WMIInterface** directives that specify characteristics for each WMI class that the driver provides.
 
-``` syntax
+```
 [install-section-name.WMI] |
 [install-section-name.nt.WMI] | 
 [install-section-name.ntx86.WMI] |
@@ -35,7 +42,7 @@ Specifies a GUID value that identifies a WMI class.
 <a href="" id="flags"></a>*flags*  
 Specifies one of the following bitmask flags:
 
-<a href="" id="0x00000001--scwmi-clobber-security-"></a>0x00000001 (SCWMI\_CLOBBER\_SECURITY)  
+<a href="" id="0x00000001--scwmi-clobber-security-"></a>0x00000001 (SCWMI_CLOBBER_SECURITY)  
 If set, and if a security descriptor already exists in the registry, the existing security descriptor is replaced by the one specified in the INF file. If not set, and if a security descriptor already exists in the registry, the existing security descriptor is used instead of the one specified in the INF file.
 
 <a href="" id="wmi-class-section"></a>*WMI-class-section*  

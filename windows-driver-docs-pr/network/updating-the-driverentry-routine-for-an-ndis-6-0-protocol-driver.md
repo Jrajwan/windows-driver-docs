@@ -2,13 +2,22 @@
 title: Updating the DriverEntry Routine for an NDIS 6.0 Protocol Driver
 description: Updating the DriverEntry Routine for an NDIS 6.0 Protocol Driver
 ms.assetid: b856816e-1c3b-4397-bda3-87d51e8665f3
-keywords: ["NdisRegisterProtocol", "updating DriverEntry", "DriverEntry WDK networking"]
+keywords:
+- NdisRegisterProtocol
+- updating DriverEntry
+- DriverEntry WDK networking
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Updating the DriverEntry Routine for an NDIS 6.0 Protocol Driver
 
 
-## <a href="" id="ddk-updating-the-driverentry-routine-for-ndis-6-0-protocol-drivers-nd"></a>
+
 
 
 Like NDIS 5.*x*, NDIS 6.0 protocol drivers register with NDIS in the [**DriverEntry**](https://msdn.microsoft.com/library/windows/hardware/ff544113) routine. In NDIS 6.0, the [**NdisRegisterProtocol**](https://msdn.microsoft.com/library/windows/hardware/ff554653) function is eliminated. To register the protocol driver with NDIS 6.0, call the [**NdisRegisterProtocolDriver**](https://msdn.microsoft.com/library/windows/hardware/ff564520) function.

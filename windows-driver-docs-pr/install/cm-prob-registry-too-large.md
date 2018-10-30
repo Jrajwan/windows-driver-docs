@@ -2,13 +2,22 @@
 title: CM_PROB_REGISTRY_TOO_LARGE
 description: CM_PROB_REGISTRY_TOO_LARGE
 ms.assetid: 8870ea57-4ae4-48a0-9d56-c5d0da8e1525
-keywords: ["CM_PROB_REGISTRY_TOO_LARGE"]
+keywords:
+- CM_PROB_REGISTRY_TOO_LARGE
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # CM_PROB_REGISTRY_TOO_LARGE
 
+This function is reserved for system use.
 
-## <a href="" id="ddk-cm-prob-registry-too-large-dg"></a>
+
+
 
 
 The registry is too large.

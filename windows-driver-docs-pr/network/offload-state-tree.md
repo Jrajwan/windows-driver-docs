@@ -2,7 +2,15 @@
 title: Offload State Tree
 description: Offload State Tree
 ms.assetid: c96608bd-5e8f-499b-872a-b6f7f33c9e0c
-keywords: ["offload state WDK TCP chimney offload , trees", "trees WDK TCP chimney offload"]
+keywords:
+- offload state WDK TCP chimney offload , trees
+- trees WDK TCP chimney offload
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Offload State Tree
@@ -10,7 +18,7 @@ keywords: ["offload state WDK TCP chimney offload , trees", "trees WDK TCP chimn
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-offload-state-tree-ng"></a>
+
 
 
 The host stack can link [**NDIS\_MINIPORT\_OFFLOAD\_BLOCK\_LIST**](https://msdn.microsoft.com/library/windows/hardware/ff566469) structures to create a tree of state objects. By conveying a state tree to an offload target, the host stack can efficiently offload or reference multiple TCP connections, the path and neighbor state objects that are associated with such connections, or both.

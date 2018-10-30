@@ -2,13 +2,24 @@
 title: Creating International INF Files
 description: Creating International INF Files
 ms.assetid: 7c07c4de-4a0f-4555-b153-15307c76a2a3
-keywords: ["INF files WDK device installations , international", "international INF files WDK", "locale-specific INF files WDK", "locale-specific driver files WDK", "Unicode INF files WDK"]
+keywords:
+- INF files WDK device installations , international
+- international INF files WDK
+- locale-specific INF files WDK
+- locale-specific driver files WDK
+- Unicode INF files WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Creating International INF Files
 
 
-## <a href="" id="ddk-creating-international-inf-files-dg"></a>
+
 
 
 Creating installations for international markets requires providing locale-specific INF files and, possibly, locale-specific driver files.

@@ -2,13 +2,23 @@
 title: NDIS Intermediate Drivers
 description: NDIS Intermediate Drivers
 ms.assetid: 773d9711-fdea-4541-bb0d-6b07b50892fc
-keywords: ["intermediate drivers WDK networking", "network drivers WDK , intermediate drivers", "NDIS WDK , intermediate drivers", "NDIS intermediate drivers WDK"]
+keywords:
+- intermediate drivers WDK networking
+- network drivers WDK , intermediate drivers
+- NDIS WDK , intermediate drivers
+- NDIS intermediate drivers WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NDIS Intermediate Drivers
 
 
-## <a href="" id="ddk-ndis-intermediate-drivers-ng"></a>
+
 
 
 NDIS intermediate drivers interface between upper-level protocol drivers and miniport drivers. Some applications that might require an intermediate driver include:

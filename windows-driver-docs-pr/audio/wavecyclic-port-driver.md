@@ -2,7 +2,17 @@
 title: WaveCyclic Port Driver
 description: WaveCyclic Port Driver
 ms.assetid: c5572ae3-0d91-43a6-a49c-c6c005263f5b
-keywords: ["WaveCyclic port driver WDK audio", "PortCls WDK audio , port drivers", "audio miniport drivers WDK , port drivers", "miniport drivers WDK audio , port drivers"]
+keywords:
+- WaveCyclic port driver WDK audio
+- PortCls WDK audio , port drivers
+- audio miniport drivers WDK , port drivers
+- miniport drivers WDK audio , port drivers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # WaveCyclic Port Driver
@@ -22,12 +32,15 @@ The WaveCyclic port driver exposes an [IPortWaveCyclic](https://msdn.microsoft.c
 [**IPortWaveCyclic::NewMasterDmaChannel**](https://msdn.microsoft.com/library/windows/hardware/ff536900)
 
 Creates a new master DMA channel object for an audio device with a built-in DMA controller.
+
 [**IPortWaveCyclic::NewSlaveDmaChannel**](https://msdn.microsoft.com/library/windows/hardware/ff536902)
 
 Creates a new subordinate DMA channel object for an audio device without a built-in DMA controller.
+
 [**IPortWaveCyclic::Notify**](https://msdn.microsoft.com/library/windows/hardware/ff536903)
 
 Notifies the port driver that the DMA controller has advanced to a new position in the audio stream.
+
 The WaveCyclic port and miniport driver objects communicate with each other through their respective [IPortWaveCyclic](https://msdn.microsoft.com/library/windows/hardware/ff536899) and [IMiniportWaveCyclic](https://msdn.microsoft.com/library/windows/hardware/ff536714) interfaces. In addition, the port driver communicates with the miniport driver's stream objects through their [IMiniportWaveCyclicStream](https://msdn.microsoft.com/library/windows/hardware/ff536715) interfaces.
 
  
@@ -35,7 +48,5 @@ The WaveCyclic port and miniport driver objects communicate with each other thro
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[audio\audio]:%20WaveCyclic%20Port%20Driver%20%20RELEASE:%20%287/18/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

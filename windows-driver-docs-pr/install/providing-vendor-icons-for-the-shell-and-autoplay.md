@@ -2,13 +2,28 @@
 title: Providing Vendor Icons for the Shell and AutoPlay
 description: Providing Vendor Icons for the Shell and AutoPlay
 ms.assetid: 2e3afbf6-57f6-4b83-b10a-c33d9b1c1731
-keywords: ["AutoPlay icons WDK", "custom icons WDK device installations", "vendor icons WDK", "icons WDK Shell", "Shell icons WDK", "media-inserted icons WDK", "no-media-inserted icons WDK", "icons WDK AutoPlay", "copying icon files"]
+keywords:
+- AutoPlay icons WDK
+- custom icons WDK device installations
+- vendor icons WDK
+- icons WDK Shell
+- Shell icons WDK
+- media-inserted icons WDK
+- no-media-inserted icons WDK
+- icons WDK AutoPlay
+- copying icon files
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Providing Vendor Icons for the Shell and AutoPlay
 
 
-## <a href="" id="ddk-providing-vendor-icons-for-the-shell-and-autoplay-dg"></a>
+
 
 
 [AutoPlay](http://go.microsoft.com/fwlink/p/?linkid=12031) is an extension of the Shell, and is supported by Microsoft Windows XP and later versions of Windows. AutoPlay detects different types of content, such as audio or video files, on removable media or removable devices. AutoPlay can display custom icons for content and devices, and it can automatically start an application to play or display content when the system detects a medium or device.
@@ -33,7 +48,7 @@ If a system-supplied driver handles your device, you do not have to supply a ful
 
 ### To create icons
 
--   Follow the MSDN guidelines that are provided at the Creating [Windows XP Icons](http://go.microsoft.com/fwlink/p/?linkid=6938) website. These guidelines describe how to create icons that have the appearance and behavior of Windows XP graphical elements.
+-   Follow the guidelines that are provided at the Creating [Windows XP Icons](http://go.microsoft.com/fwlink/p/?linkid=6938) website. These guidelines describe how to create icons that have the appearance and behavior of Windows XP graphical elements.
 
 ### To specify the icons in an INF file
 
@@ -58,13 +73,13 @@ If a system-supplied driver handles your device, you do not have to supply a ful
 
 -   Include an [**INF SourceDisksFiles section**](inf-sourcedisksfiles-section.md) that lists the icon files and a corresponding [**INF CopyFiles directive**](inf-copyfiles-directive.md) that copies them to the system.
 
-Windows saves the **Icons** and **NoMediaIcons** value entries under the **Device Parameters** key under the device's [*hardware key*](https://msdn.microsoft.com/library/windows/hardware/ff556288#wdkgloss-hardware-key). The following example specifies the registry location, value-entry-type, and value of the **Icons** and **NoMediaIcons** value entries for the device whose device instance ID is USB\\Vid\_0000&Pid\_0000\\059B003112010E93.
+Windows saves the **Icons** and **NoMediaIcons** value entries under the **Device Parameters** key under the device's [*hardware key*](https://msdn.microsoft.com/library/windows/hardware/ff556288#wdkgloss-hardware-key). The following example specifies the registry location, value-entry-type, and value of the **Icons** and **NoMediaIcons** value entries for the device whose device instance ID is USB\\Vid_0000&Pid_0000\\059B003112010E93.
 
-**HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\***USB\\Vid\_0000&Pid\_0000\\059B003112010E93*\\**Device Parameters**
+**HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\***USB\\Vid_0000&Pid_0000\\059B003112010E93*\\**Device Parameters**
 
-**Icons** \[REG\_MULTI\_SZ\] = %*SystemRoo*t%*\\system32\\icon.ico*
+**Icons** \[REG_MULTI_SZ\] = %*SystemRoo*t%*\\system32\\icon.ico*
 
-**NoMediaIcons** \[REG\_MULTI\_SZ\] = %*SystemRoot*%*\\system32\\noicon.ico*
+**NoMediaIcons** \[REG_MULTI_SZ\] = %*SystemRoot*%*\\system32\\noicon.ico*
 
 Drivers or other code should never access or modify the **Device Parameters** key directly. Instead, you should use the following system functions:
 

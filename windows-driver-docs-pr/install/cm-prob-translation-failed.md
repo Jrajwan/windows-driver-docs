@@ -2,13 +2,22 @@
 title: CM_PROB_TRANSLATION_FAILED
 description: CM_PROB_TRANSLATION_FAILED
 ms.assetid: b131327a-93ff-476b-8257-09a3dfc424be
-keywords: ["CM_PROB_TRANSLATION_FAILED"]
+keywords:
+- CM_PROB_TRANSLATION_FAILED
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # CM_PROB_TRANSLATION_FAILED
 
+This function is reserved for system use.
 
-## <a href="" id="ddk-cm-prob-translation-failed-dg"></a>
+
+
 
 
 Resource translation failed for the device.

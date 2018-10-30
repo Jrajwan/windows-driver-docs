@@ -2,13 +2,24 @@
 title: Power Management (NDIS 6.0 and NDIS 6.1)
 description: Power Management (NDIS 6.0 and NDIS 6.1)
 ms.assetid: 10CACB4E-BBC8-497F-9B54-810518B726A8
-keywords: ["miniport drivers WDK networking , power management", "NDIS miniport drivers WDK , power management", "power management WDK networking , miniport drivers", "power management WDK NDIS miniport", "power management WDK NDIS miniport , about miniport driver power management"]
+keywords:
+- miniport drivers WDK networking , power management
+- NDIS miniport drivers WDK , power management
+- power management WDK networking , miniport drivers
+- power management WDK NDIS miniport
+- power management WDK NDIS miniport , about miniport driver power management
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Power Management (NDIS 6.0 and NDIS 6.1)
 
 
-## <a href="" id="ddk-power-management-for-ndis-miniport-drivers-ng"></a>
+
 
 
 This section describes the NDIS power management interface that was introduced with Windows XP and NDIS 5.1. This power management interface is supported in the following versions of NDIS:

@@ -2,20 +2,24 @@
 title: Preprocessor Directives
 author: windows-driver-content
 description: Preprocessor Directives
-MS-HAID:
-- 'nt5gpd\_3ee60963-debd-4501-b2e8-33e0c0e8d47f.xml'
-- 'print.preprocessor\_directives'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 5731b159-c6f9-47a8-8eaa-a1b0b6c12132
-keywords: ["GPD file entries WDK Unidrv , preprocessor directives", "preprocessor directives WDK GPD files", "parsing GPD file sections", "preprocessor symbols WDK GPD files"]
+keywords:
+- GPD file entries WDK Unidrv , preprocessor directives
+- preprocessor directives WDK GPD files
+- parsing GPD file sections
+- preprocessor symbols WDK GPD files
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Preprocessor Directives
 
 
-## <a href="" id="ddk-preprocessor-directives-gg"></a>
+
 
 
 GPD files can contain preprocessor directives, which can be used to control conditional parsing of sections within the GPD file. The following table describes the preprocessor directives that can be used in GPD files.
@@ -178,7 +182,5 @@ The WINNT\_40, WINNT\_50, and WINNT\_51 symbols are useful for creating GPD file
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bprint\print%5D:%20Preprocessor%20Directives%20%20RELEASE:%20%289/1/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

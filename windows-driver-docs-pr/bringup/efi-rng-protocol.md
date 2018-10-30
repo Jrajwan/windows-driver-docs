@@ -1,11 +1,14 @@
 ---
-title: EFI\_RNG\_PROTOCOL
+title: EFI_RNG_PROTOCOL
 author: windows-driver-content
-description: The EFI\_RNG\_PROTOCOL is used to obtain a Random Number Generation (RNG) value from an EFI driver.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
+description: The EFI_RNG_PROTOCOL is used to obtain a Random Number Generation (RNG) value from an EFI driver.
 ms.assetid: 927E2C40-973B-49AB-ACD5-2A3532827D74
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # EFI\_RNG\_PROTOCOL
@@ -45,6 +48,5 @@ Returns an RNG value using an optional RNG algorithm. For more information, see 
  
 
 
---------------------
 
 

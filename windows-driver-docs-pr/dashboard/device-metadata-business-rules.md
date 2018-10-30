@@ -1,13 +1,13 @@
 ---
 title: Device Metadata Business Rules
 description: Device Metadata Business Rules
-MS-HAID:
-- 'p\_dashboard.device\_metadata\_business\_rules'
-- 'hw\_dashboard.device\_metadata\_business\_rules'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 19a0ced7-bb31-4899-abb4-2de803f179a6
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Device Metadata Business Rules
@@ -78,7 +78,7 @@ Different types of device metadata packages must follow different rules. Additio
 <td><p>Devices and Printers Folder</p></td>
 <td><ul>
 <li><p>All devices</p></li>
-<li><p>Devices that have a Windows Store device app</p></li>
+<li><p>Devices that have a UWP device app</p></li>
 <li><p>Devices that have a privileged app</p></li>
 </ul></td>
 <td><p>The device must either use only in-box drivers that do not have an associated Windows® logo submission, or custom drivers that have Windows logo submissions that are bound to the device experience.</p></td>
@@ -167,7 +167,7 @@ Different types of device metadata packages must follow different rules. Additio
 
 -   In an experience, you can only have one default preview locale package and one default released package for each Windows operating system version.
 
-### <span id="BKMK_Unique"></span><span id="bkmk_unique"></span><span id="BKMK_UNIQUE"></span>Unique Device Stage Metadata Submissions
+### <span id="bkmk-unique"></span>Unique Device Stage Metadata Submissions
 
 To submit a PC metadata package, see, [Submit a PC device manifest package](https://msdn.microsoft.com/library/windows/hardware/hh801890.aspx).
 
@@ -175,12 +175,12 @@ To submit a mobile broadband metadata package, see [Submit a mobile broadband de
 
 To submit a multiple-locale metadata package, see [Submit a Multiple-locale device manifest package](https://msdn.microsoft.com/library/windows/hardware/hh801889.aspx).
 
-### <span id="Windows_Store_device_app_limits"></span><span id="windows_store_device_app_limits"></span><span id="WINDOWS_STORE_DEVICE_APP_LIMITS"></span>Windows Store device app limits
+### <span id="Windows_Store_device_app_limits"></span><span id="windows_store_device_app_limits"></span><span id="WINDOWS_STORE_DEVICE_APP_LIMITS"></span>UWP device app limits
 
-Device manufacturers are limited in the number of Windows Store apps that may be specified in device metadata for automatic installation and app privilege. For example, peripheral device manufacturers (IHVs) can submit up to one app that is configured for automatic installation and up to one app that is specified as a privileged app. An IHV can submit one app that meets both limitations or two apps, with each meeting just one of the limitations.
+Device manufacturers are limited in the number of UWP apps that may be specified in device metadata for automatic installation and app privilege. For example, peripheral device manufacturers (IHVs) can submit up to one app that is configured for automatic installation and up to one app that is specified as a privileged app. An IHV can submit one app that meets both limitations or two apps, with each meeting just one of the limitations.
 
 **Important**  
-There is no limit to the total number of Windows Store device apps that a device manufacturer can submit to the Windows Store; these limits apply only to a single device metadata package.
+There is no limit to the total number of UWP device apps that a device manufacturer can submit to the Microsoft Store; these limits apply only to a single device metadata package.
 
  
 
@@ -235,7 +235,6 @@ In each device metadata package, the following limits apply:
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bhw_dashboard\hw_dashboard%5D:%20Device%20Metadata%20Business%20Rules%20%20RELEASE:%20%281/3/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

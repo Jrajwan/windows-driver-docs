@@ -2,7 +2,18 @@
 title: Layers of Offload State
 description: Layers of Offload State
 ms.assetid: 50f5d8f7-4d32-4cf9-84a3-20523f0c6946
-keywords: ["offload state WDK TCP chimney offload , layers", "neighbor state WDK TCP chimney offload", "path state WDK TCP chimney offload", "TCP connection state WDK TCP chimney offload", "layers of offload state WDK TCP chimney offload"]
+keywords:
+- offload state WDK TCP chimney offload , layers
+- neighbor state WDK TCP chimney offload
+- path state WDK TCP chimney offload
+- TCP connection state WDK TCP chimney offload
+- layers of offload state WDK TCP chimney offload
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Layers of Offload State
@@ -10,7 +21,7 @@ keywords: ["offload state WDK TCP chimney offload , layers", "neighbor state WDK
 
 \[The TCP chimney offload feature is deprecated and should not be used.\]
 
-## <a href="" id="ddk-layers-of-offload-state-ng"></a>
+
 
 
 As the following figure shows, the host stack offloads three layers of protocol state to an offload target.

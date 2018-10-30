@@ -2,7 +2,25 @@
 title: Extensible Wave-Format Descriptors
 description: Extensible Wave-Format Descriptors
 ms.assetid: b80e651b-fb97-4502-8526-e844425805dc
-keywords: ["wave-format descriptors WDK audio", "PCM formats WDK audio", "wave-format tags WDK audio", "wave streams WDK audio", "audio data formats WDK", "data formats WDK audio , wave-format descriptors", "formats WDK audio , wave-format descriptors", "KSDATAFORMAT structure", "KMixer system driver WDK audio , wave-format descriptors", "WAVEFORMATEXTENSIBLE", "WAVEFORMATEX structure", "WDM audio data formats WDK"]
+keywords:
+- wave-format descriptors WDK audio
+- PCM formats WDK audio
+- wave-format tags WDK audio
+- wave streams WDK audio
+- audio data formats WDK
+- data formats WDK audio , wave-format descriptors
+- formats WDK audio , wave-format descriptors
+- KSDATAFORMAT structure
+- KMixer system driver WDK audio , wave-format descriptors
+- WAVEFORMATEXTENSIBLE
+- WAVEFORMATEX structure
+- WDM audio data formats WDK
+ms.author: windowsdriverdev
+ms.date: 10/27/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Extensible Wave-Format Descriptors
@@ -146,9 +164,6 @@ The subset of WAVEFORMATEX PCM formats that KMixer supports differs between Wind
 </table>
 
  
-
-KMixer limits WAVEFORMATEX formats to only one or two channels in all versions of Windows except Windows 98 "Gold". The same limitations in sample size and number of channels apply to PCMWAVEFORMAT because it is equivalent to WAVEFORMATEX for PCM formats. For more information about Windows 98 SE + hotfix, see [Additional Requirements for Windows 98](additional-requirements-for-windows-98.md).
-
 In WAVEFORMATEXTENSIBLE, **dwBitsPerSample** is the container size, and **wValidBitsPerSample** is the number of valid data bits per sample. Containers are always byte-aligned in memory, and the container size must be specified as a multiple of eight bits.
 
 Before the WAVEFORMATEXTENSIBLE structure was defined, vendors had to register each new wave format with Microsoft so that an official, 16-bit format tag could be assigned to the format. (The format tag is contained in the **wFormatTag** member of the WAVEFORMATEX structure.) A list of registered format tags appears in public header file Mmreg.h (for example, WAVE\_FORMAT\_MPEG).
@@ -162,7 +177,5 @@ When using WAVEFORMATEXTENSIBLE, set **wFormatTag** to WAVE\_FORMAT\_EXTENSIBLE 
  
 
 
---------------------
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[audio\audio]:%20Extensible%20Wave-Format%20Descriptors%20%20RELEASE:%20%287/18/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 

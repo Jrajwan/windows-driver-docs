@@ -2,10 +2,13 @@
 title: IEEE 1394 Bus Driver in Windows 7
 author: windows-driver-content
 description: Windows 7 includes 1394ohci.sys, a new IEEE 1394 bus driver that supports faster speeds and alternative media as defined in the IEEE-1394b specification.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 3744C1D5-E411-4E47-9154-40E15626250D
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # IEEE 1394 Bus Driver in Windows 7
@@ -19,12 +22,12 @@ The new 1394ohci.sys bus driver is fully backward compatible with the legacy bus
 
  
 
--   [I/O Request Completion](#-i-o-request-completion)
+-   [I/O Request Completion](#io-request-completion)
 -   [Configuration ROM Retrieval](#configuration-rom-retrieval)
 -   [IEEE-1394-1995 PHY Support](#ieee-1394-1995-phy-support)
 -   [NODE\_DEVICE\_EXTENSION Structure Usage](#-node-device-extension-structure-usage)
 -   [Gap Count Optimization](#gap-count-optimization)
--   [Device Driver Interface (DDI) Changes](#-device-driver-interface--ddi--changes)
+-   [Device Driver Interface (DDI) Changes](#device-driver-interface-ddi-changes)
 -   [Related topics](#related-topics)
 
 ##  I/O Request Completion
@@ -44,7 +47,7 @@ The new 1394 bus driver tries to use asynchronous block transactions at faster b
 
 The 1394ohci.sys bus driver requires a physical layer (PHY) that supports IEEE-1394a or IEEE-1394b. It does not support a PHY that supports IEEE-1394-1995. This requirement is due to the 1394ohci.sys bus driver's exclusive use of short (arbitrated) bus resets.
 
-## <a href="" id="-node-device-extension-structure-usage"></a> NODE\_DEVICE\_EXTENSION Structure Usage
+##  NODE\_DEVICE\_EXTENSION Structure Usage
 
 
 A client driver can reference the device extension in the 1394 bus driver associated with the physical device object (PDO) for the device that the client driver controls. This device extension is described by the **NODE\_DEVICE\_EXTENSION** structure. In 1394ohci.sys, this structure remains at the same location as in the legacy 1394 bus driver, but the nonstatic members of the structure might not be valid. When a client driver uses the new 1394 bus driver, they must make sure that the data accessed in **NODE\_DEVICE\_EXTENSION** is valid. The static members of **NODE\_DEVICE\_EXTENSION** that contain valid data are **Tag**, **DeviceObject**, and **PortDeviceObject**. All other members **NODE\_DEVICE\_EXTENSION** are nonstatic, which the client driver must not reference.
@@ -67,6 +70,5 @@ In Windows 7, the 1394 DDIs were changed to support faster speeds as defined by 
 [The IEEE 1394 Driver Stack](https://msdn.microsoft.com/library/windows/hardware/ff538867)  
 [Retrieving the Contents of a IEEE 1394 Node's Configuration ROM](https://msdn.microsoft.com/library/windows/hardware/gg266408)  
 
---------------------
 
 

@@ -2,13 +2,20 @@
 title: Determining Connection Offload Capabilities
 description: Determining Connection Offload Capabilities
 ms.assetid: 9a7c40dd-7151-462f-b30b-0444a4177ff9
-keywords: ["connection offload WDK TCP/IP transport , capabilities"]
+keywords:
+- connection offload WDK TCP/IP transport , capabilities
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Determining Connection Offload Capabilities
 
 
-## <a href="" id="ddk-determining-connection-offload-capabilities-ng"></a>
+
 
 
 NDIS supports two categories of offload services: TCP/IP offload services that are enhanced forms of the NDIS 5.1 and earlier task offload services and connection offload services.

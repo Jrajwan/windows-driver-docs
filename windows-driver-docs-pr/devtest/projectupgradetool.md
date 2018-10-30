@@ -1,7 +1,13 @@
 ---
 title: ProjectUpgradeTool
-description: The ProjectUpgradeTool takes Microsoft Visual Studio 2012 project (\ .vcxproj) and solution files (\ .sln) that were created with the Windows Driver Kit (WDK) for Windows 8 and upgrades them to work with the WDK for Windows 8.1 and Microsoft Visual Studio 2013.
+description: The ProjectUpgradeTool takes Microsoft Visual Studio 2012 projects (*.vcxproj) and solution files (*.sln) that were created with the Windows Driver Kit (WDK) for Windows 8 and upgrades them to work with the WDK for Windows 8.1 and Microsoft Visual Studio 2013.
 ms.assetid: DEB7799C-D505-40E6-B2B0-CF774A99B1BE
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # ProjectUpgradeTool
@@ -18,7 +24,7 @@ The ProjectUpgradeTool takes Microsoft Visual Studio 2012 project (\*.vcxproj) a
 1.  Open a Visual Studio Command Prompt window.
 2.  Type the command **ProjectUpgradeTool** and specify the root (or parent) directory that contains the Windows Driver Kit (WDK) 8 project or solution files that you want to upgrade to the Windows Driver Kit (WDK) 8.1 for Windows 8.1. For example, the following command upgrades all the files in C:\\myDriver directory and subdirectories.
 
-    ``` syntax
+    ```
     ProjectUpgradeTool.exe  C:\myDriver
     ```
 
@@ -34,7 +40,7 @@ The project upgrade tool is located in the %WindowsSdkDir%\\bin\\x86\\ directory
 
 The ProjectUpgradeTool.exe has the following syntax:
 
-``` syntax
+```
 ProjectUpgradeTool.exe  < rootDir >
                           [-Log:[<LogFile>]:[<Verbosity>]]
                           [-ConsoleLog:<Verbosity>]
@@ -93,20 +99,20 @@ ProjectUpgradeTool.exe  < rootDir >
 ## <span id="Comments"></span><span id="comments"></span><span id="COMMENTS"></span>Comments
 
 
--   [What to do if you see Error MSB8020 (Platform Toolset = 'WindowsKernelModeDriver8.0') cannot be found](#what-to-do-if-you-see-error-msb8020--platform-toolset----windowskernelmodedriver8-0---cannot-be-found-)
+-   [What to do if you see Error MSB8020 (Platform Toolset = 'WindowsKernelModeDriver8.0') cannot be found](#what-to-do-if-you-see-error-msb8020)
 -   [What to do if you are unable to build a Windows Vista target after migrating a WDK 8 project to WDK 8.1](#build-vista-with-wdk-8-1)
 
-### <span id="What_to_do_if_you_see_Error_MSB8020__Platform_Toolset____WindowsKernelModeDriver8.0___cannot_be_found_"></span><span id="what_to_do_if_you_see_error_msb8020__platform_toolset____windowskernelmodedriver8.0___cannot_be_found_"></span><span id="WHAT_TO_DO_IF_YOU_SEE_ERROR_MSB8020__PLATFORM_TOOLSET____WINDOWSKERNELMODEDRIVER8.0___CANNOT_BE_FOUND_"></span>What to do if you see Error MSB8020 (Platform Toolset = 'WindowsKernelModeDriver8.0') cannot be found
+### <span id="What_to_do_if_you_see_Error_MSB8020__Platform_Toolset____WindowsKernelModeDriver8.0___cannot_be_found_"></span><span id="what_to_do_if_you_see_error_msb8020__platform_toolset____windowskernelmodedriver8.0___cannot_be_found_"></span><span id="WHAT_TO_DO_IF_YOU_SEE_ERROR_MSB8020__PLATFORM_TOOLSET____WINDOWSKERNELMODEDRIVER8.0___CANNOT_BE_FOUND_"></span><a name="what-to-do-if-you-see-error-msb8020"></a>What to do if you see Error MSB8020 (Platform Toolset = 'WindowsKernelModeDriver8.0') cannot be found
 
 If you attempt to open a project or solution that was created with WDK 8, you might see the following error message when you attempt to build the project using WDK 8.1.
 
-``` syntax
+```
 1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.Cpp.Platform.targets(54,5): error MSB8020: The builds tools for WindowsKernelModeDriver8.0 (Platform Toolset = 'WindowsKernelModeDriver8.0') cannot be found. To build using the WindowsKernelModeDriver8.0 build tools, please install WindowsKernelModeDriver8.0 build tools. Alternatively, you may update to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Update VC++ Projects...".
 ```
 
 The platform toolset in the WDK 8 was **WindowsKernelModeDriver8.0**. To fix this error, run the ProjectUpgradeTool as described here and upgrade your WDK 8 solution to use the toolset available in WDK 8.1
 
-### <span id="build_vista_with_WDK_8.1"></span><span id="build_vista_with_wdk_8.1"></span><span id="BUILD_VISTA_WITH_WDK_8.1"></span>What to do if you are unable to build a Windows Vista target after migrating a WDK 8 project to WDK 8.1
+### <span id="build_vista_with_WDK_8.1"></span><span id="build_vista_with_wdk_8.1"></span><span id="BUILD_VISTA_WITH_WDK_8.1"></span><a name="build-vista-with-wdk-8-1"></a>What to do if you are unable to build a Windows Vista target after migrating a WDK 8 project to WDK 8.1
 
 **Issue:** Unable to build a Windows Vista target after migrating a WDK 8 project to WDK 8.1.
 
@@ -114,17 +120,17 @@ The platform toolset in the WDK 8 was **WindowsKernelModeDriver8.0**. To fix thi
 
 You open the project in WDK 8.1. When you build a Win32 Windows Vista target, you might see the following error message:
 
-``` syntax
+```
 error MSB6004: The specified task executable location "C:\Program Files (x86)\Windows Kits\8.0\bin\x86\x86\CL.exe" is invalid.   C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppCommon.targets  347 5   KMDF Driver1
 ```
 
 When you build an x64 Windows Vista target, you might see the following error messages:
 
-``` syntax
+```
 error TRK0002: Failed to execute command: ""C:\Program Files (x86)\Windows Kits\8.0\bin\x64\stampinf.exe" -d * -a amd64 -v * -k 1.11 -u 1.11.0 -f x64\VistaRelease\KMDFDriver1.inf". The operation identifier is not valid.  C:\Users\Administrator\Desktop\KMDF Driver1 - Copy\KMDF Driver1\TRACKER KMDF Driver1
 ```
 
-``` syntax
+```
 error : Verification Error: Driver package has no driver version.    C:\Program Files (x86)\Windows Kits\8.0\build\WindowsDriver8.0.common.targets   1338    5   KMDF Driver1 Package
 ```
 
@@ -221,7 +227,6 @@ error : Verification Error: Driver package has no driver version.    C:\Program 
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[devtest\devtest]:%20ProjectUpgradeTool%20%20RELEASE:%20%2811/17/2016%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

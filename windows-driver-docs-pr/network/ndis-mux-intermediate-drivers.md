@@ -2,13 +2,23 @@
 title: NDIS MUX Intermediate Drivers
 description: NDIS MUX Intermediate Drivers
 ms.assetid: 2c2e0af8-aa33-47fb-8605-26eae184ea22
-keywords: ["MUX intermediate drivers WDK", "NDIS MUX intermediate drivers WDK", "one-to-n MUX intermediate driver configuration WDK", "n-to-one MUX intermediate driver configuration WDK"]
+keywords:
+- MUX intermediate drivers WDK
+- NDIS MUX intermediate drivers WDK
+- one-to-n MUX intermediate driver configuration WDK
+- n-to-one MUX intermediate driver configuration WDK
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # NDIS MUX Intermediate Drivers
 
 
-## <a href="" id="ddk-ndis-mux-intermediate-drivers-ng"></a>
+
 
 
 The number of virtual miniports that are exposed by a MUX intermediate driver can be different than the number of lower physical adapters that are bound to the driver. A MUX intermediate driver exposes virtual miniports in a one-to-*n*, *n*-to-one, or even an *m*-to-*n* relationship with underlying adapters. This variety results in complicated internal bindings and data paths.

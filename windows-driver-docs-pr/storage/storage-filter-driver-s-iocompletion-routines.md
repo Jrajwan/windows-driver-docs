@@ -3,7 +3,17 @@ title: Storage Filter Driver's IoCompletion Routines
 author: windows-driver-content
 description: Storage Filter Driver's IoCompletion Routines
 ms.assetid: 1a27598b-7113-4f95-8777-bbb10003c268
-keywords: ["storage filter drivers WDK , IoCompletion", "filter drivers WDK storage , IoCompletion", "SFD WDK storage , IoCompletion", "IoCompletion"]
+keywords:
+- storage filter drivers WDK , IoCompletion
+- filter drivers WDK storage , IoCompletion
+- SFD WDK storage , IoCompletion
+- IoCompletion
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Storage Filter Driver's IoCompletion Routines
@@ -29,6 +39,5 @@ For more information about *InterpretRequestSense*, *RetryRequest*, and *Release
  
 
 
---------------------
 
 

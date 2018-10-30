@@ -1,14 +1,18 @@
 ---
 title: PrivilegedApplications
 description: PrivilegedApplications
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: fb0c4a7e-173e-4768-b1ba-a6c5149d61aa
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # PrivilegedApplications
 
+[!include[MBAE deprecation warning](mbae-deprecation-warning.md)]
 
 The PrivilegedApplications element specifies the app that will be allowed to access privileged Mobile Broadband interfaces.
 
@@ -98,11 +102,11 @@ There are no attributes.
 
 -   To specify multiple packages, list multiple [Package](package-privapps.md) elements in the PrivilegedApplications element.
 
--   The Package Name, Publisher, and Application ID must match the information in package.appxmanifest for the Windows Store app. The publisher also must match the publisher certificate that is installed on the PC.
+-   The Package Name, Publisher, and Application ID must match the information in package.appxmanifest for the Microsoft Store app. The publisher also must match the publisher certificate that is installed on the PC.
 
--   For the Windows Store app that is listed under the [DeviceCompanionApplications](devicecompanionapplications.md) element to have access to privileged Mobile Broadband interfaces including SMS, that app also must be specified under the PrivilegedApplications element.
+-   For the Microsoft Store app that is listed under the [DeviceCompanionApplications](devicecompanionapplications.md) element to have access to privileged Mobile Broadband interfaces including SMS, that app also must be specified under the PrivilegedApplications element.
 
--   When you are submitting your service metadata package to the Windows Dev Center Dashboard, you cannot declare more than 2 privileged apps. One of apps must be the app ID for the Windows Store device app that will be automatically downloaded. The second privileged app is not automatically downloaded, but will access to the privileged Mobile Broadband APIs if the app is installed.
+-   When you are submitting your service metadata package to the Windows Dev Center Dashboard, you cannot declare more than 2 privileged apps. One of apps must be the app ID for the Microsoft Store device app that will be automatically downloaded. The second privileged app is not automatically downloaded, but will access to the privileged Mobile Broadband APIs if the app is installed.
 
 The PrivilegedApplications element is optional.
 
@@ -110,7 +114,6 @@ The PrivilegedApplications element is optional.
 
  
 
-[Send comments about this topic to Microsoft](mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20%5Bp_mb\p_mb%5D:%20PrivilegedApplications%20%20RELEASE:%20%281/18/2017%29&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/default.aspx. "Send comments about this topic to Microsoft")
 
 
 

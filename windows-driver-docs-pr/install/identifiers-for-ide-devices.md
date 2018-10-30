@@ -2,13 +2,27 @@
 title: Identifiers for IDE Devices
 description: Identifiers for IDE Devices
 ms.assetid: b1624eb9-afa7-49ce-9db1-b0eab466ddcd
-keywords: ["device identification strings WDK , IDE devices", "identification strings WDK device , IDE devices", "identifiers WDK device , IDE devices", "IDE device identifiers WDK device installations", "device IDs WDK device installations", "hardware IDs WDK device installations", "compatible IDs WDK device installations", "integrated device electronics identifiers WDK device installations"]
+keywords:
+- device identification strings WDK , IDE devices
+- identification strings WDK device , IDE devices
+- identifiers WDK device , IDE devices
+- IDE device identifiers WDK device installations
+- device IDs WDK device installations
+- hardware IDs WDK device installations
+- compatible IDs WDK device installations
+- integrated device electronics identifiers WDK device installations
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Identifiers for IDE Devices
 
 
-## <a href="" id="ddk-identifiers-for-ide-devices-dg"></a>
+
 
 
 Identifiers for integrated device electronics (IDE) devices resemble SCSI identifiers. The device ID format is as follows:
@@ -132,13 +146,13 @@ GenSFloppy
 
 The following shows the kind of identifiers that can be generated for an IDE hard disk drive:
 
-IDE\\DiskMaxtor\_91000D8\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_SASX1B18
+IDE\\DiskMaxtor_91000D8_____________________SASX1B18
 
-IDE\\Maxtor\_91000D8\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_SASX1B18
+IDE\\Maxtor_91000D8___________________________SASX1B18
 
-IDE\\DiskMaxtor\_91000D8\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+IDE\\DiskMaxtor_91000D8________________________
 
-Maxtor\_91000D8\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_SASX1B18
+Maxtor_91000D8__________________________SASX1B18
 
 GenDisk
 

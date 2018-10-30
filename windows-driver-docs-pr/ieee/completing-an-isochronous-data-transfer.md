@@ -2,20 +2,21 @@
 title: Completing an Isochronous Data Transfer
 author: windows-driver-content
 description: Completing an Isochronous Data Transfer
-MS-HAID:
-- '1394-isoch\_d58d7460-a333-40db-b13f-fef81239324b.xml'
-- 'IEEE.completing\_an\_isochronous\_data\_transfer'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/windows/hardware'
 ms.assetid: 1fc98e1b-4dd5-4358-aa23-86fcbbf33967
-keywords: ["isochronous I/O WDK IEEE 1394 bus , completing transfers"]
+keywords:
+- isochronous I/O WDK IEEE 1394 bus , completing transfers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # Completing an Isochronous Data Transfer
 
 
-## <a href="" id="ddk-completing-an-isochronous-data-transfer-kg"></a>
+
 
 
 Once a device no longer needs to transfer data, the driver must inform the bus that the operation is complete, and then deallocate the isochronous resources it allocated when setting up.
@@ -37,6 +38,5 @@ Drivers must follow these steps to clean up:
  
 
 
---------------------
 
 

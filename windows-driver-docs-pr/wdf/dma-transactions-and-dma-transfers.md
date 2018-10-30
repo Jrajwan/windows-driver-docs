@@ -3,7 +3,21 @@ title: DMA Transactions and DMA Transfers
 author: windows-driver-content
 description: DMA Transactions and DMA Transfers
 ms.assetid: afcbe756-1a45-410b-8260-2c2c611e6a70
-keywords: ["DMA transactions WDK KMDF", "DMA operations WDK KMDF , transactions", "bus-master DMA WDK KMDF , transactions", "DMA operations WDK KMDF , transfers", "bus-master DMA WDK KMDF , transfers", "DMA transfers WDK KMDF", "DMA transactions WDK KMDF , about DMA transactions", "DMA transfers WDK KMDF , about DMA transfers"]
+keywords:
+- DMA transactions WDK KMDF
+- DMA operations WDK KMDF , transactions
+- bus-master DMA WDK KMDF , transactions
+- DMA operations WDK KMDF , transfers
+- bus-master DMA WDK KMDF , transfers
+- DMA transfers WDK KMDF
+- DMA transactions WDK KMDF , about DMA transactions
+- DMA transfers WDK KMDF , about DMA transfers
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # DMA Transactions and DMA Transfers
@@ -11,7 +25,7 @@ keywords: ["DMA transactions WDK KMDF", "DMA operations WDK KMDF , transactions"
 
 \[Applies to KMDF only\]
 
-## <a href="" id="ddk-dma-transactions-and-dma-transfers-df"></a>
+
 
 
 To understand how the framework handles bus-master and system-mode DMA operations, you must know the following two terms:

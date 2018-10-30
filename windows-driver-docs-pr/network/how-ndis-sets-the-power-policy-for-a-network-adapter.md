@@ -2,13 +2,28 @@
 title: How NDIS Sets the Power Policy for a Network Adapter
 description: How NDIS Sets the Power Policy for a Network Adapter
 ms.assetid: ede0e33d-16f9-45ec-9e9d-b188f6360b2f
-keywords: ["network interface cards WDK networking , power policy", "NICs WDK networking , power policy", "power policy WDK networking", "DEVICE_CAPABILITIES", "OID_PNP_CAPABILITIES", "device power policy owner WDK networking", "power management WDK NDIS miniport , power policy", "user input WDK power management", "power management WDK NDIS miniport , user input"]
+keywords:
+- network interface cards WDK networking , power policy
+- NICs WDK networking , power policy
+- power policy WDK networking
+- DEVICE_CAPABILITIES
+- OID_PNP_CAPABILITIES
+- device power policy owner WDK networking
+- power management WDK NDIS miniport , power policy
+- user input WDK power management
+- power management WDK NDIS miniport , user input
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # How NDIS Sets the Power Policy for a Network Adapter
 
 
-## <a href="" id="ddk-how-ndis-sets-the-power-policy-for-a-nic-ng"></a>
+
 
 
 NDIS serves as the device power policy owner for each network device. As such, NDIS sets and administers the power policy for each network device. For more information about managing device power policy, see [Managing Device Power Policy](https://msdn.microsoft.com/library/windows/hardware/ff554355).

@@ -2,13 +2,23 @@
 title: MSI-X Pre-Registration
 description: MSI-X Pre-Registration
 ms.assetid: 93a09ebd-8a50-4c96-a926-54bb4686a618
-keywords: ["MSI-X WDK networking , resource-requirements filter function", "message-signaled interrupts WDK networking , resource-requirements filter function", "MSIs WDK networking , resource-requirements filter function", "resource-requirements filter function WDK net"]
+keywords:
+- MSI-X WDK networking , resource-requirements filter function
+- message-signaled interrupts WDK networking , resource-requirements filter function
+- MSIs WDK networking , resource-requirements filter function
+- resource-requirements filter function WDK net
+ms.author: windowsdriverdev
+ms.date: 04/20/2017
+ms.topic: article
+ms.prod: windows-hardware
+ms.technology: windows-devices
+ms.localizationpriority: medium
 ---
 
 # MSI-X Pre-Registration
 
 
-## <a href="" id="ddk-msi-x-pre-registration-ng"></a>
+
 
 
 To support changing interrupt affinities for MSI-X or to remove message interrupt resources, a miniport driver must establish a resource-requirements filter function. This pre-registration step occurs before NDIS calls the [*MiniportInitializeEx*](https://msdn.microsoft.com/library/windows/hardware/ff559389) function.
